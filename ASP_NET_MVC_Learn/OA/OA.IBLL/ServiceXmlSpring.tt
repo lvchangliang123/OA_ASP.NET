@@ -1,0 +1,30 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".xml" #>
+<#
+	CodeGenerationTools code = new CodeGenerationTools(this);
+	MetadataLoader loader = new MetadataLoader(this);
+	CodeRegion region = new CodeRegion(this,1);
+	MetadataTools ef = new MetadataTools(this);
+	string inputFile = @"..\\OA.Model\\DataModel.edmx";
+	EdmItemCollection ItemCollection = loader.CreateEdmItemCollection(inputFile);
+	string namespaceName = code.VsNamespaceSuggestion();
+	EntityFrameworkTemplateFileManager fileManager = EntityFrameworkTemplateFileManager.Create(this);
+#>
+<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+<#
+foreach (EntityType entity in ItemCollection.GetItems<EntityType>().OrderBy(e => e.Name))
+{
+
+#>
+
+	<object name="<#=entity.Name#>Service" type="OA.BLL.<#=entity.Name#>Service, OA.BLL" singleton="false">
+  </object>
+<#}#>
+</objects>
+

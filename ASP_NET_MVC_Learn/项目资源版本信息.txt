@@ -1,0 +1,4 @@
+总体框架：.NET Framework 4.7.2
+Mysql for visual studio 1.2.10
+mysql connector 8.0.26
+entityframework  6.4.4

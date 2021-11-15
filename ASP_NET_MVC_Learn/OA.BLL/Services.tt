@@ -1,0 +1,47 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+<#
+	CodeGenerationTools code = new CodeGenerationTools(this);
+	MetadataLoader loader = new MetadataLoader(this);
+	CodeRegion region = new CodeRegion(this,1);
+	MetadataTools ef = new MetadataTools(this);
+	string inputFile = @"..\\OA\\OA.Model\\DataModel.edmx";
+	EdmItemCollection ItemCollection = loader.CreateEdmItemCollection(inputFile);
+	string namespaceName = code.VsNamespaceSuggestion();
+	EntityFrameworkTemplateFileManager fileManager = EntityFrameworkTemplateFileManager.Create(this);
+#>
+using OA.DALFactory;
+using OA.IBLL;
+using OA.IDAL;
+using OA.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OA.BLL
+{
+
+<#
+foreach (EntityType entity in ItemCollection.GetItems<EntityType>().OrderBy(e => e.Name))
+{
+#>
+
+	public partial class <#=entity.Name#>Service:BaseService <<#=entity.Name#>>,I<#=entity.Name#>Service
+	{
+		public override void SetCurrentDal()
+		{
+			CurrentDal = DbSession.<#=entity.Name#>Dal;
+		}
+	}
+	<#}#>
+
+
+
+}

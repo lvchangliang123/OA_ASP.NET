@@ -1,0 +1,5 @@
+C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA.Common\bin\Debug\OA.Common.dll
+C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA.Common\bin\Debug\OA.Common.pdb
+C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA.Common\obj\Debug\OA.Common.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA.Common\obj\Debug\OA.Common.dll
+C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA.Common\obj\Debug\OA.Common.pdb

@@ -1,0 +1,39 @@
+﻿@model OA.Model.UserInfo
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>userinfo</h4>
+    <hr />
+
+    <form action="/UserInfo/Create" method="post">
+        <table>
+            <tr>
+                <td>用户名：</td>
+                <td><input type="text" name="txtName" /></td>
+            </tr>
+            <tr>
+                <td>ID：</td>
+                <td><input type="text" name="txtID" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td><input type="submit" value="提交" /></td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
