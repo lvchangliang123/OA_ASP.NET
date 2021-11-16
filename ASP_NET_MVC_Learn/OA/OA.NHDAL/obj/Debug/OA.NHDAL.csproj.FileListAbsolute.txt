@@ -12,3 +12,17 @@ C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.NHDAL\obj\Debug\OA.NHDAL.csproj.C
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.NHDAL\obj\Debug\OA.NHDAL.dll
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.NHDAL\obj\Debug\OA.NHDAL.pdb
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.NHDAL\obj\Debug\OA.NHDAL.csproj.CopyComplete
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\bin\Debug\OA.NHDAL.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\bin\Debug\OA.NHDAL.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\bin\Debug\OA.IDAL.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\bin\Debug\OA.Model.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\bin\Debug\EntityFramework.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\bin\Debug\OA.IDAL.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\bin\Debug\OA.Model.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\bin\Debug\OA.Model.dll.config
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\bin\Debug\EntityFramework.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\obj\Debug\OA.NHDAL.csproj.AssemblyReference.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\obj\Debug\OA.NHDAL.csproj.CoreCompileInputs.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\obj\Debug\OA.NHDAL.csproj.CopyComplete
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\obj\Debug\OA.NHDAL.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.NHDAL\obj\Debug\OA.NHDAL.pdb

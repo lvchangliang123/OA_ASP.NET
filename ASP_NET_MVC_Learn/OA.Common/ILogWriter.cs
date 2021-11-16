@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace OA.Common
 {
-    public class Class1
+    public interface ILogWriter
     {
+
+        void WriteLogInfo(string logText);
+
     }
 }

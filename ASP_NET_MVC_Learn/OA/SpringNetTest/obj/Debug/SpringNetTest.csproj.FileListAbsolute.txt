@@ -27,3 +27,32 @@ C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\SpringNetTest\obj\Debug\SpringNetTes
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\SpringNetTest\obj\Debug\SpringNetTest.pdb
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\SpringNetTest\obj\Debug\SpringNetTest.csproj.CopyComplete
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\SpringNetTest\obj\Debug\SpringNetTest.csproj.AssemblyReference.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\SpringNetTest.exe.config
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\SpringNetTest.exe
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\SpringNetTest.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Common.Logging.Core.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Common.Logging.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Microsoft.Bcl.HashCode.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Microsoft.Win32.Registry.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Spring.Core.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\System.CodeDom.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\System.Security.AccessControl.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\System.Security.Permissions.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\System.Security.Principal.Windows.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Common.Logging.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Common.Logging.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Common.Logging.Core.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Common.Logging.Core.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Microsoft.Bcl.HashCode.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\Microsoft.Win32.Registry.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\System.CodeDom.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\System.Configuration.ConfigurationManager.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\System.Security.AccessControl.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\System.Security.Permissions.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\bin\Debug\System.Security.Principal.Windows.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\obj\Debug\SpringNetTest.csproj.AssemblyReference.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\obj\Debug\SpringNetTest.csproj.CoreCompileInputs.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\obj\Debug\SpringNetTest.csproj.CopyComplete
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\obj\Debug\SpringNetTest.exe
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\SpringNetTest\obj\Debug\SpringNetTest.pdb

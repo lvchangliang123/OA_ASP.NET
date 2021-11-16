@@ -18,3 +18,23 @@ C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.DALFactory\obj\Debug\OA.DALFactor
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.DALFactory\obj\Debug\OA.DALFactory.csproj.CopyComplete
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.DALFactory\obj\Debug\OA.DALFactory.dll
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.DALFactory\obj\Debug\OA.DALFactory.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.DALFactory.dll.config
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.DALFactory.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.DALFactory.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\EntityFramework.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\EntityFramework.SqlServer.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.EFDAL.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.IDAL.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.Model.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.EFDAL.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.EFDAL.dll.config
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.IDAL.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\EntityFramework.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\EntityFramework.SqlServer.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.Model.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\bin\Debug\OA.Model.dll.config
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\obj\Debug\OA.DALFactory.csproj.AssemblyReference.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\obj\Debug\OA.DALFactory.csproj.CoreCompileInputs.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\obj\Debug\OA.DALFactory.csproj.CopyComplete
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\obj\Debug\OA.DALFactory.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.DALFactory\obj\Debug\OA.DALFactory.pdb

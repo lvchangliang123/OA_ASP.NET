@@ -10,3 +10,15 @@ C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.IDAL\bin\Debug\OA.Model.pdb
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.IDAL\bin\Debug\OA.Model.dll.config
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.IDAL\bin\Debug\EntityFramework.xml
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA\OA.IDAL\obj\Debug\OA.IDAL.csproj.CopyComplete
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\bin\Debug\OA.IDAL.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\bin\Debug\OA.IDAL.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\bin\Debug\OA.Model.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\bin\Debug\EntityFramework.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\bin\Debug\OA.Model.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\bin\Debug\OA.Model.dll.config
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\bin\Debug\EntityFramework.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\obj\Debug\OA.IDAL.csproj.AssemblyReference.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\obj\Debug\OA.IDAL.csproj.CoreCompileInputs.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\obj\Debug\OA.IDAL.csproj.CopyComplete
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\obj\Debug\OA.IDAL.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IDAL\obj\Debug\OA.IDAL.pdb

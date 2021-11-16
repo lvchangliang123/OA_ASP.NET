@@ -21,3 +21,15 @@ E:\ASP.NET\ASP.NET MVC_Learn\OA\OA.IBLL\obj\Debug\OA.IBLL.csproj.AssemblyReferen
 E:\ASP.NET\ASP.NET MVC_Learn\OA\OA.IBLL\obj\Debug\OA.IBLL.csproj.CoreCompileInputs.cache
 E:\ASP.NET\ASP.NET MVC_Learn\OA\OA.IBLL\obj\Debug\OA.IBLL.dll
 E:\ASP.NET\ASP.NET MVC_Learn\OA\OA.IBLL\obj\Debug\OA.IBLL.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\bin\Debug\OA.IBLL.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\bin\Debug\OA.IBLL.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\bin\Debug\OA.Model.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\bin\Debug\EntityFramework.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\bin\Debug\OA.Model.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\bin\Debug\OA.Model.dll.config
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\bin\Debug\EntityFramework.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\obj\Debug\OA.IBLL.csproj.AssemblyReference.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\obj\Debug\OA.IBLL.csproj.CoreCompileInputs.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\obj\Debug\OA.IBLL.csproj.CopyComplete
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\obj\Debug\OA.IBLL.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\OA.IBLL\obj\Debug\OA.IBLL.pdb

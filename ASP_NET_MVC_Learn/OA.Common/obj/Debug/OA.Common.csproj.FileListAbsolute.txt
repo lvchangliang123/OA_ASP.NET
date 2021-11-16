@@ -3,3 +3,9 @@ C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA.Common\bin\Debug\OA.Common.pdb
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA.Common\obj\Debug\OA.Common.csproj.CoreCompileInputs.cache
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA.Common\obj\Debug\OA.Common.dll
 C:\Users\admin\Desktop\ASP.NET MVC_Learn\OA.Common\obj\Debug\OA.Common.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\bin\Debug\OA.Common.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\bin\Debug\OA.Common.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\obj\Debug\OA.Common.csproj.AssemblyReference.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\obj\Debug\OA.Common.csproj.CoreCompileInputs.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\obj\Debug\OA.Common.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\obj\Debug\OA.Common.pdb
