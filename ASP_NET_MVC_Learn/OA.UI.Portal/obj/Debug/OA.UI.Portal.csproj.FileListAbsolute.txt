@@ -490,3 +490,5 @@ E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\obj\Debug\OA.UI.Portal.csproj.CoreComp
 E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\obj\Debug\OA.UI.Portal.csproj.CopyComplete
 E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\obj\Debug\OA.UI.Portal.dll
 E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\obj\Debug\OA.UI.Portal.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\bin\log4net.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\bin\log4net.xml

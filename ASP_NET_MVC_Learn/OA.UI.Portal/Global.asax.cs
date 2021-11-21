@@ -16,6 +16,10 @@ namespace OA.UI.Portal
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //应用程序一开始，就配置log，初始化
+            log4net.Config.XmlConfigurator.Configure();
+
         }
     }
 }

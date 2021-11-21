@@ -19,6 +19,7 @@
 75 OVER
 77 12：40
 81 over
-
+86 17：00
+87 over
 
 https://www.fujieace.com/software/powerdesigner.html

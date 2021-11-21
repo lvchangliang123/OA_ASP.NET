@@ -9,3 +9,6 @@ E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\obj\Debug\OA.Common.csproj.AssemblyRefere
 E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\obj\Debug\OA.Common.csproj.CoreCompileInputs.cache
 E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\obj\Debug\OA.Common.dll
 E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\obj\Debug\OA.Common.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\bin\Debug\log4net.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\bin\Debug\log4net.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\obj\Debug\OA.Common.csproj.CopyComplete

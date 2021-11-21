@@ -14,19 +14,32 @@ namespace OA.Common
 
         static LogHelper()      //静态构造函数，在第一次用到这个类的时候执行,只被执行一次
         {
-            logWriters.Add(new TextFileWriter());               //2.
-            logWriters.Add(new SqlLogWriter());
+            //logWriters.Add(new TextFileWriter());               //2.
+            //logWriters.Add(new SqlLogWriter());
+            logWriters.Add(new Log4NetWriter());
 
             //将消息队列中的错误信息，写入到日志文件中
             ThreadPool.QueueUserWorkItem(o =>
             {
-                lock (ExceptionStringQueue)
+                while (true)
                 {
-                    string ExpStr = ExceptionStringQueue.Dequeue();
 
-                    foreach (var logWriter in logWriters)               //3.观察者模式
+                    lock (ExceptionStringQueue)
                     {
-                        logWriter.WriteLogInfo(ExpStr);
+                        if (ExceptionStringQueue.Count>0)
+                        {
+                            string ExpStr = ExceptionStringQueue.Dequeue();
+
+                            foreach (var logWriter in logWriters)               //3.观察者模式
+                            {
+                                logWriter.WriteLogInfo(ExpStr);
+                            }
+                        }
+                        else
+                        {
+                            Thread.Sleep(30);
+                        }
+                      
                     }
                 }
             });
