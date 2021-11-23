@@ -8,12 +8,11 @@
   </EntityType>
   <EntityType Name="OrderInfo">
     <Key>
-      <PropertyRef Name="UserInfoId" />
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="UserInfoId" Type="int" Nullable="false" />
-    <Property Name="Content" Type="varchar" MaxLength="255" />
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Content" Type="varchar" MaxLength="255" />
+    <Property Name="UserInfoId" Type="int" />
   </EntityType>
   <EntityType Name="RoleInfo">
     <Key>
@@ -25,13 +24,14 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="UName" Type="varchar" MaxLength="255" />
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UName" Type="varchar" MaxLength="255" />
+    <Property Name="Pwd" Type="varchar" MaxLength="255" />
+    <Property Name="ShowName" Type="varchar" MaxLength="255" />
+    <Property Name="DelFlag" Type="int" Nullable="false" />
   </EntityType>
-  <Association Name="UserInfoId">
-    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+  <Association Name="userinfoid">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1" />
     <End Role="OrderInfo" Type="Self.OrderInfo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserInfo">
@@ -47,7 +47,7 @@
     <EntitySet Name="OrderInfo" EntityType="Self.OrderInfo" Schema="oa" store:Type="Tables" />
     <EntitySet Name="RoleInfo" EntityType="Self.RoleInfo" Schema="oa" store:Type="Tables" />
     <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="oa" store:Type="Tables" />
-    <AssociationSet Name="UserInfoId" Association="Self.UserInfoId">
+    <AssociationSet Name="userinfoid" Association="Self.userinfoid">
       <End Role="UserInfo" EntitySet="UserInfo" />
       <End Role="OrderInfo" EntitySet="OrderInfo" />
     </AssociationSet>

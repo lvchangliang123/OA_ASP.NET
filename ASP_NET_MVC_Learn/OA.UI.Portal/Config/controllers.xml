@@ -8,13 +8,16 @@
       </object>
   
       <object type="OA.UI.Portal.Controllers.OrderInfoController, OA.UI.Portal" singleton="false">
-        <!--类的属性+属性的类型(Class类型是引用类型，使用ref)-->
         <property name="OrderInfoService" ref="OrderInfoService"/>
       </object>
 
       <object type="OA.UI.Portal.Controllers.ActionInfoController, OA.UI.Portal" singleton="false">
-        <!--类的属性+属性的类型(Class类型是引用类型，使用ref)-->
         <property name="ActionInfoService" ref="ActionInfoService"/>
+      </object>
+  
+      <object type="OA.UI.Portal.Controllers.UserLoginController, OA.UI.Portal" singleton="false">
+        <!--类的属性+属性的类型(Class类型是引用类型，使用ref)-->
+        <property name="UserInfoService" ref="UserInfoService"/>
       </object>
 
 </objects>

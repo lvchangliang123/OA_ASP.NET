@@ -25,9 +25,9 @@ namespace OA.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ActionInfo> ActionInfoes { get; set; }
         public virtual DbSet<OrderInfo> OrderInfoes { get; set; }
         public virtual DbSet<RoleInfo> RoleInfoes { get; set; }
         public virtual DbSet<UserInfo> UserInfoes { get; set; }
-        public virtual DbSet<ActionInfo> ActionInfoes { get; set; }
     }
 }

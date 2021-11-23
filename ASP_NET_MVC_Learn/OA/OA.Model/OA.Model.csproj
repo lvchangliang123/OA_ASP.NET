@@ -117,6 +117,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Enum\DelFlagEnum.cs" />
     <Compile Include="OrderInfo.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>

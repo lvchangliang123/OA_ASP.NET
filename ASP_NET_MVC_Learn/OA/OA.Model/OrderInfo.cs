@@ -14,9 +14,9 @@ namespace OA.Model
     
     public partial class OrderInfo
     {
-        public int UserInfoId { get; set; }
-        public string Content { get; set; }
         public int Id { get; set; }
+        public string Content { get; set; }
+        public Nullable<int> UserInfoId { get; set; }
     
         public virtual UserInfo UserInfo { get; set; }
     }

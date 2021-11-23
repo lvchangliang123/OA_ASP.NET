@@ -1,14 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="oaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="OrderInfo">
+  <EntityContainer Name="OAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ActionInfoes" EntityType="oaModel.ActionInfo" />
+    <EntitySet Name="OrderInfoes" EntityType="oaModel.OrderInfo" />
+    <EntitySet Name="RoleInfoes" EntityType="oaModel.RoleInfo" />
+    <EntitySet Name="UserInfoes" EntityType="oaModel.UserInfo" />
+    <AssociationSet Name="userinfoid" Association="oaModel.userinfoid">
+      <End Role="UserInfo" EntitySet="UserInfoes" />
+      <End Role="OrderInfo" EntitySet="OrderInfoes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ActionInfo">
     <Key>
-      <PropertyRef Name="UserInfoId" />
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="UserInfoId" Type="Int32" Nullable="false" />
-    <Property Name="Content" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="UserInfo" Relationship="Self.UserInfoId" FromRole="OrderInfo" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="OrderInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Content" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserInfoId" Type="Int32" />
+    <NavigationProperty Name="UserInfo" Relationship="oaModel.userinfoid" FromRole="OrderInfo" ToRole="UserInfo" />
   </EntityType>
   <EntityType Name="RoleInfo">
     <Key>
@@ -20,15 +35,16 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="UName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="OrderInfoes" Relationship="Self.UserInfoId" FromRole="UserInfo" ToRole="OrderInfo" />
+    <Property Name="UName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Pwd" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ShowName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DelFlag" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrderInfo" Relationship="oaModel.userinfoid" FromRole="UserInfo" ToRole="OrderInfo" />
   </EntityType>
-  <Association Name="UserInfoId">
-    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="OrderInfo" Type="Self.OrderInfo" Multiplicity="*" />
+  <Association Name="userinfoid">
+    <End Type="oaModel.UserInfo" Role="UserInfo" Multiplicity="0..1" />
+    <End Type="oaModel.OrderInfo" Role="OrderInfo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserInfo">
         <PropertyRef Name="Id" />
@@ -38,20 +54,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="OAEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="OrderInfoes" EntityType="Self.OrderInfo" />
-    <EntitySet Name="RoleInfoes" EntityType="Self.RoleInfo" />
-    <EntitySet Name="UserInfoes" EntityType="Self.UserInfo" />
-    <AssociationSet Name="UserInfoId" Association="Self.UserInfoId">
-      <End Role="UserInfo" EntitySet="UserInfoes" />
-      <End Role="OrderInfo" EntitySet="OrderInfoes" />
-    </AssociationSet>
-    <EntitySet Name="ActionInfoes" EntityType="oaModel.ActionInfo" />
-  </EntityContainer>
-  <EntityType Name="ActionInfo">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-  </EntityType>
 </Schema>

@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7239adb3570644e4933f8c7e65d019d3" Name="Diagram1" ZoomLevel="197">
-        <EntityTypeShape EntityType="oaModel.OrderInfo" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="oaModel.RoleInfo" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="oaModel.UserInfo" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="oaModel.UserInfoId" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="oaModel.ActionInfo" Width="1.5" PointX="3.375" PointY="3.75" />
+      <Diagram DiagramId="7239adb3570644e4933f8c7e65d019d3" Name="Diagram1" ZoomLevel="148">
+        <EntityTypeShape EntityType="oaModel.ActionInfo" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="oaModel.OrderInfo" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="oaModel.RoleInfo" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="oaModel.UserInfo" Width="1.5" PointX="0.75" PointY="0.875" />
+        <AssociationConnector Association="oaModel.userinfoid" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

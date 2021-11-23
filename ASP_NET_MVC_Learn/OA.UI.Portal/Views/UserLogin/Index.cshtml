@@ -4,23 +4,58 @@
 
 
 <!DOCTYPE html>
+
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="~/Scripts/CssScripts/Login.css" />
+
+        <script src="~/Scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+
+        <!--这里的js代码并没有起作用，我改为后台ProcessLogin方法进行页面跳转-->
+        @*<script type="text/javascript">
+
+            $(function () {
+                $("#img").click(changeCheckCode);
+            });
+            function changeCheckCode() {
+                var old = $("#img").attr("src");
+                var now = new Date();
+                var str = old + now.getDay() + now.getHours() + now.getMinutes();
+                $("img").attr("src", str);
+            }
+
+            function afterLogin(data) {
+                if (data == "Login Success") {
+                    //登陆成功
+                    window.location.href = "/Home/Index";
+                } else {
+                    alert(data);
+                    changeCheckCode();
+                }
+            }
+        </script>*@
+
     </head>
     <body>
-        <div id="login">
-            <h1>Login</h1>
-            <form method="post">
-                <input type="text" required="required" placeholder="用户名" name="u" />
-                <input type="password" required="required" placeholder="密码" name="p" />
-                <input type="text" required="required" placeholder="验证码" name="c" />
-                <img id="img" src="/UserLogin/ShowVCode" onclick="this.src+='?new Date()'" style="float: left;height:24px;"/>
-                <button class="but" type="submit">登录</button>
-            </form>
-        </div>
+        <!--利用微软的异步提交登录请求-->
+        <!--OnSuccess = "afterLogin" -->
+        @using (Ajax.BeginForm("ProcessLogin", "UserLogin", new AjaxOptions() { }))
+        {
+            <div id="login">
+                <h1>Login</h1>
+                <form method="post">
+                    <input type="text" required="required" placeholder="用户名" name="loginName" />
+                    <input type="password" required="required" placeholder="密码" name="loginPwd" />
+                    <input type="text" required="required" placeholder="验证码" name="vCode" />
+                    <img id="img" src="/UserLogin/ShowVCode" onclick="this.src+='?new Date()'" style="float: left;height:24px;" />
+                    <button class="but" type="submit">登录</button>
+                </form>
+            </div>
+        }
     </body>
     </html>
 
