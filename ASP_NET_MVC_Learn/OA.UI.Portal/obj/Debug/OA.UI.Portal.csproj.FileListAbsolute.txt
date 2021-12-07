@@ -492,3 +492,5 @@ E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\obj\Debug\OA.UI.Portal.dll
 E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\obj\Debug\OA.UI.Portal.pdb
 E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\bin\log4net.dll
 E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\bin\log4net.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\bin\Enyim.Caching.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\bin\Enyim.Caching.xml

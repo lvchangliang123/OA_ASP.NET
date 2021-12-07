@@ -1,0 +1,10 @@
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\TestDemo\bin\Debug\TestDemo.exe.config
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\TestDemo\bin\Debug\TestDemo.exe
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\TestDemo\bin\Debug\TestDemo.pdb
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\TestDemo\bin\Debug\Enyim.Caching.dll
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\TestDemo\bin\Debug\Enyim.Caching.xml
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\TestDemo\obj\Debug\TestDemo.csproj.AssemblyReference.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\TestDemo\obj\Debug\TestDemo.csproj.CoreCompileInputs.cache
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\TestDemo\obj\Debug\TestDemo.csproj.CopyComplete
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\TestDemo\obj\Debug\TestDemo.exe
+E:\ASP.NET\ASP_NET_MVC_Learn\OA\TestDemo\obj\Debug\TestDemo.pdb

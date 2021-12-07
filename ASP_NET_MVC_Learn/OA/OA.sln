@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OA.IBLL", "OA.IBLL\OA.IBLL.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpringNetTest", "SpringNetTest\SpringNetTest.csproj", "{F6BE941B-D572-4BDD-8842-41C10FEFC671}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDemo", "TestDemo\TestDemo.csproj", "{0156AFD8-EA32-4A32-86D7-31963D2FB5AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{F6BE941B-D572-4BDD-8842-41C10FEFC671}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6BE941B-D572-4BDD-8842-41C10FEFC671}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6BE941B-D572-4BDD-8842-41C10FEFC671}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0156AFD8-EA32-4A32-86D7-31963D2FB5AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0156AFD8-EA32-4A32-86D7-31963D2FB5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0156AFD8-EA32-4A32-86D7-31963D2FB5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0156AFD8-EA32-4A32-86D7-31963D2FB5AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

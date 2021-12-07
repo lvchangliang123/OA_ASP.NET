@@ -56,8 +56,18 @@ namespace OA.UI.Portal.Controllers
             {
                 return Content("The UserName or Passward Incorrect,Please Login again!");
             }
+
             //存储登录过的用户信息,用户其他地方的校验
-            Session["loginUser"] = userinfo_Login;
+            //Session["loginUser"] = userinfo_Login;
+
+            //注意：早期使用Session来存储用户登录信息，改为 memcache+cookie 来实现
+            //(1)使用Guid生成存储数据的key  （2）用户对象信息作为value  （3）将guid存入客户端cookie中
+            string userLoginId = Guid.NewGuid().ToString();
+
+            Common.Cache.CacheHelper.AddCache(userLoginId, userinfo_Login, DateTime.Now.AddMinutes(20));
+
+
+            Response.Cookies["userLoginId"].Value = userLoginId;
 
             //3.
             //如果验证正确，跳转到首页

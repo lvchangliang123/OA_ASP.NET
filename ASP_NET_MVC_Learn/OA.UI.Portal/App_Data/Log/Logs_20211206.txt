@@ -1,0 +1,128 @@
+
+-----------------------header------------------------
+记录时间：2021-12-06 22:25:13,907 线程ID:[6] 日志级别：ERROR 出错类：Logger4Net property:[(null)] - 错误描述：System.TypeInitializationException: “OA.Common.Cache.CacheHelper”的类型初始值设定项引发异常。 ---> Spring.Objects.Factory.ObjectCreationException: Error creating object with name 'CacheWriter' defined in 'file [E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\Config\common.xml] line 10' : Initialization of object failed : Cannot instantiate Type [OA.Common.Cache.MemcacheWriter] using ctor [Void .ctor()] : '“OA.Common.Cache.MemcacheWriter”的类型初始值设定项引发异常。' ---> Spring.Util.FatalReflectionException: Cannot instantiate Type [OA.Common.Cache.MemcacheWriter] using ctor [Void .ctor()] : '“OA.Common.Cache.MemcacheWriter”的类型初始值设定项引发异常。' ---> System.TypeInitializationException: “OA.Common.Cache.MemcacheWriter”的类型初始值设定项引发异常。 ---> System.ArgumentNullException: 值不能为 null。
+   在 System.Threading.Monitor.ReliableEnter(Object obj, Boolean& lockTaken)
+   在 System.Threading.Monitor.Enter(Object obj, Boolean& lockTaken)
+   在 OA.Common.Cache.MemcacheWriter.getInstance(Dictionary`2 ServerDic) 位置 E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\Cache\MemcacheWriter.cs:行号 56
+   在 OA.Common.Cache.MemcacheWriter..cctor() 位置 E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\Cache\MemcacheWriter.cs:行号 35
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 OA.Common.Cache.MemcacheWriter..ctor()
+   在 _dynamic_OA.Common.Cache.MemcacheWriter..ctor(Object[] )
+   在 Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments)
+   在 Spring.Util.ObjectUtils.InstantiateType(ConstructorInfo constructor, Object[] arguments)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Spring.Util.ObjectUtils.InstantiateType(ConstructorInfo constructor, Object[] arguments)
+   在 Spring.Objects.Factory.Support.SimpleInstantiationStrategy.Instantiate(RootObjectDefinition definition, String name, IObjectFactory factory)
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String objectName, RootObjectDefinition definition)
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.CreateObjectInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments)
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure)
+   在 Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure)
+   在 Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name)
+   在 Spring.Context.Support.AbstractApplicationContext.GetObject(String name)
+   在 OA.Common.Cache.CacheHelper..cctor() 位置 E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\Cache\CacheHelper.cs:行号 24
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 OA.Common.Cache.CacheHelper.AddCache(String key, Object value, DateTime expDate)
+   在 OA.UI.Portal.Controllers.UserLoginController.ProcessLogin() 位置 E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\Controllers\UserLoginController.cs:行号 67
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+
+-----------------------header------------------------
+记录时间：2021-12-06 22:27:34,090 线程ID:[7] 日志级别：ERROR 出错类：Logger4Net property:[(null)] - 错误描述：System.TypeInitializationException: “OA.Common.Cache.CacheHelper”的类型初始值设定项引发异常。 ---> Spring.Objects.Factory.ObjectCreationException: Error creating object with name 'CacheWriter' defined in 'file [E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\Config\common.xml] line 10' : Initialization of object failed : Cannot instantiate Type [OA.Common.Cache.MemcacheWriter] using ctor [Void .ctor()] : '“OA.Common.Cache.MemcacheWriter”的类型初始值设定项引发异常。' ---> Spring.Util.FatalReflectionException: Cannot instantiate Type [OA.Common.Cache.MemcacheWriter] using ctor [Void .ctor()] : '“OA.Common.Cache.MemcacheWriter”的类型初始值设定项引发异常。' ---> System.TypeInitializationException: “OA.Common.Cache.MemcacheWriter”的类型初始值设定项引发异常。 ---> System.ArgumentNullException: 值不能为 null。
+   在 System.Threading.Monitor.ReliableEnter(Object obj, Boolean& lockTaken)
+   在 System.Threading.Monitor.Enter(Object obj, Boolean& lockTaken)
+   在 OA.Common.Cache.MemcacheWriter.getInstance(Dictionary`2 ServerDic) 位置 E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\Cache\MemcacheWriter.cs:行号 56
+   在 OA.Common.Cache.MemcacheWriter..cctor() 位置 E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\Cache\MemcacheWriter.cs:行号 35
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 OA.Common.Cache.MemcacheWriter..ctor()
+   在 _dynamic_OA.Common.Cache.MemcacheWriter..ctor(Object[] )
+   在 Spring.Reflection.Dynamic.SafeConstructor.Invoke(Object[] arguments)
+   在 Spring.Util.ObjectUtils.InstantiateType(ConstructorInfo constructor, Object[] arguments)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Spring.Util.ObjectUtils.InstantiateType(ConstructorInfo constructor, Object[] arguments)
+   在 Spring.Objects.Factory.Support.SimpleInstantiationStrategy.Instantiate(RootObjectDefinition definition, String name, IObjectFactory factory)
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String objectName, RootObjectDefinition definition)
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.CreateObjectInstance(String objectName, RootObjectDefinition objectDefinition, Object[] arguments)
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure)
+   在 Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure)
+   在 Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name)
+   在 Spring.Context.Support.AbstractApplicationContext.GetObject(String name)
+   在 OA.Common.Cache.CacheHelper..cctor() 位置 E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\Cache\CacheHelper.cs:行号 24
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 OA.Common.Cache.CacheHelper.AddCache(String key, Object value, DateTime expDate)
+   在 OA.UI.Portal.Controllers.UserLoginController.ProcessLogin() 位置 E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\Controllers\UserLoginController.cs:行号 67
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
+
+-----------------------header------------------------
+记录时间：2021-12-06 22:35:50,729 线程ID:[7] 日志级别：ERROR 出错类：Logger4Net property:[(null)] - 错误描述：System.TypeInitializationException: “OA.Common.Cache.CacheHelper”的类型初始值设定项引发异常。 ---> Spring.Objects.Factory.ObjectCreationException: Error creating object with name 'CacheWriter' defined in 'file [E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\Config\common.xml] line 10' : Initialization of object failed : 'padlock' node cannot be resolved for the specified context [OA.Common.Cache.MemcacheWriter]. ---> Spring.Core.InvalidPropertyException: 'padlock' node cannot be resolved for the specified context [OA.Common.Cache.MemcacheWriter].
+   在 Spring.Expressions.PropertyOrFieldNode.InitializeNode(Object context)
+   在 Spring.Expressions.PropertyOrFieldNode.Set(Object context, EvaluationContext evalContext, Object newValue)
+   在 Spring.Expressions.BaseNode.SetValue(Object context, Object newValue)
+   在 Spring.Objects.ObjectWrapper.SetPropertyValue(IExpression propertyExpression, Object val)
+   在 Spring.Objects.ObjectWrapper.SetPropertyValue(PropertyValue pv)
+   在 Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues propertyValues, Boolean ignoreUnknown)
+   在 Spring.Objects.ObjectWrapper.SetPropertyValues(IPropertyValues pvs)
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ApplyPropertyValues(String name, RootObjectDefinition definition, IObjectWrapper wrapper, IPropertyValues properties)
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.PopulateObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper)
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.ConfigureObject(String name, RootObjectDefinition definition, IObjectWrapper wrapper)
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Spring.Objects.Factory.Support.AbstractAutowireCapableObjectFactory.InstantiateObject(String name, RootObjectDefinition definition, Object[] arguments, Boolean allowEagerCaching, Boolean suppressConfigure)
+   在 Spring.Objects.Factory.Support.AbstractObjectFactory.GetObjectInternal(String name, Type requiredType, Object[] arguments, Boolean suppressConfigure)
+   在 Spring.Objects.Factory.Support.AbstractObjectFactory.GetObject(String name)
+   在 Spring.Context.Support.AbstractApplicationContext.GetObject(String name)
+   在 OA.Common.Cache.CacheHelper..cctor() 位置 E:\ASP.NET\ASP_NET_MVC_Learn\OA.Common\Cache\CacheHelper.cs:行号 24
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 OA.Common.Cache.CacheHelper.AddCache(String key, Object value, DateTime expDate)
+   在 OA.UI.Portal.Controllers.UserLoginController.ProcessLogin() 位置 E:\ASP.NET\ASP_NET_MVC_Learn\OA.UI.Portal\Controllers\UserLoginController.cs:行号 67
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_0.<InvokeActionMethodFilterAsynchronouslyRecursive>b__0()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_2.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__4()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__1(IAsyncResult asyncResult)
