@@ -1,0 +1,93 @@
+﻿@using WebApplication1.Models.EnumTypes
+@using WebApplication1.DataRepositories
+@using WebApplication1.ViewModels
+@model StudentCreateViewModel
+@inject IStudentRepository _studentRepository
+@{ ViewBag.Title = "创建学生信息";}
+<form class="mt-3" asp-controller="Student" asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group row">
+        <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <!--asp-validation-summary="All"-->
+            <input asp-for="Name" class="form-control" placeholder="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Email" class="form-control" placeholder="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <!--for属性和id属性是相关联的-->
+    <div class="form-group row">
+        <label asp-for="Major" class="col-sm-2 col-form-label">主修科目</label>
+        <div class="col-sm-10">
+            <select class="custom-select mr-sm-2" asp-for="Major"
+                    asp-items="Html.GetEnumSelectList<MajorEnum>()">
+                <option value=0>请选择</option>
+            </select>
+            <span asp-validation-for="Major" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!--上传图片-->
+    <div class="form-group row">
+        <label asp-for="Photos" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <div class="custom-file">
+                <input type="file" id="Photos" name="Photos" asp-for="Photos"
+                       multiple class="form-control custom-file-input" />
+                <label class="custom-file-label">请选择图片......</label>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button class="btn btn-primary" type="submit">创建</button>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            学生总人数 = @_studentRepository.GetAllStudents().Count().ToString()
+        </div>
+    </div>
+
+    <!--单文件的上传js-->
+    <!--<script>-->
+    @*显示上传标签选中文件的名称*@
+    <!--$(document).ready(function() {
+            $(".custom-file-input").on("change", function() {
+                var fileName = $(this)
+                    .val()
+                    .split("\\")
+                    .pop();
+                $(this)
+                    .next(".custom-file-label")
+                    .html(fileName);
+            });
+        });
+    </script>-->
+
+    <script>
+        @*显示上传标签选中文件的名称*@
+        $(document).ready(function() {
+            $(".custom-file-input").on("change", function () {
+                var fileLabel = $(this).next(".custom-file-label");
+                var files = $(this)[0].files;
+                if (files.length > 1) {
+                    fileLabel.html("您已经选择了:" + files.length + "个文件");
+                } else if (files.length = 1) {
+                    fileLabel.html(files[0].length);
+                }
+            });
+        });
+    </script>
+
+</form>

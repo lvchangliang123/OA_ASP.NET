@@ -1,0 +1,36 @@
+2022-03-23 22:30:34.5772|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:18525 
+2022-03-23 22:30:34.6076|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-23 22:30:34.6076|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-23 22:30:34.6076|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-23 22:31:32.0104|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:24690 
+2022-03-23 22:31:32.0371|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-23 22:31:32.0371|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-23 22:31:32.1578|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-23 22:31:37.7192|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'NotFound' was not found. Searched locations: /Views/Admin/NotFound.cshtml, /Views/Shared/NotFound.cshtml 
+2022-03-23 22:31:38.3110|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'NotFound' was not found. The following locations were searched:
+/Views/Admin/NotFound.cshtml
+/Views/Shared/NotFound.cshtml
+2022-03-23 22:38:36.6710|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:3496 
+2022-03-23 22:38:36.7020|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-23 22:38:36.7020|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-23 22:38:36.7020|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-23 22:38:45.2396|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'NotFound' was not found. Searched locations: /Views/Admin/NotFound.cshtml, /Views/Shared/NotFound.cshtml 
+2022-03-23 22:38:45.8846|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'NotFound' was not found. The following locations were searched:
+/Views/Admin/NotFound.cshtml
+/Views/Shared/NotFound.cshtml
+2022-03-23 22:40:37.4926|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:20960 
+2022-03-23 22:40:37.5225|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-23 22:40:37.5225|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-23 22:40:37.5225|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-23 22:45:49.6149|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:24339 
+2022-03-23 22:45:49.6439|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-23 22:45:49.6439|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-23 22:45:49.6766|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-23 22:45:58.0146|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'NotFound' was not found. Searched locations: /Views/Admin/NotFound.cshtml, /Views/Shared/NotFound.cshtml 
+2022-03-23 22:45:58.6742|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'NotFound' was not found. The following locations were searched:
+/Views/Admin/NotFound.cshtml
+/Views/Shared/NotFound.cshtml
+2022-03-23 22:59:54.0328|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:4799 
+2022-03-23 22:59:54.0568|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-23 22:59:54.0590|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-23 22:59:54.0590|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 

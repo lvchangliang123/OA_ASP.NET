@@ -1,0 +1,30 @@
+2022-03-17 21:38:50.2099|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:11303 
+2022-03-17 21:38:50.2418|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-17 21:38:50.2418|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-17 21:38:50.2470|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-17 21:40:07.6727|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:9763 
+2022-03-17 21:40:07.6983|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-17 21:40:07.7004|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-17 21:40:07.7162|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-17 21:54:08.5851|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:33235 
+2022-03-17 21:54:08.6112|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-17 21:54:08.6112|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-17 21:54:08.6112|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-17 21:54:57.8870|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:26029 
+2022-03-17 21:54:57.9112|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-17 21:54:57.9112|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-17 21:54:57.9112|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-17 21:55:38.3244|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:7987 
+2022-03-17 21:55:38.3517|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-17 21:55:38.3517|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-17 21:55:38.3565|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-17 21:57:15.3821|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:8523 
+2022-03-17 21:57:15.4102|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-17 21:57:15.4102|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-17 21:57:15.4102|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
+2022-03-17 21:58:06.9922|Microsoft.AspNetCore.Identity.UserManager|WARN|User 8b195b95-5311-456e-8857-3f2265d73acc password validation failed: PasswordRequiresNonAlphanumeric;PasswordRequiresLower;PasswordRequiresUpper. 
+2022-03-17 21:58:41.8864|Microsoft.AspNetCore.Identity.UserManager|WARN|User 5769e491-3f78-4461-8356-00975f0061e3 password validation failed: PasswordRequiresNonAlphanumeric. 
+2022-03-17 22:21:06.9358|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:37044 
+2022-03-17 22:21:06.9597|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-03-17 22:21:06.9597|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-03-17 22:21:06.9597|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET_Core\ASP.NETCore_Learn01\WebApplication1 
