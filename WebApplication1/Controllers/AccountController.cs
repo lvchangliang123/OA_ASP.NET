@@ -48,6 +48,11 @@ namespace WebApplication1.Controllers
                 };
                 var result = await userManager.CreateAsync(user, registerViewModel.Password);
                 if (result.Succeeded) {
+                    //如果用户登录为Admin，创建的角色后重定向到ListUsers的视图列表
+                    if (signInManager.IsSignedIn(User)&&User.IsInRole("Admin")) {
+                        return RedirectToAction("ListUsers", "Admin");
+                    }
+                    //否则重定向到Student控制器的Index页面
                     await signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Student");
                 }
@@ -109,6 +114,12 @@ namespace WebApplication1.Controllers
                 return Json($"邮箱:{email} 已经被注册使用!");
             }
 
+        }
+
+        [HttpGet]
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
 
     }

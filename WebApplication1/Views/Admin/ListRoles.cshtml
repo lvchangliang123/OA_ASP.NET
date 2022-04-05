@@ -14,7 +14,14 @@
             </div>
             <div class="card-footer">
                 <a asp-controller="Admin" asp-action="EditRole" asp-route-id="@role.Id" class="btn btn-primary">编辑</a>
-                <a href="#" class="btn btn-primary">删除</a>
+                <span id="confirmDeleteSpan_@role.Id" style="display:none">
+                    <span>确定需要删除吗?</span>
+                    <button type="submit" class="btn btn-danger">是</button>
+                    <a href="#" class="btn btn-primary" onclick="confirmDelete('@role.Id', false)">否</a>
+                </span>
+                <span id="deleteSpan_@role.Id">
+                    <a href="#" class="btn btn-primary" onclick="confirmDelete('@role.Id', true)">删除</a>
+                </span>
             </div>
         </div>
     }
@@ -30,4 +37,8 @@ else
             <a asp-controller="Admin" asp-action="CreateRole" style="width:auto" class="btn btn-primary">创建角色</a>
         </div>
     </div>
+}
+
+@section Scripts{ 
+<script src="~/js/CustomScript.js" asp-append-version="true"></script>
 }

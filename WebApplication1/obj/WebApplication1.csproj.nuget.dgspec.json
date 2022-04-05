@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ASP.NET_Core\\ASP.NETCore_Learn01\\WebApplication1\\WebApplication1.csproj": {}
+    "E:\\ASP.NET\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "E:\\ASP.NET_Core\\ASP.NETCore_Learn01\\WebApplication1\\WebApplication1.csproj": {
+    "E:\\ASP.NET\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ASP.NET_Core\\ASP.NETCore_Learn01\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "E:\\ASP.NET\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "E:\\ASP.NET_Core\\ASP.NETCore_Learn01\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "E:\\ASP.NET\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\ASP.NET_Core\\ASP.NETCore_Learn01\\WebApplication1\\obj\\",
+        "outputPath": "E:\\ASP.NET\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

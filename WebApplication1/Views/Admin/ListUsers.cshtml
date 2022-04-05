@@ -1,0 +1,53 @@
+﻿@using WebApplication1.Models;
+@model IEnumerable<ApplicationUser>
+@{ ViewBag.Title = "用户列表";}
+
+<h1>所有用户</h1>
+@if (Model.Any())
+{
+    <a asp-action="Register" asp-controller="Account" class="btn btn-primary mb-3" style="width:auto">
+        创建用户
+    </a>
+    foreach (var user in Model)
+    {
+        <div class="card mb-3">
+            <div class="card-header">
+                用户Id:@user.Id
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@user.UserName</h5>
+            </div>
+            <div class="card-footer">
+                <a asp-action="EditUser" asp-controller="Admin" asp-route-id="@user.Id" class="btn btn-primary">编辑</a>
+                @*<a asp-action="DeleteUser" asp-controller="Admin" asp-route-id="@user.Id" class="btn btn-primary">删除</a>*@
+                @*<button type="submit" onclick="return confirm('确定要删除用户:@user.UserName\吗?')" class="btn btn-danger">
+                    删除
+                </button>*@
+                <span id="confirmDeleteSpan_@user.Id" style="display:none">
+                    <span>确定需要删除吗?</span>
+                    <button type="submit" class="btn btn-danger">是</button>
+                    <a href="#" class="btn btn-primary" onclick="confirmDelete('@user.Id', false)">否</a>
+                </span>
+                <span id="deleteSpan_@user.Id">
+                    <a href="#" class="btn btn-primary" onclick="confirmDelete('@user.Id', true)">删除</a>
+                </span>
+            </div>
+        </div>
+    }
+
+}
+else
+{
+        <div class="card">
+            <div class="card-header">
+                尚未创建用户
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">单击店下面按钮创建用户</h5>
+            </div>
+            <div class="card-footer">
+                <a style="width:auto" asp-controller="Account" asp-action="Register" class="btn btn-primary">编辑</a>
+            </div>
+        </div>
+}
+

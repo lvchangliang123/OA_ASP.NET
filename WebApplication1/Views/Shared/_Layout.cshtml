@@ -89,14 +89,31 @@
                         <a class="nav-link" asp-controller="Student" asp-action="Index">学生列表</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Student" asp-action="Create">创建学生</a>
+                        <a class="nav-link" asp-controller="Student" asp-action="Create">添加学生</a>
                     </li>
-                    <li class="nav-item">
+                    @*<li class="nav-item">
                         <a class="nav-link" asp-controller="Admin" asp-action="CreateRole">创建角色</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Admin" asp-action="ListRoles">角色列表</a>
+                    </li>*@
+                    @*@if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {*@
+                        @*<li class="nav-item">
+                            <a class="nav-link" asp-controller="Admin" asp-action="ListRoles">管理</a>
+                        </li>*@
+
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            管理
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" asp-controller="Admin" asp-action="ListUsers">用户列表</a>
+                            <a class="dropdown-item" asp-controller="Admin" asp-action="ListRoles">角色列表</a>
+                        </div>
                     </li>
+
+                    @*  *@<!--}-->
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     @if (signInManager.IsSignedIn(User))
@@ -125,6 +142,7 @@
     </div>
     @if (IsSectionDefined("Scripts"))
     {@RenderSection("Scripts", required: false)}
+    <script src="~/js/CustomScript.js"></script>
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>

@@ -34,6 +34,7 @@ namespace WebApplication1.Controllers
             return View("NotFound");
         }
 
+        [AllowAnonymous]
         [Route("Error")]
         public IActionResult Error()
         {

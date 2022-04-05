@@ -1,0 +1,89 @@
+2022-04-05 09:25:56.1821|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:37502 
+2022-04-05 09:25:56.2124|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 09:25:56.2124|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 09:25:56.2124|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 09:26:37.1580|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:15926 
+2022-04-05 09:26:37.1847|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 09:26:37.1847|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 09:26:37.1847|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 09:28:41.7341|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:39875 
+2022-04-05 09:28:41.7591|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 09:28:41.7591|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 09:28:41.7591|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 10:05:55.6475|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:4097 
+2022-04-05 10:05:55.6724|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 10:05:55.6747|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 10:05:55.6747|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 10:06:03.9199|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+WebApplication1.Controllers.AdminController.EditUser (WebApplication1)
+WebApplication1.Controllers.AdminController.ListUsers (WebApplication1)
+WebApplication1.Controllers.AdminController.Index (WebApplication1)
+2022-04-05 10:06:56.8944|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:9096 
+2022-04-05 10:06:56.9184|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 10:06:56.9184|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 10:06:56.9184|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 10:26:28.1701|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:44586 
+2022-04-05 10:26:28.1940|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 10:26:28.1940|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 10:26:28.1940|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 10:45:54.4188|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:14681 
+2022-04-05 10:45:54.4471|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 10:45:54.4471|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 10:45:54.4471|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 10:46:50.5470|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:19142 
+2022-04-05 10:46:50.5707|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 10:46:50.5707|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 10:46:50.5707|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 10:48:04.2869|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:1586 
+2022-04-05 10:48:04.3134|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 10:48:04.3158|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 10:48:04.3158|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 10:49:46.6379|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:20406 
+2022-04-05 10:49:46.6661|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 10:49:46.6661|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 10:49:46.6661|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 10:51:35.7129|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:41848 
+2022-04-05 10:51:35.7369|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 10:51:35.7369|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 10:51:35.7369|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 17:05:18.8212|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:26393 
+2022-04-05 17:05:18.8550|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 17:05:18.8550|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 17:05:18.8550|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 17:07:57.2286|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:26508 
+2022-04-05 17:07:57.2533|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 17:07:57.2533|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 17:07:57.2533|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 17:07:58.4182|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. Option 'trusted_connection' not supported.
+2022-04-05 17:07:58.5591|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An exception was thrown attempting to execute the error handler. Option 'trusted_connection' not supported.
+2022-04-05 17:07:58.6842|Microsoft.AspNetCore.Server.Kestrel|ERROR|Connection id "0HMGMSF3C4PIF", Request id "0HMGMSF3C4PIF:00000001": An unhandled exception was thrown by the application. Option 'trusted_connection' not supported.
+2022-04-05 17:09:21.5828|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:7771 
+2022-04-05 17:09:21.6084|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 17:09:21.6084|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 17:09:21.6129|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 17:09:22.2532|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. Option 'trusted_connection' not supported.
+2022-04-05 17:09:22.4145|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An exception was thrown attempting to execute the error handler. Option 'trusted_connection' not supported.
+2022-04-05 17:09:22.5281|Microsoft.AspNetCore.Server.Kestrel|ERROR|Connection id "0HMGMSFSH4MI6", Request id "0HMGMSFSH4MI6:00000001": An unhandled exception was thrown by the application. Option 'trusted_connection' not supported.
+2022-04-05 17:10:17.1201|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:33379 
+2022-04-05 17:10:17.1481|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 17:10:17.1481|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 17:10:17.1481|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 17:10:17.6121|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. Option 'trusted_connection' not supported.
+2022-04-05 17:10:17.7617|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An exception was thrown attempting to execute the error handler. Option 'trusted_connection' not supported.
+2022-04-05 17:10:17.8599|Microsoft.AspNetCore.Server.Kestrel|ERROR|Connection id "0HMGMSGD14R1S", Request id "0HMGMSGD14R1S:00000001": An unhandled exception was thrown by the application. Option 'trusted_connection' not supported.
+2022-04-05 17:11:21.5337|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:21167 
+2022-04-05 17:11:21.5619|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 17:11:21.5646|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 17:11:21.5646|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 17:11:21.9981|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. Option 'multipleactiveresultsets' not supported.
+2022-04-05 17:11:22.1665|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An exception was thrown attempting to execute the error handler. Option 'multipleactiveresultsets' not supported.
+2022-04-05 17:11:22.2549|Microsoft.AspNetCore.Server.Kestrel|ERROR|Connection id "0HMGMSH070PNQ", Request id "0HMGMSH070PNQ:00000001": An unhandled exception was thrown by the application. Option 'multipleactiveresultsets' not supported.
+2022-04-05 17:14:44.0679|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:38364 
+2022-04-05 17:14:44.0933|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 17:14:44.0933|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 17:14:44.0975|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-05 22:45:55.2684|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:12482 
+2022-04-05 22:45:55.3003|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-05 22:45:55.3003|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-05 22:45:55.3003|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 

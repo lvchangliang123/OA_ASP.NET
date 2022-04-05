@@ -85,7 +85,7 @@ namespace WebApplication1
 
             //若要使用自定义路由规则，请使用app.UseMvc()方法，按照规则添加(***还是使用的MVC默认路由规则***)
 
-            app.UseAuthentication();    //添加鉴权中间件 找出解析请求携带的信息
+            app.UseAuthentication();    //添加授权中间件 找出解析请求携带的信息
             app.UseAuthorization();     //添加验证中间件,在添加路由中间件之前添加，目的是到达路由之前进行验证
 
 
