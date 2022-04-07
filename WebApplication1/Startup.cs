@@ -61,6 +61,26 @@ namespace WebApplication1
             });
             //添加Identity的选项配置依赖
 
+
+            
+            services.AddAuthorization(options =>
+            {
+                //策略结合声明的授权
+                options.AddPolicy("DeleteRolePolicy", policy => policy.RequireClaim("Delete Role"));
+                options.AddPolicy("AdminRolePolicy", policy => policy.RequireRole("Admin"));
+                //策略结合多个角色进行授权
+                options.AddPolicy("SuperAdminPolicy", policy => policy.RequireRole("Admin", "User", "SuperManager"));
+                options.AddPolicy("EditRolePolicy", policy => policy.RequireClaim("Edit Role"));
+
+            });
+
+            services.ConfigureApplicationCookie(options => {
+                options.AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Admin/AccessDenied");
+                options.Cookie.Name = "MockSchoolCookieName";
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+                options.SlidingExpiration = true;
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

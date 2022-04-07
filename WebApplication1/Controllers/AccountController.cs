@@ -116,11 +116,6 @@ namespace WebApplication1.Controllers
 
         }
 
-        [HttpGet]
-        public IActionResult AccessDenied()
-        {
-            return View();
-        }
 
     }
 }

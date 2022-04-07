@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<IdentityRole>
 @{ViewBag.Title = "角色列表";}
+<!--为了检查登录的用户是否满足EditRolePolicy，注入服务-->
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService authorizationService
+
 
 <h1>角色列表</h1>
 @if (Model.Any())
@@ -13,7 +17,12 @@
                 <h5 class="card-title">@role.Name</h5>
             </div>
             <div class="card-footer">
-                <a asp-controller="Admin" asp-action="EditRole" asp-route-id="@role.Id" class="btn btn-primary">编辑</a>
+                <!--检查是否具有编辑策略-->
+                @if ((await authorizationService.AuthorizeAsync(User, "EditRolePolicy")).Succeeded)
+                {
+                    <a asp-controller="Admin" asp-action="EditRole" asp-route-id="@role.Id" class="btn btn-primary">编辑</a>
+                }
+
                 <span id="confirmDeleteSpan_@role.Id" style="display:none">
                     <span>确定需要删除吗?</span>
                     <button type="submit" class="btn btn-danger">是</button>

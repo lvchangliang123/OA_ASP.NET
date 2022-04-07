@@ -1,0 +1,24 @@
+2022-04-07 21:51:23.4704|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:42325 
+2022-04-07 21:51:23.5045|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-07 21:51:23.5045|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-07 21:51:23.5045|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-07 22:16:39.1116|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:18668 
+2022-04-07 22:16:39.1357|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-07 22:16:39.1357|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-07 22:16:39.1357|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-07 22:17:20.9510|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:9951 
+2022-04-07 22:17:20.9762|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-07 22:17:20.9762|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-07 22:17:20.9762|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-07 22:18:05.5653|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+WebApplication1.Controllers.AccountController.IsEmailInUse (WebApplication1)
+WebApplication1.Controllers.AccountController.AccessDenied (WebApplication1)
+2022-04-07 22:28:12.6478|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:47161 
+2022-04-07 22:28:12.6719|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-07 22:28:12.6741|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-07 22:28:12.6741|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-07 22:29:32.7337|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:19664 
+2022-04-07 22:29:32.7606|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-07 22:29:32.7606|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-07 22:29:32.7606|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 

@@ -75,6 +75,7 @@ namespace WebApplication1.Controllers
         #region 编辑角色
         [HttpGet]
         [Route("EditRole")]
+        [Authorize(Policy ="EditRolePolicy")]
         public async Task<IActionResult> EditRole(string id)
         {
             var role = await roleManager.FindByIdAsync(id);
@@ -414,6 +415,15 @@ namespace WebApplication1.Controllers
         }
 
 
+        #endregion
+
+        #region 拒绝访问路由
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
         #endregion
 
     }

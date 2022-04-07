@@ -154,9 +154,9 @@ E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.csproj.CopyCo
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.dll
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.pdb
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.genruntimeconfig.cache
-E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ListUsers.cshtml.g.cs
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Admin\EditUser.cshtml.g.cs
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Shared\NotFound.cshtml.g.cs
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ManageUserRoles.cshtml.g.cs
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Admin\ManageUserClaims.cshtml.g.cs
+E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Admin\AccessDenied.cshtml.g.cs
