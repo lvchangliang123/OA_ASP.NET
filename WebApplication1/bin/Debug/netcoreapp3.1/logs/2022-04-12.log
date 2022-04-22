@@ -1,0 +1,110 @@
+2022-04-12 20:37:56.7625|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:47844 
+2022-04-12 20:37:56.7940|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 20:37:56.7940|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 20:37:56.7940|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 20:38:38.4178|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 20:43:25.7191|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 20:47:51.4913|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:10949 
+2022-04-12 20:47:51.5166|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 20:47:51.5190|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 20:47:51.5190|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 20:48:07.6668|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 20:49:14.1860|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:43531 
+2022-04-12 20:49:14.2161|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 20:49:14.2161|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 20:49:14.2212|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 20:50:11.7893|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 20:50:41.1460|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:5153 
+2022-04-12 20:50:41.1722|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 20:50:41.1751|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 20:50:41.1751|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 20:53:03.8131|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:20290 
+2022-04-12 20:53:03.8401|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 20:53:03.8401|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 20:53:03.8401|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 20:53:11.4157|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 21:05:37.9600|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:8083 
+2022-04-12 21:05:37.9849|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:05:37.9875|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:05:37.9875|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:07:30.6273|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:25600 
+2022-04-12 21:07:30.6554|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:07:30.6554|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:07:30.6604|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:08:55.2951|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 21:11:58.0935|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:24838 
+2022-04-12 21:11:58.1168|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:11:58.1168|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:11:58.1206|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:21:46.5883|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:17254 
+2022-04-12 21:21:46.6146|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:21:46.6146|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:21:46.6146|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:22:36.4666|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:47104 
+2022-04-12 21:22:36.4919|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:22:36.4919|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:22:36.4919|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:24:59.7161|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 21:25:25.1859|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 21:25:31.4244|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:12565 
+2022-04-12 21:25:31.4517|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:25:31.4517|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:25:31.4555|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:25:37.0889|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 21:31:11.3550|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:17400 
+2022-04-12 21:31:11.3793|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:31:11.3793|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:31:11.3793|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:32:38.6372|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 21:32:57.2929|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:5192 
+2022-04-12 21:32:57.3166|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:32:57.3166|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:32:57.3166|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:40:54.0894|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 21:42:14.0279|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 21:43:56.1880|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 21:45:24.8830|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:40420 
+2022-04-12 21:45:24.9080|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:45:24.9100|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:45:24.9100|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:45:33.7793|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error was encountered while handling the remote login.
+2022-04-12 21:48:10.9215|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:40078 
+2022-04-12 21:48:10.9470|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:48:10.9470|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:48:10.9470|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:49:06.7395|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:10258 
+2022-04-12 21:49:06.7652|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:49:06.7652|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:49:06.7695|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:49:58.6182|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:34448 
+2022-04-12 21:49:58.6439|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:49:58.6439|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:49:58.6439|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:51:32.3060|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:19566 
+2022-04-12 21:51:32.3338|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:51:32.3338|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:51:32.3338|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:52:35.8074|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:41421 
+2022-04-12 21:52:35.9242|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:52:35.9279|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:52:35.9279|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:58:28.0736|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:23346 
+2022-04-12 21:58:28.0986|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:58:28.0986|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:58:28.0986|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 21:59:00.2712|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:15919 
+2022-04-12 21:59:00.3132|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 21:59:00.3165|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 21:59:00.3165|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 22:01:39.9463|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:46832 
+2022-04-12 22:01:39.9762|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 22:01:39.9762|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 22:01:39.9762|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 22:02:34.2015|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:24271 
+2022-04-12 22:02:34.2259|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 22:02:34.2259|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 22:02:34.2259|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-12 22:03:18.4706|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:33975 
+2022-04-12 22:03:18.4955|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-12 22:03:18.4955|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-12 22:03:18.4955|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 

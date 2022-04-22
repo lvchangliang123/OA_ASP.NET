@@ -1,0 +1,104 @@
+2022-04-18 21:08:51.0479|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:46588 
+2022-04-18 21:08:51.1898|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 21:08:51.2201|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 21:08:51.2201|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 21:08:51.8012|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 21:30:15.5084|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:32638 
+2022-04-18 21:30:15.5324|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 21:30:15.5324|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 21:30:15.5324|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 21:30:15.8107|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 21:31:33.7986|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. Object reference not set to an instance of an object.
+2022-04-18 21:33:49.8522|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:30664 
+2022-04-18 21:33:49.8771|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 21:33:49.8771|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 21:33:49.8771|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 21:33:50.1909|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 21:34:17.7868|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'Error/Error' was not found. Searched locations: /Views/Account/Error/Error.cshtml, /Views/Shared/Error/Error.cshtml 
+2022-04-18 21:34:17.8219|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'Error/Error' was not found. The following locations were searched:
+/Views/Account/Error/Error.cshtml
+/Views/Shared/Error/Error.cshtml
+2022-04-18 21:34:57.7101|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:3747 
+2022-04-18 21:34:57.7433|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 21:34:57.7461|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 21:34:57.7461|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 21:34:57.8341|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 21:36:48.3802|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'Error' was not found. Searched locations: /Views/Account/Error.cshtml, /Views/Shared/Error.cshtml 
+2022-04-18 21:36:48.4136|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'Error' was not found. The following locations were searched:
+/Views/Account/Error.cshtml
+/Views/Shared/Error.cshtml
+2022-04-18 21:38:15.5881|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:44145 
+2022-04-18 21:38:15.6148|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 21:38:15.6148|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 21:38:15.6148|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 21:38:15.8113|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 21:39:21.7216|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:16911 
+2022-04-18 21:39:21.7477|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 21:39:21.7477|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 21:39:21.7477|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 21:39:22.0781|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 21:41:21.0638|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:15476 
+2022-04-18 21:41:21.0911|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 21:41:21.0911|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 21:41:21.0911|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 21:41:21.3511|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 21:43:13.2093|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'ConfirmEmail' was not found. Searched locations: /Views/Account/ConfirmEmail.cshtml, /Views/Shared/ConfirmEmail.cshtml 
+2022-04-18 21:43:13.2534|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'ConfirmEmail' was not found. The following locations were searched:
+/Views/Account/ConfirmEmail.cshtml
+/Views/Shared/ConfirmEmail.cshtml
+2022-04-18 21:46:43.1011|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'ConfirmEmail' was not found. Searched locations: /Views/Account/ConfirmEmail.cshtml, /Views/Shared/ConfirmEmail.cshtml 
+2022-04-18 21:46:43.1355|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'ConfirmEmail' was not found. The following locations were searched:
+/Views/Account/ConfirmEmail.cshtml
+/Views/Shared/ConfirmEmail.cshtml
+2022-04-18 21:48:10.1711|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:24496 
+2022-04-18 21:48:10.1959|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 21:48:10.1959|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 21:48:10.1996|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 21:48:10.4320|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 21:50:00.0476|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'ConfirmEmail' was not found. Searched locations: /Views/Account/ConfirmEmail.cshtml, /Views/Shared/ConfirmEmail.cshtml 
+2022-04-18 21:50:00.0855|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'ConfirmEmail' was not found. The following locations were searched:
+/Views/Account/ConfirmEmail.cshtml
+/Views/Shared/ConfirmEmail.cshtml
+2022-04-18 21:50:47.5422|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:43319 
+2022-04-18 21:50:47.5726|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 21:50:47.5746|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 21:50:47.5746|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 21:50:47.6603|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 21:50:56.8847|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'ConfirmEmail' was not found. Searched locations: /Views/Account/ConfirmEmail.cshtml, /Views/Shared/ConfirmEmail.cshtml 
+2022-04-18 21:50:56.9337|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'ConfirmEmail' was not found. The following locations were searched:
+/Views/Account/ConfirmEmail.cshtml
+/Views/Shared/ConfirmEmail.cshtml
+2022-04-18 21:51:12.0349|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:24410 
+2022-04-18 21:51:12.0631|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 21:51:12.0631|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 21:51:12.0631|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 21:51:12.3107|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 21:51:30.2197|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'ConfirmEmail' was not found. Searched locations: /Views/Account/ConfirmEmail.cshtml, /Views/Shared/ConfirmEmail.cshtml 
+2022-04-18 21:51:30.2541|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'ConfirmEmail' was not found. The following locations were searched:
+/Views/Account/ConfirmEmail.cshtml
+/Views/Shared/ConfirmEmail.cshtml
+2022-04-18 22:24:52.5075|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:15657 
+2022-04-18 22:24:52.5357|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 22:24:52.5357|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 22:24:52.5357|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 22:24:52.7903|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 22:25:55.4129|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:29765 
+2022-04-18 22:25:55.4418|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 22:25:55.4418|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 22:25:55.4418|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 22:25:55.5037|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 22:27:24.3335|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:29103 
+2022-04-18 22:27:24.3809|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 22:27:24.3809|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 22:27:24.3809|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 22:27:24.6050|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 22:27:58.1004|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:41923 
+2022-04-18 22:27:58.1484|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 22:27:58.1484|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 22:27:58.1553|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 22:27:58.2527|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-04-18 22:29:37.4657|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:8656 
+2022-04-18 22:29:37.4934|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-18 22:29:37.4934|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-18 22:29:37.4973|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-18 22:29:37.7446|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 

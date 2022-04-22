@@ -10,7 +10,7 @@ namespace WebApplication1.ViewModels
     {
         public EditUserViewModel()
         {
-            Claims = new List<string>();
+            Claims = new List<System.Security.Claims.Claim>();
             Roles = new List<string>();
         }
 
@@ -21,8 +21,8 @@ namespace WebApplication1.ViewModels
         [EmailAddress]
         public string Email { get; set; }
         public string City { get; set; }
-        public List<string> Claims { get; set; }
-        public List<string> Roles { get; set; }
+        public IList<System.Security.Claims.Claim> Claims { get; set; }
+        public IList<string> Roles { get; set; }
 
 
     }

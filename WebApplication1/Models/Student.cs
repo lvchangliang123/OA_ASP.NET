@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.DataRepositories;
@@ -22,6 +23,10 @@ namespace WebApplication1.Models
         //[RegularExpression(@"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$",ErrorMessage ="邮箱格式不正确")]
         public string Email { get; set; }
         public string PhotoPath { get; set; }
+
+        [NotMapped]
+        [Display(Name="加密ID")]
+        public string EncryptedId { get; set; }
 
     }
 

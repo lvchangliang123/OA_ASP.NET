@@ -69,7 +69,7 @@
         </div>
 
         <div class="card-footer">
-            <a asp-controller="Admin" asp-action="ManageUserRoles" asp-route-id="@Model.Id" style="width:auto" class="btn btn-primary">管理角色</a>
+            <a asp-controller="Admin" asp-action="ManageUserRoles" asp-route-userId="@Model.Id" style="width:auto" class="btn btn-primary">管理角色</a>
         </div>
 
     </div>
@@ -86,7 +86,7 @@
                 foreach (var claim in Model.Claims)
                 {
                     <h5 class="card-title">
-                        @claim
+                        @claim.Type:@claim.Value
                     </h5>
                 }
             }
@@ -99,7 +99,7 @@
         </div>
 
         <div class="card-footer">
-            <a asp-controller="Admin" asp-action="ManageUserClaims" asp-route-id="@Model.Id" style="width:auto" class="btn btn-primary">管理声明</a>
+            <a asp-controller="Admin" asp-action="ManageUserClaims" asp-route-userId="@Model.Id" style="width:auto" class="btn btn-primary">管理声明</a>
         </div>
 
     </div>

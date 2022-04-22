@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -17,18 +18,24 @@ namespace WebApplication1.Controllers
     {
         private readonly IStudentRepository _studentRepository;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IDataProtector _protector;
 
-        public StudentController(IStudentRepository studentRepository,IWebHostEnvironment webHostEnvironment)
+        public StudentController(IStudentRepository studentRepository,IWebHostEnvironment webHostEnvironment,IDataProtectionProvider dataProtectionProvider,Extensions.DataProtectionPurposeStrings dataProtectionPurposeStrings)
         {
             this._studentRepository = studentRepository;
             this._webHostEnvironment = webHostEnvironment;
+            this._protector = dataProtectionProvider.CreateProtector(dataProtectionPurposeStrings.StudentIdRouteValue);
         }
 
         [Route("Details/{id?}")]
         //属性路由支持分层
-        public ViewResult Details(int? id)
+        //public ViewResult Details(int? id)
+        public ViewResult Details(string id)
         {
-            var student = _studentRepository.GetStudentById(id ?? 1);
+            string decryptedId = _protector.Unprotect(id);
+            int decryptedStudentId=Convert.ToInt32(decryptedId);
+
+            var student = _studentRepository.GetStudentById(decryptedStudentId);
             if (student==null) {
                 Response.StatusCode = 404;
                 return View("StudentNotFound", id);
@@ -46,7 +53,10 @@ namespace WebApplication1.Controllers
         [Route("/")]
         public ViewResult Index()
         {
-            var students = _studentRepository.GetAllStudents();
+            //var students = _studentRepository.GetAllStudents();
+            var students = _studentRepository.GetAllStudents().Select(s => { s.EncryptedId = _protector.Protect(s.Id.ToString());
+                return s;
+            }).ToList();    //加密学生ID
             return View(students);
         }
 

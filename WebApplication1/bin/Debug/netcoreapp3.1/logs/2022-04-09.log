@@ -1,0 +1,99 @@
+2022-04-09 08:57:06.7786|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:39639 
+2022-04-09 08:57:06.8066|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 08:57:06.8156|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 08:57:06.8156|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 08:58:23.6728|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:11234 
+2022-04-09 08:58:23.7013|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 08:58:23.7013|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 08:58:23.7058|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 08:58:55.5095|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+WebApplication1.Controllers.AdminController.AccessDenied (WebApplication1)
+WebApplication1.Controllers.AdminController.ListUsers (WebApplication1)
+WebApplication1.Controllers.AdminController.Index (WebApplication1)
+2022-04-09 08:59:01.9608|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+WebApplication1.Controllers.AdminController.AccessDenied (WebApplication1)
+WebApplication1.Controllers.AdminController.ListUsers (WebApplication1)
+WebApplication1.Controllers.AdminController.Index (WebApplication1)
+2022-04-09 08:59:06.0509|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+WebApplication1.Controllers.AdminController.AccessDenied (WebApplication1)
+WebApplication1.Controllers.AdminController.ListUsers (WebApplication1)
+WebApplication1.Controllers.AdminController.Index (WebApplication1)
+2022-04-09 09:01:34.8093|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:45438 
+2022-04-09 09:01:34.8340|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:01:34.8340|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:01:34.8340|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:06:23.5769|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:43992 
+2022-04-09 09:06:23.6007|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:06:23.6007|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:06:23.6007|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:07:27.1722|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:13578 
+2022-04-09 09:07:27.2005|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:07:27.2005|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:07:27.2005|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:08:53.9391|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:7753 
+2022-04-09 09:08:53.9629|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:08:53.9629|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:08:53.9629|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:11:36.5076|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:7131 
+2022-04-09 09:11:36.5409|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:11:36.5409|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:11:36.5409|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:12:39.9020|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:40523 
+2022-04-09 09:12:39.9313|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:12:39.9313|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:12:39.9313|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:14:38.6546|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:44064 
+2022-04-09 09:14:38.6783|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:14:38.6783|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:14:38.6783|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:19:00.7313|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:13945 
+2022-04-09 09:19:00.7561|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:19:00.7561|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:19:00.7561|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:20:16.2403|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:34347 
+2022-04-09 09:20:16.2658|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:20:16.2682|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:20:16.2682|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:34:40.4104|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:47568 
+2022-04-09 09:34:40.4383|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:34:40.4404|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:34:40.4404|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:35:55.1191|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:29997 
+2022-04-09 09:35:55.1473|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:35:55.1473|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:35:55.1473|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:36:36.9708|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:1555 
+2022-04-09 09:36:36.9963|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:36:36.9963|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:36:36.9963|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:38:23.3164|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:23308 
+2022-04-09 09:38:23.3404|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:38:23.3404|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:38:23.3404|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:39:45.6374|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:15690 
+2022-04-09 09:39:45.6624|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:39:45.6624|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:39:45.6624|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:54:35.4908|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:28519 
+2022-04-09 09:54:35.5185|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:54:35.5185|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:54:35.5185|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:55:48.0197|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:18990 
+2022-04-09 09:55:48.0447|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:55:48.0447|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:55:48.0498|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:56:43.5125|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:31817 
+2022-04-09 09:56:43.5378|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:56:43.5378|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:56:43.5378|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 09:58:02.9979|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:25761 
+2022-04-09 09:58:03.0266|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 09:58:03.0266|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 09:58:03.0266|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-09 10:07:32.4481|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:31169 
+2022-04-09 10:07:32.4728|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-09 10:07:32.4728|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-09 10:07:32.4728|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 

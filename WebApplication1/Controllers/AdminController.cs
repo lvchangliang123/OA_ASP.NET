@@ -14,7 +14,7 @@ using WebApplication1.ViewModels;
 namespace WebApplication1.Controllers
 {
     [Route("Admin")]
-    //[Authorize(Roles ="Admin")]
+    [Authorize(Roles = "ADMIN")]
     //只有管理员角色才能管理角色
     public class AdminController : Controller
     {
@@ -75,7 +75,7 @@ namespace WebApplication1.Controllers
         #region 编辑角色
         [HttpGet]
         [Route("EditRole")]
-        [Authorize(Policy ="EditRolePolicy")]
+        [Authorize(Policy = "EditRolePolicy")]
         public async Task<IActionResult> EditRole(string id)
         {
             var role = await roleManager.FindByIdAsync(id);
@@ -185,6 +185,7 @@ namespace WebApplication1.Controllers
 
         #region 用户管理列举所有注册用户
         [HttpGet]
+        [Route("ListUsers")]
         public IActionResult ListUsers()
         {
             var users = userManager.Users.ToList();
@@ -210,8 +211,8 @@ namespace WebApplication1.Controllers
                 Email = user.Email,
                 UserName = user.UserName,
                 City = user.City,
-                Claims = userClaims.Select(c => c.Value).ToList(),
-                Roles = userRoles.ToList()
+                Claims = userClaims,
+                Roles = userRoles
             };
             return View(model);
         }
@@ -270,6 +271,7 @@ namespace WebApplication1.Controllers
         #region 删除角色
         [HttpPost]
         [Route("DeleteRole")]
+        [Authorize(Policy ="DeleteRolePolicy")]
         public async Task<IActionResult> DeleteRole(string id)
         {
             var role = await roleManager.FindByNameAsync(id);
@@ -405,7 +407,7 @@ namespace WebApplication1.Controllers
                 return View(model);
             }
             //添加页面上选中的所有声明信息
-            result = await userManager.AddClaimsAsync(user, model.Claims.Where(c => c.IsSelected).Select(c => new System.Security.Claims.Claim(c.ClaimType, c.ClaimType)));
+            result = await userManager.AddClaimsAsync(user, model.Claims.Where(c => c.IsSelected).Select(c => new System.Security.Claims.Claim(c.ClaimType, c.IsSelected?"true":"false")));
             if (!result.Succeeded) {
                 ModelState.AddModelError("", "无法向用户添加选定的声明");
                 return View(model);

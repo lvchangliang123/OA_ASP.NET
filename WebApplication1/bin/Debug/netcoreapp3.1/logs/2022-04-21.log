@@ -1,0 +1,5 @@
+2022-04-21 22:13:24.9698|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:34663 
+2022-04-21 22:13:25.0634|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-04-21 22:13:25.0793|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-04-21 22:13:25.0793|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-04-21 22:13:25.2413|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
