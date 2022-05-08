@@ -38,6 +38,7 @@
           "MrHuo.OAuth.Github": "1.1.1",
           "NLog.Web.AspNetCore": "4.10.0",
           "Pomelo.EntityFrameworkCore.MySql": "5.0.0",
+          "System.Linq.Dynamic.Core": "1.2.12",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -1078,6 +1079,17 @@
         },
         "compile": {
           "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {}
+        }
+      },
+      "System.Linq.Dynamic.Core/1.2.12": {
+        "runtime": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {
+            "assemblyVersion": "1.2.12.0",
+            "fileVersion": "1.2.12.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {}
         }
       },
       "System.Memory/4.5.3": {},
@@ -3173,6 +3185,13 @@
       "sha512": "sha512-lzJaeRZE4dvPmH9U65J8z9wsrWghlosNYEqwCTjOh5o/gCHHcTV6P6EcYj7xC22AHPYavYh8IUtIqH5MszW1rA==",
       "path": "system.identitymodel.tokens.jwt/6.15.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.15.0.nupkg.sha512"
+    },
+    "System.Linq.Dynamic.Core/1.2.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wJDLhidcJnLAJeZ4z10YVAxMm4rTW0zlYmUjriJTo4eGLHD5NKZOm6qFabkn5TinbfZ6LM9LeYFPyiQMpRly3Q==",
+      "path": "system.linq.dynamic.core/1.2.12",
+      "hashPath": "system.linq.dynamic.core.1.2.12.nupkg.sha512"
     },
     "System.Memory/4.5.3": {
       "type": "package",

@@ -1,6 +1,9 @@
-﻿@using WebApplication1.Extensions
-@model IEnumerable<WebApplication1.Models.Student>
-
+﻿@using WebApplication1.Dtos;
+@using WebApplication1.Extensions
+@model PaginationModel
+@{
+    ViewBag.Title = "学生列表页面";
+}
 @{ 
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -9,30 +12,114 @@
 <html>
 <head>
     <title>学生页面详情</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <div class="card-deck">
-        @foreach (var student in Model)
-        {
-            var photoPath = "~/UploadImages/" + (student.PhotoPath ?? "noimage.png");
-            <div class="card m-3">
-                <div class="card-header">
-                    <h3 class="card-title">@student.Name</h3>
-                </div>
-                <img class="card-img-top" src="@photoPath" asp-append-version="true" />
 
-                <div class="card-body text-center">
-                    <h5 class="card-title">主修科目：@student.Major.GetDisplayName()</h5>
-                </div>
+    <form asp-action="Index" method="post">
+        <div class="form-actions no-color">
+            <p>
+                请输入名称:
+                <input type="text" name="searchString" value="@ViewBag.CurrentFilter" />
+                <input type="submit" value="查询" class="btn btn-info" />
+                <a asp-action="Index">返回所有列表</a>
+                <a asp-action="Create">添加学生</a>
+            </p>
+        </div>
+    </form>
 
-                <div class="card-footer text-center">
-                    <a asp-controller="Student" asp-action="Details" asp-route-id="@student.EncryptedId" class="btn btn-info m-1">查看</a>
-                    <a asp-controller="Student" asp-action="Edit" asp-route-id="@student.EncryptedId" class="btn btn-primary m-1">编辑</a>
-                    <a href="#" class="btn btn-danger m-1">删除</a>
-                </div>
-            </div>
-        }
+    <!--新版布局-->
+
+    <div class=row>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">头像</th>
+                    <th scope="col" class="sort-link">
+                        <a asp-action="Index" asp-route-sortBy="Name">名字</a>
+                        <a class=pl-3 asp-action="Index" asp-route-sortBy="Name desc">降序</a>
+                    </th>
+                          <th scope="col" class="sort-link">
+                        <a asp-action="Index" asp-route-sortBy="Email">邮箱地址</a>
+                        <a class=pl-3 asp-action="Index" asp-route-sortBy="Email desc">降序</a>
+                    </th>
+                          <th scope="col" class="sort-link">
+                        <a asp-action="Index" asp-route-sortBy="Major">主修科目</a>
+                        <a class=pl-3 asp-action="Index" asp-route-sortBy="Major desc">降序</a>
+                    </th>
+                          <th scope="col" class="sort-link">
+                        <a asp-action="Index" asp-route-sortBy="EnrollmentDate">入学时间</a>
+                        <a class=pl-3 asp-action="Index" asp-route-sortBy="EnrollmentDate desc">降序</a>
+                    </th>
+                    <th scope="col">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model.Data) {
+                    var photoPath = "~/Imgs/noimage.png";
+                    if (student.PhotoPath != null) {
+                        photoPath = "~/UploadImages/" + student.PhotoPath;
+                    }
+                <tr>
+                    <td>
+                        <img class="table-img img-thumbnail" width=300px height=300px src="@photoPath" asp-append-version=true> 
+                    </td>
+                    <td scope=row>@student.Name</td>
+                    <td>@student.Email</td>
+                    <td>@student.Major.GetDisplayName()</td>
+                    <td>@student.EnrollmentDate.ToString("yyyy-MM-dd")</td>
+                    <td>
+                        <form method="post" asp-action="DeleteUser" asp-route-id="@student.Id">
+                            <a asp-controller="Student" class="btn btn-info" asp-action="Details" asp-route-id="@student.EncryptedId">
+                                查看
+                            </a>
+                            <a asp-controller="Student" class="btn btn-primary m-1" asp-action="Edit" asp-route-id="@student.EncryptedId">
+                                编辑
+                            </a>
+                            <span id="confirmDeleteSpan_@student.Id" style="display:none">
+                                <span>您确定要删除吗?</span>
+                                <button type="submit" class="btn btn-danger">是</button>
+                                <a href="#" class="btn btn-primary" onclick="confirmDelete('@student.Id',false)">否</a>
+                            </span>
+                            <span id="deleteSpan_@student.Id">
+                                <a asp-controller="Student" asp-action="DeleteUser" asp-route-id="@student.Id" class="btn btn-danger" onclick="confirmDelete('@student.Id',true)">删除</a>
+                            </span>
+                        </form>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
     </div>
+    
+    <div class="col-md-2 col-md-offset-5" style="float:none;display:block;margin-left:auto;margin-right:auto">
+        <ul class=pagination>
+            <li class="page-item @(!Model.ShowFirst?"disabled":"")">
+                <a asp-route-CurrentPage="1" class="page-link">
+                    首页
+                </a>
+            </li>
+            <li class="page-item @(!Model.ShowPrevious? "disabled":"")">
+                <a asp-route-CurrentPage="@(Model.CurrentPage -1)" class="page-link">
+                    上一页
+                </a>
+            </li>
+            <li class="page-item  @(!Model.ShowNext? "disabled":"")">
+                <a asp-route-CurrentPage="@(Model.CurrentPage + 1)" class="page-link">
+                下一页</a>
+            </li>
+            <li class="page-item  @(!Model.ShowLast? "disabled":"")">
+                <a asp-route-CurrentPage="@Model.TotalPages" class="page-link">
+                    尾页
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="~/js/CustomScript.js" asp-append-version="true"></script>
+
+    <!--新版布局-->
 
 </body>
 </html>

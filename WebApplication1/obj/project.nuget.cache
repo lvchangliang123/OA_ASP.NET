@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RUlhIadIquCb5ctdh1GK78gYZTTfR9ud+mZA99nE0sgateaFjrktlvugSa4xWWU9zzXKRfpccC90AXlFD5g4jw==",
+  "dgSpecHash": "xk4dcITOvSI/4QbSiiO64x3S9ZC+fDqrxdTk2L1SkAeP/OVilKrFSDmRfYNMohk+P9mQ390twm4UPeesOzlzSA==",
   "success": true,
   "projectFilePath": "E:\\ASP.NET\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
@@ -66,6 +66,7 @@
     "C:\\Users\\admin\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.drawing.common\\4.6.0\\system.drawing.common.4.6.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.15.0\\system.identitymodel.tokens.jwt.6.15.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.linq.dynamic.core\\1.2.12\\system.linq.dynamic.core.1.2.12.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.security.accesscontrol\\4.6.0\\system.security.accesscontrol.4.6.0.nupkg.sha512",

@@ -1,0 +1,67 @@
+2022-05-06 21:46:50.5063|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:46034 
+2022-05-06 21:46:50.5444|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 21:46:50.5444|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 21:46:50.5444|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 21:46:50.8637|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 21:49:19.8571|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:1525 
+2022-05-06 21:49:19.8836|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 21:49:19.8836|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 21:49:19.8889|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 21:49:20.0142|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 21:51:09.9878|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:47482 
+2022-05-06 21:51:10.0165|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 21:51:10.0165|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 21:51:10.0165|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 21:51:10.1506|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 21:52:21.1821|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:4214 
+2022-05-06 21:52:21.2280|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 21:52:21.2280|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 21:52:21.2329|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 21:52:21.3343|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 21:52:30.5918|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|ERROR|The view 'IndexSearch' was not found. Searched locations: /Views/Student/IndexSearch.cshtml, /Views/Shared/IndexSearch.cshtml 
+2022-05-06 21:52:30.7159|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The view 'IndexSearch' was not found. The following locations were searched:
+/Views/Student/IndexSearch.cshtml
+/Views/Shared/IndexSearch.cshtml
+2022-05-06 21:53:26.1659|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:38487 
+2022-05-06 21:53:26.1927|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 21:53:26.1927|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 21:53:26.1927|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 21:53:26.5021|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 21:53:56.8913|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:42429 
+2022-05-06 21:53:56.9159|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 21:53:56.9187|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 21:53:56.9187|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 21:53:57.0569|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 21:54:38.5486|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:34803 
+2022-05-06 21:54:38.5760|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 21:54:38.5760|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 21:54:38.5760|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 21:54:38.9688|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 22:43:53.1452|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:42585 
+2022-05-06 22:43:53.1700|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 22:43:53.1700|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 22:43:53.1700|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 22:43:53.2924|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 22:43:54.8322|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[WebApplication1.Models.Student]', but this ViewDataDictionary instance requires a model item of type 'WebApplication1.Dtos.PaginationModel'.
+2022-05-06 22:48:31.2479|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:14298 
+2022-05-06 22:48:31.2767|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 22:48:31.2792|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 22:48:31.2792|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 22:48:31.4019|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 22:48:32.8549|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[WebApplication1.Models.Student]', but this ViewDataDictionary instance requires a model item of type 'WebApplication1.Dtos.PaginationModel'.
+2022-05-06 22:50:29.7891|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:10462 
+2022-05-06 22:50:29.8155|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 22:50:29.8155|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 22:50:29.8155|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 22:50:30.1258|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 22:50:31.6616|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[WebApplication1.Models.Student]', but this ViewDataDictionary instance requires a model item of type 'WebApplication1.Dtos.PaginationModel'.
+2022-05-06 22:54:37.0991|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:36140 
+2022-05-06 22:54:37.1261|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 22:54:37.1261|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 22:54:37.1261|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 22:54:37.3564|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-06 22:55:56.6331|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:44098 
+2022-05-06 22:55:56.6569|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-06 22:55:56.6569|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-06 22:55:56.6569|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-06 22:55:56.9699|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 

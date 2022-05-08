@@ -28,6 +28,12 @@ namespace WebApplication1.Models
         [Display(Name="加密ID")]
         public string EncryptedId { get; set; }
 
+        [Display(Name ="入学时间")]
+        public DateTime EnrollmentDate { get; set; }
+
+        //导航属性，一对多
+        public ICollection<StudentCourse> StudentCourses { get; set; }
+
     }
 
   

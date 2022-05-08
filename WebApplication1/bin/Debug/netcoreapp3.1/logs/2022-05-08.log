@@ -1,0 +1,105 @@
+2022-05-08 10:01:15.4158|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:9346 
+2022-05-08 10:01:15.4434|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:01:15.4434|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:01:15.4434|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:01:15.6757|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 10:03:36.9918|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:36985 
+2022-05-08 10:03:37.0175|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:03:37.0175|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:03:37.0175|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:03:37.1572|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 10:04:54.5209|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:24737 
+2022-05-08 10:04:54.5494|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:04:54.5494|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:04:54.5494|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:04:54.7905|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 10:05:23.9128|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:34186 
+2022-05-08 10:05:23.9369|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:05:23.9369|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:05:23.9369|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:05:24.0286|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 10:07:46.3010|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:42959 
+2022-05-08 10:07:46.3315|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:07:46.3315|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:07:46.3315|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:07:46.4454|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 10:09:15.3107|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:18244 
+2022-05-08 10:09:15.3364|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:09:15.3364|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:09:15.3364|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:09:15.4727|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 10:09:53.4388|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:29461 
+2022-05-08 10:09:53.4649|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:09:53.4671|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:09:53.4671|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:09:53.6624|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 10:10:10.9297|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:4826 
+2022-05-08 10:10:10.9542|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:10:10.9542|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:10:10.9542|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:10:11.0914|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 10:12:04.3214|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:14608 
+2022-05-08 10:12:04.3452|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:12:04.3452|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:12:04.3452|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:12:04.5670|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 10:13:12.5515|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:24393 
+2022-05-08 10:13:12.5751|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:13:12.5770|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:13:12.5770|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:13:12.8574|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 10:13:34.5812|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:7664 
+2022-05-08 10:13:34.6061|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 10:13:34.6083|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 10:13:34.6083|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 10:13:34.9263|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 11:15:42.3748|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:10717 
+2022-05-08 11:15:42.3989|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 11:15:42.3989|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 11:15:42.3989|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 11:15:42.7147|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 11:19:10.1667|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:35942 
+2022-05-08 11:19:10.1967|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 11:19:10.1967|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 11:19:10.1967|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 11:19:10.4819|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 11:21:11.3022|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:19352 
+2022-05-08 11:21:11.3291|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 11:21:11.3291|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 11:21:11.3291|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 11:21:11.4801|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 11:27:20.7938|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:16659 
+2022-05-08 11:27:20.8307|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 11:27:20.8307|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 11:27:20.8307|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 11:27:20.9214|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 11:28:02.7413|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:34976 
+2022-05-08 11:28:02.7669|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 11:28:02.7669|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 11:28:02.7669|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 11:28:02.8751|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 11:29:04.8619|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:40371 
+2022-05-08 11:29:04.8881|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 11:29:04.8901|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 11:29:04.8901|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 11:29:05.1525|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 11:31:18.8551|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:9293 
+2022-05-08 11:31:18.8793|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 11:31:18.8793|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 11:31:18.8793|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 11:31:19.1657|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 11:32:04.4813|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:11791 
+2022-05-08 11:32:04.5052|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 11:32:04.5052|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 11:32:04.5052|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 11:32:04.6847|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 11:32:37.0207|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:35815 
+2022-05-08 11:32:37.0449|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 11:32:37.0476|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 11:32:37.0476|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 11:32:37.2037|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 11:34:33.3484|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:22298 
+2022-05-08 11:34:33.3753|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 11:34:33.3753|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 11:34:33.3753|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 11:34:33.5389|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 

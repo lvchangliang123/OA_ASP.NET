@@ -212,6 +212,22 @@ namespace WebApplication1.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("WebApplication1.Models.Course", b =>
+                {
+                    b.Property<int>("CourseID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Credits")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("CourseID");
+
+                    b.ToTable("Course");
+                });
+
             modelBuilder.Entity("WebApplication1.Models.Student", b =>
                 {
                     b.Property<int>("Id")
@@ -220,6 +236,9 @@ namespace WebApplication1.Migrations
 
                     b.Property<string>("Email")
                         .HasColumnType("longtext");
+
+                    b.Property<DateTime>("EnrollmentDate")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int?>("Major")
                         .HasColumnType("int");
@@ -232,17 +251,39 @@ namespace WebApplication1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students");
+                    b.ToTable("Student");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             Email = "123456789@163.com",
+                            EnrollmentDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Major = 1,
                             Name = "德莱厄斯",
                             PhotoPath = "~/Imgs/nuoshou.jpeg"
                         });
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.StudentCourse", b =>
+                {
+                    b.Property<int>("StudentsCourseId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("CourseID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentID")
+                        .HasColumnType("int");
+
+                    b.HasKey("StudentsCourseId");
+
+                    b.HasIndex("CourseID");
+
+                    b.HasIndex("StudentID");
+
+                    b.ToTable("StudentCourse");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -294,6 +335,35 @@ namespace WebApplication1.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.StudentCourse", b =>
+                {
+                    b.HasOne("WebApplication1.Models.Course", "Course")
+                        .WithMany("StudentCourses")
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WebApplication1.Models.Student", "Student")
+                        .WithMany("StudentCourses")
+                        .HasForeignKey("StudentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.Course", b =>
+                {
+                    b.Navigation("StudentCourses");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.Student", b =>
+                {
+                    b.Navigation("StudentCourses");
                 });
 #pragma warning restore 612, 618
         }

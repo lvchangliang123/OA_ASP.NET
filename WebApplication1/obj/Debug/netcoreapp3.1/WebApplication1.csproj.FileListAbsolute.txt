@@ -195,3 +195,5 @@ E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPass
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPasswordConfirmation.cshtml.g.cs
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Account\ChangePassword.cshtml.g.cs
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Account\ChangePasswordConfirmation.cshtml.g.cs
+E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccountLocked.cshtml.g.cs
+E:\ASP.NET\WebApplication1\bin\Debug\netcoreapp3.1\System.Linq.Dynamic.Core.dll

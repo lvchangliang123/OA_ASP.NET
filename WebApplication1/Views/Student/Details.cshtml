@@ -1,5 +1,4 @@
-﻿
-@using WebApplication1.Extensions
+﻿@using WebApplication1.Extensions
 @model WebApplication1.ViewModels.StudentDetailsViewModel
 <!--这里虽然没有指定Layout布局页面设置，但是还是遵守了默认的——Layout.cshtml-->
 <!DOCTYPE html>
@@ -9,16 +8,6 @@
     <title>学生页面详情</title>
 </head>
 <body>
-    @*<h3>@Model.PageTitle</h3>
-    <div>
-        姓名：@Model.Student.Name
-    </div>
-    <div>
-        邮箱：@Model.Student.Email
-    </div>
-    <div>
-        主修科目：@Model.Student.Major
-    </div>*@
     @{ 
         var photoPath = "~/UploadImages/" + (Model.Student.PhotoPath ?? "noimage.png");
     }
@@ -30,14 +19,15 @@
                     <h1>@Model.Student.Name</h1>
                 </div>
                 <div class="card-body text-center">
-                    <img class="card-img-top" src="@photoPath" asp-append-version="true"/>
+                    <img class="card-img-top imageThumbnail" src="@photoPath" asp-append-version="true"/>
                     <h4>学生ID：@Model.Student.Id</h4>
                     <h4>邮箱：@Model.Student.Email</h4>
                     <h4>主修科目：@Model.Student.Major.GetDisplayName()</h4>
+                    <h4>入学时间：@Model.Student.EnrollmentDate.ToString("yyyy-MM-dd")</h4>
                 </div>
                 <div class="card-footer text-center">
                     <a asp-action="Index" asp-controller="Student" class="btn btn-info">返回</a>
-                    <a href="#" class="btn btn-primary">编辑</a>
+                    <a asp-action="Edit" asp-controller="Student" asp-route-id="@Model.Student.EncryptedId" class="btn btn-primary">编辑</a>
                     <a href="#" class="btn btn-danger">删除</a>
                 </div>
             </div>

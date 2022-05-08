@@ -1,8 +1,9 @@
 ﻿@using WebApplication1.Models.EnumTypes
 @using WebApplication1.DataRepositories
 @using WebApplication1.ViewModels
+@using WebApplication1.Infrastructure.Repositories
 @model StudentCreateViewModel
-@inject IStudentRepository _studentRepository
+@inject IRepository<Student,int> StudentRepository
 @{ ViewBag.Title = "创建学生信息";}
 <form class="mt-3" asp-controller="Student" asp-action="Create" method="post" enctype="multipart/form-data">
     <div class="form-group row">
@@ -18,6 +19,13 @@
         <div class="col-sm-10">
             <input asp-for="Email" class="form-control" placeholder="Email" />
             <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+        <div class="form-group row">
+        <label asp-for="EnrollmentDate" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="EnrollmentDate" class="form-control" placeholder="选择入学时间" />
+            <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
         </div>
     </div>
 
@@ -55,7 +63,7 @@
 
     <div class="form-group row">
         <div class="col-sm-10">
-            学生总人数 = @_studentRepository.GetAllStudents().Count().ToString()
+            学生总人数 = @StudentRepository.LongCount().ToString()
         </div>
     </div>
 

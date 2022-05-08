@@ -1,0 +1,100 @@
+2022-05-05 21:49:25.7160|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:7635 
+2022-05-05 21:49:25.7474|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-05 21:49:25.7474|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-05 21:49:25.7474|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-05 21:49:26.0115|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-05 21:53:34.1842|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:33325 
+2022-05-05 21:53:34.2188|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-05 21:53:34.2188|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-05 21:53:34.2188|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-05 21:53:34.3120|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-05 21:54:13.7522|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:30747 
+2022-05-05 21:54:13.7758|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-05 21:54:13.7758|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-05 21:54:13.7796|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-05 21:54:14.0692|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-05 21:54:39.3126|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:34471 
+2022-05-05 21:54:39.3407|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-05 21:54:39.3428|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-05 21:54:39.3428|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-05 21:54:39.5864|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-05 22:04:41.6188|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:17742 
+2022-05-05 22:04:41.6494|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-05 22:04:41.6494|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-05 22:04:41.6547|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-05 22:04:41.7593|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-05 22:07:45.2012|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:10946 
+2022-05-05 22:07:45.2333|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-05 22:07:45.2333|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-05 22:07:45.2333|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-05 22:07:45.5075|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-05 22:08:29.5282|Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (97ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Student` (`Email`, `EnrollmentDate`, `Major`, `Name`, `PhotoPath`)
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT `Id`
+FROM `Student`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID(); 
+2022-05-05 22:08:29.7653|Microsoft.EntityFrameworkCore.Update|ERROR|An exception occurred in the database while saving changes for context type 'WebApplication1.Infrastructure.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Duplicate entry '1' for key 'student.PRIMARY'
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 137
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 445
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 314
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in /_/src/MySqlConnector/MySqlCommand.cs:line 256
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess) An error occurred while updating the entries. See the inner exception for details.
+2022-05-05 22:10:44.4055|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:37417 
+2022-05-05 22:10:44.4335|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-05 22:10:44.4356|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-05 22:10:44.4356|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-05 22:10:44.5169|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-05 22:14:35.3928|Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Student` (`Email`, `EnrollmentDate`, `Major`, `Name`, `PhotoPath`)
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT `Id`
+FROM `Student`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID(); 
+2022-05-05 22:14:35.4511|Microsoft.EntityFrameworkCore.Update|ERROR|An exception occurred in the database while saving changes for context type 'WebApplication1.Infrastructure.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Duplicate entry '4' for key 'student.PRIMARY'
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 137
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 445
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 314
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in /_/src/MySqlConnector/MySqlCommand.cs:line 256
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess) An error occurred while updating the entries. See the inner exception for details.
+2022-05-05 22:14:41.5421|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. An error occurred while updating the entries. See the inner exception for details.
+2022-05-05 22:14:48.5841|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:5064 
+2022-05-05 22:14:48.6108|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-05 22:14:48.6108|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-05 22:14:48.6108|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-05 22:14:48.7869|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-05 22:40:13.5075|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:40565 
+2022-05-05 22:40:13.5411|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-05 22:40:13.5411|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-05 22:40:13.5463|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-05 22:40:13.7586|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 

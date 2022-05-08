@@ -21,6 +21,7 @@
     <PackageReference Include="MrHuo.OAuth.Github" Version="1.1.1" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="4.10.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.12" />
   </ItemGroup>
 
 </Project>

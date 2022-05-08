@@ -19,6 +19,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.DataRepositories;
 using WebApplication1.Infrastructure;
+using WebApplication1.Infrastructure.Repositories;
 using WebApplication1.Models;
 
 namespace WebApplication1
@@ -48,7 +49,9 @@ namespace WebApplication1
             services.AddControllersWithViews().AddXmlSerializerFormatters();
             //AddXmlSerializerFormatters()方法，在MVC服务中允许返回XML格式的数据类型(JSON格式默认自动允许？？？)
             //services.AddSingleton<IStudentRepository, MockStudentRepository>();    
-            services.AddScoped<IStudentRepository, SQLStudentRepository>();     //添加数据库实体类依赖注入
+            services.AddScoped<IStudentRepository, SQLStudentRepository>();
+            services.AddScoped<ICourseRepository, SQLCourseRepository>();
+            services.AddTransient(typeof(IRepository<,>),typeof(RepositoryBase<,>));
             //services.AddSingleton<IWebHostEnvironment, WebHostBuilder>();
             //services.AddMvc(a => a.EnableEndpointRouting = false);
 

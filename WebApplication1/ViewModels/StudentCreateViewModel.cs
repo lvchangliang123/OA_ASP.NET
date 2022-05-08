@@ -25,5 +25,7 @@ namespace WebApplication1.ViewModels
         //public IFormFile Photo { get; set; }
         [Display(Name = "Photos")]
         public List<IFormFile> Photos { get; set; }
+        [Display(Name ="入学时间")]
+        public DateTime EnrollmentDate { get; set; }
     }
 }

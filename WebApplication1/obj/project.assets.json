@@ -809,6 +809,15 @@
           "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {}
         }
       },
+      "System.Linq.Dynamic.Core/1.2.12": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll": {}
+        }
+      },
       "System.Memory/4.5.3": {
         "type": "package",
         "compile": {
@@ -2361,6 +2370,48 @@
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
+    "System.Linq.Dynamic.Core/1.2.12": {
+      "sha512": "wJDLhidcJnLAJeZ4z10YVAxMm4rTW0zlYmUjriJTo4eGLHD5NKZOm6qFabkn5TinbfZ6LM9LeYFPyiQMpRly3Q==",
+      "type": "package",
+      "path": "system.linq.dynamic.core/1.2.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/System.Linq.Dynamic.Core.dll",
+        "lib/net35/System.Linq.Dynamic.Core.pdb",
+        "lib/net35/System.Linq.Dynamic.Core.xml",
+        "lib/net40/System.Linq.Dynamic.Core.dll",
+        "lib/net40/System.Linq.Dynamic.Core.pdb",
+        "lib/net40/System.Linq.Dynamic.Core.xml",
+        "lib/net45/System.Linq.Dynamic.Core.dll",
+        "lib/net45/System.Linq.Dynamic.Core.pdb",
+        "lib/net45/System.Linq.Dynamic.Core.xml",
+        "lib/net46/System.Linq.Dynamic.Core.dll",
+        "lib/net46/System.Linq.Dynamic.Core.pdb",
+        "lib/net46/System.Linq.Dynamic.Core.xml",
+        "lib/net5.0/System.Linq.Dynamic.Core.dll",
+        "lib/net5.0/System.Linq.Dynamic.Core.pdb",
+        "lib/net5.0/System.Linq.Dynamic.Core.xml",
+        "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll",
+        "lib/netcoreapp2.1/System.Linq.Dynamic.Core.pdb",
+        "lib/netcoreapp2.1/System.Linq.Dynamic.Core.xml",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.pdb",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.xml",
+        "lib/netstandard2.0/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard2.0/System.Linq.Dynamic.Core.pdb",
+        "lib/netstandard2.0/System.Linq.Dynamic.Core.xml",
+        "lib/netstandard2.1/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard2.1/System.Linq.Dynamic.Core.pdb",
+        "lib/netstandard2.1/System.Linq.Dynamic.Core.xml",
+        "lib/uap10.0.10240/System.Linq.Dynamic.Core.dll",
+        "lib/uap10.0.10240/System.Linq.Dynamic.Core.pdb",
+        "lib/uap10.0.10240/System.Linq.Dynamic.Core.pri",
+        "lib/uap10.0.10240/System.Linq.Dynamic.Core.xml",
+        "system.linq.dynamic.core.1.2.12.nupkg.sha512",
+        "system.linq.dynamic.core.nuspec"
+      ]
+    },
     "System.Memory/4.5.3": {
       "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "type": "package",
@@ -2862,7 +2913,8 @@
       "Microsoft.Identity.Web >= 1.22.0",
       "MrHuo.OAuth.Github >= 1.1.1",
       "NLog.Web.AspNetCore >= 4.10.0",
-      "Pomelo.EntityFrameworkCore.MySql >= 5.0.0"
+      "Pomelo.EntityFrameworkCore.MySql >= 5.0.0",
+      "System.Linq.Dynamic.Core >= 1.2.12"
     ]
   },
   "packageFolders": {
@@ -2940,6 +2992,10 @@
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "System.Linq.Dynamic.Core": {
+            "target": "Package",
+            "version": "[1.2.12, )"
           }
         },
         "imports": [
