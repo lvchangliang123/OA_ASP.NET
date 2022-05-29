@@ -1,0 +1,45 @@
+2022-05-14 17:40:03.6191|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:45276 
+2022-05-14 17:40:03.6741|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-14 17:40:03.6741|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-14 17:40:03.6741|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-14 17:40:04.0343|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-14 17:54:59.7634|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:41423 
+2022-05-14 17:54:59.7870|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-14 17:54:59.7870|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-14 17:54:59.7947|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-14 17:54:59.9313|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-14 17:55:33.3515|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+WebApplication1.Controllers.StudentController.Index (WebApplication1)
+WebApplication1.Controllers.StudentController.Create (WebApplication1)
+WebApplication1.Controllers.StudentController.Index (WebApplication1)
+2022-05-14 17:55:38.6035|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+WebApplication1.Controllers.StudentController.Index (WebApplication1)
+WebApplication1.Controllers.StudentController.Create (WebApplication1)
+WebApplication1.Controllers.StudentController.Index (WebApplication1)
+2022-05-14 18:05:34.1296|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:11590 
+2022-05-14 18:05:34.1566|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-14 18:05:34.1566|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-14 18:05:34.1566|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-14 18:05:34.4519|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-14 18:05:44.2286|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The request matched multiple endpoints. Matches: 
+
+WebApplication1.Controllers.StudentController.Index (WebApplication1)
+WebApplication1.Controllers.StudentController.Create (WebApplication1)
+WebApplication1.Controllers.StudentController.Index (WebApplication1)
+2022-05-14 18:07:31.5227|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:22103 
+2022-05-14 18:07:31.5486|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-14 18:07:31.5486|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-14 18:07:31.5486|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-14 18:07:31.8184|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-14 18:07:59.9434|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:29402 
+2022-05-14 18:07:59.9788|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-14 18:07:59.9816|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-14 18:07:59.9816|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-14 18:08:00.2804|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-14 18:09:04.0518|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:9854 
+2022-05-14 18:09:04.0768|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-14 18:09:04.0768|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-14 18:09:04.0768|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-14 18:09:04.3272|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 

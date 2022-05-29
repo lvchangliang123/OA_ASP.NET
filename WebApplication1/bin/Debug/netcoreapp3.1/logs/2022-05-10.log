@@ -1,0 +1,71 @@
+2022-05-10 21:20:31.9113|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:46871 
+2022-05-10 21:20:31.9490|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-10 21:20:31.9520|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-10 21:20:31.9520|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-10 21:20:32.0887|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-10 22:25:02.8968|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:2566 
+2022-05-10 22:25:02.9285|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-10 22:25:02.9285|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-10 22:25:02.9285|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-10 22:25:03.1596|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-10 22:27:41.1098|Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (35ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `StudentCourse` (`CourseID`, `StudentID`)
+VALUES (@p0, @p1);
+SELECT `StudentsCourseId`
+FROM `StudentCourse`
+WHERE ROW_COUNT() = 1 AND `StudentsCourseId` = LAST_INSERT_ID();
+
+INSERT INTO `StudentCourse` (`CourseID`, `StudentID`)
+VALUES (@p2, @p3);
+SELECT `StudentsCourseId`
+FROM `StudentCourse`
+WHERE ROW_COUNT() = 1 AND `StudentsCourseId` = LAST_INSERT_ID();
+
+INSERT INTO `StudentCourse` (`CourseID`, `StudentID`)
+VALUES (@p4, @p5);
+SELECT `StudentsCourseId`
+FROM `StudentCourse`
+WHERE ROW_COUNT() = 1 AND `StudentsCourseId` = LAST_INSERT_ID();
+
+INSERT INTO `StudentCourse` (`CourseID`, `StudentID`)
+VALUES (@p6, @p7);
+SELECT `StudentsCourseId`
+FROM `StudentCourse`
+WHERE ROW_COUNT() = 1 AND `StudentsCourseId` = LAST_INSERT_ID();
+
+INSERT INTO `StudentCourse` (`CourseID`, `StudentID`)
+VALUES (@p8, @p9);
+SELECT `StudentsCourseId`
+FROM `StudentCourse`
+WHERE ROW_COUNT() = 1 AND `StudentsCourseId` = LAST_INSERT_ID(); 
+2022-05-10 22:27:41.3446|Microsoft.EntityFrameworkCore.Update|ERROR|An exception occurred in the database while saving changes for context type 'WebApplication1.Infrastructure.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`mockschooldb-dev`.`studentcourse`, CONSTRAINT `FK_StudentCourse_Student_StudentID` FOREIGN KEY (`StudentID`) REFERENCES `student` (`Id`) ON DELETE CASCADE)
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 137
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 445
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 314
+   at MySqlConnector.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in /_/src/MySqlConnector/MySqlCommand.cs:line 256
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess) An error occurred while updating the entries. See the inner exception for details.
+2022-05-10 22:28:12.2897|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:16019 
+2022-05-10 22:28:12.3122|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-10 22:28:12.3122|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-10 22:28:12.3122|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-10 22:28:12.4091|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-10 22:29:39.7402|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:22487 
+2022-05-10 22:29:39.7634|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-10 22:29:39.7661|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-10 22:29:39.7661|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-10 22:29:39.9604|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 

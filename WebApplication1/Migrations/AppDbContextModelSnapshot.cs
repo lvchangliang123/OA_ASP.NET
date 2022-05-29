@@ -220,12 +220,72 @@ namespace WebApplication1.Migrations
                     b.Property<int>("Credits")
                         .HasColumnType("int");
 
+                    b.Property<int>("DepartmentID")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .HasColumnType("longtext");
 
                     b.HasKey("CourseID");
 
+                    b.HasIndex("DepartmentID");
+
                     b.ToTable("Course");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.CourseAssignment", b =>
+                {
+                    b.Property<int>("CourseID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeacherID")
+                        .HasColumnType("int");
+
+                    b.HasKey("CourseID", "TeacherID");
+
+                    b.HasIndex("TeacherID");
+
+                    b.ToTable("CourseAssignment");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.Department", b =>
+                {
+                    b.Property<int>("DepartmentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Budget")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int?>("TeacherID")
+                        .HasColumnType("int");
+
+                    b.HasKey("DepartmentID");
+
+                    b.HasIndex("TeacherID");
+
+                    b.ToTable("Department");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.OfficeLocation", b =>
+                {
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Location")
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("TeacherId");
+
+                    b.ToTable("OfficeLocation");
                 });
 
             modelBuilder.Entity("WebApplication1.Models.Student", b =>
@@ -252,17 +312,6 @@ namespace WebApplication1.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Student");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Email = "123456789@163.com",
-                            EnrollmentDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Major = 1,
-                            Name = "德莱厄斯",
-                            PhotoPath = "~/Imgs/nuoshou.jpeg"
-                        });
                 });
 
             modelBuilder.Entity("WebApplication1.Models.StudentCourse", b =>
@@ -272,6 +321,9 @@ namespace WebApplication1.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("CourseID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Grade")
                         .HasColumnType("int");
 
                     b.Property<int>("StudentID")
@@ -286,12 +338,32 @@ namespace WebApplication1.Migrations
                     b.ToTable("StudentCourse");
                 });
 
+            modelBuilder.Entity("WebApplication1.Models.Teacher", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("HireDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("TeacherName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Teacher");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -300,7 +372,7 @@ namespace WebApplication1.Migrations
                     b.HasOne("WebApplication1.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -309,7 +381,7 @@ namespace WebApplication1.Migrations
                     b.HasOne("WebApplication1.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -318,13 +390,13 @@ namespace WebApplication1.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("WebApplication1.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -333,8 +405,59 @@ namespace WebApplication1.Migrations
                     b.HasOne("WebApplication1.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.Course", b =>
+                {
+                    b.HasOne("WebApplication1.Models.Department", "Department")
+                        .WithMany("Courses")
+                        .HasForeignKey("DepartmentID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Department");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.CourseAssignment", b =>
+                {
+                    b.HasOne("WebApplication1.Models.Course", "Course")
+                        .WithMany("CourseAssignments")
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("WebApplication1.Models.Teacher", "Teacher")
+                        .WithMany("CourseAssignments")
+                        .HasForeignKey("TeacherID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.Department", b =>
+                {
+                    b.HasOne("WebApplication1.Models.Teacher", "Administrator")
+                        .WithMany()
+                        .HasForeignKey("TeacherID")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Administrator");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.OfficeLocation", b =>
+                {
+                    b.HasOne("WebApplication1.Models.Teacher", "Teacher")
+                        .WithOne("OfficeLocation")
+                        .HasForeignKey("WebApplication1.Models.OfficeLocation", "TeacherId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Teacher");
                 });
 
             modelBuilder.Entity("WebApplication1.Models.StudentCourse", b =>
@@ -342,13 +465,13 @@ namespace WebApplication1.Migrations
                     b.HasOne("WebApplication1.Models.Course", "Course")
                         .WithMany("StudentCourses")
                         .HasForeignKey("CourseID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("WebApplication1.Models.Student", "Student")
                         .WithMany("StudentCourses")
                         .HasForeignKey("StudentID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -358,12 +481,26 @@ namespace WebApplication1.Migrations
 
             modelBuilder.Entity("WebApplication1.Models.Course", b =>
                 {
+                    b.Navigation("CourseAssignments");
+
                     b.Navigation("StudentCourses");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.Department", b =>
+                {
+                    b.Navigation("Courses");
                 });
 
             modelBuilder.Entity("WebApplication1.Models.Student", b =>
                 {
                     b.Navigation("StudentCourses");
+                });
+
+            modelBuilder.Entity("WebApplication1.Models.Teacher", b =>
+                {
+                    b.Navigation("CourseAssignments");
+
+                    b.Navigation("OfficeLocation");
                 });
 #pragma warning restore 612, 618
         }

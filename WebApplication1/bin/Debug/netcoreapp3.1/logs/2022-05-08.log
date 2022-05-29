@@ -103,3 +103,38 @@
 2022-05-08 11:34:33.3753|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
 2022-05-08 11:34:33.3753|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
 2022-05-08 11:34:33.5389|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 14:02:53.6409|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:25810 
+2022-05-08 14:02:53.6655|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 14:02:53.6655|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 14:02:53.6699|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 14:02:53.9036|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 22:59:45.1821|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:37924 
+2022-05-08 22:59:45.2087|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 22:59:45.2087|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 22:59:45.2087|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 22:59:45.3289|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 23:00:28.3012|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:6083 
+2022-05-08 23:00:28.3249|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 23:00:28.3249|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 23:00:28.3249|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 23:00:28.6786|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 23:02:05.3847|Microsoft.AspNetCore.Identity.UserManager|WARN|Invalid password for user 28791b29-8b29-4b3d-afc9-f4951c69e7d1. 
+2022-05-08 23:02:05.3847|Microsoft.AspNetCore.Identity.SignInManager|WARN|User 28791b29-8b29-4b3d-afc9-f4951c69e7d1 failed to provide the correct password. 
+2022-05-08 23:02:22.3584|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[WebApplication1.Models.Student]', but this ViewDataDictionary instance requires a model item of type 'WebApplication1.Dtos.PagedResultDto`1[WebApplication1.Models.Student]'.
+2022-05-08 23:06:27.3504|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:30228 
+2022-05-08 23:06:27.3779|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 23:06:27.3779|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 23:06:27.3779|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 23:06:27.6652|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 23:06:33.2543|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. Value cannot be null. (Parameter 'ordering')
+2022-05-08 23:07:01.8954|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:38217 
+2022-05-08 23:07:01.9226|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 23:07:01.9226|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 23:07:01.9226|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 23:07:02.0214|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-08 23:07:05.9034|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. Value cannot be null. (Parameter 'ordering')
+2022-05-08 23:07:52.0015|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:37944 
+2022-05-08 23:07:52.0283|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-08 23:07:52.0283|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-08 23:07:52.0322|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-08 23:07:52.2605|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 

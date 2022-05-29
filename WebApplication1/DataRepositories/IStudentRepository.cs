@@ -8,10 +8,6 @@ namespace WebApplication1.DataRepositories
 {
     public interface IStudentRepository
     {
-        //Student GetStudent(int id);
-        //void Save(Student student);
-        //IEnumerable<Student> GetAllStudents();
-        //Student Add(Student student);
         Student GetStudentById(int id);
         IEnumerable<Student> GetAllStudents();
         Student Insert(Student student);

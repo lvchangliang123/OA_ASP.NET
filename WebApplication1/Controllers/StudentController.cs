@@ -26,11 +26,12 @@ namespace WebApplication1.Controllers
         private readonly IDataProtector _protector;
         private readonly IStudentService _studentService;
 
-        public StudentController(IRepository<Student, int> studentRepository,IWebHostEnvironment webHostEnvironment,IDataProtectionProvider dataProtectionProvider,Extensions.DataProtectionPurposeStrings dataProtectionPurposeStrings)
+        public StudentController(IRepository<Student, int> studentRepository,IWebHostEnvironment webHostEnvironment,IDataProtectionProvider dataProtectionProvider,Extensions.DataProtectionPurposeStrings dataProtectionPurposeStrings, IStudentService studentService)
         {
             this._studentRepository = studentRepository;
             this._webHostEnvironment = webHostEnvironment;
             this._protector = dataProtectionProvider.CreateProtector(dataProtectionPurposeStrings.StudentIdRouteValue);
+            this._studentService = studentService;
         }
 
         [Route("Details/{id?}")]
@@ -90,11 +91,8 @@ namespace WebApplication1.Controllers
             //return View(students);
             #endregion
 
-            //IQueryable<Student> query = _studentRepository.GetAll().OrderBy(sortBy).AsNoTracking();
-            //var model = query.ToList().Select(s => { s.EncryptedId = _protector.Protect(s.Id.ToString()); return s; }).ToList();
-            //return View(model);
-            PaginationModel paginationModel = new PaginationModel();
-            paginationModel.Count = await _studentRepository.CountAsync();
+            PagedResultDto<Student> paginationModel = new PagedResultDto<Student>();
+            paginationModel.TotalCount = await _studentRepository.CountAsync();
             paginationModel.CurrentPage = pageNumber??1;
             var students = await _studentRepository.GetAllListAsync();
             paginationModel.Data = students.Select(s => { s.EncryptedId = _protector.Protect(s.Id.ToString()); return s; }).ToList();
@@ -103,38 +101,53 @@ namespace WebApplication1.Controllers
 
         [Route("Index")]
         [HttpPost]
-        public async Task<IActionResult> Index(string searchString,string sortBy="Id")
+        public async Task<IActionResult> Index(int currentPage,string sorting,string filterText)
         {
-            ViewBag.CurrentFilter=searchString?.Trim();
+            PagedResultDto<Student> paginationModel = new PagedResultDto<Student>();
+            paginationModel.FilterText = filterText;
             IQueryable<Student> query = _studentRepository.GetAll();
-            if (!String.IsNullOrEmpty(searchString)) {
-                query= query.Where(s => s.Name.Contains(searchString)||s.Email.Contains(searchString));
+            if (!String.IsNullOrEmpty(filterText)) {
+                query= query.Where(s => s.Name.Contains(filterText) ||s.Email.Contains(filterText));
             }
-            query = query.OrderBy(sortBy).AsNoTracking();
+            //////////////////////////////////////////////////////////////
+            query = query.OrderBy(sorting??"Id").AsNoTracking();
             var model=query.ToList().Select(s => { s.EncryptedId = _protector.Protect(s.Id.ToString());return s;}).ToList();
-            return View(model);
+           
+            paginationModel.TotalCount = await _studentRepository.CountAsync();
+            paginationModel.CurrentPage = currentPage;
+            var students = await _studentRepository.GetAllListAsync();
+            paginationModel.Data = students.Select(s => { s.EncryptedId = _protector.Protect(s.Id.ToString()); return s; }).ToList();
+            return View(paginationModel);
         }
 
         //分页操作
-        public async Task<IActionResult> Index(string searchString, int currentPage, string sortBy = "Id")
+        public async Task<IActionResult> Index(GetStudentInput input)
         {
-            ViewBag.CurrentFilter = searchString?.Trim();
-            PaginationModel paginationModel = new PaginationModel();
-            paginationModel.Count = await _studentRepository.CountAsync();
-            paginationModel.CurrentPage = currentPage;
-            var students = await _studentService.GetPaginatedResult(paginationModel.CurrentPage, searchString, sortBy);
-            paginationModel.Data = students.Select(s => { s.EncryptedId = _protector.Protect(s.Id.ToString()); return s; }).ToList();
-            IQueryable<Student> query = _studentRepository.GetAll();
-            if (!string.IsNullOrEmpty(searchString)) {
-                query = query.Where(s => s.Name.Contains(searchString) || s.Email.Contains(searchString));
-            }
-            query = query.OrderBy(sortBy).AsNoTracking();
-            var model = query.ToList().Select(s => { s.EncryptedId = _protector.Protect(s.Id.ToString()); return s; }).ToList();
-            return View(model);
+            #region Old Code
+            //ViewBag.CurrentFilter = searchString?.Trim();
+            //PagedResultDto paginationModel = new PagedResultDto();
+            //paginationModel.Count = await _studentRepository.CountAsync();
+            //paginationModel.CurrentPage = currentPage;
+            //var students = await _studentService.GetPaginatedResult(paginationModel.CurrentPage, searchString, sortBy);
+            //paginationModel.Data = students.Select(s => { s.EncryptedId = _protector.Protect(s.Id.ToString()); return s; }).ToList();
+            //IQueryable<Student> query = _studentRepository.GetAll();
+            //if (!string.IsNullOrEmpty(searchString)) {
+            //    query = query.Where(s => s.Name.Contains(searchString) || s.Email.Contains(searchString));
+            //}
+            //query = query.OrderBy(sortBy).AsNoTracking();
+            //var model = query.ToList().Select(s => { s.EncryptedId = _protector.Protect(s.Id.ToString()); return s; }).ToList();
+            //return View(model);
+            #endregion
+
+            var dtos = await _studentService.GetPaginatedResult(input);
+            dtos.Data = dtos.Data.Select(s => { s.EncryptedId = _protector.Protect(s.Id.ToString()); return s; }).ToList();
+            return View(dtos);
+
         }
 
 
         [HttpPost]
+        [Route("Create")]
         public IActionResult Create(StudentCreateViewModel model)
         {
             #region Old Code
@@ -180,9 +193,8 @@ namespace WebApplication1.Controllers
 
         }
 
-
-        //[Route("Create")]
         [HttpGet]
+        [Route("Create")]
         public IActionResult Create()
         {
             return View();
@@ -300,6 +312,20 @@ namespace WebApplication1.Controllers
             }
             await _studentRepository.DeleteAsync(student);
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        [Route("About")]
+        public async Task<IActionResult> About()
+        {
+            var data = from student in _studentRepository.GetAll()
+                       group student by student.EnrollmentDate into dateGroup
+                       select new EnrollmentDateGroupDto {
+                           EnrollmentDate = dateGroup.Key,
+                           StudentCount = dateGroup.Count()
+                       };
+            var dtos = await data.AsNoTracking().ToListAsync();
+            return View(dtos);
         }
 
 

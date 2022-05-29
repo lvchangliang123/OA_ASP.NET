@@ -17,10 +17,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication1.Courses;
 using WebApplication1.DataRepositories;
 using WebApplication1.Infrastructure;
+using WebApplication1.Infrastructure.Data;
 using WebApplication1.Infrastructure.Repositories;
 using WebApplication1.Models;
+using WebApplication1.Services.TeachersService;
+using WebApplication1.Students;
 
 namespace WebApplication1
 {
@@ -40,18 +44,18 @@ namespace WebApplication1
             //添加数据库连接注入
             services.AddDbContextPool<AppDbContext>(optionsBuilder => optionsBuilder.UseMySql(Configuration.GetConnectionString("MockStudentDBConnection"),new MySqlServerVersion(new Version(8,0,26))));
 
-            //config =>
-            //{
-            //    var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
-            //    config.Filters.Add(new AuthorizeFilter(policy));
-            //}
-
-            services.AddControllersWithViews().AddXmlSerializerFormatters();
-            //AddXmlSerializerFormatters()方法，在MVC服务中允许返回XML格式的数据类型(JSON格式默认自动允许？？？)
-            //services.AddSingleton<IStudentRepository, MockStudentRepository>();    
+            services.AddControllersWithViews().AddXmlSerializerFormatters().AddRazorRuntimeCompilation();
+            //AddXmlSerializerFormatters()方法，在MVC服务中允许返回XML格式的数据类型(JSON格式默认自动允许？？？) 
             services.AddScoped<IStudentRepository, SQLStudentRepository>();
             services.AddScoped<ICourseRepository, SQLCourseRepository>();
+            services.AddScoped<ITeacherRepository, SQLTeacherRepository>();
+            services.AddScoped<IRepository<CourseAssignment,int>, SQLCourseAssignmentRepository>();
+            services.AddScoped<IRepository<OfficeLocation,int>,SQLOfficeLocationRepository>();
+            services.AddScoped<IDepartmentRepository, SQLDepartmentRepository>();
+            services.AddScoped<ICourseService, CourseService>();
             services.AddTransient(typeof(IRepository<,>),typeof(RepositoryBase<,>));
+            services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<ITeacherService, TeacherService>();
             //services.AddSingleton<IWebHostEnvironment, WebHostBuilder>();
             //services.AddMvc(a => a.EnableEndpointRouting = false);
 
@@ -71,7 +75,6 @@ namespace WebApplication1
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);  //添加锁定账户时间和登录失败次数
             });
             //添加Identity的选项配置依赖
-
 
 
             services.AddAuthorization(options =>
@@ -135,8 +138,10 @@ namespace WebApplication1
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseDataInitializer();
 
-         
+
+
 
             app.UseRouting();
             //app.UseMvcWithDefaultRoute();   //添加默认路由到应用程序的请求处理管道中(默认到Home控制器，Index()处理方法下)

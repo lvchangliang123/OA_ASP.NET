@@ -1,0 +1,20 @@
+2022-05-24 21:51:07.0357|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:32622 
+2022-05-24 21:51:07.0629|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-24 21:51:07.0629|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-24 21:51:07.0629|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-24 21:51:07.3407|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-24 21:51:43.9045|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:40829 
+2022-05-24 21:51:43.9390|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-24 21:51:43.9390|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-24 21:51:43.9390|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-24 21:51:44.1130|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-24 22:33:05.2665|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:24028 
+2022-05-24 22:33:05.2917|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-24 22:33:05.2917|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-24 22:33:05.2917|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-24 22:33:05.4820|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-24 22:34:55.8954|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:2318 
+2022-05-24 22:34:55.9214|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-24 22:34:55.9214|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-24 22:34:55.9214|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-24 22:34:56.1701|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 

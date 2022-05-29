@@ -1,0 +1,42 @@
+2022-05-29 10:04:07.6272|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:40100 
+2022-05-29 10:04:07.6590|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 10:04:07.6590|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 10:04:07.6590|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 10:04:07.8299|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 10:04:11.3925|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. Unable to resolve service for type 'WebApplication1.DataRepositories.ICourseRepository' while attempting to activate 'WebApplication1.Controllers.CourseController'.
+2022-05-29 10:04:35.1817|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:20853 
+2022-05-29 10:04:35.2166|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 10:04:35.2190|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 10:04:35.2190|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 10:04:35.2857|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 10:04:37.1419|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. Unable to resolve service for type 'WebApplication1.DataRepositories.ICourseRepository' while attempting to activate 'WebApplication1.Controllers.CourseController'.
+2022-05-29 10:08:36.3365|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:32663 
+2022-05-29 10:08:36.3613|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 10:08:36.3613|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 10:08:36.3613|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 10:08:36.5216|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 14:30:52.0841|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:22059 
+2022-05-29 14:30:52.1097|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 14:30:52.1097|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 14:30:52.1097|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 14:30:52.2872|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 14:30:56.3546|Microsoft.EntityFrameworkCore.Query|WARN|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))' 
+2022-05-29 14:31:51.1249|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:4498 
+2022-05-29 14:31:51.1493|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 14:31:51.1493|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 14:31:51.1493|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 14:31:51.2414|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 14:31:53.6837|Microsoft.EntityFrameworkCore.Query|WARN|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))' 
+2022-05-29 14:32:12.4206|Microsoft.EntityFrameworkCore.Query|WARN|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))' 
+2022-05-29 14:43:40.0623|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:27367 
+2022-05-29 14:43:40.1041|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 14:43:40.1041|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 14:43:40.1094|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 14:43:40.3006|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 14:43:43.3307|Microsoft.EntityFrameworkCore.Query|WARN|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))' 
+2022-05-29 14:53:15.3924|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:18690 
+2022-05-29 14:53:15.4195|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 14:53:15.4223|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 14:53:15.4223|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 14:53:15.7143|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 14:53:19.3801|Microsoft.EntityFrameworkCore.Query|WARN|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))' 

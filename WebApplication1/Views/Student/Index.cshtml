@@ -1,6 +1,6 @@
 ﻿@using WebApplication1.Dtos;
 @using WebApplication1.Extensions
-@model PaginationModel
+@model PagedResultDto<Student>
 @{
     ViewBag.Title = "学生列表页面";
 }
@@ -18,9 +18,11 @@
 
     <form asp-action="Index" method="post">
         <div class="form-actions no-color">
+            <input type="hidden" name="CurrentPage" value=@Model.CurrentPage />
+            <input type="hidden" name="Sorting" value=@Model.Sorting />
             <p>
                 请输入名称:
-                <input type="text" name="searchString" value="@ViewBag.CurrentFilter" />
+                <input type="text" name="FilterString" value="@Model.FilterText" />
                 <input type="submit" value="查询" class="btn btn-info" />
                 <a asp-action="Index">返回所有列表</a>
                 <a asp-action="Create">添加学生</a>
@@ -30,26 +32,43 @@
 
     <!--新版布局-->
 
-    <div class=row>
-        <table class="table table-bordered table-striped">
+    <div class="table-responsive-sm">
+        @if (Model.Data.Any()) {
+            <table class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th scope="col">头像</th>
                     <th scope="col" class="sort-link">
-                        <a asp-action="Index" asp-route-sortBy="Name">名字</a>
-                        <a class=pl-3 asp-action="Index" asp-route-sortBy="Name desc">降序</a>
+                        <a asp-action="Index" asp-route-Sorting="Name" 
+                        asp-route-CurrentPage="@Model.CurrentPage"
+                        asp-route-FilterText="@Model.FilterText">名字</a>
+                        <a class=pl-3 asp-action="Index" asp-route-Sorting="Name desc"
+                        asp-route-CurrentPage="@Model.CurrentPage"
+                        asp-route-FilterText="@Model.FilterText">降序</a>
                     </th>
                           <th scope="col" class="sort-link">
-                        <a asp-action="Index" asp-route-sortBy="Email">邮箱地址</a>
-                        <a class=pl-3 asp-action="Index" asp-route-sortBy="Email desc">降序</a>
+                        <a asp-action="Index" asp-route-Sorting="Email"
+                        asp-route-CurrentPage="@Model.CurrentPage"
+                        asp-route-FilterText="@Model.FilterText">邮箱地址</a>
+                        <a class=pl-3 asp-action="Index" asp-route-Sorting="Email desc"
+                        asp-route-CurrentPage="@Model.CurrentPage"
+                        asp-route-FilterText="@Model.FilterText">降序</a>
                     </th>
                           <th scope="col" class="sort-link">
-                        <a asp-action="Index" asp-route-sortBy="Major">主修科目</a>
-                        <a class=pl-3 asp-action="Index" asp-route-sortBy="Major desc">降序</a>
+                        <a asp-action="Index" asp-route-Sorting="Major"
+                        asp-route-CurrentPage="@Model.CurrentPage"
+                        asp-route-FilterText="@Model.FilterText">主修科目</a>
+                        <a class=pl-3 asp-action="Index" asp-route-Sorting="Major desc"
+                        asp-route-CurrentPage="@Model.CurrentPage"
+                        asp-route-FilterText="@Model.FilterText">降序</a>
                     </th>
                           <th scope="col" class="sort-link">
-                        <a asp-action="Index" asp-route-sortBy="EnrollmentDate">入学时间</a>
-                        <a class=pl-3 asp-action="Index" asp-route-sortBy="EnrollmentDate desc">降序</a>
+                        <a asp-action="Index" asp-route-Sorting="EnrollmentDate"
+                        asp-route-CurrentPage="@Model.CurrentPage"
+                        asp-route-FilterText="@Model.FilterText">入学时间</a>
+                        <a class=pl-3 asp-action="Index" asp-route-Sorting="EnrollmentDate desc"
+                        asp-route-CurrentPage="@Model.CurrentPage"
+                        asp-route-FilterText="@Model.FilterText">降序</a>
                     </th>
                     <th scope="col">操作</th>
                 </tr>
@@ -62,7 +81,7 @@
                     }
                 <tr>
                     <td>
-                        <img class="table-img img-thumbnail" width=300px height=300px src="@photoPath" asp-append-version=true> 
+                        <img class="table-img img-thumbnail" width=200px height=200px src="@photoPath" asp-append-version=true> 
                     </td>
                     <td scope=row>@student.Name</td>
                     <td>@student.Email</td>
@@ -90,26 +109,41 @@
                 }
             </tbody>
         </table>
+        }
+        
     </div>
     
     <div class="col-md-2 col-md-offset-5" style="float:none;display:block;margin-left:auto;margin-right:auto">
         <ul class=pagination>
             <li class="page-item @(!Model.ShowFirst?"disabled":"")">
-                <a asp-route-CurrentPage="1" class="page-link">
+                <a asp-route-CurrentPage="1" asp-route-Sorting="@Model.Sorting"
+                        asp-route-FilterText="@Model.FilterText" class="page-link">
                     首页
                 </a>
             </li>
             <li class="page-item @(!Model.ShowPrevious? "disabled":"")">
-                <a asp-route-CurrentPage="@(Model.CurrentPage -1)" class="page-link">
+                <a asp-route-CurrentPage="@(Model.CurrentPage -1)" asp-route-Sorting="@Model.Sorting"
+                        asp-route-FilterText="@Model.FilterText" class="page-link">
                     上一页
                 </a>
             </li>
+
+            @for(var i=1;i<=Model.TotalPages;i++) {
+                <li class="page-item @(i==Model.CurrentPage?"active":"")">
+                        <a asp-route-CurrentPage="@i" asp-route-Sorting="@Model.Sorting"
+                        asp-route-FilterText="@Model.FilterText" class="page-link">
+                @i</a>
+                </li>
+            }
+
             <li class="page-item  @(!Model.ShowNext? "disabled":"")">
-                <a asp-route-CurrentPage="@(Model.CurrentPage + 1)" class="page-link">
+                <a asp-route-CurrentPage="@(Model.CurrentPage + 1)" asp-route-Sorting="@Model.Sorting"
+                        asp-route-FilterText="@Model.FilterText" class="page-link">
                 下一页</a>
             </li>
             <li class="page-item  @(!Model.ShowLast? "disabled":"")">
-                <a asp-route-CurrentPage="@Model.TotalPages" class="page-link">
+                <a asp-route-CurrentPage="@Model.TotalPages" asp-route-Sorting="@Model.Sorting"
+                        asp-route-FilterText="@Model.FilterText" class="page-link">
                     尾页
                 </a>
             </li>

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using WebApplication1.Models.EnumTypes;
 
 namespace WebApplication1.Models
 {
@@ -10,6 +11,8 @@ namespace WebApplication1.Models
 
         public int CourseID { get; set; }
         public int StudentID { get; set; }
+        [DisplayFormat(NullDisplayText ="无成绩")]
+        public Grade? Grade { get; set; }
         public Course Course { get; set; }
         public Student Student { get; set; }
     }
