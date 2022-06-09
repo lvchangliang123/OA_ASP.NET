@@ -40,3 +40,33 @@
 2022-05-29 14:53:15.4223|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
 2022-05-29 14:53:15.7143|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
 2022-05-29 14:53:19.3801|Microsoft.EntityFrameworkCore.Query|WARN|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))' 
+2022-05-29 15:00:41.3926|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:23265 
+2022-05-29 15:00:41.4171|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 15:00:41.4171|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 15:00:41.4219|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 15:00:41.7381|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 15:00:44.6656|Microsoft.EntityFrameworkCore.Query|WARN|Compiling a query which loads related collections for more than one collection navigation either via 'Include' or through projection but no 'QuerySplittingBehavior' has been configured. By default Entity Framework will use 'QuerySplittingBehavior.SingleQuery' which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))' 
+2022-05-29 15:46:18.3955|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:8747 
+2022-05-29 15:46:18.4244|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 15:46:18.4244|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 15:46:18.4244|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 15:46:18.5383|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 15:46:47.4692|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:10805 
+2022-05-29 15:46:47.4946|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 15:46:47.4946|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 15:46:47.5008|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 15:46:47.7495|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 15:46:55.7275|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. Unable to resolve service for type 'WebApplication1.Services.DepartmentService.IDepartmentService' while attempting to activate 'WebApplication1.Controllers.DepartmentController'.
+2022-05-29 15:47:45.4445|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:43414 
+2022-05-29 15:47:45.4750|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 15:47:45.4750|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 15:47:45.4750|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 15:47:45.5556|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 
+2022-05-29 15:47:48.5041|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred while executing the request. The partial view '_Pagination' was not found. The following locations were searched:
+/Views/Department/_Pagination.cshtml
+/Views/Shared/_Pagination.cshtml
+2022-05-29 15:48:08.9969|Microsoft.Hosting.Lifetime|INFO|Now listening on: http://127.0.0.1:9967 
+2022-05-29 15:48:09.0277|Microsoft.Hosting.Lifetime|INFO|Application started. Press Ctrl+C to shut down. 
+2022-05-29 15:48:09.0320|Microsoft.Hosting.Lifetime|INFO|Hosting environment: Production 
+2022-05-29 15:48:09.0320|Microsoft.Hosting.Lifetime|INFO|Content root path: E:\ASP.NET\WebApplication1 
+2022-05-29 15:48:09.1813|Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware|WARN|Failed to determine the https port for redirect. 

@@ -23,6 +23,7 @@ using WebApplication1.Infrastructure;
 using WebApplication1.Infrastructure.Data;
 using WebApplication1.Infrastructure.Repositories;
 using WebApplication1.Models;
+using WebApplication1.Services.DepartmentService;
 using WebApplication1.Services.TeachersService;
 using WebApplication1.Students;
 
@@ -51,8 +52,10 @@ namespace WebApplication1
             services.AddScoped<ITeacherRepository, SQLTeacherRepository>();
             services.AddScoped<IRepository<CourseAssignment,int>, SQLCourseAssignmentRepository>();
             services.AddScoped<IRepository<OfficeLocation,int>,SQLOfficeLocationRepository>();
+            services.AddScoped<IRepository<Department,int>,RepositoryBase<Department, int>>();
             services.AddScoped<IDepartmentRepository, SQLDepartmentRepository>();
             services.AddScoped<ICourseService, CourseService>();
+            services.AddScoped<IDepartmentService, DepartmentService>();
             services.AddTransient(typeof(IRepository<,>),typeof(RepositoryBase<,>));
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<ITeacherService, TeacherService>();

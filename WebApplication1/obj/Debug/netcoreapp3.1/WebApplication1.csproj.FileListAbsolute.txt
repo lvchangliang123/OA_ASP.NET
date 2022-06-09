@@ -502,3 +502,7 @@ E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Course\Edit.cshtm
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Course\Details.cshtml.g.cs
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Edit.cshtml.g.cs
 E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Teacher\Create.cshtml.g.cs
+E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Department\Index.cshtml.g.cs
+E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Department\Create.cshtml.g.cs
+E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Department\Details.cshtml.g.cs
+E:\ASP.NET\WebApplication1\obj\Debug\netcoreapp3.1\Razor\Views\Department\Edit.cshtml.g.cs

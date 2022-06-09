@@ -261,6 +261,11 @@ namespace WebApplication1.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
+                    b.Property<DateTime?>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("timestamp(6)");
+
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime(6)");
 
