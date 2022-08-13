@@ -1,0 +1,82 @@
+﻿@model List<NewBlogContentViewModel>
+@{
+    ViewBag.Title = "我的博客";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NetCoreBlog.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="col float-left">
+            <a href="#">我的资料</a>
+            <label>我的文章数量:@Model.Count</label>
+            <label>文章阅读数量:35</label>
+            <a asp-controller="UserBlog" asp-action="CreateNewBlog">创建新文章</a>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="container col-md-9">
+            @foreach (var blog in Model)
+            {
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row" style="background:red">
+                                <img src="#" class="col-3 img-fluid" />
+                                <div class="col-9 text-start" style="background:orange">
+                                    <h4 class="card-header">@blog.BlogTitle</h4>
+                                    <textarea class="card-body">@blog.BlogContent</textarea>
+                                    <div class="card-footer">
+                                        <span>2018/11/26</span>
+                                        <span>14-Views</span>
+                                        <span>Comments:@blog.BlogTags.Count</span>
+                                        <button class="btn btn-info">阅读全文</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            }
+        </div>
+        <div class="col-md-3 card">
+            <div class="row"style="heigth:10%">
+                <div class="col" style="border-bottom:1px solid #dfdfdf;background:#f8f8f8">
+                    <svg t="1660224997222" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2364" width="25" height="25"><path d="M384 480H192c-52.8 0-96-43.2-96-96V192c0-52.8 43.2-96 96-96h192c52.8 0 96 43.2 96 96v192c0 52.8-43.2 96-96 96zM192 160c-17.6 0-32 14.4-32 32v192c0 17.6 14.4 32 32 32h192c17.6 0 32-14.4 32-32V192c0-17.6-14.4-32-32-32H192zM832 480H640c-52.8 0-96-43.2-96-96V192c0-52.8 43.2-96 96-96h192c52.8 0 96 43.2 96 96v192c0 52.8-43.2 96-96 96zM640 160c-17.6 0-32 14.4-32 32v192c0 17.6 14.4 32 32 32h192c17.6 0 32-14.4 32-32V192c0-17.6-14.4-32-32-32H640zM384 928H192c-52.8 0-96-43.2-96-96V640c0-52.8 43.2-96 96-96h192c52.8 0 96 43.2 96 96v192c0 52.8-43.2 96-96 96zM192 608c-17.6 0-32 14.4-32 32v192c0 17.6 14.4 32 32 32h192c17.6 0 32-14.4 32-32V640c0-17.6-14.4-32-32-32H192zM832 928H640c-52.8 0-96-43.2-96-96V640c0-52.8 43.2-96 96-96h192c52.8 0 96 43.2 96 96v192c0 52.8-43.2 96-96 96zM640 608c-17.6 0-32 14.4-32 32v192c0 17.6 14.4 32 32 32h192c17.6 0 32-14.4 32-32V640c0-17.6-14.4-32-32-32H640z" p-id="2365" fill="#515151"></path></svg>
+                    <span class="card-title" style="background:#f8f8f8;font-weight:bold;height:40px;display:line-block;vertical-align:middle;line-height:40px">站内搜索</span>
+                </div>
+                <div class="card-body" style="border-bottom:1px solid #dfdfdf;margin-top:10px">
+                    <div class="input-group" style="margin-bottom:10px">
+                        <input type="text" class="form-control" placeholder="输入搜索内容" />
+                        <span class="input-group-btn btn btn-primary">搜索</span>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:10px">
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="row" style="background:red">
+                                <img src="#" class="col-3 img-fluid" />
+                                <div class="col-9" style="background:orange">
+                                    <h4>Title</h4>
+                                    <textarea>Content</textarea>
+                                    <div class="row">
+                                        <span class="col-3" style="text-align:left">3</span>
+                                        <span class="col-9" style="text-align:right">2018/11/26</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,86 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> _signInManager
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NetCoreBlog</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NetCoreBlog.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+
+        <!--导航条-->
+
+        <nav class="navbar navbar-dark navbar-fixed-top">
+            <div class="container-fluid d-md-inline-flex">
+                <div class="col-2">
+                    <a class="text-info col-auto" style="display:flex;font-size:20pt;margin-left:10px" asp-controller="Home" asp-action="Index">.Net技术博客</a>
+                </div>
+                <div class="col-6">
+                    <form class="input-group">
+                        <input type="text" placeholder="Search" class="form-control" style="margin:6px,0px,0px,0px" />
+                        <button type="submit" class="input-group-btn btn btn-primary">搜索</button>
+                    </form>
+                </div>
+                <div class="col-4">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            @if (_signInManager.IsSignedIn(User))
+                            {
+                                <form method="post" asp-controller="Identity" asp-action="Logout">
+                                    <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
+                                        注销 @User?.Identity?.Name
+                                    </button>
+                                </form>
+                            }
+                            else
+                            {
+                                <a class="nav-fill" asp-controller="Identity" asp-action="Login" style="margin:10px">登录</a>
+                            }
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-fill" asp-controller="Identity" asp-action="RegisterUser" style="margin:10px">注册用户</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-fill" asp-controller="UserBlog" asp-action="Index" style="margin:10px">我的博客</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-fill" href="#" style="margin:10px">我的资料</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--导航条-->
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container" style="text-align:center">
+            &copy; 2022 - NetCoreBlog - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        $("#tabmenu a").click(function(e) {
+            e.preventDefault();
+            $(this).tab("show");
+        })
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

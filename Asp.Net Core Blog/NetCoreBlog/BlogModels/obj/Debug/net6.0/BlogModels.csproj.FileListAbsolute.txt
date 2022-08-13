@@ -1,0 +1,12 @@
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\bin\Debug\net6.0\BlogModels.deps.json
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\bin\Debug\net6.0\BlogModels.dll
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\bin\Debug\net6.0\BlogModels.pdb
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\obj\Debug\net6.0\BlogModels.csproj.AssemblyReference.cache
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\obj\Debug\net6.0\BlogModels.GeneratedMSBuildEditorConfig.editorconfig
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\obj\Debug\net6.0\BlogModels.AssemblyInfoInputs.cache
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\obj\Debug\net6.0\BlogModels.AssemblyInfo.cs
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\obj\Debug\net6.0\BlogModels.csproj.CoreCompileInputs.cache
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\obj\Debug\net6.0\BlogModels.dll
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\obj\Debug\net6.0\refint\BlogModels.dll
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\obj\Debug\net6.0\BlogModels.pdb
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\BlogModels\obj\Debug\net6.0\ref\BlogModels.dll
