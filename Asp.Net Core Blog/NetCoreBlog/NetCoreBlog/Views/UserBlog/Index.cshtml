@@ -1,4 +1,4 @@
-﻿@model List<NewBlogContentViewModel>
+﻿@model List<BlogModels.Dtos.BlogInfoDto>
 @{
     ViewBag.Title = "我的博客";
 }
@@ -34,7 +34,7 @@
                                     <div class="card-footer">
                                         <span>2018/11/26</span>
                                         <span>14-Views</span>
-                                        <span>Comments:@blog.BlogTags.Count</span>
+                                        <span>Comments:@blog.BlogTags.Split(',').Length</span>
                                         <button class="btn btn-info">阅读全文</button>
                                     </div>
                                 </div>

@@ -96,7 +96,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\BlogModels\\BlogModels.csproj": {
+                "projectPath": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\BlogModels\\BlogModels.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

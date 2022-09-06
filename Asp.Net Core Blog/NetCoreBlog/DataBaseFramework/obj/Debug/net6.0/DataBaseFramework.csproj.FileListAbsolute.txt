@@ -12,3 +12,6 @@ E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\DataBaseFramework\obj\Debug\net6.0\refi
 E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\DataBaseFramework\obj\Debug\net6.0\DataBaseFramework.pdb
 E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\DataBaseFramework\obj\Debug\net6.0\DataBaseFramework.genruntimeconfig.cache
 E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\DataBaseFramework\obj\Debug\net6.0\ref\DataBaseFramework.dll
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\DataBaseFramework\bin\Debug\net6.0\BlogModels.dll
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\DataBaseFramework\bin\Debug\net6.0\BlogModels.pdb
+E:\ASP.NET\Asp.Net Core Blog\NetCoreBlog\DataBaseFramework\obj\Debug\net6.0\DataBaseFramework.csproj.CopyComplete

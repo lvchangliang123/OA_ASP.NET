@@ -14,7 +14,6 @@ namespace BlogModels.ViewModels
         [Required]
         public string BlogContent { get; set; }
         [Required]
-        public List<string> BlogTags { get; set; }
-
+        public string BlogTags { get; set; }
     }
 }

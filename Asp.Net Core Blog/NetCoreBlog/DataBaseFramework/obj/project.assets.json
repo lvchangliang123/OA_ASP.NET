@@ -430,6 +430,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "BlogModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BlogModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogModels.dll": {}
+        }
       }
     }
   },
@@ -1027,10 +1037,16 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "BlogModels/1.0.0": {
+      "type": "project",
+      "path": "../BlogModels/BlogModels.csproj",
+      "msbuildProject": "../BlogModels/BlogModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BlogModels >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.26",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.26",
       "Pomelo.EntityFrameworkCore.MySql >= 6.0.0"
@@ -1070,7 +1086,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\BlogModels\\BlogModels.csproj": {
+              "projectPath": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\BlogModels\\BlogModels.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ELYq8KDAz3EgCZ0uHf2VTmuqbFcSUJUuJQGLTCfcXEQ=",
+  "Hash": "qPWuJCkycxUrrgtAKGXjlCVVVl8uNAKXr9zmUcoV0GQ=",
   "Source": "NetCoreBlog",
   "BasePath": "_content/NetCoreBlog",
   "Mode": "Default",
@@ -933,6 +933,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-simpleModal\\simpleModal.js",
+      "SourceId": "NetCoreBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\",
+      "BasePath": "_content/NetCoreBlog",
+      "RelativePath": "lib/jquery-simpleModal/simpleModal.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-simpleModal\\simpleModal.js"
     },
     {
       "Identity": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",

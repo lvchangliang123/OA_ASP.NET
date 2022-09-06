@@ -449,6 +449,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "BlogModels": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.26",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.0"
         },

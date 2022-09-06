@@ -198,6 +198,7 @@
       },
       "DataBaseFramework/1.0.0": {
         "dependencies": {
+          "BlogModels": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.0"
         },

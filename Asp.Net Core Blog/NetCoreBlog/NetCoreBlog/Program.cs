@@ -1,6 +1,7 @@
 using DataBaseFramework;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using DataBaseFramework.Infrastructure;
 using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,9 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<AppDbContext>();
-builder.Services.AddDbContextPool<AppDbContext>(options => { 
-    options.UseMySql(builder.Configuration.GetConnectionString("NetCoreBlogDBConnection"), new MySqlServerVersion(new Version(8, 0, 26)),mysqlOptions=>mysqlOptions.MigrationsAssembly("NetCoreBlog")); 
+builder.Services.AddDbContextPool<AppDbContext>(options =>
+{
+    options.UseMySql(builder.Configuration.GetConnectionString("NetCoreBlogDBConnection"), new MySqlServerVersion(new Version(8, 0, 26)), mysqlOptions => mysqlOptions.MigrationsAssembly("NetCoreBlog"));
 });
+builder.Services.AddTransient(typeof(IRepository<,>), typeof(RepositoryBase<,>));
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 builder.Services.Configure<IdentityOptions>(options =>
 {
