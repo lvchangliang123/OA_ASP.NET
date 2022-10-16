@@ -19,6 +19,37 @@ namespace NetCoreBlog.Migrations
                 .HasAnnotation("ProductVersion", "6.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("BlogModels.Dtos.BlogCommentDto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("BlogInfoDtoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CommentBody")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("CommentDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("CommentUserEmail")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CommentUserName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlogInfoDtoId");
+
+                    b.ToTable("BlogComment", (string)null);
+                });
+
             modelBuilder.Entity("BlogModels.Dtos.BlogInfoDto", b =>
                 {
                     b.Property<int>("Id")
@@ -245,6 +276,17 @@ namespace NetCoreBlog.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("BlogModels.Dtos.BlogCommentDto", b =>
+                {
+                    b.HasOne("BlogModels.Dtos.BlogInfoDto", "BlogInfoDto")
+                        .WithMany("BlogComments")
+                        .HasForeignKey("BlogInfoDtoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BlogInfoDto");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -294,6 +336,11 @@ namespace NetCoreBlog.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("BlogModels.Dtos.BlogInfoDto", b =>
+                {
+                    b.Navigation("BlogComments");
                 });
 #pragma warning restore 612, 618
         }

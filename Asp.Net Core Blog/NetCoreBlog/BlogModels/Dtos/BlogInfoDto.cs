@@ -20,5 +20,7 @@ namespace BlogModels.Dtos
         public string BlogTitle { get; set; }
         public string BlogContent { get; set; }
         public string BlogTags { get; set; }
+        //一对多
+        public List<BlogCommentDto> BlogComments { get; set; }
     }
 }

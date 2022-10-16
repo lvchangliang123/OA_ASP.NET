@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="MarkDown/css/editormd.min.css" />
+    <link rel="stylesheet" href="~/MarkDown/css/editormd.min.css" />
 </head>
 <body>
     <form method="post" asp-controller="UserBlog" asp-action="CreateNewBlog">
@@ -19,7 +19,7 @@
         </div>
         <div id="editor" class="editormd-dialog-container card-body" style="height:800px">
             <!-- Tips: Editor.md can auto append a `<textarea>` tag -->
-            <textarea asp-for="BlogContent">### Hello Editor.md !</textarea>
+            <textarea id="editorBody" asp-for="BlogContent">### Hello Editor.md !</textarea>
         </div>
         <div class="card-footer row" style="margin:0;width:100%">
             <div style="width:100%">
@@ -59,8 +59,7 @@
         </div>
     </form>
     <script src="~/lib/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-@*    <script src="~/lib/jquey-simpleModal/simpleModal.js" type="text/javascript" charset="utf-8"></script>*@
-    <script src="MarkDown/src/editormd.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/MarkDown/src/editormd.js" type="text/javascript" charset="utf-8"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="~/lib/bootstrap/dist/css/bootstrap.min.css" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
@@ -101,14 +100,50 @@
         })
     </script>
     <script type="text/javascript">
-                $(function () {
+         $(function () {
             var editor = editormd("editor", {
                 width: "100%",
                 height: 700,
                 syncScrolling: "single",
-                // markdown: "xxxx",     // dynamic set Markdown text
-                path: "MarkDown/lib/"  // Autoload modules mode, codemirror, marked... dependents libs path
+                path: "MarkDown/lib/",  // Autoload modules mode, codemirror, marked... dependents libs path
+                saveHTMLToTextarea: true,
+                emoji: true,
+                imageUpload: true,
+                imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL: "/UserBlog/UploadBlogImages", // 文件上传的处理请求！
             });
+
+            $("#editor").on("paste", function (ev) {
+                //1.截图粘贴图片并上传
+                var items = (event.clipboardData || event.originalEvent.clipboardData).items;
+                for (var index in items) {
+                    var item = items[index];
+                    if (item.kind === 'file') {
+                        var blob = item.getAsFile();
+                        var reader = new FileReader();
+                        reader.onload = function (event) {
+                            //将剪切板中复制信息转换成一种base64格式字符串
+                            var base64 = event.target.result;
+                            //ajax上传图片
+                            $.ajax({
+                                url: "/UserBlog/UploadBlogImagesByClibord",
+                                type: 'post',
+                                data: { 'base': base64 },
+                                async: false,
+                                dataType: 'text',
+                                success: function (data) {
+                                    editor.insertValue("\n![" + "image.png" + "](" + data + ")");
+                                    alert("图片上传成功!");
+                                },
+                                error: function () {
+                                    alert('图片上传错误!');
+                                }
+                            });
+                        }
+                    };
+                }
+            });
+
         });
     </script>
 </body>

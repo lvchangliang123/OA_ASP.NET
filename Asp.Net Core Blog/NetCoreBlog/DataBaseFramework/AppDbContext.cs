@@ -19,7 +19,7 @@ namespace DataBaseFramework
 
         //数据集合
         public DbSet<BlogInfoDto> Blogs { get; set; }
-
+        public DbSet<BlogCommentDto> BlogsComments { get; set; }
 
 
 
@@ -37,7 +37,7 @@ namespace DataBaseFramework
 
             //修改数据库表名
             builder.Entity<BlogInfoDto>().ToTable("Blog");
-
+            builder.Entity<BlogCommentDto>().ToTable("BlogComment");
         }
     }
 }

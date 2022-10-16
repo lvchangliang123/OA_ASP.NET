@@ -1,0 +1,144 @@
+﻿@using Newtonsoft.Json;
+@model BlogModels.ViewModels.NewBlogContentViewModel
+@Html.AntiForgeryToken()
+@{
+     ViewBag.Title = "查看博客";
+}
+<!--这里只做显示，不可编辑-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Emoji/dist/emojionearea.min.css" />
+    <link rel="stylesheet" href="~/MarkDown/css/editormd.min.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/Emoji/dist/emojionearea.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <!--引入editormd文件-->
+    <script src="~/MarkDown/src/editormd.js"></script>
+    <script src="~/MarkDown/lib/marked.min.js"></script>
+    <script src="~/MarkDown/lib/prettify.min.js"></script>
+    <script src="~/MarkDown/lib/raphael.min.js"></script>
+    <script src="~/MarkDown/lib/underscore.min.js"></script>
+    <script src="~/MarkDown/lib/sequence-diagram.min.js"></script>
+    <script src="~/MarkDown/lib/flowchart.min.js"></script>
+    <script src="~/MarkDown/lib/jquery.flowchart.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="box" style="display:flex;justify-content:center">
+                <span class="box-shadow" style="vertical-align:middle;font-weight:600;font-family:Helvetica;font-size:18pt">@Model.BlogTitle</span>
+            </div>
+        </div>
+
+        <div class="card-body" id="editor" style="width:90%;height:800px">
+            <textarea>@Model.BlogContent</textarea>
+        </div>
+
+        <div class="card-footer" style="display:flex;justify-content:left">
+            <div>
+                <span>文章标签:</span>
+            </div>
+            <ul class="list-unstyled list-inline" style="margin-left:10px">
+                @foreach (var tag in Model.BlogTagList)
+                {
+                    <li class="list-inline-item" style="justify-content:center;align-items:center">
+                        <!--块元素的文字居中:height:30px;line-height:30px-->
+                        <span style="color:white;background-color:#31a6a0;border-radius:3px;display:block;vertical-align:middle;width:100px;height:30px;line-height:30px;padding-left:10px">
+                            @tag.ToString()
+                        </span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <!--文章底部放置评论功能模块-->
+
+    <div class="card">
+        <div>
+            <span style="font-family:Helvetica;font-weight:bold;margin-left:15px;margin-top:10px">发表评论</span>
+        </div>
+
+
+
+        <div>
+            <form id="commentForm" class="form-control" asp-controller="UserBlog" asp-action="SubmitBlogComment">
+                <input id="inputBlogId" type="text" value="@Model.BlogId" style="display:none" />
+                <textarea id="emojiText" rows="5" style="width:100%">@Model.NewBlogComment.CommentBody</textarea>
+                <div class="input-group" style="width:50%">
+                    <span class="input-group-text">昵称</span>
+                    <input id="inputUserName" type="text" class="form-control" placeholder="User Name" value="@Model.NewBlogComment.CommentUserName" asp-for="@Model.NewBlogComment.CommentUserName" />
+                </div>
+                <div class="input-group" style="width:50%;margin-top:10px">
+                    <span class="input-group-text">邮箱</span>
+                    <input id="inputEmail" type="email" class="form-control" placeholder="User Email" value="@Model.NewBlogComment.CommentUserEmail" asp-for="@Model.NewBlogComment.CommentUserEmail" />
+                </div>
+                <input type="submit" class="btn btn-primary" onclick="SubCommentAjax();" style="width:15%;margin-top:10px" value="提交"/>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            var editor = editormd.markdownToHTML("editor", {
+                htmlDecode: "style, script, iframe",
+                emoji: true,
+                taskList: true,
+                tex: true,  // 默认不解析
+                flowChart: true,  // 默认不解析
+                sequenceDiagram: true,  // 默认不解析
+                syncScrolling: "single",
+                path: "~/MarkDown/lib/",  // Autoload modules mode, codemirror, marked... dependents libs path
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#emojiText").emojioneArea({
+                pickerPosition:"bottom"
+            });
+        });
+    </script>
+
+    <!--点击提交ajax请求-->
+    <script type="text/javascript">
+        function SubCommentAjax() {
+            $.ajax({
+                type: "POST",
+                //contentType: 'application/x-www-form-urlencoded;charset=UTF-8',
+                url: "/UserBlog/SubmitBlogComment",
+                //data: JSON.stringify({
+                //    blogid: $("#inputBlogId").val(),
+                //    commentbody: $("#emojiText").val(),
+                //    commentusername: $("#inputUserName").val(),
+                //    commentuseremail: $("#inputEmail").val(),
+                //}),
+                data: {
+                    blogid: $("#inputBlogId").val(),
+                    commentbody: $("#emojiText").val(),
+                    commentusername: $("#inputUserName").val(),
+                    commentuseremail: $("#inputEmail").val(),
+                },
+                dataType: "json",
+                success: function (response) {
+                    alert(response);
+                },
+                failure: function (response) {
+                    alert(response);
+                }
+            });
+        }
+    </script>
+
+</body>
+
+@{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
