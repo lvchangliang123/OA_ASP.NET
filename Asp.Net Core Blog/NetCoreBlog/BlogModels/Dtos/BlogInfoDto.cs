@@ -16,11 +16,13 @@ namespace BlogModels.Dtos
         public string UserId { get; set; }
 
         public string UserName { get; set; }
+        //用户头像路径
+        public string Avatar { get; set; }
         public DateTime ModifyTime { get; set; }
         public string BlogTitle { get; set; }
         public string BlogContent { get; set; }
         public string BlogTags { get; set; }
         //一对多
-        public List<BlogCommentDto> BlogComments { get; set; }
+        public List<BlogCommentDto> BlogComments { get; set; }=new List<BlogCommentDto>();
     }
 }

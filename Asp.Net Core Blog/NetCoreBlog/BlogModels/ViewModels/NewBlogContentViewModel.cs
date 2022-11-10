@@ -20,5 +20,6 @@ namespace BlogModels.ViewModels
         public List<string> BlogTagList { get; set; }
         public BlogCommentDto NewBlogComment { get; set; }
         public List<BlogCommentDto> BlogComments { get; set; }
+
     }
 }

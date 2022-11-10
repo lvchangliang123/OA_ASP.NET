@@ -1,5 +1,8 @@
-﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> _signInManager
+﻿@using DataBaseFramework.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<CustomerIdentityUser> _signInManager
+@inject UserManager<CustomerIdentityUser> _userManager
+@inject IWebHostEnvironment _webHostEnvironment
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,39 +20,56 @@
 
         <nav class="navbar navbar-dark navbar-fixed-top">
             <div class="container-fluid d-md-inline-flex">
-                <div class="col-2">
+                <div style="width:16%">
                     <a class="text-info col-auto" style="display:flex;font-size:20pt;margin-left:10px" asp-controller="Home" asp-action="Index">.Net技术博客</a>
                 </div>
-                <div class="col-6">
+                <div style="width:44%">
                     <form class="input-group">
-                        <input type="text" placeholder="Search" class="form-control" style="margin:6px,0px,0px,0px" />
+                        <input type="text" placeholder="Search" class="form-control" style="margin:0px,0px,0px,0px" />
                         <button type="submit" class="input-group-btn btn btn-primary">搜索</button>
                     </form>
                 </div>
-                <div class="col-4">
+                <div style="width:40%">
                     <ul class="nav">
-                        <li class="nav-item">
+                        <li class="nav-item" style="width:40%;text-align:center;padding-left:100px">
                             @if (_signInManager.IsSignedIn(User))
                             {
-                                <form method="post" asp-controller="Identity" asp-action="Logout">
-                                    <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
-                                        注销 @User?.Identity?.Name
-                                    </button>
-                                </form>
+                                <div style="height:50px;line-height:50px">
+                                    <!--登录显示头像-->
+                                    @if ((await _userManager.FindByNameAsync(User?.Identity?.Name)).Avatar != "")
+                                    {
+                                        var userAvatar = "\\UserAvatars\\" + _userManager.FindByNameAsync(User?.Identity?.Name).Result.Avatar;
+                                        <img src="@userAvatar" width="40" height="40">
+                                    }
+                                    else
+                                    {
+                                        //显示默认头像
+                                        <img src="~/UserAvatars/DefaultAvatar.png"
+                                             width="30px" height="30px" style="object-fit:scale-down;display:inline-block">
+                                    }
+                                    <form method="post" style="display:inline-block" asp-controller="Identity" asp-action="Logout">
+                                        <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
+                                            注销 @User?.Identity?.Name
+                                        </button>
+                                    </form>
+                                </div>
                             }
                             else
                             {
-                                <a class="nav-fill" asp-controller="Identity" asp-action="Login" style="margin:10px">登录</a>
+                                <a class="nav-fill" asp-controller="Identity" asp-action="Login" style="margin:10px;height:50px;line-height:50px">登录</a>
                             }
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-fill" asp-controller="Identity" asp-action="RegisterUser" style="margin:10px">注册用户</a>
+                        <li class="nav-item" style="width:15%;text-align:center">
+                            <a class="nav-fill" asp-controller="Identity" asp-action="RegisterUser" style="margin:10px;height:50px;line-height:50px">注册用户</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-fill" asp-controller="UserBlog" asp-action="Index" style="margin:10px">我的博客</a>
+                        <li class="nav-item" style="width:15%;text-align:center">
+                            <a class="nav-fill" asp-controller="UserBlog" asp-action="Index" style="margin:10px;height:50px;line-height:50px">我的博客</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-fill" href="#" style="margin:10px">我的资料</a>
+                        <li class="nav-item" style="width:15%;text-align:center">
+                            <a class="nav-fill" href="#" style="margin:10px;height:50px;line-height:50px">我的资料</a>
+                        </li>
+                          <li class="nav-item" style="width:15%;text-align:center">
+                            <a class="nav-fill" href="#" style="margin:10px;height:50px;line-height:50px"></a>
                         </li>
                     </ul>
                 </div>

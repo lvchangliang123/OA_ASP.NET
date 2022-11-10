@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataBaseFramework
 {
-    public class AppDbContext : IdentityDbContext
+    public class AppDbContext : IdentityDbContext<Models.CustomerIdentityUser>
     {
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

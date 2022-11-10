@@ -68,24 +68,67 @@
 
 
         <div>
-            <form id="commentForm" class="form-control" asp-controller="UserBlog" asp-action="SubmitBlogComment">
+            <form id="commentForm" class="form-control">
                 <input id="inputBlogId" type="text" value="@Model.BlogId" style="display:none" />
                 <textarea id="emojiText" rows="5" style="width:100%">@Model.NewBlogComment.CommentBody</textarea>
                 <div class="input-group" style="width:50%">
                     <span class="input-group-text">昵称</span>
-                    <input id="inputUserName" type="text" class="form-control" placeholder="User Name" value="@Model.NewBlogComment.CommentUserName" asp-for="@Model.NewBlogComment.CommentUserName" />
+                    <input id="inputUserName" type="text" class="form-control" placeholder="User Name" value="@Model.NewBlogComment.CommentUserName"/>
                 </div>
                 <div class="input-group" style="width:50%;margin-top:10px">
                     <span class="input-group-text">邮箱</span>
-                    <input id="inputEmail" type="email" class="form-control" placeholder="User Email" value="@Model.NewBlogComment.CommentUserEmail" asp-for="@Model.NewBlogComment.CommentUserEmail" />
+                    <input id="inputEmail" type="email" class="form-control" placeholder="User Email" value="@Model.NewBlogComment.CommentUserEmail"/>
                 </div>
-                <input type="submit" class="btn btn-primary" onclick="SubCommentAjax();" style="width:15%;margin-top:10px" value="提交"/>
+                <input type="button" class="btn btn-primary" onclick="SubCommentAjax();" style="width:15%;margin-top:10px" value="提交"/>
             </form>
         </div>
     </div>
 
+    <div style="margin-top:50px">
+        <!--展示该博客下面的评论，并且分页展示，一页最多十条-->
+        <table id="commentTable" class="table table-bordered">
+            <thead>
+                <tr id="show_tab_one">
+                    <th>用户名</th>
+                    <th>评论时间</th>
+                    <th>评论内容</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var bc in Model.BlogComments)
+                {
+                    <tr id="show_tab_two">
+                        <td>@bc.CommentUserName</td>
+                        <td>@bc.CommentDate</td>
+                        <td>@bc.CommentBody</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <!--利用js实现分页-->
+
+        <div id="cd" style="margin-top:20px">
+            <input type="button" style="height:30px;background:#ededed;border:gray" value="上一页" id="lastPage" />
+            <input type="text" style="height:30px;background:white" id="curPage" size="3" />
+            <input type="button" style="height:30px;background:#ededed;border:gray" id="nPage" value="确定" />
+            <input type="button" style="height:30px;background:#ededed;border:gray" value="下一页" id="nextPage" />
+            共<input id="page" style="height:30px;background:white" type="text" size="1" readonly="readonly" />页
+            每页显示<input id="pageSize" style="height:30px;background:white" type="text" value="2" size="3">行<input style="height:30px;background:#ededed;border:gray" type="button" value="确定" onclick="pageSize2()">
+        </div>
+
+    </div>
+
     <script type="text/javascript">
+
+        //初始化分页函数
+        var pageSize = 2;  //每页显示的记录条数
+        var curPage = 0;   //显示第curPage页
+        var len;           //总行数
+        var page;          //总页数
+
         $(function () {
+
+            //初始化富文本编辑器
             var editor = editormd.markdownToHTML("editor", {
                 htmlDecode: "style, script, iframe",
                 emoji: true,
@@ -96,7 +139,80 @@
                 syncScrolling: "single",
                 path: "~/MarkDown/lib/",  // Autoload modules mode, codemirror, marked... dependents libs path
             });
+
+
+
+            len = $("#commentTable tr").length-1;  
+            //console.log("len="+len);
+            page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1;
+            //console.log("page=" + page);
+            document.getElementById("page").value = page; 
+            curPage = 1;
+            displayPage();     //显示第一页
+
+            //$("#cd").children().css("height","30px");
+
+            $("#nextPage").click(function () {//下一页
+                if (curPage < page) {
+                    curPage += 1;
+                }
+                else {
+                    alert("已经是最后一页");
+                }
+                displayPage();
+            });
+            $("#lastPage").click(function () {//上一页
+                if (curPage > 1) {
+                    curPage -= 1;
+                }
+                else {
+                    alert("已经是第一页");
+                }
+                displayPage();
+            });
+            $("#nPage").click(function () {//跳到固定某一页
+                var npage = parseInt(document.getElementById("curPage").value);
+                if (npage > page || npage < 1) {
+                    alert("该页不存在");
+                }
+                else {
+                    curPage = npage;
+                }
+                displayPage();
+            });
+
         });
+
+        $(function displayPage(){
+            var begin = (curPage-1)*pageSize;   //0*
+            var end = begin+pageSize;
+            if(end > len) end=len;
+            //console.log("begin=" + begin);
+            //console.log("end=" + end);
+            $("#commentTable tr").hide();
+            //console.log("table tr count:" + $("#commentTable tr").length);
+            $("#commentTable tr").each(function (i) {
+                if (i - 1 >= begin && i - 1 < end)//显示第page页的记录
+                {
+                    //console.log("table tr foreach count:"+i);
+                    $("#show_tab_one").show();
+                    $(this).show();
+                    document.getElementById("curPage").value = curPage;
+                }
+            });
+        
+        });
+
+        function pageSize2() {
+            curPage = 0;   //显示第curPage页
+            pageSize = parseInt(document.getElementById("pageSize").value);
+            len = $("#commentTable tr").length - 1;   //去掉表头
+            page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1;//根据记录条数，计算页数
+            document.getElementById("page").value = page;
+            curPage = 1;
+            displayPage();//显示第一页
+        }
+
     </script>
 
     <script type="text/javascript">
@@ -112,26 +228,20 @@
         function SubCommentAjax() {
             $.ajax({
                 type: "POST",
-                //contentType: 'application/x-www-form-urlencoded;charset=UTF-8',
                 url: "/UserBlog/SubmitBlogComment",
-                //data: JSON.stringify({
-                //    blogid: $("#inputBlogId").val(),
-                //    commentbody: $("#emojiText").val(),
-                //    commentusername: $("#inputUserName").val(),
-                //    commentuseremail: $("#inputEmail").val(),
-                //}),
-                data: {
-                    blogid: $("#inputBlogId").val(),
-                    commentbody: $("#emojiText").val(),
-                    commentusername: $("#inputUserName").val(),
-                    commentuseremail: $("#inputEmail").val(),
-                },
+                contentType: "application/json",
                 dataType: "json",
+                data: JSON.stringify({
+                    "Blogid": $("#inputBlogId").val(),
+                    "Commentbody": $("#emojiText").val(),
+                    "Commentusername": $("#inputUserName").val(),
+                    "Commentuseremail": $("#inputEmail").val(),
+                }),
                 success: function (response) {
-                    alert(response);
+                    alert("Success:"+response);
                 },
                 failure: function (response) {
-                    alert(response);
+                    alert("Failed:"+response);
                 }
             });
         }
@@ -139,6 +249,6 @@
 
 </body>
 
-@{
+@*@{
     await Html.RenderPartialAsync("_ValidationScriptsPartial");
-}
+}*@

@@ -11,6 +11,7 @@ namespace BlogModels.ViewModels
     {
         public string CommentUserName { get; set; }
         public string CommentUserEmail { get; set; }
+        public string CommentUserAvatar { get; set; }
         public string CommentBody { get; set; }
         public DateTime CommentDate { get; set; }
 

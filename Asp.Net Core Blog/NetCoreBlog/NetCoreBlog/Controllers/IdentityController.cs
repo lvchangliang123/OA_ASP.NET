@@ -1,18 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BlogModels.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using NetCoreBlog.Models;
+using DataBaseFramework.Models;
 
 namespace NetCoreBlog.Controllers
 {
     public class IdentityController : Controller
     {
-        private UserManager<IdentityUser> _userManager;
-        private SignInManager<IdentityUser> _signInManager;
+        private UserManager<CustomerIdentityUser> _userManager;
+        private SignInManager<CustomerIdentityUser> _signInManager;
+        private IWebHostEnvironment _webHostEnvironment;
 
-        public IdentityController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public IdentityController(UserManager<CustomerIdentityUser> userManager, SignInManager<CustomerIdentityUser> signInManager, IWebHostEnvironment webHostEnvironment)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         [HttpGet]
@@ -35,12 +39,20 @@ namespace NetCoreBlog.Controllers
         {
             if (ModelState.IsValid)
             {
+                //将头像上传到root文件夹下的UserAvatars文件夹下
                 //创建identityUser对象
-                var user = new IdentityUser
+                var avatarFlod = Path.Combine(_webHostEnvironment.WebRootPath, "UserAvatars");
+                string guidStr = Guid.NewGuid().ToString();
+                var filePath = Path.Combine(avatarFlod,guidStr + "_" + registerViewModel.Avatar.FileName);
+                var user = new CustomerIdentityUser
                 {
                     UserName = registerViewModel.UserName,
                     Email = registerViewModel.Email,
+                    Birthday = registerViewModel.BirthDay,
+                    Avatar = guidStr + "_" + registerViewModel.Avatar.FileName,
                 };
+                //上传头像
+                await registerViewModel.Avatar.CopyToAsync(new FileStream(filePath, FileMode.Create));
                 var result = await _userManager.CreateAsync(user, registerViewModel.Password);
                 if (result.Succeeded)
                 {

@@ -14,40 +14,78 @@
     <link rel="stylesheet" href="~/NetCoreBlog.styles.css" asp-append-version="true" />
 </head>
 <body>
+
     <div class="row">
-        <div class="col-12">
-            <div class="row">
-                <span class="col-6 offset-6">
-                    <svg t="1658157471125" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2893" width="80" height="80"><path d="M853.333333 85.333333H170.666667c-46.933333 0-85.333333 38.4-85.333334 85.333334v682.666666c0 46.933333 38.4 85.333333 85.333334 85.333334h682.666666c46.933333 0 85.333333-38.4 85.333334-85.333334V170.666667c0-46.933333-38.4-85.333333-85.333334-85.333334z m-170.666666 298.666667v42.666667c0 25.6 17.066667 42.666667 42.666666 42.666666s42.666667 17.066667 42.666667 42.666667v128c0 72.533333-55.466667 128-128 128H384c-72.533333 0-128-55.466667-128-128V341.333333c0-72.533333 55.466667-128 128-128h170.666667c72.533333 0 128 55.466667 128 128v42.666667z m-256 42.666667h110.933333c25.6 0 42.666667-17.066667 42.666667-42.666667s-17.066667-42.666667-42.666667-42.666667H426.666667c-25.6 0-42.666667 17.066667-42.666667 42.666667s17.066667 42.666667 42.666667 42.666667z m170.666666 128h-170.666666c-25.6 0-42.666667 17.066667-42.666667 42.666666s17.066667 42.666667 42.666667 42.666667h170.666666c25.6 0 42.666667-17.066667 42.666667-42.666667s-17.066667-42.666667-42.666667-42.666666z" p-id="2894" fill="#515151"></path></svg>
-                </span>
-            </div>
-            <form method="post" class="form-control">
+        <div style="text-align:center">
+            <span >
+                <svg t="1658157471125" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2893" width="80" height="80"><path d="M853.333333 85.333333H170.666667c-46.933333 0-85.333333 38.4-85.333334 85.333334v682.666666c0 46.933333 38.4 85.333333 85.333334 85.333334h682.666666c46.933333 0 85.333333-38.4 85.333334-85.333334V170.666667c0-46.933333-38.4-85.333333-85.333334-85.333334z m-170.666666 298.666667v42.666667c0 25.6 17.066667 42.666667 42.666666 42.666666s42.666667 17.066667 42.666667 42.666667v128c0 72.533333-55.466667 128-128 128H384c-72.533333 0-128-55.466667-128-128V341.333333c0-72.533333 55.466667-128 128-128h170.666667c72.533333 0 128 55.466667 128 128v42.666667z m-256 42.666667h110.933333c25.6 0 42.666667-17.066667 42.666667-42.666667s-17.066667-42.666667-42.666667-42.666667H426.666667c-25.6 0-42.666667 17.066667-42.666667 42.666667s17.066667 42.666667 42.666667 42.666667z m170.666666 128h-170.666666c-25.6 0-42.666667 17.066667-42.666667 42.666666s17.066667 42.666667 42.666667 42.666667h170.666666c25.6 0 42.666667-17.066667 42.666667-42.666667s-17.066667-42.666667-42.666667-42.666666z" p-id="2894" fill="#515151"></path></svg>
+            </span>
+        </div>
+        <div class="col-6 offset-3 shadow-sm p-3 mb-6 bg-light">
+            <form method="post" class="form-control" enctype="multipart/form-data">
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
-                    <label asp-for="UserName"></label>
-                    <input asp-for="UserName" class="form-control" />
-                    <span asp-validation-for="UserName" class="text-danger"></span>
+                    <label asp-for="UserName" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-12">
+                        <input asp-for="UserName" class="form-control" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Email"></label>
-                    <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <label asp-for="Email" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-12">
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Password"></label>
-                    <input asp-for="Password" class="form-control" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
+                    <label asp-for="BirthDay" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-12">
+                        <input asp-for="BirthDay" type="date" class="form-control"/>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label asp-for="ConfirmPassword"></label>
-                    <input asp-for="ConfirmPassword" class="form-control" />
-                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    <label asp-for="Avatar" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-12">
+                        <div>
+                            <input asp-for="Avatar" type="file" name="Avatar" id="Avatar" class="form-control" />
+                            @*<label class="custom-file-label">请选择图片...</label>*@
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
+                    <label asp-for="Password" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-12">
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword" class="col-md-3 col-form-label"></label>
+                    <div class="col-md-12">
+                        <input asp-for="ConfirmPassword" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group" style="text-align:center">
                     <button type="submit" class="btn btn-primary" style="margin:10px 0 0 0;width:100px">注册</button>
                 </div>
 
             </form>
         </div>
     </div>
+
+    <script>
+        //$(document).ready(function(){
+        //    $("#customer_file_input").on("change",function(){
+        //        var fileName = $(this)
+        //        .val()
+        //        .split("\\")
+        //        .pop();
+        //        $(this).next(".custom-file-label")
+        //        .html(fileName);
+        //    });
+        //});
+    </script>
+
 </body>

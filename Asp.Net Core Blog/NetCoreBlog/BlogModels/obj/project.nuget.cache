@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Kowxyp40XnSiRlnBGGBBqWJKDIqW6YM92ugb/azm6XPwH7pZ8YKE3/CF/xIsj0szu8ngN2AwcMMwyBpdENJ2Qw==",
+  "dgSpecHash": "/s443JI6mShNQEVWYwROb0utkii63dLH6CzvJ7qadh/DJhN2Bi+C4EL9LNYXk+P3GnfUdXCrnN5qJ0odJpp85A==",
   "success": true,
   "projectFilePath": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\BlogModels\\BlogModels.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
