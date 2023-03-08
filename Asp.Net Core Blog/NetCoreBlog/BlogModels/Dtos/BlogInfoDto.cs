@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,8 @@ namespace BlogModels.Dtos
         public string BlogTitle { get; set; }
         public string BlogContent { get; set; }
         public string BlogTags { get; set; }
+        [Description("文章封面")]
+        public string BlogRelativeImageUrl { get; set; }
         //一对多
         public List<BlogCommentDto> BlogComments { get; set; }=new List<BlogCommentDto>();
     }

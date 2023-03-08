@@ -1,0 +1,2213 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\NetCoreBlog.bundle.scp.css",
+      "PackagePath": "staticwebassets\\NetCoreBlog.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\24e6dbf9-1351-434d-8337-9751c6ed52fb_aspNetCore.png",
+      "PackagePath": "staticwebassets\\ArticleImages\\24e6dbf9-1351-434d-8337-9751c6ed52fb_aspNetCore.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\.editorconfig",
+      "PackagePath": "staticwebassets\\Emoji\\.editorconfig"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\.gitconfig",
+      "PackagePath": "staticwebassets\\Emoji\\.gitconfig"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\.gitignore",
+      "PackagePath": "staticwebassets\\Emoji\\.gitignore"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\Gruntfile.js",
+      "PackagePath": "staticwebassets\\Emoji\\Gruntfile.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\bower.json",
+      "PackagePath": "staticwebassets\\Emoji\\bower.json"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\composer.json",
+      "PackagePath": "staticwebassets\\Emoji\\composer.json"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\dist\\emojionearea.css",
+      "PackagePath": "staticwebassets\\Emoji\\dist\\emojionearea.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\dist\\emojionearea.js",
+      "PackagePath": "staticwebassets\\Emoji\\dist\\emojionearea.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\dist\\emojionearea.min.css",
+      "PackagePath": "staticwebassets\\Emoji\\dist\\emojionearea.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\dist\\emojionearea.min.js",
+      "PackagePath": "staticwebassets\\Emoji\\dist\\emojionearea.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\images\\placeholder.png",
+      "PackagePath": "staticwebassets\\Emoji\\images\\placeholder.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\images\\sprite.png",
+      "PackagePath": "staticwebassets\\Emoji\\images\\sprite.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\package.json",
+      "PackagePath": "staticwebassets\\Emoji\\package.json"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\scss\\_image.scss",
+      "PackagePath": "staticwebassets\\Emoji\\scss\\_image.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\scss\\_text-complete.scss",
+      "PackagePath": "staticwebassets\\Emoji\\scss\\_text-complete.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\Emoji\\scss\\_variables.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\scss\\emojionearea.scss",
+      "PackagePath": "staticwebassets\\Emoji\\scss\\emojionearea.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\amd.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\amd.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\block\\selection.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\block\\selection.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\emojionearea.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\emojionearea.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\attach.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\attach.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\bindEvent.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\bindEvent.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\calcButtonPosition.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\calcButtonPosition.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\calcElapsedTime.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\calcElapsedTime.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\detectVersion.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\detectVersion.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\div.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\div.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\emojioneReady.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\emojioneReady.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\getDefaultOptions.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\getDefaultOptions.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\getEmojioneVersion.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\getEmojioneVersion.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\getOptions.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\getOptions.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\getRecent.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\getRecent.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\getSupportMode.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\getSupportMode.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\getTemplate.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\getTemplate.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\htmlFromText.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\htmlFromText.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\init.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\init.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\isMobile.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\isMobile.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\isObject.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\isObject.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\lazyLoading.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\lazyLoading.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\loadEmojione.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\loadEmojione.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\pasteHtmlAtCaret.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\pasteHtmlAtCaret.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\restoreSelection.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\restoreSelection.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\saveSelection.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\saveSelection.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\selector.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\selector.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\setRecent.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\setRecent.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\shortnameTo.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\shortnameTo.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\supportsLocalStorage.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\supportsLocalStorage.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\textFromHtml.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\textFromHtml.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\trigger.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\trigger.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\unicodeTo.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\unicodeTo.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\function\\updateRecent.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\function\\updateRecent.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\disable.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\disable.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\enable.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\enable.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\getText.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\getText.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\hidePicker.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\hidePicker.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\off.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\off.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\on.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\on.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\setFocus.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\setFocus.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\setText.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\setText.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\showPicker.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\showPicker.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\trigger.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\trigger.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\prototype\\var\\EmojioneArea.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\prototype\\var\\EmojioneArea.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\blankImg.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\blankImg.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\cdn.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\cdn.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\css_class.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\css_class.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\emojione.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\emojione.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\emojioneSupportMode.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\emojioneSupportMode.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\eventStorage.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\eventStorage.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\invisibleChar.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\invisibleChar.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\possibleEvents.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\possibleEvents.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\readyCallbacks.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\readyCallbacks.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\slice.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\slice.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\uniRegexp.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\uniRegexp.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\var\\unique.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\var\\unique.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\src\\wrapper.js",
+      "PackagePath": "staticwebassets\\Emoji\\src\\wrapper.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\tasks\\build.js",
+      "PackagePath": "staticwebassets\\Emoji\\tasks\\build.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\.gitignore",
+      "PackagePath": "staticwebassets\\MarkDown\\.gitignore"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\.jshintrc",
+      "PackagePath": "staticwebassets\\MarkDown\\.jshintrc"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\Gulpfile.js",
+      "PackagePath": "staticwebassets\\MarkDown\\Gulpfile.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\bower.json",
+      "PackagePath": "staticwebassets\\MarkDown\\bower.json"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\css\\editormd.css",
+      "PackagePath": "staticwebassets\\MarkDown\\css\\editormd.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\css\\editormd.logo.css",
+      "PackagePath": "staticwebassets\\MarkDown\\css\\editormd.logo.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\css\\editormd.logo.min.css",
+      "PackagePath": "staticwebassets\\MarkDown\\css\\editormd.logo.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\css\\editormd.min.css",
+      "PackagePath": "staticwebassets\\MarkDown\\css\\editormd.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\css\\editormd.preview.css",
+      "PackagePath": "staticwebassets\\MarkDown\\css\\editormd.preview.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\css\\editormd.preview.min.css",
+      "PackagePath": "staticwebassets\\MarkDown\\css\\editormd.preview.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\editormd.amd.js",
+      "PackagePath": "staticwebassets\\MarkDown\\editormd.amd.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\editormd.amd.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\editormd.amd.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\editormd.js",
+      "PackagePath": "staticwebassets\\MarkDown\\editormd.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\editormd.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\editormd.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\MarkDown\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\fonts\\editormd-logo.eot",
+      "PackagePath": "staticwebassets\\MarkDown\\fonts\\editormd-logo.eot"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\fonts\\editormd-logo.svg",
+      "PackagePath": "staticwebassets\\MarkDown\\fonts\\editormd-logo.svg"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\fonts\\editormd-logo.ttf",
+      "PackagePath": "staticwebassets\\MarkDown\\fonts\\editormd-logo.ttf"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\fonts\\editormd-logo.woff",
+      "PackagePath": "staticwebassets\\MarkDown\\fonts\\editormd-logo.woff"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\MarkDown\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\MarkDown\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\MarkDown\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\MarkDown\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\MarkDown\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\loading.gif"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\loading@2x.gif",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\loading@2x.gif"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\loading@3x.gif",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\loading@3x.gif"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-favicon-16x16.ico",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-favicon-16x16.ico"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-favicon-24x24.ico",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-favicon-24x24.ico"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-favicon-32x32.ico",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-favicon-32x32.ico"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-favicon-48x48.ico",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-favicon-48x48.ico"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-favicon-64x64.ico",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-favicon-64x64.ico"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-114x114.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-114x114.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-120x120.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-120x120.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-144x144.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-144x144.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-16x16.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-16x16.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-180x180.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-180x180.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-240x240.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-240x240.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-24x24.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-24x24.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-320x320.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-320x320.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-32x32.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-32x32.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-48x48.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-48x48.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-57x57.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-57x57.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-64x64.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-64x64.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-72x72.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-72x72.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\editormd-logo-96x96.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\editormd-logo-96x96.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\images\\logos\\vi.png",
+      "PackagePath": "staticwebassets\\MarkDown\\images\\logos\\vi.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\languages\\en.js",
+      "PackagePath": "staticwebassets\\MarkDown\\languages\\en.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\languages\\zh-tw.js",
+      "PackagePath": "staticwebassets\\MarkDown\\languages\\zh-tw.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\AUTHORS",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\LICENSE",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\README.md",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\README.md"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\comment\\comment.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\comment\\comment.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\comment\\continuecomment.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\comment\\continuecomment.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\dialog\\dialog.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\dialog\\dialog.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\dialog\\dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\dialog\\dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\display\\fullscreen.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\display\\fullscreen.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\display\\fullscreen.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\display\\fullscreen.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\display\\panel.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\display\\panel.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\display\\placeholder.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\display\\placeholder.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\display\\rulers.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\display\\rulers.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\edit\\closebrackets.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\edit\\closebrackets.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\edit\\closetag.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\edit\\closetag.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\edit\\continuelist.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\edit\\continuelist.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\edit\\matchbrackets.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\edit\\matchbrackets.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\edit\\matchtags.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\edit\\matchtags.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\edit\\trailingspace.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\edit\\trailingspace.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\fold\\brace-fold.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\fold\\brace-fold.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\fold\\comment-fold.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\fold\\comment-fold.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\fold\\foldcode.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\fold\\foldcode.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\fold\\foldgutter.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\fold\\foldgutter.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\fold\\foldgutter.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\fold\\foldgutter.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\fold\\indent-fold.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\fold\\indent-fold.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\fold\\markdown-fold.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\fold\\markdown-fold.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\fold\\xml-fold.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\fold\\xml-fold.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\hint\\anyword-hint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\hint\\anyword-hint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\hint\\css-hint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\hint\\css-hint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\hint\\html-hint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\hint\\html-hint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\hint\\javascript-hint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\hint\\javascript-hint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\hint\\show-hint.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\hint\\show-hint.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\hint\\show-hint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\hint\\show-hint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\hint\\sql-hint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\hint\\sql-hint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\hint\\xml-hint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\hint\\xml-hint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\lint\\coffeescript-lint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\lint\\coffeescript-lint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\lint\\css-lint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\lint\\css-lint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\lint\\javascript-lint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\lint\\javascript-lint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\lint\\json-lint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\lint\\json-lint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\lint\\lint.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\lint\\lint.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\lint\\lint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\lint\\lint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\lint\\yaml-lint.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\lint\\yaml-lint.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\merge\\merge.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\merge\\merge.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\merge\\merge.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\merge\\merge.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\mode\\loadmode.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\mode\\loadmode.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\mode\\multiplex.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\mode\\multiplex.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\mode\\multiplex_test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\mode\\multiplex_test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\mode\\overlay.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\mode\\overlay.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\mode\\simple.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\mode\\simple.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\runmode\\colorize.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\runmode\\colorize.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\runmode\\runmode-standalone.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\runmode\\runmode-standalone.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\runmode\\runmode.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\runmode\\runmode.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\runmode\\runmode.node.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\runmode\\runmode.node.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\scroll\\annotatescrollbar.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\scroll\\annotatescrollbar.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\scroll\\scrollpastend.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\scroll\\scrollpastend.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\scroll\\simplescrollbars.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\scroll\\simplescrollbars.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\scroll\\simplescrollbars.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\scroll\\simplescrollbars.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\search\\match-highlighter.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\search\\match-highlighter.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\search\\matchesonscrollbar.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\search\\matchesonscrollbar.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\search\\matchesonscrollbar.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\search\\matchesonscrollbar.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\search\\search.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\search\\search.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\search\\searchcursor.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\search\\searchcursor.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\selection\\active-line.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\selection\\active-line.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\selection\\mark-selection.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\selection\\mark-selection.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\selection\\selection-pointer.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\selection\\selection-pointer.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\tern\\tern.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\tern\\tern.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\tern\\tern.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\tern\\tern.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\tern\\worker.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\tern\\worker.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addon\\wrap\\hardwrap.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addon\\wrap\\hardwrap.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\addons.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\addons.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\bower.json",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\bower.json"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\codemirror.min.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\codemirror.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\codemirror.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\codemirror.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\lib\\codemirror.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\lib\\codemirror.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\lib\\codemirror.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\lib\\codemirror.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\apl\\apl.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\apl\\apl.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\apl\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\apl\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\asterisk\\asterisk.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\asterisk\\asterisk.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\asterisk\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\asterisk\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\clike\\clike.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\clike\\clike.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\clike\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\clike\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\clike\\scala.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\clike\\scala.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\clojure\\clojure.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\clojure\\clojure.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\clojure\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\clojure\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\cobol\\cobol.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\cobol\\cobol.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\cobol\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\cobol\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\coffeescript\\coffeescript.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\coffeescript\\coffeescript.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\coffeescript\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\coffeescript\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\commonlisp\\commonlisp.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\commonlisp\\commonlisp.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\commonlisp\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\commonlisp\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\css\\css.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\css\\css.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\css\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\css\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\css\\less.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\css\\less.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\css\\less_test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\css\\less_test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\css\\scss.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\css\\scss.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\css\\scss_test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\css\\scss_test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\css\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\css\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\cypher\\cypher.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\cypher\\cypher.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\cypher\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\cypher\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\d\\d.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\d\\d.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\d\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\d\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\dart\\dart.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\dart\\dart.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\dart\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\dart\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\diff\\diff.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\diff\\diff.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\diff\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\diff\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\django\\django.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\django\\django.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\django\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\django\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\dockerfile\\dockerfile.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\dockerfile\\dockerfile.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\dockerfile\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\dockerfile\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\dtd\\dtd.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\dtd\\dtd.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\dtd\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\dtd\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\dylan\\dylan.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\dylan\\dylan.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\dylan\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\dylan\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\ebnf\\ebnf.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\ebnf\\ebnf.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\ebnf\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\ebnf\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\ecl\\ecl.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\ecl\\ecl.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\ecl\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\ecl\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\eiffel\\eiffel.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\eiffel\\eiffel.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\eiffel\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\eiffel\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\erlang\\erlang.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\erlang\\erlang.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\erlang\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\erlang\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\forth\\forth.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\forth\\forth.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\forth\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\forth\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\fortran\\fortran.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\fortran\\fortran.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\fortran\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\fortran\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\gas\\gas.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\gas\\gas.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\gas\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\gas\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\gfm\\gfm.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\gfm\\gfm.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\gfm\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\gfm\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\gfm\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\gfm\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\gherkin\\gherkin.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\gherkin\\gherkin.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\gherkin\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\gherkin\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\go\\go.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\go\\go.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\go\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\go\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\groovy\\groovy.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\groovy\\groovy.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\groovy\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\groovy\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\haml\\haml.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\haml\\haml.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\haml\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\haml\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\haml\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\haml\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\haskell\\haskell.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\haskell\\haskell.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\haskell\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\haskell\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\haxe\\haxe.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\haxe\\haxe.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\haxe\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\haxe\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\htmlembedded\\htmlembedded.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\htmlembedded\\htmlembedded.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\htmlembedded\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\htmlembedded\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\htmlmixed\\htmlmixed.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\htmlmixed\\htmlmixed.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\htmlmixed\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\htmlmixed\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\http\\http.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\http\\http.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\http\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\http\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\idl\\idl.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\idl\\idl.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\idl\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\idl\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\jade\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\jade\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\jade\\jade.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\jade\\jade.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\javascript\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\javascript\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\javascript\\javascript.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\javascript\\javascript.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\javascript\\json-ld.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\javascript\\json-ld.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\javascript\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\javascript\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\javascript\\typescript.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\javascript\\typescript.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\jinja2\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\jinja2\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\jinja2\\jinja2.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\jinja2\\jinja2.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\julia\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\julia\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\julia\\julia.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\julia\\julia.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\kotlin\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\kotlin\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\kotlin\\kotlin.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\kotlin\\kotlin.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\livescript\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\livescript\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\livescript\\livescript.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\livescript\\livescript.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\lua\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\lua\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\lua\\lua.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\lua\\lua.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\markdown\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\markdown\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\markdown\\markdown.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\markdown\\markdown.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\markdown\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\markdown\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\meta.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\meta.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\mirc\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\mirc\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\mirc\\mirc.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\mirc\\mirc.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\mllike\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\mllike\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\mllike\\mllike.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\mllike\\mllike.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\modelica\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\modelica\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\modelica\\modelica.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\modelica\\modelica.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\nginx\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\nginx\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\nginx\\nginx.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\nginx\\nginx.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\ntriples\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\ntriples\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\ntriples\\ntriples.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\ntriples\\ntriples.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\octave\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\octave\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\octave\\octave.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\octave\\octave.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\pascal\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\pascal\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\pascal\\pascal.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\pascal\\pascal.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\pegjs\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\pegjs\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\pegjs\\pegjs.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\pegjs\\pegjs.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\perl\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\perl\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\perl\\perl.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\perl\\perl.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\php\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\php\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\php\\php.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\php\\php.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\php\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\php\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\pig\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\pig\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\pig\\pig.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\pig\\pig.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\properties\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\properties\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\properties\\properties.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\properties\\properties.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\puppet\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\puppet\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\puppet\\puppet.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\puppet\\puppet.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\python\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\python\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\python\\python.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\python\\python.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\q\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\q\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\q\\q.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\q\\q.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\r\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\r\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\r\\r.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\r\\r.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\rpm\\changes\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\rpm\\changes\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\rpm\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\rpm\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\rpm\\rpm.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\rpm\\rpm.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\rst\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\rst\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\rst\\rst.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\rst\\rst.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\ruby\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\ruby\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\ruby\\ruby.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\ruby\\ruby.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\ruby\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\ruby\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\rust\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\rust\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\rust\\rust.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\rust\\rust.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\sass\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\sass\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\sass\\sass.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\sass\\sass.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\scheme\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\scheme\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\scheme\\scheme.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\scheme\\scheme.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\shell\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\shell\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\shell\\shell.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\shell\\shell.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\shell\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\shell\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\sieve\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\sieve\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\sieve\\sieve.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\sieve\\sieve.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\slim\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\slim\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\slim\\slim.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\slim\\slim.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\slim\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\slim\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\smalltalk\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\smalltalk\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\smalltalk\\smalltalk.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\smalltalk\\smalltalk.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\smarty\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\smarty\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\smarty\\smarty.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\smarty\\smarty.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\smartymixed\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\smartymixed\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\smartymixed\\smartymixed.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\smartymixed\\smartymixed.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\solr\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\solr\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\solr\\solr.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\solr\\solr.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\soy\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\soy\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\soy\\soy.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\soy\\soy.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\sparql\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\sparql\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\sparql\\sparql.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\sparql\\sparql.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\spreadsheet\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\spreadsheet\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\spreadsheet\\spreadsheet.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\spreadsheet\\spreadsheet.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\sql\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\sql\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\sql\\sql.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\sql\\sql.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\stex\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\stex\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\stex\\stex.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\stex\\stex.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\stex\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\stex\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\stylus\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\stylus\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\stylus\\stylus.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\stylus\\stylus.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\tcl\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\tcl\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\tcl\\tcl.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\tcl\\tcl.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\textile\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\textile\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\textile\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\textile\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\textile\\textile.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\textile\\textile.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\tiddlywiki\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\tiddlywiki\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\tiddlywiki\\tiddlywiki.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\tiddlywiki\\tiddlywiki.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\tiddlywiki\\tiddlywiki.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\tiddlywiki\\tiddlywiki.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\tiki\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\tiki\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\tiki\\tiki.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\tiki\\tiki.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\tiki\\tiki.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\tiki\\tiki.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\toml\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\toml\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\toml\\toml.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\toml\\toml.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\tornado\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\tornado\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\tornado\\tornado.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\tornado\\tornado.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\turtle\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\turtle\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\turtle\\turtle.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\turtle\\turtle.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\vb\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\vb\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\vb\\vb.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\vb\\vb.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\vbscript\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\vbscript\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\vbscript\\vbscript.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\vbscript\\vbscript.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\velocity\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\velocity\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\velocity\\velocity.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\velocity\\velocity.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\verilog\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\verilog\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\verilog\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\verilog\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\verilog\\verilog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\verilog\\verilog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\xml\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\xml\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\xml\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\xml\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\xml\\xml.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\xml\\xml.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\xquery\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\xquery\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\xquery\\test.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\xquery\\test.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\xquery\\xquery.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\xquery\\xquery.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\yaml\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\yaml\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\yaml\\yaml.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\yaml\\yaml.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\z80\\index.html",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\z80\\index.html"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\mode\\z80\\z80.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\mode\\z80\\z80.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\modes.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\modes.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\package.json",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\package.json"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\3024-day.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\3024-day.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\3024-night.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\3024-night.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\ambiance-mobile.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\ambiance-mobile.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\ambiance.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\ambiance.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\base16-dark.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\base16-dark.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\base16-light.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\base16-light.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\blackboard.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\blackboard.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\cobalt.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\cobalt.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\colorforth.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\colorforth.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\eclipse.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\eclipse.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\elegant.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\elegant.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\erlang-dark.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\erlang-dark.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\lesser-dark.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\lesser-dark.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\mbo.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\mbo.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\mdn-like.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\mdn-like.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\midnight.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\midnight.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\monokai.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\monokai.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\neat.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\neat.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\neo.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\neo.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\night.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\night.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\paraiso-dark.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\paraiso-dark.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\paraiso-light.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\paraiso-light.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\pastel-on-dark.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\pastel-on-dark.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\rubyblue.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\rubyblue.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\solarized.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\solarized.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\the-matrix.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\the-matrix.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\tomorrow-night-bright.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\tomorrow-night-bright.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\tomorrow-night-eighties.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\tomorrow-night-eighties.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\twilight.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\twilight.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\vibrant-ink.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\vibrant-ink.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\xq-dark.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\xq-dark.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\xq-light.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\xq-light.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\codemirror\\theme\\zenburn.css",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\codemirror\\theme\\zenburn.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\flowchart.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\flowchart.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\jquery.flowchart.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\jquery.flowchart.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\marked.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\marked.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\prettify.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\prettify.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\raphael.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\raphael.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\sequence-diagram.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\sequence-diagram.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\lib\\underscore.min.js",
+      "PackagePath": "staticwebassets\\MarkDown\\lib\\underscore.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\package.json",
+      "PackagePath": "staticwebassets\\MarkDown\\package.json"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\code-block-dialog\\code-block-dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\code-block-dialog\\code-block-dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\emoji-dialog\\emoji-dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\emoji-dialog\\emoji-dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\emoji-dialog\\emoji.json",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\emoji-dialog\\emoji.json"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\goto-line-dialog\\goto-line-dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\goto-line-dialog\\goto-line-dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\help-dialog\\help-dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\help-dialog\\help-dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\help-dialog\\help.md",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\help-dialog\\help.md"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\html-entities-dialog\\html-entities-dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\html-entities-dialog\\html-entities-dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\html-entities-dialog\\html-entities.json",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\html-entities-dialog\\html-entities.json"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\image-dialog\\image-dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\image-dialog\\image-dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\link-dialog\\link-dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\link-dialog\\link-dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\plugin-template.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\plugin-template.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\preformatted-text-dialog\\preformatted-text-dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\preformatted-text-dialog\\preformatted-text-dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\reference-link-dialog\\reference-link-dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\reference-link-dialog\\reference-link-dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\table-dialog\\table-dialog.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\table-dialog\\table-dialog.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\plugins\\test-plugin\\test-plugin.js",
+      "PackagePath": "staticwebassets\\MarkDown\\plugins\\test-plugin\\test-plugin.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.codemirror.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.codemirror.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.dialog.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.dialog.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.form.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.form.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.grid.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.grid.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.logo.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.logo.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.menu.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.menu.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.preview.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.preview.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.preview.themes.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.preview.themes.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.tab.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.tab.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\editormd.themes.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\editormd.themes.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\font-awesome.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\font-awesome.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\github-markdown.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\github-markdown.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\lib\\prefixes.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\lib\\prefixes.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\lib\\variables.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\lib\\variables.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\scss\\prettify.scss",
+      "PackagePath": "staticwebassets\\MarkDown\\scss\\prettify.scss"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\src\\editormd.js",
+      "PackagePath": "staticwebassets\\MarkDown\\src\\editormd.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\UserAvatars\\495e6ae8-37a5-42e3-8731-92b4f55c6125_user02.jpeg",
+      "PackagePath": "staticwebassets\\UserAvatars\\495e6ae8-37a5-42e3-8731-92b4f55c6125_user02.jpeg"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\UserAvatars\\DefaultAvatar.png",
+      "PackagePath": "staticwebassets\\UserAvatars\\DefaultAvatar.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-simpleModal\\simpleModal.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-simpleModal\\simpleModal.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.NetCoreBlog.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.NetCoreBlog.props",
+      "PackagePath": "build\\NetCoreBlog.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.NetCoreBlog.props",
+      "PackagePath": "buildMultiTargeting\\NetCoreBlog.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.NetCoreBlog.props",
+      "PackagePath": "buildTransitive\\NetCoreBlog.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

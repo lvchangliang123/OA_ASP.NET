@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="~/NetCoreBlog.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    <header style="background-color:sienna">
 
         <!--导航条-->
 
@@ -39,9 +39,9 @@
                                     @if ((await _userManager.FindByNameAsync(User?.Identity?.Name)).Avatar != "")
                                     {
                                         var userAvatar = "\\UserAvatars\\" + _userManager.FindByNameAsync(User?.Identity?.Name).Result.Avatar;
-                                        <img src="@userAvatar" width="40" height="40">
+                                        <img src="@userAvatar" style="border-radius:20px" width="40" height="40">
                                     }
-                                    else
+                                    else 
                                     {
                                         //显示默认头像
                                         <img src="~/UserAvatars/DefaultAvatar.png"
@@ -66,7 +66,7 @@
                             <a class="nav-fill" asp-controller="UserBlog" asp-action="Index" style="margin:10px;height:50px;line-height:50px">我的博客</a>
                         </li>
                         <li class="nav-item" style="width:15%;text-align:center">
-                            <a class="nav-fill" href="#" style="margin:10px;height:50px;line-height:50px">我的资料</a>
+                            <a class="nav-fill" asp-controller="Identity" asp-action="EditUserInfo" style="margin:10px;height:50px;line-height:50px">我的资料</a>
                         </li>
                           <li class="nav-item" style="width:15%;text-align:center">
                             <a class="nav-fill" href="#" style="margin:10px;height:50px;line-height:50px"></a>
@@ -86,7 +86,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted" style="background-color:sienna">
         <div class="container" style="text-align:center">
             &copy; 2022 - NetCoreBlog - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

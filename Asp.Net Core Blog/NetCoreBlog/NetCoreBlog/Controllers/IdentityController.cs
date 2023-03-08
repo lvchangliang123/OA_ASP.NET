@@ -43,7 +43,7 @@ namespace NetCoreBlog.Controllers
                 //创建identityUser对象
                 var avatarFlod = Path.Combine(_webHostEnvironment.WebRootPath, "UserAvatars");
                 string guidStr = Guid.NewGuid().ToString();
-                var filePath = Path.Combine(avatarFlod,guidStr + "_" + registerViewModel.Avatar.FileName);
+                var filePath = Path.Combine(avatarFlod, guidStr + "_" + registerViewModel.Avatar.FileName);
                 var user = new CustomerIdentityUser
                 {
                     UserName = registerViewModel.UserName,
@@ -164,6 +164,79 @@ namespace NetCoreBlog.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+
+        [HttpGet]
+        [Route("EditUserInfo")]
+        public async Task<IActionResult> EditUserInfo()
+        {
+            var loginUser = await _signInManager.UserManager.GetUserAsync(HttpContext.User);
+            if (loginUser == null)
+            {
+                await Response.WriteAsync("<script>alert('当前无登录用户，请先登录......')</script>");
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                var editUserVm = new EditUserInfoViewModel
+                {
+                    NewUserName = loginUser.UserName,
+                    NewEmail = loginUser.Email,
+                    NewBirthDay = loginUser.Birthday,
+                    OldAvatar = "\\UserAvatars\\" + loginUser.Avatar,
+                };
+                return View(editUserVm);
+            }
+        }
+
+        [HttpPost]
+        [Route("EditUserInfo")]
+        public async Task<IActionResult> EditUserInfo(EditUserInfoViewModel userInfo)
+        {
+            if (ModelState.IsValid)
+            {
+                //1.确认用户输入密码是否正确
+                var loginUser = await _signInManager.UserManager.GetUserAsync(HttpContext.User);
+                var result = await _signInManager.CheckPasswordSignInAsync(loginUser, userInfo.Password, false);
+                if (result.Succeeded)
+                {
+                    loginUser.UserName = userInfo.NewUserName;
+                    loginUser.Email = userInfo.NewEmail;
+                    loginUser.Birthday = userInfo.NewBirthDay;
+                    if (userInfo.NewAvatar != null)
+                    {
+                        //说明上传了新头像
+                        var avatarFlod = Path.Combine(_webHostEnvironment.WebRootPath, "UserAvatars");
+                        string guidStr = Guid.NewGuid().ToString();
+                        var filePath = Path.Combine(avatarFlod, guidStr + "_" + userInfo.NewAvatar.FileName);
+
+                        //删除原来的图片
+                        var oldAvatarFile = new FileInfo(Path.Combine(avatarFlod, loginUser.Avatar));
+                        if (oldAvatarFile.Exists)
+                        {
+                            oldAvatarFile.Delete();
+                        }
+                        //添加新图片
+                        await userInfo.NewAvatar.CopyToAsync(new FileStream(filePath, FileMode.Create));
+                        loginUser.Avatar = guidStr + "_" + userInfo.NewAvatar.FileName;
+                    }
+                    //2.密码正确，更新用户基本信息
+                    var updateResult = await _userManager.UpdateAsync(loginUser);
+                    if (updateResult.Succeeded)
+                    {
+                        //修改成功，返回首页
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        //错误返回当前页
+                        return View("EditUserInfo");
+                    }
+                }
+            }
+            //错误返回当前页
+            await Response.WriteAsync("<script>alert('修改用户信息失败，请检查信息是否正确......')</script>");
+            return View("EditUserInfo");
+        }
 
 
     }

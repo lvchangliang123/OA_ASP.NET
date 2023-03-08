@@ -27,12 +27,12 @@
                     <ul class="list-group">
                         <li class="list-group-item">
                             <div class="row">
-                                <img src="#" class="col-3 img-fluid" />
+                                <img src="~/ArticleImages/@blog.BlogRelativeImageUrl" style="object-fit:cover" class="col-3 img-fluid" />
                                 <div class="col-9 text-start" style="background:white">
                                     <h4 class="card-header" style="width:100%;font-family:Helvetica;font-weight:500">@blog.BlogTitle</h4>
                                     <textarea class="card-body" rows="3" style="width:100%;border:none;background:#f7f7f7;margin-bottom:-5px">@blog.BlogContent</textarea>
                                     <div class="card-footer" style="font-family:Arial">
-                                        <span>2018/11/26</span>
+                                        <span>@blog.ModifyTime.ToString("D")</span>
                                         <span>14-Views</span>
                                         <span>Comments:@blog.BlogTags.Split(',').Length</span>
                                         <a class="btn btn-sm btn-info"

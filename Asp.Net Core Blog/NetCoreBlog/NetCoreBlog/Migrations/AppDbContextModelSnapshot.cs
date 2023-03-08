@@ -68,6 +68,10 @@ namespace NetCoreBlog.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("BlogRelativeImageUrl")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("BlogTags")
                         .IsRequired()
                         .HasColumnType("longtext");

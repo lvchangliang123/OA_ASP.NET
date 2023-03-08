@@ -12,10 +12,31 @@
     <link rel="stylesheet" href="~/MarkDown/css/editormd.min.css" />
 </head>
 <body>
-    <form method="post" asp-controller="UserBlog" asp-action="CreateNewBlog">
-        <div class="card-header d-md-inline-flex col col-md-12">
-            <span style="height:30px;display:line-block;vertical-align:middle;line-height:30px;width:6%">文章标题:</span>
-            <input class="input-large" asp-for="BlogTitle" type="text" placeholder="Add title for your article" style="margin-left:10px;width:94%" />
+    <form method="post" asp-controller="UserBlog" asp-action="CreateNewBlog" enctype="multipart/form-data">
+        <div class="card-header col col-md-12">
+            <div>
+                <div style="display:inline-block;width:70px">
+                    <span style="height:30px;display:line-block;vertical-align:middle;line-height:30px;width:70px">文章标题:</span>
+                </div>
+                <div style="display:inline-block;width:85%">
+                    <input class="form-control" asp-for="BlogTitle" type="text" placeholder="Add title for your article" />
+                </div>
+            </div>
+            <div style="margin-top:10px">
+                <div style="display:inline-block;width:70px">
+                    <span style="height:30px;display:line-block;vertical-align:middle;line-height:30px;width:6%">文章封面:</span>
+                </div>
+                <div style="display:inline-block;width:85%">
+                    <input class="form-control" asp-for="BlogRelativeImage" id="articleImageInput" type="file" placeholder="选择文章封面图片......" />
+                </div>
+                <div style="display:inline-block;width:100px;vertical-align:central">
+                    <button class="btn btn-primary" type="button" id="articleImagePreviewBtn"
+                            data-toggle="modal" data-target="#modalImagePreview">
+                        预览封面
+                    </button>
+                </div>
+         
+            </div>
         </div>
         <div id="editor" class="editormd-dialog-container card-body" style="height:800px">
             <!-- Tips: Editor.md can auto append a `<textarea>` tag -->
@@ -35,7 +56,7 @@
                 <input id="inputBlogTag" asp-for="BlogTags" style="margin-left:50px;width:50%" />
             </div>
             <div class="modal fade" id="modalContainer" role="dialog" aria-labelledby="TagModal">
-                <div class="modal-dialog" style="width:100%;height:60%;min-width:800px" role="document">
+                <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title" id="myModalLabel">Blog Tags</h4>
@@ -43,10 +64,10 @@
                         <div class="modal-body" id="tagContainer">
                             @foreach (var tag in Enum.GetValues(typeof(EnumBlogTag)))
                             {
-                                <span style="margin-right:10px">
+                                <div style="margin-right:10px">
                                     <input class="form-check-label" type="checkbox" value="@tag.ToString()">
                                     @tag.ToString()
-                                </span>
+                                </div>
                             }
                         </div>
                         <div class="modal-footer">
@@ -55,6 +76,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="modal fade" id="modalImagePreview" role="dialog" aria-labelledby="imagePreviewModal">
+                <div class="modal-dialog modal-dialog-centered"  role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Blog Image Preview</h4>
+                        </div>
+                        <div class="modal-body" id="tagContainer">
+                            <img id="imgPreview" style="object-fit:cover;width:100%;height:100%"/>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="btnModalImagePreviewClose" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </form>
@@ -68,6 +105,10 @@
                 //1.点击开启模态窗口
                 $("#modalContainer").modal('show');
                 return false;
+            });
+            $("#articleImagePreviewBtn").bind("click", function () {
+                //点击开启文章封面图片预览窗口
+                $("#modalImagePreview").modal('show');
             });
         })
     </script>
@@ -83,7 +124,7 @@
                     $("#inputBlogTag").val(arr);
                     $("#modalContainer").modal('hide');
                     return false;
-                }else{
+                } else {
                     alert("Please select at least one tag!");
                     return false;
                 }
@@ -97,10 +138,14 @@
                 $("#modalContainer").modal('hide');
                 return false;
             });
+            $("#btnModalImagePreviewClose").bind("click", function () {
+                $("#modalImagePreview").modal('hide');
+                return false;
+            });
         })
     </script>
     <script type="text/javascript">
-         $(function () {
+        $(function () {
             var editor = editormd("editor", {
                 width: "100%",
                 height: 700,
@@ -146,6 +191,40 @@
 
         });
     </script>
+    <script type="text/javascript">
+        var imageUrl;
+        $(document).ready(function () {
+            $("#btnModalImageSelectOpen").bind("click", function () {
+                if(imageUrl){
+                    $("#articleImageInput").val(imageUrl);
+                    $("#modalImageSelect").modal('hide');
+                    return false;
+                } else {
+                    alert("Please select at least one tag!");
+                    return false;
+                }
+            });
+            $("#articleImageInput").change(function(e){
+                console.log("Enter");
+                var file = this.files[0];
+                // 下面函数执行的效果是一样的，只是需要针对不同的浏览器执行不同的 js 函数
+                if (window.createObjectURL != undefined) { // basic
+                    imageUrl = window.createObjectURL(file);
+                } else if (window.URL != undefined) { // mozilla(firefox)
+                    imageUrl = window.URL.createObjectURL(file);
+                } else if (window.webkitURL != undefined) { // webkit or chrome
+                    imageUrl = window.webkitURL.createObjectURL(file);
+                }
+                console.log(imageUrl);
+            });
+            $("#articleImagePreviewBtn").bind("click", function () {
+                if (imageUrl) {
+                    $("#imgPreview").attr("src", imageUrl);
+                }
+            });
+        })
+    </script>
+
 </body>
 
 

@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Http;
 using System.Drawing;
 using NetCoreBlog.Models;
 using DataBaseFramework.Models;
+using X.PagedList;
+using System.Text.Json;
 
 namespace NetCoreBlog.Controllers
 {
@@ -47,11 +49,14 @@ namespace NetCoreBlog.Controllers
 
         [HttpPost]
         [Route("CreateNewBlog")]
-        public IActionResult CreateNewBlog(NewBlogContentViewModel model)
+        public async Task<IActionResult> CreateNewBlog(NewBlogContentViewModel model)
         {
             if (ModelState.IsValid)
             {
                 //1.创建模型
+                var imageFlod = Path.Combine(_webHostEnvironment.WebRootPath, "ArticleImages");
+                string guidStr = Guid.NewGuid().ToString();
+                var filePath = Path.Combine(imageFlod, guidStr + "_" + model.BlogRelativeImage.FileName);
                 var blogInfoDto = new BlogInfoDto()
                 {
                     BlogTitle = model.BlogTitle,
@@ -61,11 +66,28 @@ namespace NetCoreBlog.Controllers
                     Avatar = _signInManager.UserManager.GetUserAsync(HttpContext.User).Result.Avatar,
                     ModifyTime = DateTime.Now,
                     BlogTags = model.BlogTags,
+                    BlogRelativeImageUrl = guidStr + "_" + model.BlogRelativeImage.FileName,
                 };
+                //上传文章封面
+                await model.BlogRelativeImage.CopyToAsync(new FileStream(filePath, FileMode.Create));
                 //2.利用仓储模式，存储数据库
                 _blogRepository.Insert(blogInfoDto);
                 //3.存储完成后，回到当前登录用户的博客列表页面
                 return RedirectToAction("Index");
+            }
+            else
+            {
+                var meg = string.Empty;
+                foreach (var value in ModelState.Values)
+                {
+                    if (value.Errors.Count>0)
+                    {
+                        foreach (var error in value.Errors)
+                        {
+                            meg += error.ErrorMessage;
+                        }
+                    }
+                }
             }
             return View();
         }
@@ -78,8 +100,9 @@ namespace NetCoreBlog.Controllers
             if (blog != null)
             {
                 var blogCommentsList = await _blogCommentRepository.GetAllListAsync();
-                var blogComments = blogCommentsList?.AsEnumerable().Where(bc=>bc.BlogInfoDtoId==blog.Id).ToList();
-                var blogConViewModel = new NewBlogContentViewModel
+                var blogComments = blogCommentsList.Where(bc=>bc.BlogInfoDtoId==blog.Id).ToList();
+                //默认显示评论分页定死
+                var blogConViewModel = new BlogContentViewModel
                 {
                     BlogId = blogId,
                     BlogTitle = blog.BlogTitle,
@@ -99,8 +122,22 @@ namespace NetCoreBlog.Controllers
         }
 
         [HttpPost]
-        //[Route("SubmitBlogComment")]
-        //难道Ajax请求不需要写Route?
+        public async Task<JsonResult> GetBlogCommentByBlogId([FromBody]GetCommentHelper commentHelper)
+        {
+            var blog = await _blogRepository.SingleAsync(b => b.Id == commentHelper.BlogId);
+            if (blog == null)
+            {
+                return Json("未找到Id为:" + commentHelper.BlogId.ToString() + "的博客文章,请重试!");
+            }
+            else
+            {
+                var blogCommentsList = await _blogCommentRepository.GetAllListAsync();
+                var blogComments = await blogCommentsList.Where(bc => bc.BlogInfoDtoId == blog.Id).Skip((commentHelper.pageNumber - 1) * commentHelper.pageSize).Take(commentHelper.pageSize).ToListAsync();
+                return Json(blogComments);
+            }
+        }
+
+        [HttpPost]
         public async Task<JsonResult> SubmitBlogComment([FromBody] BlogCommentHelper commentHelper)
         {
             //1.根据id查询到对应的BlogInfoDto信息
@@ -111,13 +148,14 @@ namespace NetCoreBlog.Controllers
             }
             else
             {
+                var us = await _userManager.FindByEmailAsync(commentHelper.Commentuseremail);
                 //用户头像应该是查出来的
                 var newBlogComment = new BlogCommentDto
                 {
                     CommentBody = commentHelper.Commentbody,
                     CommentUserName = commentHelper.Commentusername,
                     CommentUserEmail = commentHelper.Commentuseremail,
-                    CommentUserAvatar = _signInManager.UserManager.GetUserAsync(HttpContext.User).Result.Avatar,
+                    CommentUserAvatar = us.Avatar,
                     CommentDate = DateTime.Now,
                     BlogInfoDto = blog,
                     BlogInfoDtoId = commentHelper.Blogid,

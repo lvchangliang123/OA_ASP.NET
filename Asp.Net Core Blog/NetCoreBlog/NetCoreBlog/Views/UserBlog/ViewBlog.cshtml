@@ -1,5 +1,5 @@
 ﻿@using Newtonsoft.Json;
-@model BlogModels.ViewModels.NewBlogContentViewModel
+@model BlogModels.ViewModels.BlogContentViewModel
 @Html.AntiForgeryToken()
 @{
      ViewBag.Title = "查看博客";
@@ -42,14 +42,14 @@
 
         <div class="card-footer" style="display:flex;justify-content:left">
             <div>
-                <span>文章标签:</span>
+                <span style="display:inline-block;height:30px;line-height:30px">文章标签:</span>
             </div>
             <ul class="list-unstyled list-inline" style="margin-left:10px">
                 @foreach (var tag in Model.BlogTagList)
                 {
                     <li class="list-inline-item" style="justify-content:center;align-items:center">
                         <!--块元素的文字居中:height:30px;line-height:30px-->
-                        <span style="color:white;background-color:#31a6a0;border-radius:3px;display:block;vertical-align:middle;width:100px;height:30px;line-height:30px;padding-left:10px">
+                        <span style="color:white;background-color:#31a6a0;border-radius:3px;display:inline-block;vertical-align:middle;height:30px;line-height:30px;padding-left:10px;padding-right:10px">
                             @tag.ToString()
                         </span>
                     </li>
@@ -64,9 +64,6 @@
         <div>
             <span style="font-family:Helvetica;font-weight:bold;margin-left:15px;margin-top:10px">发表评论</span>
         </div>
-
-
-
         <div>
             <form id="commentForm" class="form-control">
                 <input id="inputBlogId" type="text" value="@Model.BlogId" style="display:none" />
@@ -84,50 +81,124 @@
         </div>
     </div>
 
-    <div style="margin-top:50px">
-        <!--展示该博客下面的评论，并且分页展示，一页最多十条-->
-        <table id="commentTable" class="table table-bordered">
-            <thead>
-                <tr id="show_tab_one">
-                    <th>用户名</th>
-                    <th>评论时间</th>
-                    <th>评论内容</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var bc in Model.BlogComments)
-                {
-                    <tr id="show_tab_two">
-                        <td>@bc.CommentUserName</td>
-                        <td>@bc.CommentDate</td>
-                        <td>@bc.CommentBody</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-        <!--利用js实现分页-->
-
-        <div id="cd" style="margin-top:20px">
-            <input type="button" style="height:30px;background:#ededed;border:gray" value="上一页" id="lastPage" />
-            <input type="text" style="height:30px;background:white" id="curPage" size="3" />
-            <input type="button" style="height:30px;background:#ededed;border:gray" id="nPage" value="确定" />
-            <input type="button" style="height:30px;background:#ededed;border:gray" value="下一页" id="nextPage" />
-            共<input id="page" style="height:30px;background:white" type="text" size="1" readonly="readonly" />页
-            每页显示<input id="pageSize" style="height:30px;background:white" type="text" value="2" size="3">行<input style="height:30px;background:#ededed;border:gray" type="button" value="确定" onclick="pageSize2()">
+    <div style="margin-top:10px">
+        <div style="background-color:blanchedalmond;height:40px;border-radius:5px;border:none">
+            <span style="vertical-align:middle;line-height:40px;margin-left:10px;font-weight:800">评论列表</span>
         </div>
+        @foreach (var comment in Model.BlogComments)
+        {
+            <div id="commentContainer" style="margin:5px;border-bottom:dashed;border-width:thin">
+                <div id="commentUserAvatar" style="display:inline-block;vertical-align:top">
+                    <img src="~/UserAvatars/@comment.CommentUserAvatar" style="object-fit:cover;border:solid;border-color:#e6e6e6;border-radius:30px;width:60px;height:60px" />
+                </div>
+                <div style="display:inline-block">
+                    <div id="userNameWithComment" style="vertical-align:top;line-height:30px">
+                        <span>@comment.CommentUserName.ToString(): @comment.CommentBody</span>
+                    </div>
+                    <div id="commentDate" style="vertical-align:bottom;line-height:30px">
+                        <span style="color:darkgray">@comment.CommentDate</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 
+    <div class="divPage">
+        <nav>
+            <ul class="pagination justify-content-center">
+                <li class="page-item" id="preBtn">
+                    <a class="page-link" href="#">上一页</a>
+                </li>
+                <li class="page-item" id="nextBtn">
+                    <a class="page-link" href="#">下一页</a>
+                </li>
+                <li>
+                    <div class="alert alert-light" role="alert" id="text">
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </div>
 
     <script type="text/javascript">
+        var pageNumber = 1;
+        var pageSize = 5;
+        var last;
 
-        //初始化分页函数
-        var pageSize = 2;  //每页显示的记录条数
-        var curPage = 0;   //显示第curPage页
-        var len;           //总行数
-        var page;          //总页数
+        //var initdata = function(commentList){
 
-        $(function () {
+        //}
 
+        //改变页码的函数
+        //var change = function(){
+        //    $("#text").text("");
+        //    var str = '当前第'+pageNumber+'页,'+'共'+last+'页';
+        //    $("#text").text(str);
+        //}
+
+        //上一页，下一页的点击函数
+
+        //1.ajax请求获取数据
+        //var check = function(){
+        //    $.get("http://localhost:8080/find",{"pageNumber":pageNumber,"pageSize":pageSize},function(data){
+        //        //每次点击，刷新comments的数据源即可
+        //    },"json");
+        //}
+        //2.上一页
+        //$("#preBtn a").click(function(){
+        //    if(pageNumber>1){
+        //        pageNumber = pageNumber-1;
+        //        check();
+        //        change();
+        //    }
+        //});
+        //3.下一页
+        //$("#nextBtn a").click(function(){
+        //    if(pageNumber<last){
+        //        pageNumber = pageNumber+1;
+        //        check();
+        //        change();
+        //    }
+        //});
+        //4.初始化数据的函数(ajax)
+        $(function(){
+            GetBlogComment();
+        })
+
+        function GetBlogComment(){
+            $.ajax({
+                type: "POST",
+                url: "/UserBlog/GetBlogCommentByBlogId",
+                contentType: "application/json",
+                dataType: "json",
+                data: JSON.stringify({
+                    "pageNumber": pageNumber,
+                    "pageSize": pageSize,
+                    "BlogId": @Model.BlogId,
+                }),
+                success: function (response) {
+                    //last = response.Count;
+                    alert(response[0].CommentDate);
+                    //var commentListResult = JSON.parse(response);
+                    //alert(commentListResult.Count.ToString());
+                    //alert(commentListResult.ToString());
+                    //initdata(response);
+                    //change();
+                },
+                failure: function (response) {
+                    alert("Failed to Get Blog Comment!");
+                }
+            });
+        }
+        //https://www.cnblogs.com/moonblogcore/p/11659892.html
+
+        //https://blog.csdn.net/hailongcsdn/article/details/106298517
+
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
             //初始化富文本编辑器
             var editor = editormd.markdownToHTML("editor", {
                 htmlDecode: "style, script, iframe",
@@ -137,93 +208,13 @@
                 flowChart: true,  // 默认不解析
                 sequenceDiagram: true,  // 默认不解析
                 syncScrolling: "single",
+                pickerPosition: "bottom",
                 path: "~/MarkDown/lib/",  // Autoload modules mode, codemirror, marked... dependents libs path
             });
-
-
-
-            len = $("#commentTable tr").length-1;  
-            //console.log("len="+len);
-            page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1;
-            //console.log("page=" + page);
-            document.getElementById("page").value = page; 
-            curPage = 1;
-            displayPage();     //显示第一页
-
-            //$("#cd").children().css("height","30px");
-
-            $("#nextPage").click(function () {//下一页
-                if (curPage < page) {
-                    curPage += 1;
-                }
-                else {
-                    alert("已经是最后一页");
-                }
-                displayPage();
-            });
-            $("#lastPage").click(function () {//上一页
-                if (curPage > 1) {
-                    curPage -= 1;
-                }
-                else {
-                    alert("已经是第一页");
-                }
-                displayPage();
-            });
-            $("#nPage").click(function () {//跳到固定某一页
-                var npage = parseInt(document.getElementById("curPage").value);
-                if (npage > page || npage < 1) {
-                    alert("该页不存在");
-                }
-                else {
-                    curPage = npage;
-                }
-                displayPage();
-            });
-
-        });
-
-        $(function displayPage(){
-            var begin = (curPage-1)*pageSize;   //0*
-            var end = begin+pageSize;
-            if(end > len) end=len;
-            //console.log("begin=" + begin);
-            //console.log("end=" + end);
-            $("#commentTable tr").hide();
-            //console.log("table tr count:" + $("#commentTable tr").length);
-            $("#commentTable tr").each(function (i) {
-                if (i - 1 >= begin && i - 1 < end)//显示第page页的记录
-                {
-                    //console.log("table tr foreach count:"+i);
-                    $("#show_tab_one").show();
-                    $(this).show();
-                    document.getElementById("curPage").value = curPage;
-                }
-            });
-        
-        });
-
-        function pageSize2() {
-            curPage = 0;   //显示第curPage页
-            pageSize = parseInt(document.getElementById("pageSize").value);
-            len = $("#commentTable tr").length - 1;   //去掉表头
-            page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1;//根据记录条数，计算页数
-            document.getElementById("page").value = page;
-            curPage = 1;
-            displayPage();//显示第一页
-        }
-
-    </script>
-
-    <script type="text/javascript">
-        $(function(){
-            $("#emojiText").emojioneArea({
-                pickerPosition:"bottom"
-            });
         });
     </script>
 
-    <!--点击提交ajax请求-->
+    <!--点击提交评论的ajax请求-->
     <script type="text/javascript">
         function SubCommentAjax() {
             $.ajax({
@@ -249,6 +240,3 @@
 
 </body>
 
-@*@{
-    await Html.RenderPartialAsync("_ValidationScriptsPartial");
-}*@
