@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Http;
 using System.Drawing;
 using NetCoreBlog.Models;
 using DataBaseFramework.Models;
-using X.PagedList;
 using System.Text.Json;
 
 namespace NetCoreBlog.Controllers
@@ -132,8 +131,16 @@ namespace NetCoreBlog.Controllers
             else
             {
                 var blogCommentsList = await _blogCommentRepository.GetAllListAsync();
-                var blogComments = await blogCommentsList.Where(bc => bc.BlogInfoDtoId == blog.Id).Skip((commentHelper.pageNumber - 1) * commentHelper.pageSize).Take(commentHelper.pageSize).ToListAsync();
-                return Json(blogComments);
+                var blogComments = blogCommentsList.Where(bc => bc.BlogInfoDtoId == blog.Id)
+                    .Skip((commentHelper.pageNumber - 1) * commentHelper.pageSize)
+                    .Take(commentHelper.pageSize)
+                    .ToList();
+                var blogCommentInfos = new List<CommentInfoHelper>();
+                foreach (var blogComment in blogComments)
+                {
+                    blogCommentInfos.Add(new CommentInfoHelper() { CommentUserAvatar = blogComment.CommentUserAvatar, CommentUserName = blogComment.CommentUserName, CommentBody = blogComment.CommentBody, CommentDate = blogComment.CommentDate.ToString("f") });
+                }
+                return Json(new { commentInfo = blogCommentInfos, totalCount = blogCommentsList.Where(bc => bc.BlogInfoDtoId == blog.Id).Count() });
             }
         }
 

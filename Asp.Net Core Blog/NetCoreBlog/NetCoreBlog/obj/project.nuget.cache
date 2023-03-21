@@ -1,12 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VdrOWyhUqvMaNcOlXG1bdets8naXEPRIxmWnzlXiu9FwizFNDLZQji3JxJYi8/8ZSW5Bd99boBGysOZociZoYA==",
+  "dgSpecHash": "6Ek1zETxK03NYZkjU+F7JBtKiZUVXbguJTHon4aARViPospGoHRelOmzMeDfB4uDWc7apdFIfpWSj2Bk0K63QA==",
   "success": true,
   "projectFilePath": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\NetCoreBlog.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\jetbrains.annotations\\2022.1.0\\jetbrains.annotations.2022.1.0.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\lazziya.taghelpers\\6.0.0\\lazziya.taghelpers.6.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
@@ -94,9 +92,7 @@
     "C:\\Users\\admin\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.threading\\4.0.11\\system.threading.4.0.11.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.1\\system.threading.tasks.extensions.4.5.1.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\x.pagedlist\\8.4.3\\x.pagedlist.8.4.3.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\x.pagedlist.mvc.core\\8.4.3\\x.pagedlist.mvc.core.8.4.3.nupkg.sha512"
+    "C:\\Users\\admin\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.1\\system.threading.tasks.extensions.4.5.1.nupkg.sha512"
   ],
   "logs": []
 }

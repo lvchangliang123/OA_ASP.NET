@@ -2,7 +2,7 @@
 @model BlogModels.ViewModels.BlogContentViewModel
 @Html.AntiForgeryToken()
 @{
-     ViewBag.Title = "查看博客";
+    ViewBag.Title = "查看博客";
 }
 <!--这里只做显示，不可编辑-->
 <head>
@@ -24,7 +24,14 @@
     <script src="~/MarkDown/lib/sequence-diagram.min.js"></script>
     <script src="~/MarkDown/lib/flowchart.min.js"></script>
     <script src="~/MarkDown/lib/jquery.flowchart.min.js"></script>
-
+    <style>
+        .page-link{
+            cursor:pointer;
+        }
+        .tagSpan{
+            cursor:default;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,14 +56,68 @@
                 {
                     <li class="list-inline-item" style="justify-content:center;align-items:center">
                         <!--块元素的文字居中:height:30px;line-height:30px-->
-                        <span style="color:white;background-color:#31a6a0;border-radius:3px;display:inline-block;vertical-align:middle;height:30px;line-height:30px;padding-left:10px;padding-right:10px">
+                        <span class="tagSpan" style="color:white;background-color:#31a6a0;border-radius:3px;display:inline-block;vertical-align:middle;height:30px;line-height:30px;padding-left:10px;padding-right:10px">
                             @tag.ToString()
                         </span>
                     </li>
                 }
             </ul>
+            <div style="right:0px;position:absolute;display:inline-block">
+                <span style="cursor:default;border:solid;border-color:burlywood;border-width:2px;padding:3px">
+                    <svg t="1679408237712" class="icon" viewBox="0 0 1024 1024" version="1.1" 
+                    xmlns="http://www.w3.org/2000/svg" p-id="4999" width="20" height="20">
+                    <path d="M291.636 385.404c-30.49 0-55.207 25.633-55.207 57.266 0 31.637 24.717 57.272 55.207 57.272 30.486 0 55.203-25.635 55.203-57.272C346.839 411.038 322.122 385.404 291.636 385.404L291.636 385.404z" fill="#8a8a8a" p-id="5000"></path><path d="M512.461 385.404c-30.49 0-55.208 25.633-55.208 57.266 0 31.637 24.722 57.272 55.208 57.272 30.486 0 55.204-25.635 55.204-57.272C567.665 411.038 542.947 385.404 512.461 385.404L512.461 385.404z" fill="#8a8a8a" p-id="5001"></path><path d="M733.287 385.404c-30.492 0-55.208 25.633-55.208 57.266 0 31.637 24.716 57.272 55.208 57.272 30.486 0 55.202-25.635 55.202-57.272C788.489 411.038 763.773 385.404 733.287 385.404L733.287 385.404z" fill="#8a8a8a" p-id="5002"></path><path d="M843.697 99.077 181.221 99.077c-60.972 0-110.41 51.287-110.41 114.539l0 429.487c0 63.256 50.543 121.56 112.92 121.56l168.257 0c29.33 31.245 150.716 156.912 150.716 156.912 5.389 5.606 14.124 5.606 19.514 0 0 0 88.87-100.764 146.775-156.912l172.193 0c62.376 0 112.92-58.308 112.92-121.56L954.106 213.615C954.107 150.363 904.673 99.077 843.697 99.077zM899.451 643.298c0 31.669-26.565 64.899-57.799 64.899L672.075 708.197c-20.543 0-39.009 21.123-39.009 21.123L514 852.815 394.955 729.32c0 0-22.676-21.123-42.112-21.123L183.267 708.197c-31.235 0-57.794-33.23-57.794-64.899L125.473 213.205c0-31.677 24.751-57.353 55.28-57.353l663.411 0c30.53 0 55.287 25.676 55.287 57.353L899.451 643.298z" fill="#8a8a8a" p-id="5003"></path><path d="M898.905 643.103" fill="#8a8a8a" p-id="5004"></path>
+                    </svg>
+                    <span id="commentCountSpan">0</span>
+                </span>
+                <span style="cursor:default;border:solid;border-color:burlywood;border-width:2px;padding:3px;margin-left:10px">
+                    <svg t="1679407661584" class="icon" viewBox="0 0 1024 1024" version="1.1" 
+                    xmlns="http://www.w3.org/2000/svg" p-id="3938" width="20" height="20">
+                        <path d="M499.2 699.733333c-93.866667 0-170.666667-76.8-170.666667-170.666666s76.8-170.666667 170.666667-170.666667 170.666667 76.8 170.666667 170.666667-76.8 170.666667-170.666667 170.666666z m0-298.666666c-72.533333 0-128 55.466667-128 128s55.466667 128 128 128 128-55.466667 128-128-55.466667-128-128-128z" fill="#8a8a8a" p-id="3939"></path><path d="M499.2 785.066667c-256 0-469.333333-217.6-469.333333-256 0-38.4 213.333333-256 469.333333-256s469.333333 217.6 469.333333 256c0 38.4-213.333333 256-469.333333 256z m-422.4-256c25.6 38.4 204.8 213.333333 422.4 213.333333s396.8-174.933333 426.666667-213.333333c-25.6-38.4-204.8-213.333333-426.666667-213.333334s-396.8 174.933333-422.4 213.333334z m-4.266667-4.266667z" fill="#8a8a8a" p-id="3940"></path>
+                    </svg>
+                    Views
+                    <span>1</span>
+                </span>
+                <span style="cursor:pointer;border:solid;border-color:burlywood;margin-left:10px;border-width:2px;padding:3px">
+                    <svg t="1679406613654" class="icon" viewBox="0 0 1024 1024" 
+                        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2796" 
+                        width="20" height="20">
+                        <path d="M857.28 344.992h-264.832c12.576-44.256 18.944-83.584 18.944-118.208 0-78.56-71.808-153.792-140.544-143.808-60.608 8.8-89.536 59.904-89.536 125.536v59.296c0 76.064-58.208 140.928-132.224 148.064l-117.728-0.192A67.36 67.36 0 0 0 64 483.04V872c0 37.216 30.144 67.36 67.36 67.36h652.192a102.72 102.72 0 0 0 100.928-83.584l73.728-388.96a102.72 102.72 0 0 0-100.928-121.824zM128 872V483.04c0-1.856 1.504-3.36 3.36-3.36H208v395.68H131.36A3.36 3.36 0 0 1 128 872z m767.328-417.088l-73.728 388.96a38.72 38.72 0 0 1-38.048 31.488H272V476.864a213.312 213.312 0 0 0 173.312-209.088V208.512c0-37.568 12.064-58.912 34.72-62.176 27.04-3.936 67.36 38.336 67.36 80.48 0 37.312-9.504 84-28.864 139.712a32 32 0 0 0 30.24 42.496h308.512a38.72 38.72 0 0 1 38.048 45.888z" p-id="2797" fill="#8a8a8a"></path>
+                    </svg>
+                    点赞
+                    <span>2</span>
+                </span>
+                <span style="cursor:pointer;border:solid;
+                        border-color:burlywood;
+                        margin-left:10px;
+                        margin-right:2px;
+                        border-width:2px;
+                        padding:3px">
+                    <svg t="1679407230838" class="icon" viewBox="0 0 1024 1024" 
+                        version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2838" 
+                        width="20" height="20">
+                        <path d="M807.9 369c83.6 0 151.5-68 151.5-151.5S891.4 66 807.9 66c-83.6 0-151.5 68-151.5 151.5 0 8.6 0.7 16.9 2.1 25.1l-346 156.5c-26.2-21.7-59.8-34.7-96.4-34.7-83.6 0-151.5 68-151.5 151.5s68 151.5 151.5 151.5c32.8 0 63.2-10.5 88-28.2l229 128.6c-3.3 12.4-5 25.3-5 38.7 0 83.6 68 151.5 151.5 151.5 83.6 0 151.5-68 151.5-151.5 0-83.6-68-151.5-151.5-151.5-41.4 0-78.9 16.7-106.3 43.6L355.1 576.2c8-18.5 12.5-38.8 12.5-60.2 0-17.6-3-34.4-8.5-50.1l333.1-150.7C720 348 761.6 369 807.9 369zM216.1 587.5c-39.4 0-71.5-32.1-71.5-71.5s32.1-71.5 71.5-71.5 71.5 32.1 71.5 71.5-32.1 71.5-71.5 71.5zM679.6 735c39.4 0 71.5 32.1 71.5 71.5S719 878 679.6 878s-71.5-32.1-71.5-71.5 32-71.5 71.5-71.5z m128.3-589.1c39.4 0 71.5 32.1 71.5 71.5s-32.1 71.5-71.5 71.5-71.5-32.1-71.5-71.5 32.1-71.5 71.5-71.5z" p-id="2839" fill="#8a8a8a"></path>
+                    </svg>
+                    分享</span>
+                <span style="cursor:pointer;border:solid;
+                        border-color:burlywood;
+                        margin-left:10px;
+                        margin-right:2px;
+                        border-width:2px;
+                        padding:3px">
+                    <svg t="1679408715863" class="icon" viewBox="0 0 1024 1024" version="1.1" 
+                    xmlns="http://www.w3.org/2000/svg" p-id="6019" width="20" height="20"><path d="M908.8 214.4c-9.6-12.8-19.2-22.4-28.8-32-112-115.2-230.4-105.6-342.4-16-9.6 6.4-19.2 16-28.8 25.6-9.6-9.6-19.2-16-28.8-25.6-112-86.4-230.4-99.2-342.4 16-9.6 9.6-19.2 19.2-25.6 32-134.4 195.2-60.8 387.2 137.6 560 44.8 38.4 89.6 73.6 137.6 102.4 16 9.6 32 19.2 44.8 28.8 9.6 6.4 12.8 9.6 19.2 9.6 3.2 3.2 6.4 3.2 12.8 6.4 3.2 3.2 9.6 3.2 16 6.4 25.6 6.4 64 3.2 89.6-12.8 3.2 0 9.6-3.2 16-9.6 12.8-6.4 28.8-16 44.8-28.8 48-28.8 92.8-64 137.6-102.4C969.6 598.4 1043.2 406.4 908.8 214.4zM736 732.8c-41.6 35.2-86.4 70.4-131.2 99.2-16 9.6-28.8 19.2-44.8 25.6-6.4 3.2-12.8 6.4-16 9.6-6.4 3.2-16 6.4-25.6 9.6-3.2 0-6.4 0-9.6 0-6.4 0-12.8 0-16 0-3.2 0-3.2 0-3.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0-3.2 0-3.2-3.2-3.2 0-6.4-3.2-9.6-3.2-3.2-3.2-9.6-6.4-16-9.6-12.8-6.4-28.8-16-44.8-25.6-44.8-28.8-89.6-60.8-131.2-99.2-179.2-160-243.2-323.2-131.2-489.6 6.4-9.6 16-16 22.4-25.6 89.6-96 182.4-86.4 275.2-12.8 9.6 6.4 16 12.8 22.4 19.2 0 0 0 0 0 0l28.8 32c3.2 3.2 3.2 3.2 6.4 6.4 0 0 0 0 0 0l0 0c3.2-3.2 9.6-9.6 16-16 12.8-12.8 25.6-25.6 41.6-38.4 92.8-73.6 185.6-83.2 275.2 12.8 6.4 9.6 16 16 22.4 25.6C982.4 406.4 918.4 572.8 736 732.8z" p-id="6020" fill="#8a8a8a"></path></svg>
+                    收藏
+                    <span>1</span>
+                </span>
+            </div>
         </div>
     </div>
+    <!--
+    https://www.bbsmax.com/A/mo5kx9vMdw/ 分享到微信
+    https://www.bbsmax.com/A/rV577AVG5P/
+    -->
+
 
     <!--文章底部放置评论功能模块-->
 
@@ -68,15 +129,15 @@
             <form id="commentForm" class="form-control">
                 <input id="inputBlogId" type="text" value="@Model.BlogId" style="display:none" />
                 <textarea id="emojiText" rows="5" style="width:100%">@Model.NewBlogComment.CommentBody</textarea>
-                <div class="input-group" style="width:50%">
+                <div class="input-group" style="width:100%">
                     <span class="input-group-text">昵称</span>
-                    <input id="inputUserName" type="text" class="form-control" placeholder="User Name" value="@Model.NewBlogComment.CommentUserName"/>
+                    <input id="inputUserName" type="text" class="form-control" placeholder="User Name" value="@Model.NewBlogComment.CommentUserName" />
                 </div>
-                <div class="input-group" style="width:50%;margin-top:10px">
+                <div class="input-group" style="width:100%;margin-top:10px">
                     <span class="input-group-text">邮箱</span>
-                    <input id="inputEmail" type="email" class="form-control" placeholder="User Email" value="@Model.NewBlogComment.CommentUserEmail"/>
+                    <input id="inputEmail" type="email" class="form-control" placeholder="User Email" value="@Model.NewBlogComment.CommentUserEmail" />
                 </div>
-                <input type="button" class="btn btn-primary" onclick="SubCommentAjax();" style="width:15%;margin-top:10px" value="提交"/>
+                <input type="button" class="btn btn-primary" onclick="SubCommentAjax();" style="width:15%;margin-top:10px" value="提交" />
             </form>
         </div>
     </div>
@@ -85,36 +146,28 @@
         <div style="background-color:blanchedalmond;height:40px;border-radius:5px;border:none">
             <span style="vertical-align:middle;line-height:40px;margin-left:10px;font-weight:800">评论列表</span>
         </div>
-        @foreach (var comment in Model.BlogComments)
-        {
-            <div id="commentContainer" style="margin:5px;border-bottom:dashed;border-width:thin">
-                <div id="commentUserAvatar" style="display:inline-block;vertical-align:top">
-                    <img src="~/UserAvatars/@comment.CommentUserAvatar" style="object-fit:cover;border:solid;border-color:#e6e6e6;border-radius:30px;width:60px;height:60px" />
-                </div>
-                <div style="display:inline-block">
-                    <div id="userNameWithComment" style="vertical-align:top;line-height:30px">
-                        <span>@comment.CommentUserName.ToString(): @comment.CommentBody</span>
-                    </div>
-                    <div id="commentDate" style="vertical-align:bottom;line-height:30px">
-                        <span style="color:darkgray">@comment.CommentDate</span>
-                    </div>
-                </div>
-            </div>
-        }
+        <div id="commentContainer">
+
+        </div>
     </div>
 
     <div class="divPage">
         <nav>
-            <ul class="pagination justify-content-center">
-                <li class="page-item" id="preBtn">
-                    <a class="page-link" href="#">上一页</a>
+            <ul class="pagination justify-content-center" style="margin-top:30px">
+                <li class="page-item" style="margin-top:10px" id="firstPageBtn">
+                    <a class="page-link">首页</a>
                 </li>
-                <li class="page-item" id="nextBtn">
-                    <a class="page-link" href="#">下一页</a>
+                <li class="page-item" style="margin-top:10px" id="preBtn">
+                    <a class="page-link">上一页</a>
+                </li>
+                <li class="page-item" style="margin-top:10px" id="nextBtn">
+                    <a class="page-link">下一页</a>
+                </li>
+                <li class="page-item" style="margin-top:10px" id="lastPageBtn">
+                    <a class="page-link">末页</a>
                 </li>
                 <li>
                     <div class="alert alert-light" role="alert" id="text">
-
                     </div>
                 </li>
             </ul>
@@ -122,51 +175,75 @@
     </div>
 
     <script type="text/javascript">
-        var pageNumber = 1;
-        var pageSize = 5;
-        var last;
+        let pageNumber = 1;
+        let pageSize = 2;
+        let last;
 
-        //var initdata = function(commentList){
-
-        //}
+        let refreshData = function (commentData) {
+            //动态改变html的内容
+            let commentList = commentData.commentInfo;
+            var commentHtml = "";
+            for (var i = 0; i < commentList.length; i++) {
+                commentHtml += "<div class='itemDiv'>";
+                commentHtml += "<div class='avatarDiv'>";
+                var imgUri = "/UserAvatars/" + commentList[i].commentUserAvatar;
+                commentHtml += "<img src='" + imgUri + "'" + "alt=''" + "class='avatarImg'" + " " + "/>";
+                commentHtml += "</div>";
+                commentHtml += "<div class='commentBodyDiv'>";
+                commentHtml += "<div class='commentDiv'>";
+                commentHtml += "<span>" + commentList[i].commentUserName + ": " + commentList[i].commentBody + "</span>";
+                commentHtml += "</div>";
+                commentHtml += "<div class='commentDateDiv'>";
+                commentHtml += "<span style='color:darkgray'>" + commentList[i].commentDate + "</span>";
+                commentHtml += "</div>";
+                commentHtml += "</div>";
+                commentHtml += "</div>";
+            }
+            $("#commentContainer").append(commentHtml);
+            $(".avatarDiv").css({ "display": "inline-block", "vertical-align": "top" });
+            $(".avatarImg").css({ "object-fit": "cover", "border": "solid", "border-color": "#e6e6e6", "border-radius": "30px", "width": "60px", "height": "60px" });
+            $(".commentBodyDiv").css({ "display": "inline-block" });
+            $(".commentDiv").css({ "vertical-align": "top", "line-height": "30px" });
+            $(".commentDateDiv").css({ "vertical-align": "bottom", "line-height": "30px" });
+            $(".itemDiv").css({ "margin": "5px", "border-bottom": "dashed", "border-width": "thin" });
+            last = Math.round(commentData.totalCount / pageSize);
+        }
 
         //改变页码的函数
-        //var change = function(){
-        //    $("#text").text("");
-        //    var str = '当前第'+pageNumber+'页,'+'共'+last+'页';
-        //    $("#text").text(str);
-        //}
+        let change = function () {
+            $("#text").text("");
+            var str = '当前第' + pageNumber + '页,' + '共' + last + '页';
+            $("#text").text(str);
+        }
 
         //上一页，下一页的点击函数
 
         //1.ajax请求获取数据
-        //var check = function(){
-        //    $.get("http://localhost:8080/find",{"pageNumber":pageNumber,"pageSize":pageSize},function(data){
-        //        //每次点击，刷新comments的数据源即可
-        //    },"json");
-        //}
+
         //2.上一页
-        //$("#preBtn a").click(function(){
-        //    if(pageNumber>1){
-        //        pageNumber = pageNumber-1;
-        //        check();
-        //        change();
-        //    }
-        //});
+        $("#preBtn a").click(function () {
+            if (pageNumber > 1) {
+                pageNumber = pageNumber - 1;
+                $("#commentContainer").children().remove();
+                GetBlogComment();
+                change();
+            }
+        });
         //3.下一页
-        //$("#nextBtn a").click(function(){
-        //    if(pageNumber<last){
-        //        pageNumber = pageNumber+1;
-        //        check();
-        //        change();
-        //    }
-        //});
+        $("#nextBtn a").click(function () {
+            if (pageNumber < last) {
+                pageNumber = pageNumber + 1;
+                $("#commentContainer").children().remove();
+                GetBlogComment();
+                change();
+            }
+        });
         //4.初始化数据的函数(ajax)
-        $(function(){
+        $(function () {
             GetBlogComment();
         })
 
-        function GetBlogComment(){
+        function GetBlogComment() {
             $.ajax({
                 type: "POST",
                 url: "/UserBlog/GetBlogCommentByBlogId",
@@ -178,19 +255,34 @@
                     "BlogId": @Model.BlogId,
                 }),
                 success: function (response) {
-                    //last = response.Count;
-                    alert(response[0].CommentDate);
-                    //var commentListResult = JSON.parse(response);
-                    //alert(commentListResult.Count.ToString());
-                    //alert(commentListResult.ToString());
-                    //initdata(response);
-                    //change();
+                    //为啥传回来的数据，属性首字母变成了小写？？
+                    refreshData(response);
+                    console.log(response.length);
+                    $("#commentCountSpan").html(response.totalCount);
+                    change();
                 },
                 failure: function (response) {
                     alert("Failed to Get Blog Comment!");
                 }
             });
         }
+
+        //首页
+        $("#firstPageBtn a").click(function () {
+            pageNumber = 1;
+            $("#commentContainer").children().remove();
+            GetBlogComment();
+            change();
+        });
+
+        //末页
+        $("#lastPageBtn a").click(function () {
+            pageNumber = last;
+            $("#commentContainer").children().remove();
+            GetBlogComment();
+            change();
+        });
+
         //https://www.cnblogs.com/moonblogcore/p/11659892.html
 
         //https://blog.csdn.net/hailongcsdn/article/details/106298517
@@ -198,7 +290,7 @@
     </script>
 
     <script type="text/javascript">
-        $(function(){
+        $(function () {
             //初始化富文本编辑器
             var editor = editormd.markdownToHTML("editor", {
                 htmlDecode: "style, script, iframe",
@@ -229,10 +321,10 @@
                     "Commentuseremail": $("#inputEmail").val(),
                 }),
                 success: function (response) {
-                    alert("Success:"+response);
+                    alert("Success:" + response);
                 },
                 failure: function (response) {
-                    alert("Failed:"+response);
+                    alert("Failed:" + response);
                 }
             });
         }

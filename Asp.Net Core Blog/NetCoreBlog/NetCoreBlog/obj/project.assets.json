@@ -15,35 +15,6 @@
           }
         }
       },
-      "JetBrains.Annotations/2022.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/JetBrains.Annotations.dll": {
-            "related": ".deps.json;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/JetBrains.Annotations.dll": {
-            "related": ".deps.json;.xml"
-          }
-        }
-      },
-      "LazZiya.TagHelpers/6.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/LazZiya.TagHelpers.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/LazZiya.TagHelpers.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1497,33 +1468,6 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "X.PagedList/8.4.3": {
-        "type": "package",
-        "dependencies": {
-          "JetBrains.Annotations": "2022.1.0"
-        },
-        "compile": {
-          "lib/net6.0/X.PagedList.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/X.PagedList.dll": {}
-        }
-      },
-      "X.PagedList.Mvc.Core/8.4.3": {
-        "type": "package",
-        "dependencies": {
-          "X.PagedList": "8.4.3"
-        },
-        "compile": {
-          "lib/net6.0/X.PagedList.Mvc.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/X.PagedList.Mvc.Core.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "BlogModels/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1570,55 +1514,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "JetBrains.Annotations/2022.1.0": {
-      "sha512": "ASfpoFJxiRsC9Xc4TWuPM41Zb/gl64xwfMOhnOZ3RnVWGYIZchjpWQV5zshJgoc/ZxVtgjaF7b577lURj7E6ig==",
-      "type": "package",
-      "path": "jetbrains.annotations/2022.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "jetbrains.annotations.2022.1.0.nupkg.sha512",
-        "jetbrains.annotations.nuspec",
-        "lib/net20/JetBrains.Annotations.dll",
-        "lib/net20/JetBrains.Annotations.xml",
-        "lib/netstandard1.0/JetBrains.Annotations.deps.json",
-        "lib/netstandard1.0/JetBrains.Annotations.dll",
-        "lib/netstandard1.0/JetBrains.Annotations.xml",
-        "lib/netstandard2.0/JetBrains.Annotations.deps.json",
-        "lib/netstandard2.0/JetBrains.Annotations.dll",
-        "lib/netstandard2.0/JetBrains.Annotations.xml",
-        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.dll",
-        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml"
-      ]
-    },
-    "LazZiya.TagHelpers/6.0.0": {
-      "sha512": "coXJdm9ooqig+TRjbzjxFTmqgHubT5ym/Qs3vgoJyd6UckHD8FgRfF6cMeKf/UiZapgmMguBRlO60O01sSr4Mg==",
-      "type": "package",
-      "path": "lazziya.taghelpers/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lazziya.taghelpers.6.0.0.nupkg.sha512",
-        "lazziya.taghelpers.nuspec",
-        "lib/net5.0/LazZiya.TagHelpers.dll",
-        "lib/net5.0/LazZiya.TagHelpers.xml",
-        "lib/net6.0/LazZiya.TagHelpers.dll",
-        "lib/net6.0/LazZiya.TagHelpers.xml",
-        "lib/netcoreapp2.0/LazZiya.TagHelpers.dll",
-        "lib/netcoreapp2.0/LazZiya.TagHelpers.xml",
-        "lib/netcoreapp2.1/LazZiya.TagHelpers.dll",
-        "lib/netcoreapp2.1/LazZiya.TagHelpers.xml",
-        "lib/netcoreapp2.2/LazZiya.TagHelpers.dll",
-        "lib/netcoreapp2.2/LazZiya.TagHelpers.xml",
-        "lib/netcoreapp3.0/LazZiya.TagHelpers.dll",
-        "lib/netcoreapp3.0/LazZiya.TagHelpers.xml",
-        "lib/netcoreapp3.1/LazZiya.TagHelpers.dll",
-        "lib/netcoreapp3.1/LazZiya.TagHelpers.xml",
-        "license.txt"
       ]
     },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
@@ -4481,33 +4376,6 @@
         "version.txt"
       ]
     },
-    "X.PagedList/8.4.3": {
-      "sha512": "wVVbgv++0NmOaUFgNOAky+wt4MdAAwn2Roz/+u+jlEX1s/ELIbbnan70Skhk/um6w5NnM5eC4Kux1GAPjzHOeQ==",
-      "type": "package",
-      "path": "x.pagedlist/8.4.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net6.0/X.PagedList.dll",
-        "lib/netstandard2.0/X.PagedList.dll",
-        "lib/netstandard2.1/X.PagedList.dll",
-        "x.pagedlist.8.4.3.nupkg.sha512",
-        "x.pagedlist.nuspec"
-      ]
-    },
-    "X.PagedList.Mvc.Core/8.4.3": {
-      "sha512": "f1M+6o0AGSUGBuIRiXl9PGfoFbymw8uKjcuA1pJb2XkfginndZg1UR9zgppXW0GMLWCMzCoD5uVGD3SSywSimQ==",
-      "type": "package",
-      "path": "x.pagedlist.mvc.core/8.4.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net6.0/X.PagedList.Mvc.Core.dll",
-        "lib/netcoreapp3.1/X.PagedList.Mvc.Core.dll",
-        "x.pagedlist.mvc.core.8.4.3.nupkg.sha512",
-        "x.pagedlist.mvc.core.nuspec"
-      ]
-    },
     "BlogModels/1.0.0": {
       "type": "project",
       "path": "../BlogModels/BlogModels.csproj",
@@ -4523,12 +4391,10 @@
     "net6.0": [
       "BlogModels >= 1.0.0",
       "DataBaseFramework >= 1.0.0",
-      "LazZiya.TagHelpers >= 6.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 6.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.0",
-      "System.Drawing.Common >= 6.0.0",
-      "X.PagedList.Mvc.Core >= 8.4.3"
+      "System.Drawing.Common >= 6.0.0"
     ]
   },
   "packageFolders": {
@@ -4585,10 +4451,6 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "LazZiya.TagHelpers": {
-            "target": "Package",
-            "version": "[6.0.0, )"
-          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.0, )"
@@ -4606,10 +4468,6 @@
           "System.Drawing.Common": {
             "target": "Package",
             "version": "[6.0.0, )"
-          },
-          "X.PagedList.Mvc.Core": {
-            "target": "Package",
-            "version": "[8.4.3, )"
           }
         },
         "imports": [
@@ -4631,7 +4489,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
