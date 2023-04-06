@@ -1,4 +1,5 @@
 ﻿using BlogModels.Dtos;
+using BlogModels.ModelHelpers;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataBaseFramework
 {
-    public class AppDbContext : IdentityDbContext<Models.CustomerIdentityUser>
+    public class AppDbContext : IdentityDbContext<CustomerIdentityUser>
     {
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
@@ -20,7 +21,7 @@ namespace DataBaseFramework
         //数据集合
         public DbSet<BlogInfoDto> Blogs { get; set; }
         public DbSet<BlogCommentDto> BlogsComments { get; set; }
-
+        public DbSet<BlogCollection> BlogCollections { get; set; }
 
 
 
@@ -38,6 +39,7 @@ namespace DataBaseFramework
             //修改数据库表名
             builder.Entity<BlogInfoDto>().ToTable("Blog");
             builder.Entity<BlogCommentDto>().ToTable("BlogComment");
+            builder.Entity<BlogCollection>().ToTable("BlogCollection");
         }
     }
 }

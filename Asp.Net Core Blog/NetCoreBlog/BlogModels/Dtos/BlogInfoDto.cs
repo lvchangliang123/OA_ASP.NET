@@ -26,7 +26,12 @@ namespace BlogModels.Dtos
         public string BlogTags { get; set; }
         [Description("文章封面")]
         public string BlogRelativeImageUrl { get; set; }
+        [Description("点赞数量")]
+        public int GiveLikeCount { get; set; }
+        [Description("访问数量")]
+        public int ViewCount { get; set; }
         //一对多
-        public List<BlogCommentDto> BlogComments { get; set; }=new List<BlogCommentDto>();
+        public IList<BlogCommentDto> BlogComments { get; set; }=new List<BlogCommentDto>();
+        public ICollection<BlogCollection> BlogCollections { get; set; }
     }
 }

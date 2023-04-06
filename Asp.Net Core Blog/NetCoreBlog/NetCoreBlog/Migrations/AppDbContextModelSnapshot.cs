@@ -16,8 +16,29 @@ namespace NetCoreBlog.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.0")
+                .HasAnnotation("ProductVersion", "6.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            modelBuilder.Entity("BlogModels.Dtos.BlogCollection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("BlogInfoDtoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CustomerIdentityUserId")
+                        .HasColumnType("varchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlogInfoDtoId");
+
+                    b.HasIndex("CustomerIdentityUserId");
+
+                    b.ToTable("BlogCollection", (string)null);
+                });
 
             modelBuilder.Entity("BlogModels.Dtos.BlogCommentDto", b =>
                 {
@@ -80,6 +101,9 @@ namespace NetCoreBlog.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("GiveLikeCount")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("ModifyTime")
                         .HasColumnType("datetime(6)");
 
@@ -91,12 +115,15 @@ namespace NetCoreBlog.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("ViewCount")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Blog", (string)null);
                 });
 
-            modelBuilder.Entity("DataBaseFramework.Models.CustomerIdentityUser", b =>
+            modelBuilder.Entity("BlogModels.ModelHelpers.CustomerIdentityUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
@@ -295,6 +322,23 @@ namespace NetCoreBlog.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("BlogModels.Dtos.BlogCollection", b =>
+                {
+                    b.HasOne("BlogModels.Dtos.BlogInfoDto", "BlogInfoDto")
+                        .WithMany("BlogCollections")
+                        .HasForeignKey("BlogInfoDtoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BlogModels.ModelHelpers.CustomerIdentityUser", "CustomerIdentityUser")
+                        .WithMany("BlogCollections")
+                        .HasForeignKey("CustomerIdentityUserId");
+
+                    b.Navigation("BlogInfoDto");
+
+                    b.Navigation("CustomerIdentityUser");
+                });
+
             modelBuilder.Entity("BlogModels.Dtos.BlogCommentDto", b =>
                 {
                     b.HasOne("BlogModels.Dtos.BlogInfoDto", "BlogInfoDto")
@@ -317,7 +361,7 @@ namespace NetCoreBlog.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("DataBaseFramework.Models.CustomerIdentityUser", null)
+                    b.HasOne("BlogModels.ModelHelpers.CustomerIdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -326,7 +370,7 @@ namespace NetCoreBlog.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("DataBaseFramework.Models.CustomerIdentityUser", null)
+                    b.HasOne("BlogModels.ModelHelpers.CustomerIdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -341,7 +385,7 @@ namespace NetCoreBlog.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DataBaseFramework.Models.CustomerIdentityUser", null)
+                    b.HasOne("BlogModels.ModelHelpers.CustomerIdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -350,7 +394,7 @@ namespace NetCoreBlog.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("DataBaseFramework.Models.CustomerIdentityUser", null)
+                    b.HasOne("BlogModels.ModelHelpers.CustomerIdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -359,7 +403,14 @@ namespace NetCoreBlog.Migrations
 
             modelBuilder.Entity("BlogModels.Dtos.BlogInfoDto", b =>
                 {
+                    b.Navigation("BlogCollections");
+
                     b.Navigation("BlogComments");
+                });
+
+            modelBuilder.Entity("BlogModels.ModelHelpers.CustomerIdentityUser", b =>
+                {
+                    b.Navigation("BlogCollections");
                 });
 #pragma warning restore 612, 618
         }

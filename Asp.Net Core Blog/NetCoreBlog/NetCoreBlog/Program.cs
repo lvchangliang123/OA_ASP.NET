@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using DataBaseFramework.Infrastructure;
 using Microsoft.Extensions.FileProviders;
 using NetCoreBlog.Models;
-using DataBaseFramework.Models;
+using BlogModels.ModelHelpers;
+using NetCoreBlog.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,12 +39,13 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAuthentication();    //添加验证中间件
 
 app.UseRouting();
-
+app.UseMiddleware<VisitCounterMiddleware>();    //注册中间件，记录伯博客访问次数
 app.UseAuthorization();
 
 app.MapControllerRoute(

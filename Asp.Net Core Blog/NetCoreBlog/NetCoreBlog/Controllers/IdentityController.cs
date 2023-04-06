@@ -2,7 +2,7 @@
 using BlogModels.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using NetCoreBlog.Models;
-using DataBaseFramework.Models;
+using BlogModels.ModelHelpers;
 
 namespace NetCoreBlog.Controllers
 {

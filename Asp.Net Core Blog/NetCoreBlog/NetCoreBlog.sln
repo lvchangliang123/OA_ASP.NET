@@ -5,9 +5,9 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreBlog", "NetCoreBlog\NetCoreBlog.csproj", "{2A054A70-9DF4-4CFD-9F36-EAE044947F8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseFramework", "DataBaseFramework\DataBaseFramework.csproj", "{B3A15351-B396-4983-A38C-A1D5F9A76D5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBaseFramework", "DataBaseFramework\DataBaseFramework.csproj", "{B3A15351-B396-4983-A38C-A1D5F9A76D5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogModels", "BlogModels\BlogModels.csproj", "{DEC3077A-5523-46AA-B366-F3EF131A992A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogModels", "BlogModels\BlogModels.csproj", "{DEC3077A-5523-46AA-B366-F3EF131A992A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

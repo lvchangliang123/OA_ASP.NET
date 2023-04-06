@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -14,23 +15,8 @@ namespace BlogModels.ViewModels
         public List<string> BlogTagList { get; set; }
         public BlogCommentDto NewBlogComment { get; set; }
         public List<BlogCommentDto> BlogComments { get; set; }
-
-
-        //为分页准备一些变量
-        [BindProperty(SupportsGet = true)]
-        [NotMapped]
-        public int CurrentPage { get; set; } = 1;
-        [BindProperty(SupportsGet = true)]
-        [NotMapped]
-        public int OnePageCount { get; set; } = 1;
-
-        [NotMapped]
-        public int TotalCommentCounts
-        {
-            get
-            {
-                return BlogComments == null ? 0 : BlogComments.Count;
-            }
-        }
+        public int GiveLikeCount { get; set; }
+        public int ViewCount { get; set; }
+        public int CollectCount { get; set; }
     }
 }

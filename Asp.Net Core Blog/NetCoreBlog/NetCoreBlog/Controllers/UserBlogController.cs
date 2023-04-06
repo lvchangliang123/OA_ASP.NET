@@ -9,7 +9,6 @@ using System.Text.Json.Nodes;
 using Microsoft.AspNetCore.Http;
 using System.Drawing;
 using NetCoreBlog.Models;
-using DataBaseFramework.Models;
 using System.Text.Json;
 
 namespace NetCoreBlog.Controllers
@@ -21,13 +20,15 @@ namespace NetCoreBlog.Controllers
         private IRepository<BlogInfoDto, int> _blogRepository;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private IRepository<BlogCommentDto, int> _blogCommentRepository;
-        public UserBlogController(UserManager<CustomerIdentityUser> userManager, SignInManager<CustomerIdentityUser> signInManager, IRepository<BlogInfoDto, int> blogRepository,IWebHostEnvironment webHostEnvironment,IRepository<BlogCommentDto,int> blogCommentRepository)
+        private IRepository<BlogCollection, int> _blogCollectionRepository;
+        public UserBlogController(UserManager<CustomerIdentityUser> userManager, SignInManager<CustomerIdentityUser> signInManager, IRepository<BlogInfoDto, int> blogRepository, IWebHostEnvironment webHostEnvironment, IRepository<BlogCommentDto, int> blogCommentRepository, IRepository<BlogCollection, int> blogCollectionRepository)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _blogRepository = blogRepository;
             _webHostEnvironment = webHostEnvironment;
             _blogCommentRepository = blogCommentRepository;
+            _blogCollectionRepository = blogCollectionRepository;
         }
 
         [HttpGet]
@@ -92,15 +93,16 @@ namespace NetCoreBlog.Controllers
         }
 
         [HttpGet]
-        [Route("ViewBlog/{blogId}")]
-        public async Task<IActionResult> ViewBlog(int? blogId)
+        [Route("ViewBlog")]
+        //这里需要注意fromroute和fromquery的区别
+        public async Task<IActionResult> ViewBlog([FromQuery]int? blogId)
         {
+            var sss = HttpContext.Request.Query;
             var blog = await _blogRepository.SingleAsync(b => b.Id == blogId);
             if (blog != null)
             {
                 var blogCommentsList = await _blogCommentRepository.GetAllListAsync();
                 var blogComments = blogCommentsList.Where(bc=>bc.BlogInfoDtoId==blog.Id).ToList();
-                //默认显示评论分页定死
                 var blogConViewModel = new BlogContentViewModel
                 {
                     BlogId = blogId,
@@ -109,7 +111,10 @@ namespace NetCoreBlog.Controllers
                     BlogTags = blog.BlogTags,
                     BlogTagList = blog.BlogTags.Split(',').ToList(),
                     BlogComments = blogComments,
-                    NewBlogComment=new BlogCommentDto(),
+                    NewBlogComment = new BlogCommentDto(),
+                    GiveLikeCount = blog.GiveLikeCount,
+                    ViewCount = blog.ViewCount,
+                    CollectCount = blog.BlogCollections == null ? 0 : blog.BlogCollections.Count,
                 };
                 return View(blogConViewModel);
             }
@@ -173,6 +178,37 @@ namespace NetCoreBlog.Controllers
                 //3.ajax提交，刷新页面，显示评论
                 return Json("Commit Success!");
             }
+        }
+
+        [HttpPost]
+        public async Task<JsonResult> SubmitBlogGiveLike([FromBody] GiveLikeDataHelper giveLikeData)
+        {
+            //1.根据id查询到对应的BlogInfoDto信息
+            var blog = await _blogRepository.SingleAsync(b => b.Id == giveLikeData.BlogId);
+            if (blog == null)
+            {
+                return Json("未找到Id为:" + giveLikeData.BlogId + "的博客文章,请重试!");
+            }
+            else
+            {
+                if (giveLikeData.LikeOrNot)
+                {
+                    blog.GiveLikeCount++;
+                }
+                else
+                {
+                    blog.GiveLikeCount--;
+                }
+                await _blogRepository.UpdateAsync(blog);
+                //3.ajax提交，刷新页面，显示评论
+                return Json(blog.GiveLikeCount);
+            }
+        }
+
+        [HttpPost]
+        public async Task<JsonResult> CollectBlogWithUser()
+        {
+            return null;
         }
 
         [HttpPost]
