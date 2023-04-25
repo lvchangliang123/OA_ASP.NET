@@ -97,7 +97,6 @@ namespace NetCoreBlog.Controllers
         //这里需要注意fromroute和fromquery的区别
         public async Task<IActionResult> ViewBlog([FromQuery]int? blogId)
         {
-            var sss = HttpContext.Request.Query;
             var blog = await _blogRepository.SingleAsync(b => b.Id == blogId);
             if (blog != null)
             {
@@ -124,6 +123,37 @@ namespace NetCoreBlog.Controllers
                 return View("NotFound");
             }
         }
+
+        //[HttpGet]
+        //[Route("ViewBlog/{blogId}")]
+        //public async Task<IActionResult> ViewBlog(int blogId)
+        //{
+        //    var blog = await _blogRepository.SingleAsync(b => b.Id == blogId);
+        //    if (blog != null)
+        //    {
+        //        var blogCommentsList = await _blogCommentRepository.GetAllListAsync();
+        //        var blogComments = blogCommentsList.Where(bc => bc.BlogInfoDtoId == blog.Id).ToList();
+        //        var blogConViewModel = new BlogContentViewModel
+        //        {
+        //            BlogId = blogId,
+        //            BlogTitle = blog.BlogTitle,
+        //            BlogContent = blog.BlogContent,
+        //            BlogTags = blog.BlogTags,
+        //            BlogTagList = blog.BlogTags.Split(',').ToList(),
+        //            BlogComments = blogComments,
+        //            NewBlogComment = new BlogCommentDto(),
+        //            GiveLikeCount = blog.GiveLikeCount,
+        //            ViewCount = blog.ViewCount,
+        //            CollectCount = blog.BlogCollections == null ? 0 : blog.BlogCollections.Count,
+        //        };
+        //        return View(blogConViewModel);
+        //    }
+        //    else
+        //    {
+        //        ViewBag.ErrorMessage = $"未找到Id为:{blogId}的博客文章,请重试!";
+        //        return View("NotFound");
+        //    }
+        //}
 
         [HttpPost]
         public async Task<JsonResult> GetBlogCommentByBlogId([FromBody]GetCommentHelper commentHelper)
@@ -206,9 +236,36 @@ namespace NetCoreBlog.Controllers
         }
 
         [HttpPost]
-        public async Task<JsonResult> CollectBlogWithUser()
+        public async Task<JsonResult> CollectBlogWithUser([FromBody] CollectDataHelper collectDataHelper)
         {
-            return null;
+            var bloginfo = await _blogRepository.SingleAsync(b=>b.Id == collectDataHelper.BlogId);
+            if (bloginfo != null && _signInManager.UserManager.GetUserAsync(HttpContext.User) != null)
+            {
+                if (collectDataHelper.CollectOrNot)
+                {
+                    bloginfo.BlogCollections.Add(new BlogCollection() { BlogInfoDto = bloginfo, CustomerIdentityUser = _signInManager.UserManager.GetUserAsync(HttpContext.User).Result });
+                    await _blogRepository.UpdateAsync(bloginfo);
+                    return Json(bloginfo.BlogCollections?.Count);
+                }
+                else
+                {
+                    var blogCollec = bloginfo.BlogCollections.Single(bc=>bc.BlogInfoDto.Id == collectDataHelper.BlogId);
+                    if (blogCollec!=null)
+                    {
+                        bloginfo.BlogCollections.Remove(blogCollec);
+                        await _blogRepository.UpdateAsync(bloginfo);
+                    }
+                    else
+                    {
+                        //注意处理错误逻辑
+                    }
+                    return Json(bloginfo.BlogCollections?.Count);
+                }
+            }
+            else
+            {
+                return Json(0);
+            }
         }
 
         [HttpPost]

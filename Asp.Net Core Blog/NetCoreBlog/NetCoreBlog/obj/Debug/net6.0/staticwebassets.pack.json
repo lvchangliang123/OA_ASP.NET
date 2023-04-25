@@ -5,8 +5,24 @@
       "PackagePath": "staticwebassets\\NetCoreBlog.bundle.scp.css"
     },
     {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\0e668407-a28f-44d5-ba82-cc1d958761d9_553d482eb24a6b6fe06e258a101cb3a2.png",
+      "PackagePath": "staticwebassets\\ArticleImages\\0e668407-a28f-44d5-ba82-cc1d958761d9_553d482eb24a6b6fe06e258a101cb3a2.png"
+    },
+    {
       "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\24e6dbf9-1351-434d-8337-9751c6ed52fb_aspNetCore.png",
       "PackagePath": "staticwebassets\\ArticleImages\\24e6dbf9-1351-434d-8337-9751c6ed52fb_aspNetCore.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\55bb4538-411a-4570-b45d-f464113ac36d_a3495e1876194086dedcf7f7157a1ac9.png",
+      "PackagePath": "staticwebassets\\ArticleImages\\55bb4538-411a-4570-b45d-f464113ac36d_a3495e1876194086dedcf7f7157a1ac9.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\651ebb1c-fc8b-4204-9e4d-a4f97793d462_a3495e1876194086dedcf7f7157a1ac9.png",
+      "PackagePath": "staticwebassets\\ArticleImages\\651ebb1c-fc8b-4204-9e4d-a4f97793d462_a3495e1876194086dedcf7f7157a1ac9.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\b3765476-49e0-49f0-9547-2fac5cf17634_a3495e1876194086dedcf7f7157a1ac9.png",
+      "PackagePath": "staticwebassets\\ArticleImages\\b3765476-49e0-49f0-9547-2fac5cf17634_a3495e1876194086dedcf7f7157a1ac9.png"
     },
     {
       "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\Emoji\\.editorconfig",
@@ -1939,6 +1955,22 @@
     {
       "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\MarkDown\\src\\editormd.js",
       "PackagePath": "staticwebassets\\MarkDown\\src\\editormd.js"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\TestImgs\\NTE1.jpeg",
+      "PackagePath": "staticwebassets\\TestImgs\\NTE1.jpeg"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\TestImgs\\NTE2.png",
+      "PackagePath": "staticwebassets\\TestImgs\\NTE2.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\TestImgs\\NTE3.jpeg",
+      "PackagePath": "staticwebassets\\TestImgs\\NTE3.jpeg"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\TestImgs\\NTE4.png",
+      "PackagePath": "staticwebassets\\TestImgs\\NTE4.png"
     },
     {
       "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\UserAvatars\\495e6ae8-37a5-42e3-8731-92b4f55c6125_user02.jpeg",

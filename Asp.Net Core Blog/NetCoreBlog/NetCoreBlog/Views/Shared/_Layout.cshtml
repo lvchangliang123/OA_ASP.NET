@@ -14,22 +14,23 @@
     <link rel="stylesheet" href="~/NetCoreBlog.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header style="background-color:sienna">
+    <header style="background-color:sienna;position:fixed;top:0;left:0;right:0;z-index:9999">
+
 
         <!--导航条-->
 
         <nav class="navbar navbar-dark navbar-fixed-top">
             <div class="container-fluid d-md-inline-flex">
-                <div style="width:16%">
+                <div style="width:15%">
                     <a class="text-info col-auto" style="display:flex;font-size:20pt;margin-left:10px" asp-controller="Home" asp-action="Index">.Net技术博客</a>
                 </div>
-                <div style="width:44%">
+                <div style="width:40%">
                     <form class="input-group">
                         <input type="text" placeholder="Search" class="form-control" style="margin:0px,0px,0px,0px" />
                         <button type="submit" class="input-group-btn btn btn-primary">搜索</button>
                     </form>
                 </div>
-                <div style="width:40%">
+                <div style="width:45%">
                     <ul class="nav">
                         <li class="nav-item" style="width:40%;text-align:center;padding-left:100px">
                             @if (_signInManager.IsSignedIn(User))
@@ -80,7 +81,7 @@
 
 
     </header>
-    <div class="container">
+    <div class="container" style="padding-top:80px">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -101,6 +102,19 @@
             $(this).tab("show");
         })
     </script>
+  @*  <script>
+        window.onscroll = function () { // 监听页面滚动事件
+            var header = document.querySelector('header');
+            var mainContent = document.querySelector('.container');
+            if (window.pageYOffset > 0) { // 如果页面已经滚动了一定距离
+                header.classList.add('fixed'); // 将标题栏固定在页面顶部
+                mainContent.style.paddingTop = header.offsetHeight + 'px'; // 调整内容区域的位置，避免被标题栏遮挡
+            } else {
+                header.classList.remove('fixed'); // 如果页面还没有滚动或已经回到顶部，则取消固定标题栏的效果
+                mainContent.style.paddingTop = '80';
+            }
+        };
+    </script>*@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

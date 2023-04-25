@@ -93,6 +93,10 @@ namespace NetCoreBlog.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("BlogSummary")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("BlogTags")
                         .IsRequired()
                         .HasColumnType("longtext");

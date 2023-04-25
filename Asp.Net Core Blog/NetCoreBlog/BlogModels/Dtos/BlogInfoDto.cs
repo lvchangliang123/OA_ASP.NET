@@ -30,8 +30,10 @@ namespace BlogModels.Dtos
         public int GiveLikeCount { get; set; }
         [Description("访问数量")]
         public int ViewCount { get; set; }
+        [Description("博客概要")]
+        public string BlogSummary { get; set; } = "";
         //一对多
         public IList<BlogCommentDto> BlogComments { get; set; }=new List<BlogCommentDto>();
-        public ICollection<BlogCollection> BlogCollections { get; set; }
+        public ICollection<BlogCollection> BlogCollections { get; set; }=new List<BlogCollection>();
     }
 }
