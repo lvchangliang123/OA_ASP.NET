@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -95,6 +96,10 @@ namespace DataBaseFramework.Infrastructure
         long LongCount(Expression<Func<TEntity,bool>> predicate);
 
         Task<long> LongCountAsync(Expression<Func<TEntity, bool>> predicate);
+
+        #region  获取当前仓储内部的DbContext
+        AppDbContext GetDbContext();
+        #endregion
 
         #endregion
     }

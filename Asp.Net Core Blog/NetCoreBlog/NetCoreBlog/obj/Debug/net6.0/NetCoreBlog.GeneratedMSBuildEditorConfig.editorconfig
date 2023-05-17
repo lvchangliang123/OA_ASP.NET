@@ -68,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckJsb2dcQ3JlYXRlTmV3QmxvZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/ASP.NET/Asp.Net Core Blog/NetCoreBlog/NetCoreBlog/Views/UserBlog/EditBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckJsb2dcRWRpdEJsb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/ASP.NET/Asp.Net Core Blog/NetCoreBlog/NetCoreBlog/Views/UserBlog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckJsb2dcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

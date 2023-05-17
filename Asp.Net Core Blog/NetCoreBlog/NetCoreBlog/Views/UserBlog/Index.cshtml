@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/NetCoreBlog.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+        .page-link {
+            cursor: pointer,
+        }
+
+        .spCommentsCount,
+        .spViewCount {
+            margin-left: 5px;
+            color: dodgerblue;
+            vertical-align: central;
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -20,32 +35,40 @@
     </header>
 
     <div class="row">
-        <div class="container col-md-9">
-            @foreach (var blog in Model)
+        <div id="blogUlDiv" class="container col-md-9">
+            @foreach (var blog in Model.Take(2))
             {
-                <div>
-                    <ul class="list-group">
-                        <li class="list-group-item" style="margin-top:10px">
-                            <div class="row">
-                                <img src="~/ArticleImages/@blog.BlogRelativeImageUrl" style="object-fit:cover" class="col-3 img-fluid" />
-                                <div class="col-9 text-start" style="background:white">
-                                    <h4 class="card-header" style="width:100%;font-family:Helvetica;font-weight:500">@blog.BlogTitle</h4>
-                                    <textarea class="card-body" rows="3" style="width:100%;border:none;background:#f7f7f7;margin-bottom:-5px">@blog.BlogContent</textarea>
-                                    <div class="card-footer" style="font-family:Arial">
-                                        <span>@blog.ModifyTime.ToString("D")</span>
-                                        <span style="margin-left:5px;color:dodgerblue;vertical-align:central">Views:@blog.ViewCount</span>
-                                        <span style="margin-left:5px;color:dodgerblue;vertical-align:central">Comments:@blog.BlogComments?.Count</span>
-                                        <a class="btn btn-sm btn-info"
-                                            asp-controller="UserBlog" asp-action="ViewBlog" asp-route-blogId="@blog.Id"
-                                            style="font-family:Helvetica;background:#3e94a5;border-color:#3e94a5;color:white;margin-left:5px">
-                                            阅读全文
-                                        </a>
-                                    </div>
+                <ul id="blogUl" class="list-group">
+                    <li class="list-group-item" style="margin-top:10px">
+                        <div class="row">
+                            <img src="~/ArticleImages/@blog.BlogRelativeImageUrl" class="col-3 img-fluid" />
+                            <div class="col-9 text-start" style="background:white">
+                                <h4 class="card-header" style="width:100%;font-family:Helvetica;font-weight:500">@blog.BlogTitle</h4>
+                                <textarea class="card-body" rows="3" style="width:100%;border:none;background:#f7f7f7;margin-bottom:-5px">@blog.BlogContent</textarea>
+                                <div class="card-footer" style="font-family:Arial">
+                                    <span>@blog.ModifyTime.ToString("D")</span>
+                                    <span style="margin-left:5px;color:dodgerblue;vertical-align:central">Views:@blog.ViewCount</span>
+                                    <span style="margin-left:5px;color:dodgerblue;vertical-align:central">Comments:@blog.BlogComments?.Count</span>
+                                    <a class="btn btn-sm btn-info"
+                                   asp-controller="UserBlog" asp-action="ViewBlog" asp-route-blogId="@blog.Id"
+                                       style="font-family:Helvetica;background:#3e94a5;border-color:#3e94a5;color:white;margin-left:5px">
+                                        阅读全文
+                                    </a>
+                                    <a class="btn btn-sm btn-info"
+                                   asp-controller="UserBlog" asp-action="EditBlog" asp-route-blogId="@blog.Id"
+                                       style="font-family:Helvetica;background:#f0ad4e;border-color:#f0ad4e;color:white;margin-left:5px">
+                                        编辑文章
+                                    </a>
+                                    <button class="btn btn-sm btn-info delBtn" data-blog-id="@blog.Id"
+                                            data-toggle="modal" data-target="#deleteModal"
+                                            style="font-family:Helvetica;background:#dc3545;border-color:#dc3545;color:white;margin-left:5px">
+                                        删除文章
+                                    </button>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                    </li>
+                </ul>
             }
         </div>
         <div class="col-md-3 card" style="margin-top:10px">
@@ -82,5 +105,172 @@
             </div>
         </div>
     </div>
+
+    <div class="divPage col-md-9" style="margin-right:10px">
+        <nav>
+            <ul class="pagination justify-content-center" style="margin-top:30px">
+                <li class="page-item" style="margin-top:10px" id="firstPageBtn">
+                    <a class="page-link">首页</a>
+                </li>
+                <li class="page-item" style="margin-top:10px" id="preBtn">
+                    <a class="page-link">上一页</a>
+                </li>
+                <li class="page-item" style="margin-top:10px" id="nextBtn">
+                    <a class="page-link">下一页</a>
+                </li>
+                <li class="page-item" style="margin-top:10px" id="lastPageBtn">
+                    <a class="page-link">末页</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Modal component -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete blog</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this blog?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="delCancelBtn">取消</button>
+                    <button type="button" class="btn btn-danger" id="delSureBtn">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var delBlogId;
+            $('.delBtn').click(function () {
+                delBlogId = $(this).data("blog-id");
+                $('#deleteModal').modal('show');
+            });
+            $('#delCancelBtn').click(function () {
+                $('#deleteModal').modal('hide');
+                return false;
+            });
+            $('#delSureBtn').click(function () {
+                $('#deleteModal').modal('hide');
+                $.ajax({
+                    url: "/UserBlog/DeleteBlog",
+                    type: "POST",
+                    data: { blogId: delBlogId },
+                    success: function (result) {
+                        // 如果删除成功，从 DOM 中删除博客列表项
+                        if (result.success) {
+                            $("#blogUl li div div div button[data-blog-id='" + delBlogId + "']").closest("li").remove();
+                        }
+                    },
+                    failure: function (response) {
+                        alert("Failed to Delete Blog!");
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+
+    <script>
+        let pageNumber = 1;
+        let pageSize = 2;
+        let last = @Model.Count;
+
+        let refreshData = function (blogData) {
+            //动态改变html的内容
+            let blogDataHtml = "";
+            for (var i = 0; i < blogData.length; i++) {
+                var dateObj = new Date(blogData[i].modifyTime);
+                var blogId = blogData[i].id;
+                if (i == 0) {
+                    $("#blogUlDiv").append("<ul id='blogUl' class='list-group'>");
+                }
+                blogDataHtml += "<li class='list-group-item'>";
+                blogDataHtml += "<div class='row'>";
+                var imgUri = "/ArticleImages/" + blogData[i].blogRelativeImageUrl;
+                blogDataHtml += "<img src='" + imgUri + "'" + "class='col-3 img-fluid'" + " " + "/>";
+                blogDataHtml += "<div class='col-9 text-start'>";
+                blogDataHtml += "<h4 class='card-header'>" + blogData[i].blogTitle + "</h4>";
+                blogDataHtml += "<textarea class='card-body' rows='2' style='width:100%;border:none;background:#f7f7f7;margin-bottom:-5px'>" + blogData[i].blogSummary + "</textarea>";
+                blogDataHtml += "<div class='card-footer'>";
+                blogDataHtml += "<span>" + dateObj.toLocaleString() + "</span>";
+                blogDataHtml += "<span class='spViewCount'>" + "Views:" + blogData[i].viewCount + "</span>";
+                blogDataHtml += "<span class='spCommentsCount'>" + "Comments:" + blogData[i].blogComments.length + "</span>";
+                blogDataHtml += "<a class='btn btn-sm btn-info' style='font-family:Helvetica;background:#3e94a5;border-color:#3e94a5;color:white;margin-left:5px' href='/ViewBlog?blogId=" + blogId + "'>阅读全文</a>";
+                blogDataHtml += "<a class='btn btn-sm btn-info' style='font-family:Helvetica;background:#f0ad4e;border-color:#f0ad4e;color:white;margin-left:5px' href='/EditBlog?blogId=" + blogId + "'>编辑文章</a>";
+                blogDataHtml += "<button class='btn btn-sm btn-info delBtn' data-toggle='modal' data-target='#deleteModal' style='font-family:Helvetica;background:#dc3545;border-color:#dc3545;color:white;margin-left:5px' data-blog-id=" + blogId + "'>删除文章</button>";
+                blogDataHtml += "</div>";
+                blogDataHtml += "</div>";
+                blogDataHtml += "</div>";
+                blogDataHtml += "</li>";
+                $("#blogUlDiv").append(blogDataHtml);
+                if (i == blogData.length){
+                    $("#blogUlDiv").append("</ul>");
+                }
+                blogDataHtml = "";
+            }
+        }
+
+        function GetBlogInfoByPage() {
+            $.ajax({
+                type: "POST",
+                url: "/UserBlog/GetBlogsByPage",
+                contentType: "application/json",
+                dataType: "json",
+                data: JSON.stringify({
+                    "pageNumber": pageNumber,
+                    "pageSize": pageSize,
+                }),
+                success: function (response) {
+                    refreshData(response);
+                },
+                failure: function (response) {
+                    alert("Failed to Get Blog Info!\n" + response.ErrorMessage);
+                }
+            });
+        }
+
+        //上一页
+        $("#preBtn a").click(function () {
+            if (pageNumber > 1) {
+                pageNumber = pageNumber - 1;
+                $("#blogUlDiv").children().remove();
+                GetBlogInfoByPage();
+            }
+        });
+
+        //下一页
+        $("#nextBtn a").click(function () {
+            if (pageNumber < last) {
+                pageNumber = pageNumber + 1;
+                $("#blogUlDiv").children().remove();
+                GetBlogInfoByPage();
+            }
+        });
+
+        //首页
+        $("#firstPageBtn a").click(function () {
+            pageNumber = 1;
+            $("#blogUlDiv").children().remove();
+            GetBlogInfoByPage();
+        });
+
+        //末页
+        $("#lastPageBtn a").click(function () {
+            pageNumber = last;
+            $("#blogUlDiv").children().remove();
+            GetBlogInfoByPage();
+        });
+
+
+    </script>
+
 </body>
 

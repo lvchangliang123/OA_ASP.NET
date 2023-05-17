@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="~/NetCoreBlog.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header style="background-color:sienna;position:fixed;top:0;left:0;right:0;z-index:9999">
+    <header style="background-color:#ffffff;position:fixed;top:0;left:0;right:0;z-index:9999;box-shadow:0px 3px 10px rgba(0, 0, 0, 0.2)">
 
 
         <!--导航条-->
@@ -22,7 +22,7 @@
         <nav class="navbar navbar-dark navbar-fixed-top">
             <div class="container-fluid d-md-inline-flex">
                 <div style="width:15%">
-                    <a class="text-info col-auto" style="display:flex;font-size:20pt;margin-left:10px" asp-controller="Home" asp-action="Index">.Net技术博客</a>
+                    <a class="col-auto" style="display:flex;font-size:20pt;margin-left:10px;color:#444444;text-decoration:none" asp-controller="Home" asp-action="Index">.Net技术博客</a>
                 </div>
                 <div style="width:40%">
                     <form class="input-group">
@@ -49,7 +49,7 @@
                                              width="30px" height="30px" style="object-fit:scale-down;display:inline-block">
                                     }
                                     <form method="post" style="display:inline-block" asp-controller="Identity" asp-action="Logout">
-                                        <button type="submit" style="width:auto" class="nav-link btn btn-link py-0">
+                                        <button type="submit" style="width:auto;color:#444444;font-size:14pt" class="nav-link btn btn-link py-0">
                                             注销 @User?.Identity?.Name
                                         </button>
                                     </form>
@@ -61,13 +61,13 @@
                             }
                         </li>
                         <li class="nav-item" style="width:15%;text-align:center">
-                            <a class="nav-fill" asp-controller="Identity" asp-action="RegisterUser" style="margin:10px;height:50px;line-height:50px">注册用户</a>
+                            <a class="nav-fill" asp-controller="Identity" asp-action="RegisterUser" style="margin:10px;height:50px;line-height:50px;text-decoration:none;color:#444444;font-size:14pt">注册用户</a>
                         </li>
                         <li class="nav-item" style="width:15%;text-align:center">
-                            <a class="nav-fill" asp-controller="UserBlog" asp-action="Index" style="margin:10px;height:50px;line-height:50px">我的博客</a>
+                            <a class="nav-fill" asp-controller="UserBlog" asp-action="Index" style="margin:10px;height:50px;line-height:50px;text-decoration:none;color:#444444;font-size:14pt">我的博客</a>
                         </li>
                         <li class="nav-item" style="width:15%;text-align:center">
-                            <a class="nav-fill" asp-controller="Identity" asp-action="EditUserInfo" style="margin:10px;height:50px;line-height:50px">我的资料</a>
+                            <a class="nav-fill" asp-controller="Identity" asp-action="EditUserInfo" style="margin:10px;height:50px;line-height:50px;text-decoration:none;color:#444444;font-size:14pt">我的资料</a>
                         </li>
                           <li class="nav-item" style="width:15%;text-align:center">
                             <a class="nav-fill" href="#" style="margin:10px;height:50px;line-height:50px"></a>
@@ -81,13 +81,13 @@
 
 
     </header>
-    <div class="container" style="padding-top:80px">
+    <div class="container" style="padding-top:80px;background-color:#f1f1f1">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted" style="background-color:sienna">
+    <footer class="border-top footer text-muted" style="background-color:#ffffff;box-shadow:0px 3px 10px rgba(0, 0, 0, 0.2)">
         <div class="container" style="text-align:center">
             &copy; 2022 - NetCoreBlog - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

@@ -1,0 +1,237 @@
+﻿@using BlogModels.Enum
+@using BlogModels.ViewModels
+@model BlogModels.ViewModels.BlogEditViewModel
+@{
+    ViewBag.Title = "编辑博客";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MarkDown/css/editormd.min.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/MarkDown/src/editormd.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/lib/bootstrap/dist/css/bootstrap.min.css" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <form method="post" asp-controller="UserBlog" asp-action="EditBlog" enctype="multipart/form-data">
+        <div class="card-header col col-md-12">
+            <input type="hidden" asp-for="BlogId" />
+            <div>
+                <div style="display:inline-block;width:70px">
+                    <span style="height:30px;display:line-block;vertical-align:middle;line-height:30px;width:70px">文章标题:</span>
+                </div>
+                <div style="display:inline-block;width:85%">
+                    <input class="form-control" asp-for="BlogTitle" type="text" placeholder="Add title for your article" />
+                </div>
+            </div>
+            <div style="margin-top:10px">
+                <div style="display:inline-block;width:70px">
+                    <span style="height:30px;display:line-block;vertical-align:middle;line-height:30px;width:6%">文章封面:</span>
+                </div>
+                <div style="display:inline-block;width:85%">
+                    <input class="form-control" asp-for="BlogRelativeImage" id="articleImageInput" type="file" placeholder="选择文章封面图片......" />
+                </div>
+                <div style="display:inline-block;width:100px;vertical-align:central">
+                    <button class="btn btn-primary" type="button" id="articleImagePreviewBtn"
+                            data-toggle="modal" data-target="#modalImagePreview">
+                        预览封面
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div id="editor" class="editormd-dialog-container card-body" style="height:800px">
+            <textarea id="editorBody" asp-for="BlogContent">@Model.BlogContent</textarea>
+        </div>
+        <div class="card-footer row" style="margin:0;width:100%">
+            <div style="width:100%">
+                <button class="btn btn-primary" id="modalBtn" type="button"
+                        data-toggle="modal" data-target="#modalContainer"
+                        style="width:10%;float:left;margin:0 0 0 -20px">
+                    编辑文章标签
+                </button>
+                <button type="submit" class="btn btn-primary" style="width:10%;float:right;margin: 0 -20px 0 0">提交编辑</button>
+            </div>
+            <div style="margin-top:10px;margin-left:-18px;">
+                <label asp-for="BlogTags">文章标签:</label>
+                <input id="inputBlogTag" asp-for="BlogTags" style="margin-left:50px;width:83%" />
+            </div>
+            <div class="modal fade" id="modalContainer" role="dialog" aria-labelledby="TagModal">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Blog Tags</h4>
+                        </div>
+                        <div class="modal-body" id="tagContainer">
+                            @foreach (var tag in Enum.GetValues(typeof(EnumBlogTag)))
+                            {
+                                <div style="margin-right:10px">
+                                    <input class="form-check-label" type="checkbox" value="@tag.ToString()">
+                                    @tag.ToString()
+                                </div>
+                            }
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" id="btnModalClose" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary" id="btnModalOpen">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalImagePreview" role="dialog" aria-labelledby="imagePreviewModal">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">Blog Image Preview</h4>
+                        </div>
+                        <div class="modal-body" id="tagContainer">
+                            <img id="imgPreview" style="object-fit:cover;width:100%;height:100%" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="btnModalImagePreviewClose" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#modalBtn").bind("click", function () {
+                //1.点击开启模态窗口
+                $("#modalContainer").modal('show');
+                //勾选已有的选项
+                var tags = $("#inputBlogTag").val();
+                var allInputs = $("#tagContainer input");
+                $.each(allInputs,function(index,inp){
+                    if (tags.includes(inp.value)) {
+                        inp.checked=true;
+                    }
+                });
+                return false;
+            });
+            $("#articleImagePreviewBtn").bind("click", function () {
+                //点击开启文章封面图片预览窗口
+                $("#modalImagePreview").modal('show');
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //2.点击获取模态窗口选中的值
+            $("#btnModalOpen").bind("click", function () {
+                var arr = [];
+                $('#modalContainer input[type=checkbox]:checked').each(function () {
+                    arr.push($(this).val());
+                });
+                if (arr.length > 0) {
+                    $("#inputBlogTag").val(arr);
+                    $("#modalContainer").modal('hide');
+                    return false;
+                } else {
+                    alert("Please select at least one tag!");
+                    return false;
+                }
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //3.点击关闭模态窗口
+            $("#btnModalClose").bind("click", function () {
+                $("#modalContainer").modal('hide');
+                return false;
+            });
+            $("#btnModalImagePreviewClose").bind("click", function () {
+                $("#modalImagePreview").modal('hide');
+                return false;
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            var editor = editormd("editor", {
+                width: "100%",
+                height: 700,
+                syncScrolling: "single",
+                path: "MarkDown/lib/",  // Autoload modules mode, codemirror, marked... dependents libs path
+                saveHTMLToTextarea: true,
+                emoji: true,
+                imageUpload: true,
+                imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL: "/UserBlog/UploadBlogImages", // 文件上传的处理请求！
+            });
+
+            $("#editor").on("paste", function (ev) {
+                //1.截图粘贴图片并上传
+                var items = (event.clipboardData || event.originalEvent.clipboardData).items;
+                for (var index in items) {
+                    var item = items[index];
+                    if (item.kind === 'file') {
+                        var blob = item.getAsFile();
+                        var reader = new FileReader();
+                        reader.onload = function (event) {
+                            //将剪切板中复制信息转换成一种base64格式字符串
+                            var base64 = event.target.result;
+                            //ajax上传图片
+                            $.ajax({
+                                url: "/UserBlog/UploadBlogImagesByClibord",
+                                type: 'post',
+                                data: { 'base': base64 },
+                                async: false,
+                                dataType: 'text',
+                                success: function (data) {
+                                    editor.insertValue("\n![" + "image.png" + "](" + data + ")");
+                                    alert("图片上传成功!");
+                                },
+                                error: function () {
+                                    alert('图片上传错误!');
+                                }
+                            });
+                        }
+                    };
+                }
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        var imageUrl;
+        $(document).ready(function () {
+            $("#btnModalImageSelectOpen").bind("click", function () {
+                if (imageUrl) {
+                    $("#articleImageInput").val(imageUrl);
+                    $("#modalImageSelect").modal('hide');
+                    return false;
+                } else {
+                    alert("Please select at least one tag!");
+                    return false;
+                }
+            });
+            $("#articleImageInput").change(function (e) {
+                console.log("Enter");
+                var file = this.files[0];
+                // 下面函数执行的效果是一样的，只是需要针对不同的浏览器执行不同的 js 函数
+                if (window.createObjectURL != undefined) { // basic
+                    imageUrl = window.createObjectURL(file);
+                } else if (window.URL != undefined) { // mozilla(firefox)
+                    imageUrl = window.URL.createObjectURL(file);
+                } else if (window.webkitURL != undefined) { // webkit or chrome
+                    imageUrl = window.webkitURL.createObjectURL(file);
+                }
+                console.log(imageUrl);
+            });
+            $("#articleImagePreviewBtn").bind("click", function () {
+                if (imageUrl) {
+                    $("#imgPreview").attr("src", imageUrl);
+                }
+            });
+        })
+    </script>
+
+</body>

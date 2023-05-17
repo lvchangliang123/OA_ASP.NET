@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Http;
 using System.Drawing;
 using NetCoreBlog.Models;
 using System.Text.Json;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore;
 
 namespace NetCoreBlog.Controllers
 {
@@ -124,36 +126,104 @@ namespace NetCoreBlog.Controllers
             }
         }
 
-        //[HttpGet]
-        //[Route("ViewBlog/{blogId}")]
-        //public async Task<IActionResult> ViewBlog(int blogId)
-        //{
-        //    var blog = await _blogRepository.SingleAsync(b => b.Id == blogId);
-        //    if (blog != null)
-        //    {
-        //        var blogCommentsList = await _blogCommentRepository.GetAllListAsync();
-        //        var blogComments = blogCommentsList.Where(bc => bc.BlogInfoDtoId == blog.Id).ToList();
-        //        var blogConViewModel = new BlogContentViewModel
-        //        {
-        //            BlogId = blogId,
-        //            BlogTitle = blog.BlogTitle,
-        //            BlogContent = blog.BlogContent,
-        //            BlogTags = blog.BlogTags,
-        //            BlogTagList = blog.BlogTags.Split(',').ToList(),
-        //            BlogComments = blogComments,
-        //            NewBlogComment = new BlogCommentDto(),
-        //            GiveLikeCount = blog.GiveLikeCount,
-        //            ViewCount = blog.ViewCount,
-        //            CollectCount = blog.BlogCollections == null ? 0 : blog.BlogCollections.Count,
-        //        };
-        //        return View(blogConViewModel);
-        //    }
-        //    else
-        //    {
-        //        ViewBag.ErrorMessage = $"未找到Id为:{blogId}的博客文章,请重试!";
-        //        return View("NotFound");
-        //    }
-        //}
+        [HttpGet]
+        [Route("EditBlog")]
+        public async Task<IActionResult> EditBlog([FromQuery]int? blogId)
+        {
+            var blog = await _blogRepository.SingleAsync(b => b.Id == blogId);
+            if (blog != null)
+            {
+                var blogEditViewModel = new BlogEditViewModel
+                {
+                    BlogId = blog.Id,
+                    BlogTitle = blog.BlogTitle,
+                    BlogContent = blog.BlogContent,
+                    BlogTags = blog.BlogTags,
+                };
+                return View(blogEditViewModel);
+            }
+            else
+            {
+                ViewBag.ErrorMessage = $"未找到Id为:{blogId}的博客文章,请重试!";
+                return View("NotFound");
+            }
+        }
+
+        [HttpPost]
+        [Route("EditBlog")]
+        public async Task<IActionResult> EditBlog(BlogEditViewModel blogEditViewModel)
+        {
+            var blog = await _blogRepository.SingleAsync(b => b.Id == blogEditViewModel.BlogId);
+            if (blog != null)
+            {
+                //判断封面是否为空，为空则不更新
+                if (blogEditViewModel.BlogRelativeImage != null)
+                {
+                    var imageFlod = Path.Combine(_webHostEnvironment.WebRootPath, "ArticleImages");
+                    string guidStr = Guid.NewGuid().ToString();
+                    var filePath = Path.Combine(imageFlod, guidStr + "_" + blogEditViewModel.BlogRelativeImage.FileName);
+                    blog.BlogTitle = blogEditViewModel.BlogTitle;
+                    blog.BlogContent = blogEditViewModel.BlogContent;
+                    blog.BlogTags = blogEditViewModel.BlogTags;
+                    blog.BlogRelativeImageUrl = guidStr + "_" + blogEditViewModel.BlogRelativeImage.FileName;
+                    //上传文章封面
+                    await blogEditViewModel.BlogRelativeImage.CopyToAsync(new FileStream(filePath, FileMode.Create));
+                }
+                else
+                {
+                    blog.BlogTitle = blogEditViewModel.BlogTitle;
+                    blog.BlogContent = blogEditViewModel.BlogContent;
+                    blog.BlogTags = blogEditViewModel.BlogTags;
+                }
+                await _blogRepository.UpdateAsync(blog);
+                return RedirectToAction("ViewBlog",new { blogId= blogEditViewModel.BlogId });
+            }
+            else
+            {
+                ViewBag.ErrorMessage = $"未找到Id为:{blogEditViewModel.BlogId}的博客文章,请重试!";
+                return View("NotFound");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteBlog(int blogId)
+        {
+            var blog = await _blogRepository.SingleAsync(b=>b.Id == blogId);
+            if (blog!=null)
+            {
+                await _blogRepository.DeleteAsync(blog);
+                return Json(new { success = true });
+            }
+            else
+            {
+                return Json(new { success = false, message = "Blog not found" });
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> GetBlogsByPage([FromBody] GetBlogInfosHelper blogInfosHelper)
+        {
+            var curUser = await _signInManager.UserManager.GetUserAsync(HttpContext.User);
+            if (curUser != null)
+            {
+                var totalBlogs = await _blogRepository.GetAll().Where(b => b.UserId == curUser.Id).ToListAsync();
+                var displayBlogs = totalBlogs.OrderBy(b => b.ModifyTime)
+                    .Skip((blogInfosHelper.pageNumber - 1) * blogInfosHelper.pageSize)
+                    .Take(blogInfosHelper.pageSize)
+                    .ToList();
+                return Json(displayBlogs);
+            }
+            else
+            {
+                var errorResponse = new
+                {
+                    ErrorCode = 500,
+                    ErrorMessage = "未能找到作者的任何博客信息，请重试!"
+                };
+                return BadRequest(errorResponse);
+            }
+
+        }
 
         [HttpPost]
         public async Task<JsonResult> GetBlogCommentByBlogId([FromBody]GetCommentHelper commentHelper)

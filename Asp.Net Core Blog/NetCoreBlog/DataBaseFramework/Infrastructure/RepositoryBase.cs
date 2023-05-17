@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -189,6 +190,11 @@ namespace DataBaseFramework.Infrastructure
             _dbContext.Entry(entity).State = EntityState.Modified;
             await SaveAsync();
             return entity;
+        }
+
+        AppDbContext IRepository<TEntity, TPrimaryKey>.GetDbContext()
+        {
+            return this._dbContext;
         }
     }
 }
