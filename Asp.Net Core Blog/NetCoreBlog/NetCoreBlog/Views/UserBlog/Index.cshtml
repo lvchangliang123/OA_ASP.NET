@@ -181,7 +181,7 @@
     <script>
         let pageNumber = 1;
         let pageSize = 2;
-        let last = @Model.Count;
+        let last = (@Model.Count)/pageSize;
 
         let refreshData = function (blogData) {
             //动态改变html的内容

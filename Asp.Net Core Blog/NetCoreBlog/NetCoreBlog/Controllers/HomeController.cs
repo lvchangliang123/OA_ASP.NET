@@ -36,22 +36,34 @@ namespace NetCoreBlog.Controllers
             homeInfosDto.TotalBlogs= _blogRepository.Count();
             homeInfosDto.TotalKinds = 3;
             homeInfosDto.TotalTags = Enum.GetNames((new BlogModels.Enum.EnumBlogTag()).GetType()).Length;
-            homeInfosDto.TotalComments = _blogCommentRepository.Count();
+            homeInfosDto.TotalComments = totalBlogs.Select(b=>b.BlogComments).Count();
             homeInfosDto.TotalBlogViews = totalBlogs.Select(b => b.ViewCount).Sum();
             homeInfosDto.MostPopularBlogs= totalBlogs.OrderBy(b=>b.GiveLikeCount).Take(3).ToList();
-            var totalComments = await _blogCommentRepository.GetAllListAsync();
-            homeInfosDto.MostNewBlogComments = totalComments.OrderBy(c=>c.CommentDate).Take(3).ToList();
+            homeInfosDto.MostNewBlogComments = await _blogCommentRepository.GetAllListAsync();
             return View(homeInfosDto);
         }
 
         [HttpPost]
-        public async Task<JsonResult> GetBlogInfosByPage([FromBody] GetBlogInfosHelper blogInfosHelper)
+        public async Task<IActionResult> GetBlogInfosByPage([FromBody] GetBlogInfosHelper blogInfosHelper)
         {
             var totalBlogs = await _blogRepository.GetAllListAsync();
-            var displayBlogs = totalBlogs.OrderBy(b => b.ModifyTime)
-                .Skip((blogInfosHelper.pageNumber - 1) * blogInfosHelper.pageSize)
-                .Take(blogInfosHelper.pageSize)
-                .ToList();
+
+            List<BlogInfoDto> displayBlogs;
+            //数量不能超过总数
+            if (blogInfosHelper.pageNumber * blogInfosHelper.pageSize <= totalBlogs.Count)
+            {
+                displayBlogs = totalBlogs.OrderBy(b => b.ModifyTime)
+             .Skip((blogInfosHelper.pageNumber - 1) * blogInfosHelper.pageSize)
+             .Take(blogInfosHelper.pageSize)
+             .ToList();
+            }
+            else
+            {
+                displayBlogs = totalBlogs.OrderBy(b => b.ModifyTime)
+             .Skip(totalBlogs.Count - blogInfosHelper.pageSize)
+             .Take(blogInfosHelper.pageSize)
+             .ToList();
+            }
             return Json(displayBlogs);
         }
 

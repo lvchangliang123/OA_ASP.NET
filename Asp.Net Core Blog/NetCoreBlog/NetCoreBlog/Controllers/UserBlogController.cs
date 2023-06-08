@@ -12,6 +12,7 @@ using NetCoreBlog.Models;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing.Printing;
 
 namespace NetCoreBlog.Controllers
 {
@@ -23,7 +24,8 @@ namespace NetCoreBlog.Controllers
         private readonly IWebHostEnvironment _webHostEnvironment;
         private IRepository<BlogCommentDto, int> _blogCommentRepository;
         private IRepository<BlogCollection, int> _blogCollectionRepository;
-        public UserBlogController(UserManager<CustomerIdentityUser> userManager, SignInManager<CustomerIdentityUser> signInManager, IRepository<BlogInfoDto, int> blogRepository, IWebHostEnvironment webHostEnvironment, IRepository<BlogCommentDto, int> blogCommentRepository, IRepository<BlogCollection, int> blogCollectionRepository)
+        private ILogger<UserBlogController> _logger;
+        public UserBlogController(UserManager<CustomerIdentityUser> userManager, SignInManager<CustomerIdentityUser> signInManager, IRepository<BlogInfoDto, int> blogRepository, IWebHostEnvironment webHostEnvironment, IRepository<BlogCommentDto, int> blogCommentRepository, IRepository<BlogCollection, int> blogCollectionRepository, ILogger<UserBlogController> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -31,6 +33,7 @@ namespace NetCoreBlog.Controllers
             _webHostEnvironment = webHostEnvironment;
             _blogCommentRepository = blogCommentRepository;
             _blogCollectionRepository = blogCollectionRepository;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -74,6 +77,7 @@ namespace NetCoreBlog.Controllers
                 await model.BlogRelativeImage.CopyToAsync(new FileStream(filePath, FileMode.Create));
                 //2.利用仓储模式，存储数据库
                 _blogRepository.Insert(blogInfoDto);
+                _logger.LogWarning($"用户{_signInManager.UserManager.GetUserAsync(HttpContext.User).Result.UserName}创建博客成功");
                 //3.存储完成后，回到当前登录用户的博客列表页面
                 return RedirectToAction("Index");
             }
@@ -90,6 +94,7 @@ namespace NetCoreBlog.Controllers
                         }
                     }
                 }
+                _logger.LogError($"用户{_signInManager.UserManager.GetUserAsync(HttpContext.User).Result.UserName}创建博客失败,模型验证失败");
             }
             return View();
         }
@@ -144,6 +149,7 @@ namespace NetCoreBlog.Controllers
             }
             else
             {
+                _logger.LogError($"未找到Id为:{blogId}的博客文章,编辑博客请求失败");
                 ViewBag.ErrorMessage = $"未找到Id为:{blogId}的博客文章,请重试!";
                 return View("NotFound");
             }
@@ -180,6 +186,7 @@ namespace NetCoreBlog.Controllers
             }
             else
             {
+                _logger.LogError($"未找到Id为:{blogEditViewModel.BlogId}的博客文章,编辑博客Post请求失败");
                 ViewBag.ErrorMessage = $"未找到Id为:{blogEditViewModel.BlogId}的博客文章,请重试!";
                 return View("NotFound");
             }
@@ -196,6 +203,7 @@ namespace NetCoreBlog.Controllers
             }
             else
             {
+                _logger.LogError($"未找到Id为:{blogId}的博客文章,删除博客失败");
                 return Json(new { success = false, message = "Blog not found" });
             }
         }
@@ -207,10 +215,22 @@ namespace NetCoreBlog.Controllers
             if (curUser != null)
             {
                 var totalBlogs = await _blogRepository.GetAll().Where(b => b.UserId == curUser.Id).ToListAsync();
-                var displayBlogs = totalBlogs.OrderBy(b => b.ModifyTime)
-                    .Skip((blogInfosHelper.pageNumber - 1) * blogInfosHelper.pageSize)
-                    .Take(blogInfosHelper.pageSize)
-                    .ToList();
+                List<BlogInfoDto> displayBlogs;
+                //数量不能超过总数
+                if (blogInfosHelper.pageNumber * blogInfosHelper.pageSize <= totalBlogs.Count)
+                {
+                    displayBlogs = totalBlogs.OrderBy(b => b.ModifyTime)
+                 .Skip((blogInfosHelper.pageNumber - 1) * blogInfosHelper.pageSize)
+                 .Take(blogInfosHelper.pageSize)
+                 .ToList();
+                }
+                else
+                {
+                    displayBlogs = totalBlogs.OrderBy(b => b.ModifyTime)
+                 .Skip(totalBlogs.Count - blogInfosHelper.pageSize)
+                 .Take(blogInfosHelper.pageSize)
+                 .ToList();
+                }
                 return Json(displayBlogs);
             }
             else
@@ -231,6 +251,7 @@ namespace NetCoreBlog.Controllers
             var blog = await _blogRepository.SingleAsync(b => b.Id == commentHelper.BlogId);
             if (blog == null)
             {
+                _logger.LogError("Ajax请求获取博客评论失败,未找到该用户");
                 return Json("未找到Id为:" + commentHelper.BlogId.ToString() + "的博客文章,请重试!");
             }
             else
@@ -256,6 +277,7 @@ namespace NetCoreBlog.Controllers
             var blog = await _blogRepository.SingleAsync(b => b.Id == commentHelper.Blogid);
             if (blog == null)
             {
+                _logger.LogError("Ajax请求提交博客评论失败,未找到该博客");
                 return Json("未找到Id为:" + commentHelper.Blogid.ToString() + "的博客文章,请重试!");
             }
             else
@@ -275,6 +297,7 @@ namespace NetCoreBlog.Controllers
                 //2.根据评论在评论表中插入相应的数据
                 blog.BlogComments.Add(newBlogComment);
                 await _blogRepository.UpdateAsync(blog);
+                _logger.LogWarning("Ajax请求提交博客评论成功");
                 //3.ajax提交，刷新页面，显示评论
                 return Json("Commit Success!");
             }
@@ -287,6 +310,7 @@ namespace NetCoreBlog.Controllers
             var blog = await _blogRepository.SingleAsync(b => b.Id == giveLikeData.BlogId);
             if (blog == null)
             {
+                _logger.LogError("Ajax请求提交博客喜爱失败,未找到该博客");
                 return Json("未找到Id为:" + giveLikeData.BlogId + "的博客文章,请重试!");
             }
             else
@@ -300,6 +324,7 @@ namespace NetCoreBlog.Controllers
                     blog.GiveLikeCount--;
                 }
                 await _blogRepository.UpdateAsync(blog);
+                _logger.LogError("Ajax请求提交博客喜爱成功");
                 //3.ajax提交，刷新页面，显示评论
                 return Json(blog.GiveLikeCount);
             }
@@ -328,6 +353,7 @@ namespace NetCoreBlog.Controllers
                     else
                     {
                         //注意处理错误逻辑
+                        _logger.LogError("Ajax请求提交博客收藏失败");
                     }
                     return Json(bloginfo.BlogCollections?.Count);
                 }
@@ -373,8 +399,10 @@ namespace NetCoreBlog.Controllers
             {
                 success = 0;
                 msg = ex.ToString();
+                _logger.LogError("上传博客图片失败");
             }
             var obj = new { success = success, url = pathNew, message = msg };
+            _logger.LogWarning("上传博客图片成功");
             return Json(obj);
         }
 
@@ -413,6 +441,7 @@ namespace NetCoreBlog.Controllers
                 }
                 catch (Exception)
                 {
+                    _logger.LogError("从剪切板上传博客图片失败");
                     obj = new { success = 0, url = "",msg = "Upload Error" };
                 }
                 return msg;

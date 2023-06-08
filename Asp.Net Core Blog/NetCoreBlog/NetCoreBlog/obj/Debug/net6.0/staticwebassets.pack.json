@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\ArticleImages\\651ebb1c-fc8b-4204-9e4d-a4f97793d462_a3495e1876194086dedcf7f7157a1ac9.png"
     },
     {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\706759d5-6431-49b3-9081-22353a8d1fb8_a3495e1876194086dedcf7f7157a1ac9.png",
+      "PackagePath": "staticwebassets\\ArticleImages\\706759d5-6431-49b3-9081-22353a8d1fb8_a3495e1876194086dedcf7f7157a1ac9.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\917ab394-b2d3-4309-8347-dc38f7170c85_a3495e1876194086dedcf7f7157a1ac9.png",
+      "PackagePath": "staticwebassets\\ArticleImages\\917ab394-b2d3-4309-8347-dc38f7170c85_a3495e1876194086dedcf7f7157a1ac9.png"
+    },
+    {
       "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\b3765476-49e0-49f0-9547-2fac5cf17634_a3495e1876194086dedcf7f7157a1ac9.png",
       "PackagePath": "staticwebassets\\ArticleImages\\b3765476-49e0-49f0-9547-2fac5cf17634_a3495e1876194086dedcf7f7157a1ac9.png"
     },
@@ -1957,6 +1965,10 @@
       "PackagePath": "staticwebassets\\MarkDown\\src\\editormd.js"
     },
     {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\QRImgs\\wechat.jpg",
+      "PackagePath": "staticwebassets\\QRImgs\\wechat.jpg"
+    },
+    {
       "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\TestImgs\\NTE1.jpeg",
       "PackagePath": "staticwebassets\\TestImgs\\NTE1.jpeg"
     },
@@ -1979,6 +1991,10 @@
     {
       "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\UserAvatars\\DefaultAvatar.png",
       "PackagePath": "staticwebassets\\UserAvatars\\DefaultAvatar.png"
+    },
+    {
+      "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\UserAvatars\\c37a560d-f884-4216-8265-50cce9a39cdd_user01.jpeg",
+      "PackagePath": "staticwebassets\\UserAvatars\\c37a560d-f884-4216-8265-50cce9a39cdd_user01.jpeg"
     },
     {
       "Id": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\css\\site.css",

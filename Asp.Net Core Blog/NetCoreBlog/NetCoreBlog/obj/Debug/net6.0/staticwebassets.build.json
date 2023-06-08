@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yX/kwOR0qiJYUUkkeew3CvBvmwjUZi6Ni8ulBbWct1E=",
+  "Hash": "iQp/KIC4c6NOjumPTqk5MJFChnqKqgMkE+7GD5yRQ6A=",
   "Source": "NetCoreBlog",
   "BasePath": "_content/NetCoreBlog",
   "Mode": "Default",
@@ -117,6 +117,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ArticleImages\\651ebb1c-fc8b-4204-9e4d-a4f97793d462_a3495e1876194086dedcf7f7157a1ac9.png"
+    },
+    {
+      "Identity": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\706759d5-6431-49b3-9081-22353a8d1fb8_a3495e1876194086dedcf7f7157a1ac9.png",
+      "SourceId": "NetCoreBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\",
+      "BasePath": "_content/NetCoreBlog",
+      "RelativePath": "ArticleImages/706759d5-6431-49b3-9081-22353a8d1fb8_a3495e1876194086dedcf7f7157a1ac9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ArticleImages\\706759d5-6431-49b3-9081-22353a8d1fb8_a3495e1876194086dedcf7f7157a1ac9.png"
+    },
+    {
+      "Identity": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\917ab394-b2d3-4309-8347-dc38f7170c85_a3495e1876194086dedcf7f7157a1ac9.png",
+      "SourceId": "NetCoreBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\",
+      "BasePath": "_content/NetCoreBlog",
+      "RelativePath": "ArticleImages/917ab394-b2d3-4309-8347-dc38f7170c85_a3495e1876194086dedcf7f7157a1ac9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ArticleImages\\917ab394-b2d3-4309-8347-dc38f7170c85_a3495e1876194086dedcf7f7157a1ac9.png"
     },
     {
       "Identity": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\ArticleImages\\b3765476-49e0-49f0-9547-2fac5cf17634_a3495e1876194086dedcf7f7157a1ac9.png",
@@ -9384,6 +9418,23 @@
       "OriginalItemSpec": "wwwroot\\MarkDown\\src\\editormd.js"
     },
     {
+      "Identity": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\QRImgs\\wechat.jpg",
+      "SourceId": "NetCoreBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\",
+      "BasePath": "_content/NetCoreBlog",
+      "RelativePath": "QRImgs/wechat.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\QRImgs\\wechat.jpg"
+    },
+    {
       "Identity": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\TestImgs\\NTE1.jpeg",
       "SourceId": "NetCoreBlog",
       "SourceType": "Discovered",
@@ -9467,6 +9518,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\UserAvatars\\495e6ae8-37a5-42e3-8731-92b4f55c6125_user02.jpeg"
+    },
+    {
+      "Identity": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\UserAvatars\\c37a560d-f884-4216-8265-50cce9a39cdd_user01.jpeg",
+      "SourceId": "NetCoreBlog",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\",
+      "BasePath": "_content/NetCoreBlog",
+      "RelativePath": "UserAvatars/c37a560d-f884-4216-8265-50cce9a39cdd_user01.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserAvatars\\c37a560d-f884-4216-8265-50cce9a39cdd_user01.jpeg"
     },
     {
       "Identity": "E:\\ASP.NET\\Asp.Net Core Blog\\NetCoreBlog\\NetCoreBlog\\wwwroot\\UserAvatars\\DefaultAvatar.png",

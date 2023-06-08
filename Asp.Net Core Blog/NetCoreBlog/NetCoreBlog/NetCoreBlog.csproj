@@ -16,6 +16,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 
@@ -32,6 +34,7 @@
     <Folder Include="wwwroot\BlogImages\" />
     <Folder Include="wwwroot\UserAvatars\" />
     <Folder Include="wwwroot\ArticleImages\" />
+    <Folder Include="wwwroot\QRImgs\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,11 @@
+
+
+Date：2023-06-08 22:38:18.379
+LogLevel：Warning
+Message：Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+--------------------------------------------------
+
+Date：2023-06-08 22:38:25.860
+LogLevel：Warning
+Message：用户Aria登录成功
+--------------------------------------------------

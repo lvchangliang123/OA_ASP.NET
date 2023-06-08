@@ -11,12 +11,14 @@ namespace NetCoreBlog.Controllers
         private UserManager<CustomerIdentityUser> _userManager;
         private SignInManager<CustomerIdentityUser> _signInManager;
         private IWebHostEnvironment _webHostEnvironment;
+        private readonly ILogger<IdentityController> _logger;
 
-        public IdentityController(UserManager<CustomerIdentityUser> userManager, SignInManager<CustomerIdentityUser> signInManager, IWebHostEnvironment webHostEnvironment)
+        public IdentityController(UserManager<CustomerIdentityUser> userManager, SignInManager<CustomerIdentityUser> signInManager, IWebHostEnvironment webHostEnvironment, ILogger<IdentityController> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _webHostEnvironment = webHostEnvironment;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -62,6 +64,7 @@ namespace NetCoreBlog.Controllers
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
+                    _logger.LogError("注册用户失败");
                 }
             }
             return View(registerViewModel);
@@ -119,7 +122,13 @@ namespace NetCoreBlog.Controllers
                     var result = await _userManager.ResetPasswordAsync(user, modifyPasswordViewModel.Token, modifyPasswordViewModel.Password);
                     if (result.Succeeded)
                     {
+                        _logger.LogWarning($"用户{user.UserName}修改密码失成功");
                         return RedirectToAction("ResetpasswordSuccess", "Identity");
+                    }
+                    else
+                    {
+                        _logger.LogError($"用户{user.UserName}修改密码失败");
+                        return RedirectToAction("ModifyPassword", "Identity");
                     }
                 }
             }
@@ -149,9 +158,14 @@ namespace NetCoreBlog.Controllers
                 var result = await _signInManager.PasswordSignInAsync(loginViewModel.UserName, loginViewModel.Password, loginViewModel.RememberMe, false);
                 if (result.Succeeded)
                 {
+                    _logger.LogWarning($"用户{loginViewModel.UserName}登录成功");
                     return RedirectToAction("Index", "Home");
                 }
-                ModelState.AddModelError(string.Empty, "登陆失败，请重试");
+                else
+                {
+                    _logger.LogError($"用户{loginViewModel.UserName}登录失败");
+                    ModelState.AddModelError(string.Empty, "登陆失败，请重试");
+                }
             }
             return View(loginViewModel);
         }
@@ -223,14 +237,22 @@ namespace NetCoreBlog.Controllers
                     var updateResult = await _userManager.UpdateAsync(loginUser);
                     if (updateResult.Succeeded)
                     {
+                        _logger.LogWarning($"用户{loginUser.UserName}修改个人信息成功");
                         //修改成功，返回首页
                         return RedirectToAction("Index", "Home");
                     }
                     else
                     {
+                        _logger.LogError($"用户{loginUser.UserName}修改个人信息失败,userManager更新失败");
                         //错误返回当前页
                         return View("EditUserInfo");
                     }
+                }
+                else
+                {
+                    _logger.LogError($"用户{loginUser.UserName}修改个人信息失败,用户密码错误");
+                    //错误返回当前页
+                    return View("EditUserInfo");
                 }
             }
             //错误返回当前页
