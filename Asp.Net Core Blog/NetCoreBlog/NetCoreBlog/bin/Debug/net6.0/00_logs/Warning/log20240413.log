@@ -1,0 +1,51 @@
+
+
+Date：2024-04-13 18:21:14.453
+LogLevel：Warning
+Message：Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+--------------------------------------------------
+
+Date：2024-04-13 18:21:54.155
+LogLevel：Warning
+Message：Invalid password for user.
+--------------------------------------------------
+
+Date：2024-04-13 18:21:54.157
+LogLevel：Warning
+Message：User failed to provide the correct password.
+--------------------------------------------------
+
+Date：2024-04-13 18:22:09.388
+LogLevel：Warning
+Message：Invalid password for user.
+--------------------------------------------------
+
+Date：2024-04-13 18:22:09.390
+LogLevel：Warning
+Message：User failed to provide the correct password.
+--------------------------------------------------
+
+Date：2024-04-13 18:22:14.532
+LogLevel：Warning
+Message：Invalid password for user.
+--------------------------------------------------
+
+Date：2024-04-13 18:22:14.534
+LogLevel：Warning
+Message：User failed to provide the correct password.
+--------------------------------------------------
+
+Date：2024-04-13 18:22:19.042
+LogLevel：Warning
+Message：Invalid password for user.
+--------------------------------------------------
+
+Date：2024-04-13 18:22:19.044
+LogLevel：Warning
+Message：User failed to provide the correct password.
+--------------------------------------------------
+
+Date：2024-04-13 18:22:26.114
+LogLevel：Warning
+Message：用户Aria登录成功
+--------------------------------------------------

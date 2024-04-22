@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "RQScjq8RCtmQ5KdXrOaVawizb0ulMlG+0e9JUEnKaBA=",
+  "Source": "VueNetBlog.Server",
+  "BasePath": "_content/VueNetBlog.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\vuenetblog.client.esproj",
+      "Version": 2,
+      "Source": "vuenetblog.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,1 @@
+E:\ASP.NET\VueNetBlog\vuenetblog.client\obj\Debug\vuenetblog.client.esproj.CoreCompileInputs.cache
