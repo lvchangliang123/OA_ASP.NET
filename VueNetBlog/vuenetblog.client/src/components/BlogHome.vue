@@ -100,7 +100,7 @@
                 </el-row>
             </el-main>
             <el-footer style="display:flex;align-items:center;justify-content:center; background-color: #545c64;color:white;">
-                @2024 LCL.Design By Vue3 & ASP.NET CORE
+                @2024 Design By Vue3 & ASP.NET CORE
             </el-footer>
         </el-container>
     </div>
