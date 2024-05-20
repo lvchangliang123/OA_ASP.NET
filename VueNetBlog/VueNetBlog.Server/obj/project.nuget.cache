@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2gLhR7kQ0QKOn04P+gNlMKp37YDMBY699CRaZMlufsO+DWM2PVsMEBoIm/5Rf58S9O8HwVwtzJj1L7axaOC/6g==",
+  "dgSpecHash": "plUxelAh+i7wVabIFdBqdPRbG64yx6LN03pSuK/CKy71gx0ua3bnTMaAIVOWlAwNtY1chlVO9kH3zA1D6uB5ig==",
   "success": true,
   "projectFilePath": "E:\\ASP.NET\\VueNetBlog\\VueNetBlog.Server\\VueNetBlog.Server.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\6.0.29\\microsoft.aspnetcore.spaproxy.6.0.29.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\6.0.30\\microsoft.aspnetcore.spaproxy.6.0.30.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
