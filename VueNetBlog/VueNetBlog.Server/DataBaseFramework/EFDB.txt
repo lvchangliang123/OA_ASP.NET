@@ -1,0 +1,1 @@
+﻿ Scaffold-DbContext -Force -Connection "Data Source=localhost;Initial Catalog=VueNetBlogDB_Test;User=root;Password=123456" -Provider MySql.EntityFrameworkCore -OutputDir Models -Context BlogDbContext -DataAnnotations -UseDatabaseNames

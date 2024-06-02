@@ -21,9 +21,9 @@
                     </el-menu-item>
                     <el-menu-item index="2">首页</el-menu-item>
                     <el-menu-item index="3">分类</el-menu-item>
-                    <el-menu-item index="4">注册</el-menu-item>
-                    <el-menu-item index="5">登录</el-menu-item>
-                    <el-menu-item index="6">关于</el-menu-item>
+                    <el-menu-item index="4" @click="goTo('regis')">注册</el-menu-item>
+                    <el-menu-item index="5" @click="goTo('login')">登录</el-menu-item>
+                    <el-menu-item index="6" @click="goTo('about')">关于</el-menu-item>
                 </el-menu>
             </el-header>
             <el-main>
@@ -100,7 +100,7 @@
                 </el-row>
             </el-main>
             <el-footer style="display:flex;align-items:center;justify-content:center; background-color: #545c64;color:white;">
-                @2024 Design By Vue3 & ASP.NET CORE
+                @2024 Design By Vue3 & ASP.NET CORE{{testVal}}
             </el-footer>
         </el-container>
     </div>
@@ -110,6 +110,27 @@
 <script lang="js" setup>
     import { ref, reactive } from 'vue'
     import { User } from '@element-plus/icons-vue'
+    import { httpApi } from '@/Utils/httpApi'
+    import { useRouter } from 'vue-router'
+
+    const router = useRouter()
+
+    const goTo = (para) => {
+        if (para == 'about') {
+            router.push('/about')
+        }
+    }
+
+    router.onError((err) => {
+        console.error('Routing error:', err)
+    })
+
+    const testVal = ref('');
+
+    const getValue = httpApi.get('api/BlogHome/BlogHomeView')
+        .then(response => testVal.value = response.data).catch(function (error) {
+            console.log(error);
+        })
 
     const activeIndex = ref('2')
     const activeIndex2 = ref('2')
@@ -201,5 +222,4 @@
     .example-pagination-block + .example-pagination-block {
         margin-top: 10px;
     }
-
 </style>
