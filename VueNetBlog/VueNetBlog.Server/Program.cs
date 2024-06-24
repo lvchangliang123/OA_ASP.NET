@@ -21,14 +21,7 @@ builder.Services.AddDbContextPool<BlogDbContext>(options =>
     options.EnableSensitiveDataLogging();
 });
 builder.Services.AddTransient(typeof(IRepository<,>), typeof(RepositoryBase<,>));
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<BlogDbContext>().AddDefaultTokenProviders();
-builder.Services.Configure<IdentityOptions>(options =>
-{
-    options.Password.RequiredLength = 6;
-    options.Password.RequireNonAlphanumeric = true;
-    options.Password.RequireLowercase = true;
-    options.Password.RequireUppercase = true;
-});
+builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<BlogDbContext>().AddDefaultTokenProviders();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowOrigin",

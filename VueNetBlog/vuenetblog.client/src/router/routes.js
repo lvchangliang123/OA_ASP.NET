@@ -10,12 +10,43 @@ const regis = () => import('@/components/Regis.vue')
 const routes = [
     {
         name:'about',
-        path: '/about',
+        path:'/about',
         component:about,
     },
     {
-        path: '/bloghome',
+        name:'bloghome',
+        path:'/bloghome',
         component: bloghome,
+    },
+    {
+        name:'admin',
+        path:'/admin',
+        component: admin,
+    },
+    {
+        name: 'blogdetail',
+        path: '/blogdetail',
+        component: blogdetail,
+    },
+    {
+        name: 'blogedit',
+        path: '/blogedit',
+        component: blogedit,
+    },
+    {
+        name: 'dailyroutine',
+        path: '/dailyroutine',
+        component: dailyroutine,
+    },
+    {
+        name: 'login',
+        path: '/login',
+        component: login,
+    },
+    {
+        name: 'regis',
+        path: '/regis',
+        component: regis,
     },
     {
         path: '/',

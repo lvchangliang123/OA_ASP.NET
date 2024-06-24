@@ -19,7 +19,7 @@
                             </el-icon>
                         </el-avater>
                     </el-menu-item>
-                    <el-menu-item index="2">首页</el-menu-item>
+                    <el-menu-item index="2" @click="goTo('bloghome')">首页</el-menu-item>
                     <el-menu-item index="3">分类</el-menu-item>
                     <el-menu-item index="4" @click="goTo('regis')">注册</el-menu-item>
                     <el-menu-item index="5" @click="goTo('login')">登录</el-menu-item>
@@ -116,9 +116,7 @@
     const router = useRouter()
 
     const goTo = (para) => {
-        if (para == 'about') {
-            router.push('/about')
-        }
+        router.push(`/${para}`)
     }
 
     router.onError((err) => {

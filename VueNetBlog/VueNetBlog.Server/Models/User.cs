@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace VueNetBlog.Server.Models
 {
     [Table("User", Schema = "VueNetBlogDB_Test")]
-    public partial class User
+    public partial class User : IdentityUser
     {
         public User()
         {

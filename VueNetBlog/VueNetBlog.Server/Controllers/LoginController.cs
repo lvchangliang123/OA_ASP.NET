@@ -8,10 +8,14 @@ namespace VueNetBlog.Server.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        [HttpGet]
+
+        [HttpPost]
+        [Route("Login")]
         public IActionResult Login()
         {
+
             return null;
         }
+
     }
 }

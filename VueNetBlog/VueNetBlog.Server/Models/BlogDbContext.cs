@@ -7,15 +7,17 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace VueNetBlog.Server.Models
 {
-    public partial class BlogDbContext : IdentityDbContext<IdentityUser>
+    public partial class BlogDbContext : IdentityDbContext<User>
     {
         public BlogDbContext()
         {
+
         }
 
         public BlogDbContext(DbContextOptions<BlogDbContext> options)
             : base(options)
         {
+
         }
 
         public virtual DbSet<AutherInfo> AutherInfos { get; set; } = null!;
@@ -36,6 +38,8 @@ namespace VueNetBlog.Server.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<AutherInfo>(entity =>
             {
                 entity.HasOne(d => d.User)
