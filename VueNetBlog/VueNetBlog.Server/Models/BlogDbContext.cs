@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace VueNetBlog.Server.Models
 {
-    public partial class BlogDbContext : IdentityDbContext<User>
+    public partial class BlogDbContext : IdentityDbContext<User, IdentityRole<int>, int>
     {
         public BlogDbContext()
         {

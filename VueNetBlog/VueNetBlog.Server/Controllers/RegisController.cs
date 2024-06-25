@@ -72,7 +72,6 @@ namespace VueNetBlog.Server.Controllers
             {
                 return false;
             }
-
         }
 
     }

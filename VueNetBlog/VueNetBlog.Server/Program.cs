@@ -21,7 +21,7 @@ builder.Services.AddDbContextPool<BlogDbContext>(options =>
     options.EnableSensitiveDataLogging();
 });
 builder.Services.AddTransient(typeof(IRepository<,>), typeof(RepositoryBase<,>));
-builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<BlogDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<User, IdentityRole<int>>().AddEntityFrameworkStores<BlogDbContext>().AddDefaultTokenProviders();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowOrigin",

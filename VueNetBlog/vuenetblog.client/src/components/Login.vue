@@ -7,14 +7,14 @@
                         <el-image :src="imageSrc" style="height:400px;border-radius:4px" :fit="fill" />
                     </el-col>
                     <el-col :span="6">
-                        <el-form style="height:200px">
-                            <el-input v-model="input1"
+                        <el-form style="height:200px" :model="formLogin" :rules="rules" ref="formLoginRef" >
+                            <el-input v-model="formLogin.Identifier"
                                       placeholder="用户名或邮箱">
                                 <template #prefix>
                                     <el-icon class="el-input__icon"><UserFilled /></el-icon>
                                 </template>
                             </el-input>
-                            <el-input v-model="input2" style="margin-top:15px"
+                            <el-input v-model="formLogin.Password" style="margin-top:15px"
                                       placeholder="账户密码">
                                 <template #prefix>
                                     <el-icon class="el-input__icon"><View /></el-icon>
@@ -22,7 +22,7 @@
                             </el-input>
                             <el-checkbox style="margin-top:15px">记住密码</el-checkbox>
                             <div class="btnLogin">
-                                <el-button type="primary" class="flex-grow" @click="onSubmit">登录</el-button>
+                                <el-button type="primary" class="flex-grow" @click="onSubmitLogin">登录</el-button>
                             </div>
                             <div class="linkForgetPassword">
                                 <a href="#">忘记密码</a>
@@ -52,10 +52,42 @@
     import { UserFilled, View } from '@element-plus/icons-vue'
     import '../Iconscss/iconfont.css'
     import Imagebg from "../assets/loginbg.jpg"
+    import { useRouter } from 'vue-router'
+
+    const router = useRouter()
 
     const imageSrc = Imagebg
-    const input1 = ref('')
-    const input2 = ref('')
+    const formLogin = reactive({
+        Identifier: '',
+        Password: '',
+    });
+
+    const rules = reactive({
+        Identifier: [{ required: true, message: '请输入用户名或邮箱', trigger: 'blur' }],
+        Password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
+    });
+
+    const onSubmitLogin = async () => {
+        const formIsValid = await formLoginRef.value.validate();
+        if (!formIsValid) return;
+        const formData = new FormData();
+        formData.append('Identifier', formLogin.Identifier);
+        formData.append('Password', formLogin.Password);
+        const headers = {
+            'Content-Type': 'multipart/form-data',
+        };
+        try {
+            const response = await httpApi.post('api/Login/UserLogin', formData,{headers});
+            if (response.status === 200) {
+                ElMessage.success('登录成功');
+                router.push(`/bloghome`);
+            } else {
+                ElMessage.error('登录失败，请检查您的输入或重试');
+            }
+        } catch (error) {
+            ElMessage.error('登录失败,登录请求未正确相应');
+        }
+    }
 
 </script>
 

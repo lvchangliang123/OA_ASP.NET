@@ -7,7 +7,8 @@
                         <el-image :src="imageSrc" style="height:450px; border-radius: 4px" :fit="fill" />
                     </el-col>
                     <el-col :span="8">
-                        <el-form :model="form" :rules="rules" ref="formRef" label-width="80px" style="height:200px">
+                        <el-form :model="form" :rules="rules" ref="formRef" 
+                                 label-width="80px" style="height:200px">
                             <el-form-item label="用户名" prop="Name">
                                 <el-input v-model="form.Name">
                                     <template #prefix>
@@ -31,6 +32,7 @@
                                            :auto-upload="false">
                                     <img v-if="imageUrl" :src="imageUrl" style="height:100px;width:100px" class="avatar" />
                                     <el-icon v-else class="avatar-uploader-icon"><Plus /></el-icon>
+                                    <span v-else>点击上传头像</span>
                                 </el-upload>
                             </el-form-item>
                             <el-form-item label="密码" prop="Password" style="margin-top:15px">
@@ -72,6 +74,9 @@
     import '../Iconscss/iconfont.css'
     import Imagebg from "../assets/loginbg.jpg"
     import axios from 'axios'
+    import { useRouter } from 'vue-router'
+
+    const router = useRouter()
 
     const imageSrc = Imagebg
     const formRef = ref(null);
@@ -137,6 +142,7 @@
             const response = await httpApi.post('api/Regis/RegisUser', formData,{headers});
             if (response.status === 200) {
                 ElMessage.success('注册成功');
+                router.push(`/login`);
             } else {
                 ElMessage.error('注册失败，请检查您的输入或重试');
             }

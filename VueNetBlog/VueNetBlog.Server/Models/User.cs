@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace VueNetBlog.Server.Models
 {
     [Table("User", Schema = "VueNetBlogDB_Test")]
-    public partial class User : IdentityUser
+    public partial class User : IdentityUser<int>
     {
         public User()
         {
@@ -19,7 +19,7 @@ namespace VueNetBlog.Server.Models
         }
 
         [Key]
-        public int Id { get; set; }
+        public override int Id { get; set; }
         [StringLength(255)]
         public string? Name { get; set; }
         [StringLength(255)]
