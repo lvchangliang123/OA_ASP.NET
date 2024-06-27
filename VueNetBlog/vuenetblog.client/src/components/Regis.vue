@@ -147,7 +147,7 @@
                 ElMessage.error('注册失败，请检查您的输入或重试');
             }
         } catch (error) {
-            ElMessage.error('注册失败，请检查您的输入或重试');
+            ElMessage.error('注册失败，服务器请求失败');
         }
     };
 </script>

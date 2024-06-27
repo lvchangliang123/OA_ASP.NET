@@ -14,7 +14,9 @@
                                     <el-icon class="el-input__icon"><UserFilled /></el-icon>
                                 </template>
                             </el-input>
-                            <el-input v-model="formLogin.Password" style="margin-top:15px"
+                            <el-input v-model="formLogin.Password" 
+                                      type="password"
+                                      style="margin-top:15px"
                                       placeholder="账户密码">
                                 <template #prefix>
                                     <el-icon class="el-input__icon"><View /></el-icon>
@@ -50,11 +52,13 @@
 <script lang="js" setup>
     import { ref, reactive } from 'vue'
     import { UserFilled, View } from '@element-plus/icons-vue'
+    import { httpApi } from '@/Utils/httpApi'
     import '../Iconscss/iconfont.css'
     import Imagebg from "../assets/loginbg.jpg"
     import { useRouter } from 'vue-router'
 
-    const router = useRouter()
+    const formLoginRef = ref(null);
+    const router = useRouter();
 
     const imageSrc = Imagebg
     const formLogin = reactive({
@@ -79,13 +83,14 @@
         try {
             const response = await httpApi.post('api/Login/UserLogin', formData,{headers});
             if (response.status === 200) {
-                ElMessage.success('登录成功');
-                router.push(`/bloghome`);
+                if (response.data.toString() == "RedirectToBlogHome") {
+                    router.push(`/bloghome`);
+                }
             } else {
-                ElMessage.error('登录失败，请检查您的输入或重试');
+                ElMessage.error('登录失败' + response.data.toString());
             }
         } catch (error) {
-            ElMessage.error('登录失败,登录请求未正确相应');
+            ElMessage.error('登录失败,登录请求未正确响应');
         }
     }
 

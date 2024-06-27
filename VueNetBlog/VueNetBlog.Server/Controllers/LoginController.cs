@@ -38,22 +38,20 @@ namespace VueNetBlog.Server.Controllers
                         var result = await _signInManager.PasswordSignInAsync(user, userLoginDto.Password, false, lockoutOnFailure: false);
                         if (result.Succeeded)
                         {
-                            return RedirectToAction("Index", "Home");
+                            return Ok("RedirectToBlogHome");
                         }
                         else if (result.IsLockedOut)
                         {
-                            return RedirectToAction("Lockout");
+                            return StatusCode(500, "User Lock out");
                         }
                         else
                         {
-                            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                            return View(model);
+                            return StatusCode(500, "服务器请求失败");
                         }
                     }
                     else
                     {
-                        ModelState.AddModelError(string.Empty, "User with this email does not exist.");
-                        return View(model);
+                        return StatusCode(500, "用户不存在");
                     }
                 }
                 else
@@ -61,15 +59,21 @@ namespace VueNetBlog.Server.Controllers
                     var result = await _signInManager.PasswordSignInAsync(userLoginDto.Identifier, userLoginDto.Password, false, lockoutOnFailure: false);
                     if (result.Succeeded)
                     {
-                        _logger.LogWarning($"用户{loginViewModel.UserName}登录成功");
-                        return RedirectToAction("Index", "Home");
+                        return Ok("RedirectToBlogHome");
+                    }
+                    else if (result.IsLockedOut)
+                    {
+                        return StatusCode(500, "User Lock out");
                     }
                     else
                     {
-                        _logger.LogError($"用户{loginViewModel.UserName}登录失败");
-                        ModelState.AddModelError(string.Empty, "登陆失败，请重试");
+                        return StatusCode(500, "服务器请求失败");
                     }
                 }
+            }
+            else
+            {
+                return StatusCode(500, "服务器请求失败");
             }
         }
 

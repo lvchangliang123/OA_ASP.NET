@@ -23,7 +23,7 @@ namespace VueNetBlog.Server.Models
         [StringLength(255)]
         public string? Name { get; set; }
         [StringLength(255)]
-        public string? Email { get; set; }
+        public override string? Email { get; set; }
         [StringLength(255)]
         public string? Password { get; set; }
         [Column(TypeName = "date")]
