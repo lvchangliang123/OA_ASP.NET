@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "E:\\ASP.NET\\VueNetBlog\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|e:\\asp.net\\vuenetblog\\vuenetblog.client\\src\\components\\regis.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|solutionrelative:vuenetblog.client\\src\\components\\regis.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|e:\\asp.net\\vuenetblog\\vuenetblog.client\\src\\components\\bloghome.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|solutionrelative:vuenetblog.client\\src\\components\\bloghome.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|e:\\asp.net\\vuenetblog\\vuenetblog.server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|solutionrelative:vuenetblog.client\\src\\components\\login.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|e:\\asp.net\\vuenetblog\\vuenetblog.client\\src\\components\\bloghome.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|solutionrelative:vuenetblog.client\\src\\components\\bloghome.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|e:\\asp.net\\vuenetblog\\vuenetblog.client\\src\\components\\regis.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|solutionrelative:vuenetblog.client\\src\\components\\regis.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|e:\\asp.net\\vuenetblog\\vuenetblog.server\\controllers\\bloghomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,13 +42,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Regis.vue",
               "DocumentMoniker": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\src\\components\\Regis.vue",
               "RelativeDocumentMoniker": "vuenetblog.client\\src\\components\\Regis.vue",
               "ToolTip": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\src\\components\\Regis.vue",
               "RelativeToolTip": "vuenetblog.client\\src\\components\\Regis.vue",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAAEwAAAAqAAAA",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAAAI8AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
               "WhenOpened": "2024-06-27T14:26:30.424Z",
               "EditorCaption": ""
@@ -61,7 +61,7 @@
               "RelativeDocumentMoniker": "VueNetBlog.Server\\Controllers\\LoginController.cs",
               "ToolTip": "E:\\ASP.NET\\VueNetBlog\\VueNetBlog.Server\\Controllers\\LoginController.cs",
               "RelativeToolTip": "VueNetBlog.Server\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAywDAAAAA+AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T12:51:59.324Z",
               "EditorCaption": ""
@@ -74,22 +74,23 @@
               "RelativeDocumentMoniker": "vuenetblog.client\\src\\components\\Login.vue",
               "ToolTip": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\src\\components\\Login.vue",
               "RelativeToolTip": "vuenetblog.client\\src\\components\\Login.vue",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAABYAAAArAAAA",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
               "WhenOpened": "2024-06-25T13:37:02.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "BlogHome.vue",
               "DocumentMoniker": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\src\\components\\BlogHome.vue",
               "RelativeDocumentMoniker": "vuenetblog.client\\src\\components\\BlogHome.vue",
               "ToolTip": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\src\\components\\BlogHome.vue",
               "RelativeToolTip": "vuenetblog.client\\src\\components\\BlogHome.vue",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAAAHYAAAAfAAAA",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAAIIAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
-              "WhenOpened": "2024-05-29T13:45:26.565Z"
+              "WhenOpened": "2024-05-29T13:45:26.565Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -99,9 +100,10 @@
               "RelativeDocumentMoniker": "VueNetBlog.Server\\Controllers\\BlogHomeController.cs",
               "ToolTip": "E:\\ASP.NET\\VueNetBlog\\VueNetBlog.Server\\Controllers\\BlogHomeController.cs",
               "RelativeToolTip": "VueNetBlog.Server\\Controllers\\BlogHomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAATAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T13:40:50.048Z"
+              "WhenOpened": "2024-05-29T13:40:50.048Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

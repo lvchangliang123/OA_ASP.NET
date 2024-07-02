@@ -33,10 +33,10 @@ namespace VueNetBlog.Server.Controllers
             {
                 return BadRequest("头像未上传");
             }
-            using var stream = userDto.Avatar.OpenReadStream();
-            byte[] bytes = new byte[userDto.Avatar.Length];
-            await stream.ReadAsync(bytes, 0, (int)userDto.Avatar.Length);
-            var result = await RegisterUser(userDto, bytes);
+            using var stream = new MemoryStream();
+            await userDto.Avatar.CopyToAsync(stream);
+            var avatarData = stream.ToArray();
+            var result = await RegisterUser(userDto, avatarData);
             if (result)
             {
                 return Ok("注册成功");

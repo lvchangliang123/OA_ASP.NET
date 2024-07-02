@@ -19,6 +19,9 @@
                             </el-icon>
                         </el-avater>
                     </el-menu-item>
+                    <el-menu-item>
+                        <span>{{currentUserName}}</span>
+                    </el-menu-item>
                     <el-menu-item index="2" @click="goTo('bloghome')">首页</el-menu-item>
                     <el-menu-item index="3">分类</el-menu-item>
                     <el-menu-item index="4" @click="goTo('regis')">注册</el-menu-item>
@@ -100,7 +103,7 @@
                 </el-row>
             </el-main>
             <el-footer style="display:flex;align-items:center;justify-content:center; background-color: #545c64;color:white;">
-                @2024 Design By Vue3 & ASP.NET CORE{{testVal}}
+                @2024 Design By Vue3 & ASP.NET CORE
             </el-footer>
         </el-container>
     </div>
@@ -108,10 +111,11 @@
 </template>
 
 <script lang="js" setup>
-    import { ref, reactive } from 'vue'
+    import { ref, reactive, computed } from 'vue'
     import { User } from '@element-plus/icons-vue'
     import { httpApi } from '@/Utils/httpApi'
     import { useRouter } from 'vue-router'
+    import { useStore } from '@/VueX/store';
 
     const router = useRouter()
 
@@ -123,10 +127,13 @@
         console.error('Routing error:', err)
     })
 
+    const currentUserName = computed(() => 
+    {return useStore.state.currentUser?.name;});
+
     const testVal = ref('');
 
     const getValue = httpApi.get('api/BlogHome/BlogHomeView')
-        .then(response => testVal.value = response.data).catch(function (error) {
+        .then(response => testVal.value = response.data.UserName).catch(function (error) {
             console.log(error);
         })
 

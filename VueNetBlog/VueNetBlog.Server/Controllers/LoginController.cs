@@ -38,7 +38,12 @@ namespace VueNetBlog.Server.Controllers
                         var result = await _signInManager.PasswordSignInAsync(user, userLoginDto.Password, false, lockoutOnFailure: false);
                         if (result.Succeeded)
                         {
-                            return Ok("RedirectToBlogHome");
+                            var redirectData = new Dictionary<string, object>
+                            {
+                                { "PageName","RedirectToBlogHome"},
+                                {"User", user},
+                            };
+                            return Ok(redirectData);
                         }
                         else if (result.IsLockedOut)
                         {
