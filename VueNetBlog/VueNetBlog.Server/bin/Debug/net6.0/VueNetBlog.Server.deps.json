@@ -9,7 +9,7 @@
       "VueNetBlog.Server/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.25",
-          "Microsoft.AspNetCore.SpaProxy": "6.0.31",
+          "Microsoft.AspNetCore.SpaProxy": "6.0.32",
           "Microsoft.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.25",
           "MySql.EntityFrameworkCore": "8.0.0",
@@ -103,11 +103,11 @@
           }
         }
       },
-      "Microsoft.AspNetCore.SpaProxy/6.0.31": {
+      "Microsoft.AspNetCore.SpaProxy/6.0.32": {
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll": {
-            "assemblyVersion": "6.0.31.0",
-            "fileVersion": "6.0.3124.26908"
+            "assemblyVersion": "6.0.32.0",
+            "fileVersion": "6.0.3224.31405"
           }
         }
       },
@@ -667,12 +667,12 @@
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/6.0.25",
       "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.6.0.25.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.SpaProxy/6.0.31": {
+    "Microsoft.AspNetCore.SpaProxy/6.0.32": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZZVOfu3L6ZFdFrT+gtbYD3w5fV22wKquCKDxFQFMtelx+zR/eoVkeHh1IumMqZA+VW3E5B4tqYRB1b3uGKTN2w==",
-      "path": "microsoft.aspnetcore.spaproxy/6.0.31",
-      "hashPath": "microsoft.aspnetcore.spaproxy.6.0.31.nupkg.sha512"
+      "sha512": "sha512-Xy2sHljs7uCe5PqD4IuJYw42MOBjLEa+OZguTsCbKmAJdK101HiLz2n2sH9DmdtxOZF3EMsTWP4cFAZLMyHf+A==",
+      "path": "microsoft.aspnetcore.spaproxy/6.0.32",
+      "hashPath": "microsoft.aspnetcore.spaproxy.6.0.32.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/6.0.25": {
       "type": "package",

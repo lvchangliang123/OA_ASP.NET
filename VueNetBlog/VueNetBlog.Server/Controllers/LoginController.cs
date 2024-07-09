@@ -16,10 +16,14 @@ namespace VueNetBlog.Server.Controllers
         private SignInManager<User> _signInManager;
 
         private UserManager<User> _userManager;
-        public LoginController(UserManager<User> userManager,SignInManager<User> signInManager)
+
+        private readonly IWebHostEnvironment _env;
+
+        public LoginController(UserManager<User> userManager,SignInManager<User> signInManager, IWebHostEnvironment env)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _env = env;
         }
 
         [HttpPost]
@@ -38,6 +42,7 @@ namespace VueNetBlog.Server.Controllers
                         var result = await _signInManager.PasswordSignInAsync(user, userLoginDto.Password, false, lockoutOnFailure: false);
                         if (result.Succeeded)
                         {
+                            user.AvatarPath = $"{Request.Scheme}://{Request.Host}/{user.AvatarPath}".Replace("\\", "/");
                             var redirectData = new Dictionary<string, object>
                             {
                                 { "PageName","RedirectToBlogHome"},

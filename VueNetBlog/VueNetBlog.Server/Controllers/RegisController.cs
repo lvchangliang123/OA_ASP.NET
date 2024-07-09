@@ -15,10 +15,13 @@ namespace VueNetBlog.Server.Controllers
 
         private UserManager<User> _userManager;
 
-        public RegisController(UserManager<User> userManager, IRepository<User, int> userRepository)
+        private readonly IWebHostEnvironment _env;
+
+        public RegisController(UserManager<User> userManager, IRepository<User, int> userRepository, IWebHostEnvironment env)
         {
             _userManager = userManager;
             _userRepository = userRepository;
+            _env = env; 
         }
 
         [HttpPost]
@@ -33,10 +36,7 @@ namespace VueNetBlog.Server.Controllers
             {
                 return BadRequest("头像未上传");
             }
-            using var stream = new MemoryStream();
-            await userDto.Avatar.CopyToAsync(stream);
-            var avatarData = stream.ToArray();
-            var result = await RegisterUser(userDto, avatarData);
+            var result = await RegisterUser(userDto, userDto.Avatar);
             if (result)
             {
                 return Ok("注册成功");
@@ -47,7 +47,7 @@ namespace VueNetBlog.Server.Controllers
             }
         }
 
-        private async Task<bool> RegisterUser(UserDto userDto, byte[] bytes)
+        private async Task<bool> RegisterUser(UserDto userDto, IFormFile avatar)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace VueNetBlog.Server.Controllers
                 user_db.Email = userDto.Email;
                 user_db.Password = userDto.Password;
                 user_db.Birthday = DateTime.Parse(userDto.Birthday);
-                user_db.Avatar = bytes;
+                user_db.AvatarPath = SaveAvatar(avatar);
                 var identityResult = await _userManager.CreateAsync(user_db, user_db.Password);
                 if (identityResult.Succeeded)
                 {
@@ -72,6 +72,23 @@ namespace VueNetBlog.Server.Controllers
             {
                 return false;
             }
+        }
+
+        public string SaveAvatar(IFormFile file)
+        {
+            string uploadsDir = Path.Combine(_env.ContentRootPath, "uploads");
+            string avatarsDir = Path.Combine(uploadsDir, "avatars");
+            if (!Directory.Exists(avatarsDir))
+            {
+                Directory.CreateDirectory(avatarsDir);
+            }
+            string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+            string filePath = Path.Combine(avatarsDir, fileName);
+            using (FileStream fs = new FileStream(filePath, FileMode.Create))
+            {
+                file.CopyTo(fs);
+            }
+            return Path.Combine("uploads", "avatars", fileName);
         }
 
     }

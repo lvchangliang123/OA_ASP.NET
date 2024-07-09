@@ -13,13 +13,16 @@
                     <el-menu-item tabindex="0" style="font-size:large">.NET Develop Blog</el-menu-item>
                     <div class="flex-grow" />
                     <el-menu-item index="1">
-                        <el-avater>
-                            <el-icon>
-                                <User />
-                            </el-icon>
-                        </el-avater>
+                        <div v-if="!currentUserAvatarPath">
+                            <el-avater size="30">
+                                <el-icon>
+                                    <User />
+                                </el-icon>
+                            </el-avater>
+                        </div>
+                        <el-avatar v-else :size="30" :src="currentUserAvatarPath"></el-avatar>
                     </el-menu-item>
-                    <el-menu-item>
+                    <el-menu-item v-if="currentUserName" @click="">
                         <span>{{currentUserName}}</span>
                     </el-menu-item>
                     <el-menu-item index="2" @click="goTo('bloghome')">首页</el-menu-item>
@@ -129,6 +132,12 @@
 
     const currentUserName = computed(() => 
     {return useStore.state.currentUser?.name;});
+
+    const currentUserAvatarPath = computed(()=>{
+        console.log('>>>>>>>>>>>');
+        console.log(useStore.state.currentUser?.avatarPath);
+    return useStore.state.currentUser?.avatarPath;
+    });
 
     const testVal = ref('');
 

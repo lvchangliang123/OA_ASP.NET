@@ -28,8 +28,8 @@ namespace VueNetBlog.Server.Models
         public string? Password { get; set; }
         [Column(TypeName = "date")]
         public DateTime? Birthday { get; set; }
-        [Column(TypeName = "blob")]
-        public byte[]? Avatar { get; set; }
+        [StringLength(255)]
+        public string? AvatarPath { get; set; }
 
         [InverseProperty("User")]
         public virtual ICollection<AutherInfo> AutherInfos { get; set; }
