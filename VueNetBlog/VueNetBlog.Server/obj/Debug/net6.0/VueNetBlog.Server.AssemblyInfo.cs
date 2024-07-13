@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VueNetBlog.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d444c73c040c530fe7a057584c33064bc2fcd105")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b55dc85d530e65b8f4cfff5942dff72717f06aff")]
 [assembly: System.Reflection.AssemblyProductAttribute("VueNetBlog.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VueNetBlog.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

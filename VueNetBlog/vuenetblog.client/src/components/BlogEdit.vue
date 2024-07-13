@@ -1,20 +1,28 @@
 <template>
     <div style="display:flex;align-items:center">
-        <div class="rounded-background">
+        <div class="rounded-background" style="display: flex; align-items: center; margin-left: 10px">
+            <el-icon><Edit /></el-icon>
             <span>创建笔记</span>
         </div>
-        <div class="rounded-background" style="margin-left:10px">
-            <a href="#" style="color:white">回到首页</a>
+        <div class="rounded-background" style="display:flex;align-items:center;margin-left:10px">
+            <a href="#" style="color:white">
+                <el-icon><Back /></el-icon>
+                回到首页
+            </a>
         </div>
     </div>
     <el-divider></el-divider>
     <div class="title">
         <span style="color:red">*</span>
         <span>标题:</span>
-        <el-input class="inputtext" style="flex:1;margin-left:10px;margin-right:10px;" placeholder="请输入文章标题..." />
+        <el-input class="inputtext" style="flex:1;margin-left:10px;margin-right:10px;"
+                  placeholder="请输入文章标题..." />
     </div>
     <div class="body">
-        <mavon-editor style="width:100%;height:70vh"></mavon-editor>
+        <mavon-editor style="width:100%;height:70vh"
+                      v-model="Content" ref="blogEditor"
+                      @imgAdd="handleImgAdd"
+                      @imgDel="handleImgDel"></mavon-editor>
     </div>
     <div class="tag">
         <span style="color:red">*</span>
@@ -38,8 +46,9 @@
 
 <script lang="js" setup>
     import { ref, reactive } from 'vue'
-    import { Upload } from '@element-plus/icons-vue'
+    import { Upload, Edit, Back } from '@element-plus/icons-vue'
     import { mavonEditor } from 'mavon-editor'
+    import { httpApi } from '@/Utils/httpApi'
     import 'mavon-editor/dist/css/index.css'
 
     // 定义选项数据
@@ -52,6 +61,28 @@
 
     // 定义绑定的多选值
     const selectedValues = ref([]);
+
+    const Content = '';
+
+    const handleImgAdd = (pos, $file) => {
+        const formData = new FormData();
+        formData.append('file', $file.file);
+
+        try {
+            const response = await httpApi.post('api/BlogEdit/UploadBlogImage', formData, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            });
+            if (response.status === 200) {
+                this.$refs.blogEditor.updateSrc(pos, response.data.url)
+                ElMessage.success('图片上传成功!');
+            } else {
+                ElMessage.error('图片上传失败,请重试!');
+            }
+        } catch (e) {
+            ElMessage.error('图片上传失败,请重试!');
+        }
+
+    };
 
 </script>
 
@@ -91,10 +122,12 @@
         align-items: center;
         justify-content: center;
     }
+
     a {
-        text-decoration: none; 
+        text-decoration: none;
     }
-    a:hover {
-        cursor: pointer;
-    }
+
+        a:hover {
+            cursor: pointer;
+        }
 </style>

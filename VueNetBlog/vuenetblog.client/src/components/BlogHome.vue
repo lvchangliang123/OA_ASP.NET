@@ -22,7 +22,7 @@
                         </div>
                         <el-avatar v-else :size="30" :src="currentUserAvatarPath"></el-avatar>
                     </el-menu-item>
-                    <el-menu-item v-if="currentUserName" @click="">
+                    <el-menu-item v-if="currentUserName" @click="goTo('about')">
                         <span>{{currentUserName}}</span>
                     </el-menu-item>
                     <el-menu-item index="2" @click="goTo('bloghome')">首页</el-menu-item>
@@ -134,8 +134,6 @@
     {return useStore.state.currentUser?.name;});
 
     const currentUserAvatarPath = computed(()=>{
-        console.log('>>>>>>>>>>>');
-        console.log(useStore.state.currentUser?.avatarPath);
     return useStore.state.currentUser?.avatarPath;
     });
 

@@ -1,10 +1,11 @@
 <template>
     <el-row style="margin-top:40px">
         <el-col :span="1">
-            <el-avatar :icon="UserFilled" :size="50" />
+            <el-avatar v-if="!currentUserAvatarPath" :icon="UserFilled" :size="50" />
+            <el-avatar v-else :size="50" :src="currentUserAvatarPath"></el-avatar>
         </el-col>
         <el-col :span="18">
-            <div>{{UserAbout.UserName}}</div>
+            <div>{{currentUserName}}</div>
             <div style="margin-top:5px">.NET开发工程师</div>
             <div style="margin-top:5px">一个半路出家的.NET开发工程师,希望能朋友们提供学习思路</div>
         </el-col>
@@ -12,7 +13,9 @@
             <el-image :src="aspnetSrc" style="height:120px;width:380px;border-radius:4px" :fit="fill" />
         </el-col>
     </el-row>
-
+    <div>
+        <el-button type="success" style="width:200px" @click="goTo('blogedit')">创建文章</el-button>
+    </div>
     <el-divider content-position="left">
         <span style="margin-top:10px;font-weight:bold;font-size:large">认识我</span>
     </el-divider>
@@ -137,15 +140,26 @@
     import { User, UserFilled } from '@element-plus/icons-vue'
     import Imagebg from "../assets/loginbg.jpg"
     import aspnetcore from "../assets/neticon.jpg"
+    import { httpApi } from '@/Utils/httpApi'
+    import { useRouter } from 'vue-router'
+    import { useStore } from '@/VueX/store';
+
+    const currentUserName = computed(() => {
+        return useStore.state.currentUser?.name;
+    });
+
+    const currentUserAvatarPath = computed(()=>{
+        return useStore.state.currentUser?.avatarPath;
+    });
+
+    const router = useRouter()
+
+    const goTo = (para) => {
+        router.push(`/${para}`)
+    }
 
     const imageSrc = Imagebg
     const aspnetSrc = aspnetcore
-
-    const UserAbout = ref(
-        {
-            UserName: '托马斯@小火车',
-        }
-    )
 
     const imageDes = ref('这是我的文章111111111111111111111')
 
