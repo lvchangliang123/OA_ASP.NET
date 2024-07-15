@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "E:\\ASP.NET\\VueNetBlog\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|e:\\asp.net\\vuenetblog\\vuenetblog.client\\src\\components\\blogedit.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|solutionrelative:vuenetblog.client\\src\\components\\blogedit.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|e:\\asp.net\\vuenetblog\\vuenetblog.server\\controllers\\blogeditcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|solutionrelative:vuenetblog.server\\controllers\\blogeditcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|e:\\asp.net\\vuenetblog\\vuenetblog.client\\src\\components\\blogedit.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|solutionrelative:vuenetblog.client\\src\\components\\blogedit.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|e:\\asp.net\\vuenetblog\\vuenetblog.server\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|solutionrelative:vuenetblog.server\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|e:\\asp.net\\vuenetblog\\vuenetblog.server\\controllers\\bloghomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|solutionrelative:vuenetblog.server\\controllers\\bloghomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|e:\\asp.net\\vuenetblog\\vuenetblog.client\\src\\components\\about.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|solutionrelative:vuenetblog.client\\src\\components\\about.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|e:\\asp.net\\vuenetblog\\vuenetblog.client\\src\\components\\bloghome.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|solutionrelative:vuenetblog.client\\src\\components\\bloghome.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|e:\\asp.net\\vuenetblog\\vuenetblog.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|solutionrelative:vuenetblog.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|e:\\asp.net\\vuenetblog\\vuenetblog.server\\controllers\\bloghomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0BC16D-F9B3-4632-A892-E40CC574445A}|VueNetBlog.Server\\VueNetBlog.Server.csproj|solutionrelative:vuenetblog.server\\controllers\\bloghomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|e:\\asp.net\\vuenetblog\\vuenetblog.client\\src\\components\\bloghome.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7397E0D6-6073-46D3-AFE8-3FFC07D354BC}|vuenetblog.client\\vuenetblog.client.esproj|solutionrelative:vuenetblog.client\\src\\components\\bloghome.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -52,53 +52,53 @@
               "RelativeDocumentMoniker": "VueNetBlog.Server\\Models\\Blog.cs",
               "ToolTip": "E:\\ASP.NET\\VueNetBlog\\VueNetBlog.Server\\Models\\Blog.cs",
               "RelativeToolTip": "VueNetBlog.Server\\Models\\Blog.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAA9wB4AAAAqAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAAB0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-11T14:23:51.642Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BlogEditController.cs",
               "DocumentMoniker": "E:\\ASP.NET\\VueNetBlog\\VueNetBlog.Server\\Controllers\\BlogEditController.cs",
               "RelativeDocumentMoniker": "VueNetBlog.Server\\Controllers\\BlogEditController.cs",
               "ToolTip": "E:\\ASP.NET\\VueNetBlog\\VueNetBlog.Server\\Controllers\\BlogEditController.cs",
               "RelativeToolTip": "VueNetBlog.Server\\Controllers\\BlogEditController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAArAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAA3wEYAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-11T14:15:22.17Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "BlogEdit.vue",
               "DocumentMoniker": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\src\\components\\BlogEdit.vue",
               "RelativeDocumentMoniker": "vuenetblog.client\\src\\components\\BlogEdit.vue",
               "ToolTip": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\src\\components\\BlogEdit.vue",
               "RelativeToolTip": "vuenetblog.client\\src\\components\\BlogEdit.vue",
-              "ViewState": "AQIAADoAAAAAAAAAAAAowE8AAAANAAAA",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAAACIAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
               "WhenOpened": "2024-07-11T13:17:00.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "About.vue",
               "DocumentMoniker": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\src\\components\\About.vue",
               "RelativeDocumentMoniker": "vuenetblog.client\\src\\components\\About.vue",
               "ToolTip": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\src\\components\\About.vue",
               "RelativeToolTip": "vuenetblog.client\\src\\components\\About.vue",
-              "ViewState": "AQIAAI0AAAAAAAAAAAAAAJkAAAAAAAAA",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAAAI8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
               "WhenOpened": "2024-07-11T13:03:41.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "BlogHome.vue",
               "DocumentMoniker": "E:\\ASP.NET\\VueNetBlog\\vuenetblog.client\\src\\components\\BlogHome.vue",
               "RelativeDocumentMoniker": "vuenetblog.client\\src\\components\\BlogHome.vue",
@@ -106,12 +106,11 @@
               "RelativeToolTip": "vuenetblog.client\\src\\components\\BlogHome.vue",
               "ViewState": "AQIAAH4AAAAAAAAAAAAAAIQAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
-              "WhenOpened": "2024-05-29T13:45:26.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T13:45:26.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "BlogHomeController.cs",
               "DocumentMoniker": "E:\\ASP.NET\\VueNetBlog\\VueNetBlog.Server\\Controllers\\BlogHomeController.cs",
               "RelativeDocumentMoniker": "VueNetBlog.Server\\Controllers\\BlogHomeController.cs",
@@ -119,20 +118,20 @@
               "RelativeToolTip": "VueNetBlog.Server\\Controllers\\BlogHomeController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T13:40:50.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T13:40:50.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\ASP.NET\\VueNetBlog\\VueNetBlog.Server\\Program.cs",
               "RelativeDocumentMoniker": "VueNetBlog.Server\\Program.cs",
               "ToolTip": "E:\\ASP.NET\\VueNetBlog\\VueNetBlog.Server\\Program.cs",
               "RelativeToolTip": "VueNetBlog.Server\\Program.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAAACoAAAAcAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T14:25:23.086Z"
+              "WhenOpened": "2024-05-27T14:25:23.086Z",
+              "EditorCaption": ""
             }
           ]
         }
