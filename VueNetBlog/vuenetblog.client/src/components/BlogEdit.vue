@@ -64,10 +64,16 @@
 
     // 定义选项数据
     const options = [
-        { value: 'option1', label: '选项1' },
-        { value: 'option2', label: '选项2' },
-        { value: 'option3', label: '选项3' },
-        // 更多选项...
+        { value: 'WinForm', label: 'WinForm' },
+        { value: 'WPF', label: 'WPF' },
+        { value: 'ASP.NET', label: 'ASP.NET' },
+        { value: 'ASP.NET CORE', label: 'ASP.NET CORE' },
+        { value: 'Entity Framework', label: 'Entity Framework' },
+        { value: 'WCF', label: 'WCF' },
+        { value: 'Blazor', label: 'Blazor' },
+        { value: 'MAUI', label: 'MAUI' },
+        { value: 'Azure', label: 'Azure' },
+        { value: 'Others', label: 'Others' },
     ];
 
     const router = useRouter()
@@ -76,23 +82,25 @@
         router.push(`/${para}`)
     }
 
-    const selectedTags = ref([]);
+    const blogEditor = ref(null);
+
+    const selectedTags = ref('');
     const Content = ref('');
     const Title = ref('');
     const OverView = ref('');
 
-    const handleImgAdd = async (pos, $file) => {
+    const handleImgAdd = async (pos, file) => {
         const formData = new FormData();
-        formData.append('title', Title);
-        formData.append('position', pos);
-        formData.append('file', $file.file);
+        formData.append('Title', Title.value);
+        formData.append('Position', pos);
+        formData.append('File', file);
 
         try {
             const response = await httpApi.post('api/BlogEdit/UploadBlogImage', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
             if (response.status === 200) {
-                this.$refs.blogEditor.updateSrc(pos, response.data.url);
+                blogEditor.value.$img2Url(pos, response.data.url);
                 ElMessage.success('图片上传成功!');
             } else {
                 ElMessage.error('图片上传失败,请重试!');
@@ -103,13 +111,12 @@
 
     };
 
-    const handleImgDel = async (pos,$file)=>{
+    const handleImgDel = async (file)=>{
         const formData = new FormData();
-        formData.append('title', Title);
-        formData.append('position', pos);
-        formData.append('file', $file.file);
+        formData.append('Title', Title.value);
+        formData.append('FileName', file[0]);
         try {
-            const response = await httpApi.post('api/BlogEdit/UploadBlogImage', formData, {
+            const response = await httpApi.post('api/BlogEdit/DeleteBlogImage', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
             if (response.status === 200) {
@@ -125,10 +132,10 @@
 
     const handleBlogUpload= async ()=>{
          const formData = new FormData();
-         formData.append('title', Title);
-         formData.append('overView', OverView);
-         formData.append('content', Content);
-         formData.append('tags', selectedTags);
+         formData.append('Title', Title.value);
+         formData.append('OverView', OverView.value);
+         formData.append('Content', Content.value);
+         formData.append('Tags', selectedTags.value);
          try {
              const response = await httpApi.post('api/BlogEdit/UploadBlogContent', formData, {
                  headers: { 'Content-Type': 'multipart/form-data' }
