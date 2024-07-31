@@ -74,7 +74,7 @@ namespace VueNetBlog.Server.Controllers
             }
         }
 
-        public string SaveAvatar(IFormFile file)
+        private string SaveAvatar(IFormFile file)
         {
             string uploadsDir = Path.Combine(_env.ContentRootPath, "uploads");
             string avatarsDir = Path.Combine(uploadsDir, "avatars");

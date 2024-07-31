@@ -11,8 +11,8 @@ using VueNetBlog.Server.Models;
 namespace VueNetBlog.Server.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20240627142355_UpdateUserEmail")]
-    partial class UpdateUserEmail
+    [Migration("20240722143324_UpdateBlogDataContext")]
+    partial class UpdateBlogDataContext
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -192,6 +192,11 @@ namespace VueNetBlog.Server.Migrations
                     b.Property<byte[]>("Cover")
                         .HasColumnType("blob");
 
+                    b.Property<DateTime?>("CreateTime")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
                     b.Property<string>("OverView")
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
@@ -294,8 +299,9 @@ namespace VueNetBlog.Server.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<byte[]>("Avatar")
-                        .HasColumnType("blob");
+                    b.Property<string>("AvatarPath")
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime?>("Birthday")
                         .HasColumnType("date");

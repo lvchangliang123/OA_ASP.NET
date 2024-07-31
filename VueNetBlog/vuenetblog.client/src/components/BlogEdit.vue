@@ -130,14 +130,14 @@
         }
     };
 
-    const handleBlogUpload= async ()=>{
+    const handleBlogUpload= ()=>{
          const formData = new FormData();
          formData.append('Title', Title.value);
          formData.append('OverView', OverView.value);
          formData.append('Content', Content.value);
          formData.append('Tags', selectedTags.value);
          try {
-             const response = await httpApi.post('api/BlogEdit/UploadBlogContent', formData, {
+             const response = httpApi.post('api/BlogEdit/UploadBlogContent', formData, {
                  headers: { 'Content-Type': 'multipart/form-data' }
              });
              if (response.status === 200) {

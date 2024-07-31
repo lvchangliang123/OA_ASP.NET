@@ -130,25 +130,25 @@
 </template>
 
 <style>
-    .icon{
-        margin-left:100px
+    .icon {
+        margin-left: 100px
     }
 </style>
 
 <script lang="js" setup>
-    import { ref, reactive, computed } from 'vue'
+    import { ref, reactive, computed, onMounted } from 'vue'
     import { User, UserFilled } from '@element-plus/icons-vue'
     import Imagebg from "../assets/loginbg.jpg"
     import aspnetcore from "../assets/neticon.jpg"
     import { httpApi } from '@/Utils/httpApi'
     import { useRouter } from 'vue-router'
-    import { useStore } from '@/VueX/store';
+    import { useStore } from '@/VueX/store'
 
     const currentUserName = computed(() => {
         return useStore.state.currentUser?.name;
     });
 
-    const currentUserAvatarPath = computed(()=>{
+    const currentUserAvatarPath = computed(() => {
         return useStore.state.currentUser?.avatarPath;
     });
 
@@ -157,6 +157,26 @@
     const goTo = (para) => {
         router.push(`/${para}`)
     }
+
+    const userData = ref([]);
+
+    onMounted(async () => {
+        try {
+            const userId = useStore.state.currentUser?.id;
+            if (userId) {
+                 const url = `api/About/GetUserBlogData?userid=${userId}`;
+                 const response = await httpApi.get(url);
+                 if (response.status === 200) {
+                     //填充数据
+                     userData = response.data;
+                 } else {
+                     ElMessage.error('用户信息获取失败!请重试!');
+                 }
+            }
+        } catch (e) {
+            ElMessage.error('用户信息获取失败!请重试!');
+        }
+    })
 
     const imageSrc = Imagebg
     const aspnetSrc = aspnetcore

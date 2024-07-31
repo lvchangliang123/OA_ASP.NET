@@ -6,7 +6,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace VueNetBlog.Server.Migrations
 {
-    public partial class UpdateUser : Migration
+    public partial class UpdateBlogModeWithCreateTime : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -42,7 +42,7 @@ namespace VueNetBlog.Server.Migrations
                     Email = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true),
                     Password = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
                     Birthday = table.Column<DateTime>(type: "date", nullable: true),
-                    Avatar = table.Column<byte[]>(type: "blob", nullable: true),
+                    AvatarPath = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
                     UserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true),
                     NormalizedEmail = table.Column<string>(type: "varchar(256)", maxLength: 256, nullable: true),
@@ -210,6 +210,7 @@ namespace VueNetBlog.Server.Migrations
                     OverView = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
                     Content = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
                     Tags = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
+                    CreateTime = table.Column<DateTime>(type: "date", nullable: true),
                     ViewCount = table.Column<int>(type: "int", nullable: true),
                     Cover = table.Column<byte[]>(type: "blob", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: true)

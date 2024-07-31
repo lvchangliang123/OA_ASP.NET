@@ -11,8 +11,8 @@ using VueNetBlog.Server.Models;
 namespace VueNetBlog.Server.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20240708132156_Update_UserAvatarPath")]
-    partial class Update_UserAvatarPath
+    [Migration("20240722141708_UpdateBlogModeWithCreateTime")]
+    partial class UpdateBlogModeWithCreateTime
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -191,6 +191,9 @@ namespace VueNetBlog.Server.Migrations
 
                     b.Property<byte[]>("Cover")
                         .HasColumnType("blob");
+
+                    b.Property<DateTime?>("CreateTime")
+                        .HasColumnType("date");
 
                     b.Property<string>("OverView")
                         .HasMaxLength(255)

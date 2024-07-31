@@ -190,6 +190,11 @@ namespace VueNetBlog.Server.Migrations
                     b.Property<byte[]>("Cover")
                         .HasColumnType("blob");
 
+                    b.Property<DateTime?>("CreateTime")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
                     b.Property<string>("OverView")
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");

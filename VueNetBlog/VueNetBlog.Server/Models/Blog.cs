@@ -26,6 +26,8 @@ namespace VueNetBlog.Server.Models
         public string? Content { get; set; }
         [StringLength(255)]
         public string? Tags { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? CreateTime { get; set; }
         public int? ViewCount { get; set; }
         [Column(TypeName = "blob")]
         public byte[]? Cover { get; set; }
