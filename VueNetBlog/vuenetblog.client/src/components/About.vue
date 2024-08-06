@@ -143,6 +143,7 @@
     import { httpApi } from '@/Utils/httpApi'
     import { useRouter } from 'vue-router'
     import { useStore } from '@/VueX/store'
+    import { ElMessage } from 'element-plus';
 
     const currentUserName = computed(() => {
         return useStore.state.currentUser?.name;
@@ -166,12 +167,7 @@
             if (userId) {
                  const url = `api/About/GetUserBlogData?userid=${userId}`;
                  const response = await httpApi.get(url);
-                 if (response.status === 200) {
-                     //填充数据
-                     userData = response.data;
-                 } else {
-                     ElMessage.error('用户信息获取失败!请重试!');
-                 }
+                 userData.value = response.data;
             }
         } catch (e) {
             ElMessage.error('用户信息获取失败!请重试!');

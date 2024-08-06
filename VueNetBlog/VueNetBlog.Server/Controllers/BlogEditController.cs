@@ -15,14 +15,16 @@ namespace VueNetBlog.Server.Controllers
         private readonly IWebHostEnvironment _env;
 
         private IRepository<Blog, int> _blogRepository;
+        private IRepository<User, int> _userRepository;
 
         private SignInManager<User> _signInManager;
 
-        public BlogEditController(IWebHostEnvironment env, IRepository<Blog, int> blogRepository, SignInManager<User> signInManager)
+        public BlogEditController(IWebHostEnvironment env, IRepository<Blog, int> blogRepository, SignInManager<User> signInManager, IRepository<User, int> userRepository)
         {
             _env = env;
             _blogRepository = blogRepository;
             _signInManager = signInManager;
+            _userRepository = userRepository;
         }
 
         [HttpPost]
@@ -75,7 +77,7 @@ namespace VueNetBlog.Server.Controllers
             blog_db.OverView = blogDto.OverView;
             blog_db.Content = blogDto.Content;
             blog_db.Tags = string.Join(';', blogDto.Tags);
-            blog_db.User = _signInManager.UserManager.GetUserAsync(User).Result;
+            blog_db.User = _userRepository.FirstOrDefault(u => u.Id == blogDto.UserId);
             await _blogRepository.InsertAsync(blog_db);
             return Ok();
         }

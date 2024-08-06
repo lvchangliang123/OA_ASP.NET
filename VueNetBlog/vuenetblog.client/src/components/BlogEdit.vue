@@ -55,11 +55,13 @@
 </template>
 
 <script lang="js" setup>
-    import { ref, reactive } from 'vue'
+    import { ref, reactive, computed } from 'vue'
     import { Upload, Edit, Back } from '@element-plus/icons-vue'
     import { mavonEditor } from 'mavon-editor'
     import { httpApi } from '@/Utils/httpApi'
     import { useRouter } from 'vue-router'
+    import { useStore } from '@/VueX/store'
+    import { ElMessage } from 'element-plus';
     import 'mavon-editor/dist/css/index.css'
 
     // 定义选项数据
@@ -81,6 +83,10 @@
     const goTo = (para) => {
         router.push(`/${para}`)
     }
+
+    const userIdCom = computed(() => {
+        return useStore.state.currentUser?.id;
+    });
 
     const blogEditor = ref(null);
 
@@ -130,12 +136,13 @@
         }
     };
 
-    const handleBlogUpload= ()=>{
+    const handleBlogUpload = () => {
          const formData = new FormData();
          formData.append('Title', Title.value);
          formData.append('OverView', OverView.value);
          formData.append('Content', Content.value);
          formData.append('Tags', selectedTags.value);
+         formData.append('UserId', userIdCom.value);
          try {
              const response = httpApi.post('api/BlogEdit/UploadBlogContent', formData, {
                  headers: { 'Content-Type': 'multipart/form-data' }
