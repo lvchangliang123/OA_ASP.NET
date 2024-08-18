@@ -47,16 +47,37 @@
             </el-option>
         </el-select>
     </div>
-    <div class="operation">
+    <div class="upload-section" style="margin-top:10px">
+        <el-upload class="upload-cover"
+                   action="your-upload-url"
+                   :on-success="handleCoverUploadSuccess">
+            <el-button size="middle" type="primary">
+                上传封面图片   <el-icon v-if="uploadCover" size="16" color="#95d475" style="margin-left:10px"><CircleCheck /></el-icon>
+            </el-button>
+        </el-upload>
+        <el-upload class="upload-code"
+                   action="your-upload-url"
+                   :on-success="handleCodeUploadSuccess">
+            <el-button size="middle" type="primary">
+            上传代码文件 <el-icon v-if="uploadCode" size="16" color="#95d475" style="margin-left:10px"><CircleCheck /></el-icon>
+            </el-button>
+        </el-upload>
+        <el-upload>
+            <el-button type="primary" style="width:200px" @click="handleBlogUpload">
+                上传博客<el-icon size="20" class="el-icon--right"><Upload /></el-icon>
+            </el-button>
+        </el-upload>
+    </div>
+    <!--<div class="operation">
         <el-button type="primary" style="width:200px" @click="handleBlogUpload">
             上传<el-icon class="el-icon--right"><Upload /></el-icon>
         </el-button>
-    </div>
+    </div>-->
 </template>
 
 <script lang="js" setup>
     import { ref, reactive, computed } from 'vue'
-    import { Upload, Edit, Back } from '@element-plus/icons-vue'
+    import { Upload, Edit, Back, CircleCheck } from '@element-plus/icons-vue'
     import { mavonEditor } from 'mavon-editor'
     import { httpApi } from '@/Utils/httpApi'
     import { useRouter } from 'vue-router'
@@ -95,6 +116,9 @@
     const Title = ref('');
     const OverView = ref('');
 
+    const uploadCover = ref(false);
+    const uploadCode = ref(false);
+
     const handleImgAdd = async (pos, file) => {
         const formData = new FormData();
         formData.append('Title', Title.value);
@@ -117,7 +141,7 @@
 
     };
 
-    const handleImgDel = async (file)=>{
+    const handleImgDel = async (file) => {
         const formData = new FormData();
         formData.append('Title', Title.value);
         formData.append('FileName', file[0]);
@@ -136,25 +160,33 @@
         }
     };
 
+    const handleCoverUploadSuccess = (file, fileList) => {
+        console.log('Cover upload success:', file, fileList);
+    };
+
+    const handleCodeUploadSuccess = (file, fileList) => {
+        console.log('Code upload success:', file, fileList);
+    };
+
     const handleBlogUpload = () => {
-         const formData = new FormData();
-         formData.append('Title', Title.value);
-         formData.append('OverView', OverView.value);
-         formData.append('Content', Content.value);
-         formData.append('Tags', selectedTags.value);
-         formData.append('UserId', userIdCom.value);
-         try {
-             const response = httpApi.post('api/BlogEdit/UploadBlogContent', formData, {
-                 headers: { 'Content-Type': 'multipart/form-data' }
-             });
-             if (response.status === 200) {
-                 ElMessage.success('文章上传成功!');
-                 goTo('about');
-             } else {
-                 ElMessage.error('文章上传失败,请重试!');
-             }
-         } catch (e) {
-             ElMessage.error('文章上传失败,请重试!');
+        const formData = new FormData();
+        formData.append('Title', Title.value);
+        formData.append('OverView', OverView.value);
+        formData.append('Content', Content.value);
+        formData.append('Tags', selectedTags.value);
+        formData.append('UserId', userIdCom.value);
+        try {
+            const response = httpApi.post('api/BlogEdit/UploadBlogContent', formData, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            });
+            if (response.status === 200) {
+                ElMessage.success('文章上传成功!');
+                goTo('about');
+            } else {
+                ElMessage.error('文章上传失败,请重试!');
+            }
+        } catch (e) {
+            ElMessage.error('文章上传失败,请重试!');
         }
     };
 
@@ -184,6 +216,16 @@
     .operation {
         margin-top: 20px;
         margin-left: 10px;
+    }
+
+    .upload-section {
+        display: flex;
+        align-items:center;
+        gap:10px;
+    }
+
+    .upload-section .el-upload {
+        height: 100%; 
     }
 
     .rounded-background {

@@ -27,46 +27,10 @@
         <span style="margin-top:10px;font-weight:bold;font-size:large">我的文章</span>
     </el-divider>
     <div style="display:flex">
-        <el-card shadow="hover" style="width:260px">
+        <el-card v-for="(blogData,index) in userData" shadow="hover" :style="{width: '230px', marginLeft: index > 0 ? '20px' : ''}">
             <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
             <div>
-                <p>{{imageDescription}}</p>
-            </div>
-        </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
-            <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
-            <div>
-                <p>{{imageDescription}}</p>
-            </div>
-        </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
-            <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
-            <div>
-                <p>{{imageDescription}}</p>
-            </div>
-        </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
-            <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
-            <div>
-                <p>{{imageDescription}}</p>
-            </div>
-        </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
-            <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
-            <div>
-                <p>{{imageDescription}}</p>
-            </div>
-        </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
-            <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
-            <div>
-                <p>{{imageDescription}}</p>
-            </div>
-        </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
-            <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
-            <div>
-                <p>{{imageDescription}}</p>
+                <p>{{blogData.title}}</p>
             </div>
         </el-card>
     </div>
@@ -74,43 +38,25 @@
         <span style="margin-top:10px;font-weight:bold;font-size:large">相关源码</span>
     </el-divider>
     <div style="display:flex">
-        <el-card shadow="hover" style="width:260px">
+        <el-card shadow="hover" style="width:230px">
             <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
             <div>
                 <p>{{imageDescription}}</p>
             </div>
         </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
+        <el-card shadow="hover" style="width:230px;margin-left:20px">
             <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
             <div>
                 <p>{{imageDescription}}</p>
             </div>
         </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
+        <el-card shadow="hover" style="width:230px;margin-left:20px">
             <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
             <div>
                 <p>{{imageDescription}}</p>
             </div>
         </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
-            <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
-            <div>
-                <p>{{imageDescription}}</p>
-            </div>
-        </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
-            <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
-            <div>
-                <p>{{imageDescription}}</p>
-            </div>
-        </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
-            <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
-            <div>
-                <p>{{imageDescription}}</p>
-            </div>
-        </el-card>
-        <el-card shadow="hover" style="width:260px;margin-left:20px">
+        <el-card shadow="hover" style="width:230px;margin-left:20px">
             <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
             <div>
                 <p>{{imageDescription}}</p>
@@ -167,7 +113,8 @@
             if (userId) {
                  const url = `api/About/GetUserBlogData?userid=${userId}`;
                  const response = await httpApi.get(url);
-                 userData.value = response.data;
+                userData.value = response.data;
+                console.log(userData.value);
             }
         } catch (e) {
             ElMessage.error('用户信息获取失败!请重试!');
@@ -177,7 +124,7 @@
     const imageSrc = Imagebg
     const aspnetSrc = aspnetcore
 
-    const imageDes = ref('这是我的文章111111111111111111111')
+    const imageDes = ref('这是我的源码11')
 
     const imageDescription = computed(() => {
         if (imageDes.value.length > 12) {

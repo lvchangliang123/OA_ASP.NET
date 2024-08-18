@@ -33,6 +33,12 @@ namespace VueNetBlog.Server.Models
         public byte[]? Cover { get; set; }
         public int? UserId { get; set; }
 
+        [StringLength(255)]
+        public string? CoverPath { get; set; }
+
+        [StringLength(255)]
+        public string? CodePath { get; set; }
+
         [ForeignKey("UserId")]
         [InverseProperty("Blogs")]
         public virtual User? User { get; set; }

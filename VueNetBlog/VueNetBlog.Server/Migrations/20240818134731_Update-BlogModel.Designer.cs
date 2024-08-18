@@ -11,8 +11,8 @@ using VueNetBlog.Server.Models;
 namespace VueNetBlog.Server.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20240722141708_UpdateBlogModeWithCreateTime")]
-    partial class UpdateBlogModeWithCreateTime
+    [Migration("20240818134731_Update-BlogModel")]
+    partial class UpdateBlogModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -185,6 +185,10 @@ namespace VueNetBlog.Server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("CodePath")
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
                     b.Property<string>("Content")
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
@@ -192,8 +196,14 @@ namespace VueNetBlog.Server.Migrations
                     b.Property<byte[]>("Cover")
                         .HasColumnType("blob");
 
+                    b.Property<string>("CoverPath")
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
                     b.Property<DateTime?>("CreateTime")
-                        .HasColumnType("date");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<string>("OverView")
                         .HasMaxLength(255)

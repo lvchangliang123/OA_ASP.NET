@@ -183,12 +183,20 @@ namespace VueNetBlog.Server.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<string>("CodePath")
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
+
                     b.Property<string>("Content")
                         .HasMaxLength(255)
                         .HasColumnType("varchar(255)");
 
                     b.Property<byte[]>("Cover")
                         .HasColumnType("blob");
+
+                    b.Property<string>("CoverPath")
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.Property<DateTime?>("CreateTime")
                         .ValueGeneratedOnAdd()

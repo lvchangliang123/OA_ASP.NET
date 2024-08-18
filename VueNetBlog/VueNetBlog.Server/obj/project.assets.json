@@ -131,7 +131,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.SpaProxy/6.0.32": {
+      "Microsoft.AspNetCore.SpaProxy/6.0.33": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll": {}
@@ -1211,10 +1211,10 @@
         "microsoft.aspnetcore.identity.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SpaProxy/6.0.32": {
-      "sha512": "Xy2sHljs7uCe5PqD4IuJYw42MOBjLEa+OZguTsCbKmAJdK101HiLz2n2sH9DmdtxOZF3EMsTWP4cFAZLMyHf+A==",
+    "Microsoft.AspNetCore.SpaProxy/6.0.33": {
+      "sha512": "ni7EvfMSDpHR+sAo9Y+C5gLmJRSJkgodNrEq+bem7SHrzlVSs0db552kt4r4L/KTU7+8amuhjUslQnJigLoeAg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.spaproxy/6.0.32",
+      "path": "microsoft.aspnetcore.spaproxy/6.0.33",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1222,7 +1222,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.AspNetCore.SpaProxy.targets",
         "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll",
-        "microsoft.aspnetcore.spaproxy.6.0.32.nupkg.sha512",
+        "microsoft.aspnetcore.spaproxy.6.0.33.nupkg.sha512",
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
@@ -3210,7 +3210,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

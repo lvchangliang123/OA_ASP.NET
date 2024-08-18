@@ -11,8 +11,8 @@ using VueNetBlog.Server.Models;
 namespace VueNetBlog.Server.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20240722143324_UpdateBlogDataContext")]
-    partial class UpdateBlogDataContext
+    [Migration("20240818122815_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

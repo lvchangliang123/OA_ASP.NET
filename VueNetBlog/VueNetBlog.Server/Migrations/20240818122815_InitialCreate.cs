@@ -6,7 +6,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace VueNetBlog.Server.Migrations
 {
-    public partial class UpdateBlogModeWithCreateTime : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -210,7 +210,7 @@ namespace VueNetBlog.Server.Migrations
                     OverView = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
                     Content = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
                     Tags = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true),
-                    CreateTime = table.Column<DateTime>(type: "date", nullable: true),
+                    CreateTime = table.Column<DateTime>(type: "datetime", nullable: true, defaultValueSql: "CURRENT_TIMESTAMP"),
                     ViewCount = table.Column<int>(type: "int", nullable: true),
                     Cover = table.Column<byte[]>(type: "blob", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: true)
