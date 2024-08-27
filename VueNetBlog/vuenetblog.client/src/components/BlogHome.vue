@@ -20,16 +20,16 @@
                                 </el-icon>
                             </el-avater>
                         </div>
-                        <el-avatar v-else :size="30" :src="currentUserAvatarPath"></el-avatar>
+                        <el-avatar v-else :size="30" :src="$hostURL+currentUserAvatarPath"/>
                     </el-menu-item>
-                    <el-menu-item v-if="currentUserName" @click="goTo('about')">
+                    <el-menu-item index="2" v-if="currentUserName" @click="goTo('about')">
                         <span>{{currentUserName}}</span>
                     </el-menu-item>
-                    <el-menu-item index="2" @click="goTo('bloghome')">首页</el-menu-item>
-                    <el-menu-item index="3">分类</el-menu-item>
-                    <el-menu-item index="4" @click="goTo('regis')">注册</el-menu-item>
-                    <el-menu-item index="5" @click="goTo('login')">登录</el-menu-item>
-                    <el-menu-item index="6" @click="goTo('about')">关于</el-menu-item>
+                    <el-menu-item index="3" @click="goTo('bloghome')">首页</el-menu-item>
+                    <el-menu-item index="4">分类</el-menu-item>
+                    <el-menu-item index="5" @click="goTo('regis')">注册</el-menu-item>
+                    <el-menu-item index="6" @click="goTo('login')">登录</el-menu-item>
+                    <el-menu-item index="7" @click="goTo('about')">关于</el-menu-item>
                 </el-menu>
             </el-header>
             <el-main>
@@ -130,11 +130,13 @@
         console.error('Routing error:', err)
     })
 
-    const currentUserName = computed(() => 
-    {return useStore.state.currentUser?.name;});
+    const currentUserName = computed(() => {
+        return useStore.state.currentUser?.name;
+    });
 
-    const currentUserAvatarPath = computed(()=>{
-    return useStore.state.currentUser?.avatarPath;
+    const currentUserAvatarPath = computed(() => {
+        console.log(useStore.state.currentUser?.avatarPath);
+        return useStore.state.currentUser?.avatarPath;
     });
 
     const testVal = ref('');

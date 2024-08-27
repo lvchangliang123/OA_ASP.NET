@@ -78,8 +78,60 @@ namespace VueNetBlog.Server.Controllers
             blog_db.Content = blogDto.Content;
             blog_db.Tags = string.Join(';', blogDto.Tags);
             blog_db.User = _userRepository.FirstOrDefault(u => u.Id == blogDto.UserId);
+            blog_db.CoverPath = blogDto.CoverFilePath;
+            blog_db.CodePath = blogDto.CodeFilePath;
             await _blogRepository.InsertAsync(blog_db);
             return Ok();
+        }
+
+        [HttpPost]
+        [Route("UploadBlogCover")]
+        public async Task<IActionResult> UploadBlogCover([FromForm] BlogFileDto blogFileDto)
+        {
+            //复制文件并反馈文件路径
+            if (blogFileDto.File.Length > 0)
+            {
+                string uploadsDir = Path.Combine(_env.ContentRootPath, "uploads");
+                string filesDir = Path.Combine(uploadsDir, "blogImages");
+                if (!Directory.Exists(filesDir))
+                {
+                    Directory.CreateDirectory(filesDir);
+                }
+                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(blogFileDto.File.FileName);
+                string filePath = Path.Combine(filesDir, fileName);
+                using (FileStream fs = new FileStream(filePath, FileMode.Create))
+                {
+                    await blogFileDto.File.CopyToAsync(fs);
+                }
+                string url = Path.Combine("uploads", "blogImages", fileName);
+                return Ok(new { url });
+            }
+            return BadRequest();
+        }
+
+        [HttpPost]
+        [Route("UploadBlogCode")]
+        public async Task<IActionResult> UploadBlogCode([FromForm] BlogFileDto blogFileDto)
+        {
+            //复制文件并反馈文件路径(仅支持rar，zip压缩文件)
+            if (blogFileDto.File.Length > 0)
+            {
+                string uploadsDir = Path.Combine(_env.ContentRootPath, "uploads");
+                string filesDir = Path.Combine(uploadsDir, "blogfiles");
+                if (!Directory.Exists(filesDir))
+                {
+                    Directory.CreateDirectory(filesDir);
+                }
+                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(blogFileDto.File.FileName);
+                string filePath = Path.Combine(filesDir, fileName);
+                using (FileStream fs = new FileStream(filePath, FileMode.Create))
+                {
+                    await blogFileDto.File.CopyToAsync(fs);
+                }
+                string url = Path.Combine("uploads", "blogfiles", fileName);
+                return Ok(new { url });
+            }
+            return BadRequest();
         }
 
     }

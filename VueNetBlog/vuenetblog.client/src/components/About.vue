@@ -2,7 +2,7 @@
     <el-row style="margin-top:40px">
         <el-col :span="1">
             <el-avatar v-if="!currentUserAvatarPath" :icon="UserFilled" :size="50" />
-            <el-avatar v-else :size="50" :src="currentUserAvatarPath"></el-avatar>
+            <el-avatar v-else :size="50" :src="$hostURL+currentUserAvatarPath"></el-avatar>
         </el-col>
         <el-col :span="18">
             <div>{{currentUserName}}</div>
@@ -28,7 +28,8 @@
     </el-divider>
     <div style="display:flex">
         <el-card v-for="(blogData,index) in userData" shadow="hover" :style="{width: '230px', marginLeft: index > 0 ? '20px' : ''}">
-            <el-image :src="imageSrc" style="height:120px;border-radius:4px" :fit="fill" />
+            <el-image :src="getFullFilePath(blogData.coverPath)"
+                      style="height:130px;border-radius:2px;border-color:transparent" :fit="fill" />
             <div>
                 <p>{{blogData.title}}</p>
             </div>
@@ -89,7 +90,7 @@
     import { httpApi } from '@/Utils/httpApi'
     import { useRouter } from 'vue-router'
     import { useStore } from '@/VueX/store'
-    import { ElMessage } from 'element-plus';
+    import { ElMessage } from 'element-plus'
 
     const currentUserName = computed(() => {
         return useStore.state.currentUser?.name;
@@ -98,6 +99,12 @@
     const currentUserAvatarPath = computed(() => {
         return useStore.state.currentUser?.avatarPath;
     });
+
+    const hostURLPath = useStore.getters['global/hostURL'];
+
+    const getFullFilePath = (filePath) => {
+        return `${hostURLPath}/${filePath}`;
+    };
 
     const router = useRouter()
 

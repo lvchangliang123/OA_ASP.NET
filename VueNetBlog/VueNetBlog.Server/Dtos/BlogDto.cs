@@ -12,7 +12,12 @@ namespace VueNetBlog.Server.Dtos
 
         public List<string>? Tags { get; set; }
 
-        public int UserId { get; set; } 
+        public int UserId { get; set; }
+
+        public string? CoverFilePath { get; set; }
+
+        public string? CodeFilePath { get; set; }
+
     }
 
 }

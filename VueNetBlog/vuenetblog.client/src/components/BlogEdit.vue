@@ -49,30 +49,29 @@
     </div>
     <div class="upload-section" style="margin-top:10px">
         <el-upload class="upload-cover"
-                   action="your-upload-url"
-                   :on-success="handleCoverUploadSuccess">
+                   :limit="1"
+                   :show-file-list="false"
+                   accept=".png,.jpeg,.jpg"
+                   :http-request="handleCustomCoverUpload">
             <el-button size="middle" type="primary">
-                上传封面图片   <el-icon v-if="uploadCover" size="16" color="#95d475" style="margin-left:10px"><CircleCheck /></el-icon>
+                上传封面图片   <el-icon v-if="uploadCoverFlag" size="16" color="#95d475"
+                                  style="margin-left:10px"><CircleCheck /></el-icon>
             </el-button>
         </el-upload>
         <el-upload class="upload-code"
-                   action="your-upload-url"
-                   :on-success="handleCodeUploadSuccess">
+                   :limit="1"
+                   :show-file-list="false"
+                   accept=".rar,.zip"
+                   :http-request="handleCustomCodeUpload">
             <el-button size="middle" type="primary">
-            上传代码文件 <el-icon v-if="uploadCode" size="16" color="#95d475" style="margin-left:10px"><CircleCheck /></el-icon>
+                上传代码文件 <el-icon v-if="uploadCodeFlag" size="16" color="#95d475"
+                                style="margin-left:10px"><CircleCheck /></el-icon>
             </el-button>
         </el-upload>
-        <el-upload>
-            <el-button type="primary" style="width:200px" @click="handleBlogUpload">
-                上传博客<el-icon size="20" class="el-icon--right"><Upload /></el-icon>
-            </el-button>
-        </el-upload>
-    </div>
-    <!--<div class="operation">
         <el-button type="primary" style="width:200px" @click="handleBlogUpload">
-            上传<el-icon class="el-icon--right"><Upload /></el-icon>
+            上传博客<el-icon size="20" class="el-icon--right"><Upload /></el-icon>
         </el-button>
-    </div>-->
+    </div>
 </template>
 
 <script lang="js" setup>
@@ -91,7 +90,7 @@
         { value: 'WPF', label: 'WPF' },
         { value: 'ASP.NET', label: 'ASP.NET' },
         { value: 'ASP.NET CORE', label: 'ASP.NET CORE' },
-        { value: 'Entity Framework', label: 'Entity Framework' },
+        { value: 'Entity Framework Core', label: 'Entity Framework Core' },
         { value: 'WCF', label: 'WCF' },
         { value: 'Blazor', label: 'Blazor' },
         { value: 'MAUI', label: 'MAUI' },
@@ -116,15 +115,17 @@
     const Title = ref('');
     const OverView = ref('');
 
-    const uploadCover = ref(false);
-    const uploadCode = ref(false);
+    const coverFilePath = ref('');
+    const codeFilePath = ref('');
+
+    const uploadCoverFlag = ref(false);
+    const uploadCodeFlag = ref(false);
 
     const handleImgAdd = async (pos, file) => {
         const formData = new FormData();
         formData.append('Title', Title.value);
         formData.append('Position', pos);
         formData.append('File', file);
-
         try {
             const response = await httpApi.post('api/BlogEdit/UploadBlogImage', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
@@ -138,7 +139,6 @@
         } catch (e) {
             ElMessage.error('图片上传失败,请重试!');
         }
-
     };
 
     const handleImgDel = async (file) => {
@@ -160,23 +160,59 @@
         }
     };
 
-    const handleCoverUploadSuccess = (file, fileList) => {
-        console.log('Cover upload success:', file, fileList);
+    const handleCustomCoverUpload = async (file) => {
+        const formData = new FormData();
+        formData.append('File', file.file);
+        try {
+            const response = await httpApi.post('api/BlogEdit/UploadBlogCover', formData, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            });
+            if (response.status === 200) {
+                coverFilePath.value = response.data.url;
+                uploadCoverFlag.value = true;
+                ElMessage.success('封面上传成功!');
+            } else {
+                uploadCoverFlag.value = false;
+                ElMessage.error('封面上传失败,请重试!');
+            }
+        } catch (e) {
+            uploadCoverFlag.value = false;
+            ElMessage.error('封面上传失败,请重试!');
+        }
     };
 
-    const handleCodeUploadSuccess = (file, fileList) => {
-        console.log('Code upload success:', file, fileList);
+    const handleCustomCodeUpload = async (file) => {
+        const formData = new FormData();
+        formData.append('File', file.file);
+        try {
+            const response = await httpApi.post('api/BlogEdit/UploadBlogCode', formData, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            });
+            if (response.status === 200) {
+                codeFilePath.value = response.data.url;
+                uploadCodeFlag.value = true;
+                ElMessage.success('文件上传成功!');
+            } else {
+                uploadCodeFlag.value = false;
+                ElMessage.error('文件上传失败,请重试!');
+            }
+        } catch (e) {
+            uploadCodeFlag.value = false;
+            ElMessage.error('文件上传失败,请重试!');
+        }
     };
 
-    const handleBlogUpload = () => {
+    const handleBlogUpload = async () => {
         const formData = new FormData();
         formData.append('Title', Title.value);
         formData.append('OverView', OverView.value);
         formData.append('Content', Content.value);
         formData.append('Tags', selectedTags.value);
         formData.append('UserId', userIdCom.value);
+        formData.append('CoverFilePath', coverFilePath.value);
+        formData.append('CodeFilePath', codeFilePath.value);
         try {
-            const response = httpApi.post('api/BlogEdit/UploadBlogContent', formData, {
+            const response = await httpApi.post('api/BlogEdit/UploadBlogContent', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
             if (response.status === 200) {

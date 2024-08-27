@@ -3,7 +3,7 @@ import routes from '@/router/routes.js';
 
 const router = createRouter({
     routes,
-    history: createWebHashHistory()
+    history: createWebHistory()
 })
 
 export default router

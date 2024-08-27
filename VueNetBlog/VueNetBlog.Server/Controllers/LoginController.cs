@@ -42,7 +42,7 @@ namespace VueNetBlog.Server.Controllers
                         var result = await _signInManager.PasswordSignInAsync(user, userLoginDto.Password, false, lockoutOnFailure: false);
                         if (result.Succeeded)
                         {
-                            user.AvatarPath = $"{Request.Scheme}://{Request.Host}/{user.AvatarPath}".Replace("\\", "/");
+                            user.AvatarPath = user.AvatarPath.Replace("\\", "/");
                             var redirectData = new Dictionary<string, object>
                             {
                                 { "PageName","RedirectToBlogHome"},

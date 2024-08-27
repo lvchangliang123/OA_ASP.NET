@@ -33,8 +33,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseDefaultFiles();
-app.UseStaticFiles();
+//app.UseDefaultFiles();
 
 app.UseStaticFiles(new StaticFileOptions
 {
@@ -61,5 +60,22 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapFallbackToFile("/index.html");
+
+app.Use(async (context, next) =>
+{
+    await next();
+
+    if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value))
+    {
+        var physicalPath = context.Request.Path.Value.TrimStart('/');
+        var fileInfo = new FileInfo(physicalPath);
+        if (!fileInfo.Exists)
+        {
+            context.Request.Path = "/index.html";
+            await context.Response.StartAsync();
+            await context.Response.SendFileAsync("index.html");
+        }
+    }
+});
 
 app.Run();

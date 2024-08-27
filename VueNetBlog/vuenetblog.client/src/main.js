@@ -6,4 +6,6 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import router from '@/router/index.js'
 
 
-createApp(App).use(ElementPlus).use(router).mount('#app')
+const app = createApp(App)
+app.config.globalProperties.$hostURL = 'https://localhost:7004'
+app.use(ElementPlus).use(router).mount('#app')

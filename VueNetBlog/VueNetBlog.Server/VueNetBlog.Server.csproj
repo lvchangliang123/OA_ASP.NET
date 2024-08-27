@@ -33,6 +33,7 @@
     <Folder Include="Migrations\" />
     <Folder Include="Services\" />
     <Folder Include="uploads\avatars\" />
+    <Folder Include="uploads\blogfiles\" />
     <Folder Include="uploads\blogImages\" />
   </ItemGroup>
 
