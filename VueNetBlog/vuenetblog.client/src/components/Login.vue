@@ -89,7 +89,9 @@
             const response = await httpApi.post('api/Login/UserLogin', formData, { headers });
             if (response.status === 200) {
                 if (response.data.PageName.toString() == "RedirectToBlogHome") {
-                    useStore.commit('SET_CURRENT_USER',response.data.User);
+                    useStore.commit('SET_CURRENT_USER', response.data.User);
+                    //存储用户信息持久化
+                    localStorage.setItem("VueBlogUser", JSON.stringify(response.data.User));
                     router.push('/bloghome');
                 }
             } else {

@@ -152,12 +152,27 @@
 </template>
 
 <script lang="js" setup>
-    import { ref, reactive } from 'vue'
+    import { ref, reactive, onMounted } from 'vue'
     import { User } from '@element-plus/icons-vue'
     import { ChatDotSquare } from '@element-plus/icons-vue'
     import { View } from '@element-plus/icons-vue'
+    import { useStore } from '@/VueX/store';
 
     const drawer = ref(false)
+
+    onMounted(async () => {
+        const blogInfo = useStore.state.currentBlog;
+        try {
+            if (blogInfo) {
+                //const url = `api/About/GetUserBlogData?userid=${userId}`;
+                //const response = await httpApi.get(url);
+                //userData.value = response.data;
+            }
+        } catch (e) {
+            ElMessage.error('用户信息获取失败!请重试!');
+        }
+    })
+
 
     const BlogDetail = ref(
         {
@@ -188,10 +203,6 @@
         CommentBody: '文章写得好3'
     }]
     )
-
-    //const ViewBlogCommentClick = (() => {
-    //    drawer = true
-    //})
 
 </script>
 

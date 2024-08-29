@@ -28,7 +28,8 @@
                     <el-menu-item index="3" @click="goTo('bloghome')">首页</el-menu-item>
                     <el-menu-item index="4">分类</el-menu-item>
                     <el-menu-item index="5" @click="goTo('regis')">注册</el-menu-item>
-                    <el-menu-item index="6" @click="goTo('login')">登录</el-menu-item>
+                    <el-menu-item v-if="!currentUser" index="6" @click="goTo('login')">登录</el-menu-item>
+                    <el-menu-item v-else index="6" @click="logout">注销</el-menu-item>
                     <el-menu-item index="7" @click="goTo('about')">关于</el-menu-item>
                 </el-menu>
             </el-header>
@@ -114,7 +115,7 @@
 </template>
 
 <script lang="js" setup>
-    import { ref, reactive, computed } from 'vue'
+    import { ref, reactive, computed, onMounted } from 'vue'
     import { User } from '@element-plus/icons-vue'
     import { httpApi } from '@/Utils/httpApi'
     import { useRouter } from 'vue-router'
@@ -130,6 +131,10 @@
         console.error('Routing error:', err)
     })
 
+    const currentUser = computed(() => {
+        return useStore.state.currentUser;
+    });
+
     const currentUserName = computed(() => {
         return useStore.state.currentUser?.name;
     });
@@ -138,6 +143,11 @@
         console.log(useStore.state.currentUser?.avatarPath);
         return useStore.state.currentUser?.avatarPath;
     });
+
+    const logout = ()=> {
+        useStore.commit('SET_CURRENT_USER', null);
+        localStorage.removeItem("VueBlogUser");
+    }
 
     const testVal = ref('');
 
@@ -148,6 +158,13 @@
 
     const activeIndex = ref('2')
     const activeIndex2 = ref('2')
+
+    onMounted(() => {
+        var loginUser = JSON.parse(localStorage.getItem('VueBlogUser'));
+        if (loginUser) {
+            useStore.commit('SET_CURRENT_USER', loginUser);
+        }
+    })
 
     const friendlyLinks = reactive([
         'CSDN',

@@ -27,7 +27,9 @@
         <span style="margin-top:10px;font-weight:bold;font-size:large">我的文章</span>
     </el-divider>
     <div style="display:flex">
-        <el-card v-for="(blogData,index) in userData" shadow="hover" :style="{width: '230px', marginLeft: index > 0 ? '20px' : ''}">
+        <el-card shadow="hover" v-for="(blogData,index) in userData"
+                 :style="{width: '230px', marginLeft: index > 0 ? '20px' : ''}"
+                 @click="ViewBlogDetail(blogData.UserId,blogData.Title)">
             <el-image :src="getFullFilePath(blogData.coverPath)"
                       style="height:130px;border-radius:2px;border-color:transparent" :fit="fill" />
             <div>
@@ -92,6 +94,12 @@
     import { useStore } from '@/VueX/store'
     import { ElMessage } from 'element-plus'
 
+
+    const ViewBlogDetail = (userId, blogTitle) => {
+        useStore.commit('SET_CURRENT_BLOG', { userId, blogTitle });
+        router.push('/blogdetail');
+    };
+
     const currentUserName = computed(() => {
         return useStore.state.currentUser?.name;
     });
@@ -115,13 +123,16 @@
     const userData = ref([]);
 
     onMounted(async () => {
+        var loginUser = JSON.parse(localStorage.getItem('VueBlogUser'));
+        if (loginUser) {
+            useStore.commit('SET_CURRENT_USER', loginUser);
+        }
         try {
             const userId = useStore.state.currentUser?.id;
             if (userId) {
                  const url = `api/About/GetUserBlogData?userid=${userId}`;
                  const response = await httpApi.get(url);
                 userData.value = response.data;
-                console.log(userData.value);
             }
         } catch (e) {
             ElMessage.error('用户信息获取失败!请重试!');

@@ -39,7 +39,7 @@ namespace VueNetBlog.Server.Controllers
                     var user = await _userManager.FindByEmailAsync(userLoginDto.Identifier);
                     if (user != null)
                     {
-                        var result = await _signInManager.PasswordSignInAsync(user, userLoginDto.Password, false, lockoutOnFailure: false);
+                        var result = await _signInManager.PasswordSignInAsync(user, userLoginDto.Password, true, lockoutOnFailure: false);
                         if (result.Succeeded)
                         {
                             user.AvatarPath = user.AvatarPath.Replace("\\", "/");
