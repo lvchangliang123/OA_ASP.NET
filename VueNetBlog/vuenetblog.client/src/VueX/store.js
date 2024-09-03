@@ -8,7 +8,7 @@ export const useStore = createStore({
         },
         currentBlog: {
             userId: 0,
-            blogTitle: null
+            blogId: 0,
         }
     },
     getters: {
@@ -22,7 +22,7 @@ export const useStore = createStore({
         },
         SET_CURRENT_BLOG(state, blog) {
             state.currentBlog.userId = blog.userId;
-            state.currentBlog.blogTitle = blog.blogTitle;
+            state.currentBlog.blogId = blog.blogId;
         }
     },
 });

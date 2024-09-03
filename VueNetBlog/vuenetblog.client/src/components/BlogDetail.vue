@@ -4,7 +4,7 @@
             <el-col :span="18">
                 <div>
                     <div style="text-align:center;font-family:STSong">
-                        <span style="font-size:x-large;font-weight:bold;">{{BlogDetail.BlogTitle}}</span>
+                        <span style="font-size:x-large;font-weight:bold;">{{blogData ? blogData.title : ''}}</span>
                     </div>
                     <el-card>
                         <div style="display: flex; align-items: center; justify-content: center;color:darkgray">
@@ -14,7 +14,7 @@
                                 </el-icon>
                                 <span>{{BlogDetail.BlogAuther}}</span>
                             </el-avater>
-                            <span style="margin-left:5px">{{BlogDetail.BlogCreateDateTime}}</span>
+                            <span style="margin-left:5px">{{blogData ? blogData.createTime : ''}}</span>
                             <span style="margin-left:5px">{{BlogDetail.BlogTag}}</span>
                             <span style="margin-left: 5px;display:flex;align-items:center">{{BlogDetail.BlogViews}}浏览<el-icon :size="20"><View /></el-icon></span>
                             <span class="clickable-span" style="margin-left:5px;display:flex;align-items:center" 
@@ -23,78 +23,15 @@
                     </el-card>
                     <el-card style="margin-top:5px;background-color:#f6f6f6;color:#8b94a0;">
                         <div>
-                            <span><span style="color:black;font-weight:bold">【概述】</span>{{BlogDetail.BlogOverView}}</span>
+                            <span><span style="color:black;font-weight:bold">【概述】</span>{{blogData ? blogData.overView : ''}}</span>
                         </div>
                     </el-card>
                     <div>
                         <el-card style="height:60vh;margin-top:10px;overflow:auto">
                             <el-scrollbar style="height:100%">
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是
-                                测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文
-                                章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
-                                这是测试的文章内容这是测试的文章内容这是测试的文章内容这是测试的文章内容
+                                <mavon-editor style="width:100%;height:65vh"
+                                              v-model="blogContent" ref="blogEditor">
+                                </mavon-editor>
                             </el-scrollbar>
                         </el-card>
 
@@ -155,8 +92,15 @@
     import { ref, reactive, onMounted } from 'vue'
     import { User } from '@element-plus/icons-vue'
     import { ChatDotSquare } from '@element-plus/icons-vue'
+    import { mavonEditor } from 'mavon-editor'
     import { View } from '@element-plus/icons-vue'
-    import { useStore } from '@/VueX/store';
+    import { useStore } from '@/VueX/store'
+    import { httpApi } from '@/Utils/httpApi'
+    import { ElMessage } from 'element-plus'
+
+    const blogData = ref(null);
+
+    const blogContent = ref('');
 
     const drawer = ref(false)
 
@@ -164,12 +108,13 @@
         const blogInfo = useStore.state.currentBlog;
         try {
             if (blogInfo) {
-                //const url = `api/About/GetUserBlogData?userid=${userId}`;
-                //const response = await httpApi.get(url);
-                //userData.value = response.data;
+                const url = `api/BlogDetail/GetBlogData?userid=${encodeURIComponent(blogInfo.userId)}&blogid=${encodeURIComponent(blogInfo.blogId)}`;
+                const response = await httpApi.get(url);
+                blogData.value = response.data;
+                blogContent.value = blogData.value.content;
             }
         } catch (e) {
-            ElMessage.error('用户信息获取失败!请重试!');
+            ElMessage.error('博客信息获取失败!请重试!');
         }
     })
 
@@ -209,11 +154,10 @@
 <style>
     .clickable-span {
         cursor: pointer;
-        &:hover
-        {
+        transition: background-color 0.3s ease, color 0.3s ease;
+        &:hover {
             color: #0056b3;
             text-decoration: none;
         }
-        transition: background-color 0.3s ease, color 0.3s ease;
     }
 </style>

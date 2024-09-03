@@ -29,7 +29,7 @@
     <div style="display:flex">
         <el-card shadow="hover" v-for="(blogData,index) in userData"
                  :style="{width: '230px', marginLeft: index > 0 ? '20px' : ''}"
-                 @click="ViewBlogDetail(blogData.UserId,blogData.Title)">
+                 @click="ViewBlogDetail(blogData.userId,blogData.id)">
             <el-image :src="getFullFilePath(blogData.coverPath)"
                       style="height:130px;border-radius:2px;border-color:transparent" :fit="fill" />
             <div>
@@ -95,8 +95,8 @@
     import { ElMessage } from 'element-plus'
 
 
-    const ViewBlogDetail = (userId, blogTitle) => {
-        useStore.commit('SET_CURRENT_BLOG', { userId, blogTitle });
+    const ViewBlogDetail = (userId, blogId) => {
+        useStore.commit('SET_CURRENT_BLOG', { userId, blogId });
         router.push('/blogdetail');
     };
 
@@ -130,8 +130,8 @@
         try {
             const userId = useStore.state.currentUser?.id;
             if (userId) {
-                 const url = `api/About/GetUserBlogData?userid=${userId}`;
-                 const response = await httpApi.get(url);
+                const url = `api/About/GetUserBlogData?userid=${userId}`;
+                const response = await httpApi.get(url);
                 userData.value = response.data;
             }
         } catch (e) {
