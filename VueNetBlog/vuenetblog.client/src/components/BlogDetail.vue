@@ -30,27 +30,38 @@
                         <el-card style="height:60vh;margin-top:10px;overflow:auto">
                             <el-scrollbar style="height:100%">
                                 <mavon-editor style="width:100%;height:65vh"
-                                              v-model="blogContent" ref="blogEditor">
+                                              v-model="blogContent"
+                                              :editable="false"
+                                              :defaultOpen="'preview'"
+                                              :subfield="false"
+                                              :toolbarsFlag="false"
+                                              :navigation="false"
+                                              codeStyle="docco" 
+                                              :ishljs="true" 
+                                              :scroll-style="true" 
+                                              :box-shadow="false"
+                                              ref="blogEditor">
                                 </mavon-editor>
                             </el-scrollbar>
                         </el-card>
 
                     </div>
                     <div style="text-align:center;margin-top:5px">
-                        <a href="#" style="margin-right:10px"><span>上一篇文章</span></a>
-                        <a href="#" style="margin-left:10px"><span>下一篇文章</span></a>
+                        <el-link type="primary" style="margin-right: 10px ">上一篇文章</el-link>
+                        <el-link type="primary" style="margin-left: 10px ">下一篇文章</el-link>
                     </div>
                     <el-row>
                         <el-divider content-position="left" style="width:100%">
                             <span style="font-size:large;font-weight:bold">文章评论</span>
                         </el-divider>
-                        <el-input v-model="BlogDetail.BlogCommentContent"
+                        <el-input v-model="currentBlogComment"
                                   style="width:100%"
                                   :autosize="{ minRows: 3, maxRows: 10 }"
                                   type="textarea"
                                   placeholder="Please input" />
                         <div style="margin-left:auto">
-                            <el-button style="margin-top:5px" color="#626aef" :dark="isDark">发表评论</el-button>
+                            <el-button type="primary" style="margin-top:5px" 
+                                       :dark="isDark" @click="handleBlogComment">发表评论</el-button>
                         </div>
                     </el-row>
                 </div>
@@ -77,11 +88,11 @@
                         <el-icon>
                             <User />
                         </el-icon>
-                        <span style="margin-left:5px">{{comment.CommentUserName}}</span>
-                        <span style="margin-left:10px">{{comment.CommentDate}}</span>
+                        <span style="margin-left:5px">{{comment.user.name}}</span>
+                        <span style="margin-left:10px">{{formattedCreateTime(comment.createTime)}}</span>
                     </el-avater>
                     <div style="margin-left:20px;margin-top:5px;margin-bottom:10px">
-                        <span>{{comment.CommentBody}}</span>
+                        <span>{{comment.content}}</span>
                     </div>
                 </div>
         </el-drawer>
@@ -102,7 +113,47 @@
 
     const blogContent = ref('');
 
+    const currentBlogComment = ref('');
+
     const drawer = ref(false)
+
+    const handleBlogComment = async () => {
+        if (currentBlogComment.value.trim() !== '') {
+            const blogId = useStore.state.currentBlog.blogId;
+            const userId = useStore.state.currentUser.id;
+            const formData = new FormData();
+            formData.append('BlogId', blogId);
+            formData.append('UserId', userId);
+            formData.append('CommentContent', currentBlogComment.value);
+            try {
+                const response = await httpApi.post('api/BlogDetail/SubmitBlogComment', formData, {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                });
+                if (response.status === 200) {
+                    ElMessage.success('文章评论成功!');
+                } else {
+                    ElMessage.error('文章评论失败,请重试!');
+                }
+            } catch (e) {
+                ElMessage.error('文章评论失败,请重试!');
+            }
+        } else {
+            ElMessage.error('文章评论内容不能为空!请重试!');
+        }
+    }
+
+    const formattedCreateTime = (dateTime)=> {
+        if (!dateTime) return '';
+        const date = new Date(dateTime);
+        if (isNaN(date.getTime())) return '';
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+        const seconds = String(date.getSeconds()).padStart(2, '0');
+        return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    }
 
     onMounted(async () => {
         const blogInfo = useStore.state.currentBlog;
@@ -112,6 +163,7 @@
                 const response = await httpApi.get(url);
                 blogData.value = response.data;
                 blogContent.value = blogData.value.content;
+                BlogComments.value = blogData.value.comments;
             }
         } catch (e) {
             ElMessage.error('博客信息获取失败!请重试!');
@@ -132,22 +184,7 @@
         }
     )
 
-    const BlogComments = ref([{
-        CommentUserName: 'User01',
-        CommentDate: '2023-10-03',
-        CommentBody: '文章写得好1'
-    },
-    {
-        CommentUserName: 'User02',
-        CommentDate: '2023-10-03',
-        CommentBody: '文章写得好2'
-    },
-    {
-        CommentUserName: 'User03',
-        CommentDate: '2023-10-03',
-        CommentBody: '文章写得好3'
-    }]
-    )
+    const BlogComments = ref([])
 
 </script>
 

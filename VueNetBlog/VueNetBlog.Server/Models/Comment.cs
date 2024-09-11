@@ -18,6 +18,9 @@ namespace VueNetBlog.Server.Models
         public int? UserId { get; set; }
         public int? BlogId { get; set; }
 
+        [Column(TypeName = "date")]
+        public DateTime? CreateTime { get; set; }
+
         [ForeignKey("BlogId")]
         [InverseProperty("Comments")]
         public virtual Blog? Blog { get; set; }

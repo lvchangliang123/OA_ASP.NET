@@ -76,6 +76,12 @@ namespace VueNetBlog.Server.Models
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.SetNull)
                     .HasConstraintName("FK_Comment_UserId");
+
+                entity.Property(p => p.CreateTime)
+              .HasDefaultValueSql("CURRENT_TIMESTAMP") // 设置默认值为当前时间
+              .HasColumnType("datetime") // 确保类型匹配
+              .ValueGeneratedOnAdd(); // 告诉 EF Core 该值由数据库生成
+
             });
 
             modelBuilder.Entity<Daily>(entity =>

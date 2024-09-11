@@ -22,7 +22,7 @@ namespace VueNetBlog.Server.Models
         public string? Title { get; set; }
         [StringLength(255)]
         public string? OverView { get; set; }
-        [StringLength(255)]
+        [StringLength(int.MaxValue)]
         public string? Content { get; set; }
         [StringLength(255)]
         public string? Tags { get; set; }
