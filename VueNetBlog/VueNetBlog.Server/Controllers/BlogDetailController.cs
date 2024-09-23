@@ -26,6 +26,15 @@ namespace VueNetBlog.Server.Controllers
         public async Task<IActionResult> GetBlogData(int userid, int blogid)
         {
             var blog = await _blogRepository.SingleAsync(b => b.Id == blogid && b.UserId == userid);
+            if (blog.ViewCount==null)
+            {
+                blog.ViewCount = 1;
+            }
+            else
+            {
+                blog.ViewCount++;
+            }
+            await _blogRepository.UpdateAsync(blog);
             blog.Comments = await _commentRepository.GetAllListAsync(c => c.BlogId == blogid);
             foreach (var com in blog.Comments)
             {

@@ -4,21 +4,20 @@
             <el-col :span="18">
                 <div>
                     <div style="text-align:center;font-family:STSong">
-                        <span style="font-size:x-large;font-weight:bold;">{{blogData ? blogData.title : ''}}</span>
+                        <span style="font-size:xx-large;font-weight:bold">{{blogData ? blogData.title : ''}}</span>
                     </div>
                     <el-card>
                         <div style="display: flex; align-items: center; justify-content: center;color:darkgray">
-                            <el-avater>
-                                <el-icon>
-                                    <User />
-                                </el-icon>
-                                <span>{{BlogDetail.BlogAuther}}</span>
+                            <el-avater style="display:flex;align-items:center">
+                                <el-avatar v-if="!BlogUserAvatarPath" :icon="UserFilled" :size="30" />
+                                <el-avatar v-else :size="30" :src="$hostURL+BlogUserAvatarPath"></el-avatar>
+                                <span style="margin-left:5px">{{BlogUserName}}</span>
                             </el-avater>
-                            <span style="margin-left:5px">{{blogData ? blogData.createTime : ''}}</span>
-                            <span style="margin-left:5px">{{BlogDetail.BlogTag}}</span>
-                            <span style="margin-left: 5px;display:flex;align-items:center">{{BlogDetail.BlogViews}}浏览<el-icon :size="20"><View /></el-icon></span>
-                            <span class="clickable-span" style="margin-left:5px;display:flex;align-items:center" 
-                                  @click="drawer = true">{{BlogDetail.BlogCommentCount}}评论<el-icon :size="20"><ChatDotSquare /></el-icon></span>
+                            <span style="margin-left:15px">{{BlogCreateTime}}</span>
+                            <span style="margin-left:15px">{{BlogTagFirst}}</span>
+                            <span style="margin-left:15px;display:flex;align-items:center">{{BlogViewCount}}浏览<el-icon :size="20"><View /></el-icon></span>
+                            <span class="clickable-span" style="margin-left:15px;display:flex;align-items:center;color:lightskyblue"
+                                  @click="drawer = true">{{BlogCommentsCount}}评论<el-icon :size="20"><ChatDotSquare /></el-icon></span>
                         </div>
                     </el-card>
                     <el-card style="margin-top:5px;background-color:#f6f6f6;color:#8b94a0;">
@@ -100,7 +99,7 @@
 </template>
 
 <script lang="js" setup>
-    import { ref, reactive, onMounted } from 'vue'
+    import { ref, reactive, onMounted, computed } from 'vue'
     import { User } from '@element-plus/icons-vue'
     import { ChatDotSquare } from '@element-plus/icons-vue'
     import { mavonEditor } from 'mavon-editor'
@@ -164,27 +163,36 @@
                 blogData.value = response.data;
                 blogContent.value = blogData.value.content;
                 BlogComments.value = blogData.value.comments;
+                BlogCommentsCount.value = BlogComments.value.length;
+                BlogViewCount.value = blogData.value.viewCount;
+                BlogCreateTime.value = formattedCreateTime(blogData.value.createTime);
+                BlogUserName.value = blogData.value.user.name;
+                BlogTagFirst.value = blogData.value.tags;
             }
         } catch (e) {
             ElMessage.error('博客信息获取失败!请重试!');
         }
     })
 
-
-    const BlogDetail = ref(
-        {
-            BlogTitle: '我的第一篇博客',
-            BlogAuther: 'Victor',
-            BlogCreateDateTime: '2024-10-12',
-            BlogTag: '.NET CORE',
-            BlogViews: '123',
-            BlogCommentCount: '12',
-            BlogOverView: '这是我的第一篇测试文章的概述部分',
-            BlogCommentContent: '这是我的评论'
-        }
-    )
-
     const BlogComments = ref([])
+
+    const BlogCommentsCount = ref(0)
+
+    const BlogViewCount = ref(0)
+
+    const BlogCreateTime = ref('')
+
+    const BlogUserName = ref('')
+
+    const BlogTagFirst = ref('')
+
+    const BlogUserAvatarPath = computed(() => {
+        if (blogData.value) {
+            return blogData.value.user.avatarPath;
+        } else {
+            return null;
+        }
+    });
 
 </script>
 
