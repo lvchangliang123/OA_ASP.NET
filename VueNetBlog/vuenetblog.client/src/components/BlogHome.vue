@@ -34,13 +34,13 @@
                 </el-menu>
             </el-header>
             <el-main>
-                <div>
-                    <el-carousel :interval="4000" type="card">
-                        <el-carousel-item v-for="item in 6" :key="item">
-                            <h3 text="2xl" justify="center">{{ item }}</h3>
-                        </el-carousel-item>
-                    </el-carousel>
-                </div>
+                <el-carousel :interval="4000" type="card">
+                    <el-carousel-item v-for="blogData in HomeBlogs" :key="blogData" class="carousel-item">
+                        <el-image :src="getFullFilePath(blogData.coverPath)" 
+                                :fit="contain" class="imageCarouselItem"
+                                  @click="handleBlogImageClick(blogData)"/>
+                    </el-carousel-item>
+                </el-carousel>
                 <el-divider content-position="left">
                     <span style="font-size:large;font-weight:bold;color:red">文章推荐</span>
                 </el-divider>
@@ -119,6 +119,7 @@
     import { User } from '@element-plus/icons-vue'
     import { httpApi } from '@/Utils/httpApi'
     import { useRouter } from 'vue-router'
+    import { ElMessage } from 'element-plus'
     import { useStore } from '@/VueX/store';
 
     const router = useRouter()
@@ -159,12 +160,35 @@
     const activeIndex = ref('2')
     const activeIndex2 = ref('2')
 
-    onMounted(() => {
+    const handleBlogImageClick = (blog) => {
+        if (blog && blog.userId && blog.id) {
+            useStore.commit('SET_CURRENT_BLOG', { userId: blog.userId, blogId: blog.id });
+            router.push('/blogdetail');
+        }
+    }
+
+    const HomeBlogs = ref([])
+
+    onMounted(async () => {
         var loginUser = JSON.parse(localStorage.getItem('VueBlogUser'));
         if (loginUser) {
             useStore.commit('SET_CURRENT_USER', loginUser);
         }
+        //请求最新的3个博客信息并展示
+        try {
+            const url = `api/BlogHome/GetHomeBlogs`;
+            const response = await httpApi.get(url);
+            HomeBlogs.value = response.data;
+        } catch (e) {
+            ElMessage.error('博客信息获取失败!请重试!');
+        }
     })
+
+    const hostURLPath = useStore.getters['global/hostURL'];
+
+    const getFullFilePath = (filePath) => {
+        return `${hostURLPath}/${filePath}`;
+    };
 
     const friendlyLinks = reactive([
         'CSDN',
@@ -211,20 +235,6 @@
             content: '如果说掌握一门赖以生存的技术是技术人员要学会的第一课的话，那么我觉得技术人员要真正学会的第二课，不是技术，而是业务、交流与协作，学会关心其他工作伙伴的工作情况和进展…',
             background: 'url(https://example.com/image3.jpg)',
         },
-        {
-            title: '程序员请放下你的技术情节，与你的同伴一起进步',
-            author: 'xcLiegh',
-            date: '2013-11-04',
-            content: '如果说掌握一门赖以生存的技术是技术人员要学会的第一课的话，那么我觉得技术人员要真正学会的第二课，不是技术，而是业务、交流与协作，学会关心其他工作伙伴的工作情况和进展…',
-            background: 'url(https://example.com/image3.jpg)',
-        },
-        {
-            title: '程序员请放下你的技术情节，与你的同伴一起进步',
-            author: 'xcLiegh',
-            date: '2013-11-04',
-            content: '如果说掌握一门赖以生存的技术是技术人员要学会的第一课的话，那么我觉得技术人员要真正学会的第二课，不是技术，而是业务、交流与协作，学会关心其他工作伙伴的工作情况和进展…',
-            background: 'url(https://example.com/image3.jpg)',
-        }
     ])
 
 </script>
@@ -253,4 +263,17 @@
     .example-pagination-block + .example-pagination-block {
         margin-top: 10px;
     }
+
+    .carousel-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; /* 确保 carousel-item 占据整个 carousel 的高度 */
+    }
+
+    .imageCarouselItem {
+        max-width: 100%; /* 确保图片最大宽度不超过 carousel-item */
+        height: auto; /* 保持图片的原始比例 */
+    }
+
 </style>

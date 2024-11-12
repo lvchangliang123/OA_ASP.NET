@@ -95,6 +95,8 @@
         { value: 'Blazor', label: 'Blazor' },
         { value: 'MAUI', label: 'MAUI' },
         { value: 'Azure', label: 'Azure' },
+        { value: 'Windows', label: 'Windows' },
+        { value: 'CLR', label: 'CLR' },
         { value: 'Others', label: 'Others' },
     ];
 

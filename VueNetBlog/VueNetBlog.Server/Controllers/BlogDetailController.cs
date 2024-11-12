@@ -41,8 +41,12 @@ namespace VueNetBlog.Server.Controllers
                 com.Blog = blog;
                 com.User = _userRepository.FirstOrDefault(u => u.Id == com.UserId);
             }
-            if (blog!=null)
+            if (blog != null)
             {
+                if (blog.User == null && userid != 0)
+                {
+                    blog.User = _userRepository.FirstOrDefault(u => u.Id == userid);
+                }
                 return Ok(blog);
             }
             else
