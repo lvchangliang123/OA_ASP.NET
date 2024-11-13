@@ -35,7 +35,7 @@
             </el-header>
             <el-main>
                 <el-carousel :interval="4000" type="card">
-                    <el-carousel-item v-for="blogData in HomeBlogs" :key="blogData" class="carousel-item">
+                    <el-carousel-item v-for="blogData in HomeCarouselBlogs" :key="blogData" class="carousel-item">
                         <el-image :src="getFullFilePath(blogData.coverPath)" 
                                 :fit="contain" class="imageCarouselItem"
                                   @click="handleBlogImageClick(blogData)"/>
@@ -47,19 +47,24 @@
                 <el-row>
                     <el-col :span="18">
                         <el-row>
-                            <el-col :span="24" v-for="(item, index) of blogList" :key="index">
-                                <el-space :style="{ marginBottom: '15px' }" :direction="vertical">
-                                    <el-card class="box-card" shadow="hover">
+                            <el-col :span="24" v-for="(blog, index) of paginatedBlogs" 
+                                    :key="index" style="width:100%">
+                                <el-space :style="{marginBottom: '15px', width: '100%' }"
+                                          :span="24"
+                                          :direction="vertical" >
+                                    <el-card shadow="hover" 
+                                             style="width: 100%; box-sizing: border-box; padding: 15px;">
                                         <div slot="header">
-                                            <h3 class="title">{{ item.title }}</h3>
-                                            <p>{{ item.author }} / {{ item.date }}</p>
+                                            <h3 class="title">{{ blog.title }}</h3>
+                                            <p>{{ blog.user.name }} / {{ blog.createTime }}</p>
                                         </div>
-                                        <div v-html="item.content"></div>
+                                        <div v-html="blog.overView" style="min-width:1300px;max-width:1300px"></div>
                                         <div style="text-align:right">
                                             <a href="#">
                                                 <el-button color="orange"
                                                            style="color:white;border-radius:0;"
-                                                           :dark="isDark">
+                                                           :dark="isDark"
+                                                           @click="handleBlogImageClick(blog)">
                                                     阅读全文>>
                                                 </el-button>
                                             </a>
@@ -69,7 +74,11 @@
                             </el-col>
                         </el-row>
                         <div class="example-pagination-block" style="justify-content:center;display:flex">
-                            <el-pagination layout="prev, pager, next" :total="1000" />
+                            <el-pagination layout="prev, pager, next"
+                                           :total="totalBlogCount"
+                                           :page-size="pageSize"
+                                           :current-page="currentPage"
+                                           @current-change="handlePageChange"/>
                         </div>
                     </el-col>
                     <el-span :span="2">
@@ -159,6 +168,21 @@
 
     const activeIndex = ref('2')
     const activeIndex2 = ref('2')
+    const totalBlogCount = ref(4)
+    const currentPage = ref(1)
+    const pageSize = ref(3)
+
+    // 计算属性：分页后的博客列表
+    const paginatedBlogs = computed(() => {
+        const start = (currentPage.value - 1) * pageSize.value;
+        const end = start + pageSize.value;
+        return HomeListlBlogs.value.slice(start, end);
+    });
+
+    // 监听分页变化
+    const handlePageChange = (newPage) => {
+        currentPage.value = newPage;
+    };
 
     const handleBlogImageClick = (blog) => {
         if (blog && blog.userId && blog.id) {
@@ -167,7 +191,8 @@
         }
     }
 
-    const HomeBlogs = ref([])
+    const HomeCarouselBlogs = ref([])
+    const HomeListlBlogs = ref([])
 
     onMounted(async () => {
         var loginUser = JSON.parse(localStorage.getItem('VueBlogUser'));
@@ -176,11 +201,19 @@
         }
         //请求最新的3个博客信息并展示
         try {
-            const url = `api/BlogHome/GetHomeBlogs`;
+            const url = `api/BlogHome/GetHomeCarouselBlogs`;
             const response = await httpApi.get(url);
-            HomeBlogs.value = response.data;
+            HomeCarouselBlogs.value = response.data;
         } catch (e) {
             ElMessage.error('博客信息获取失败!请重试!');
+        }
+        try {
+            const url2 = `api/BlogHome/GetHomeListlBlogs`;
+            const response2 = await httpApi.get(url2);
+            HomeListlBlogs.value = response2.data;
+            totalBlogCount.value = HomeListlBlogs.value.length;
+        } catch (e) {
+            ElMessage.error('博客列表获取失败!请重试!');
         }
     })
 
@@ -275,5 +308,6 @@
         max-width: 100%; /* 确保图片最大宽度不超过 carousel-item */
         height: auto; /* 保持图片的原始比例 */
     }
+
 
 </style>
